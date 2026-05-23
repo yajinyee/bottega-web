@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BV 各國比價 — 👛 皮夾 Wallets</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #eee; }
+.header { background: #16213e; padding: 20px; text-align: center; border-bottom: 2px solid #0f3460; }
+.header h1 { font-size: 1.5em; color: #e94560; }
+.header .meta { color: #888; font-size: 0.85em; margin-top: 5px; }
+.nav { display: flex; gap: 10px; padding: 10px 20px; background: #16213e; align-items: center; flex-wrap: wrap; }
+.nav a { padding: 8px 16px; border-radius: 20px; text-decoration: none; color: #aaa; background: #0f3460; font-size: 0.85em; }
+.nav a.active { background: #e94560; color: #fff; }
+.sort-bar { padding: 10px 20px; background: #0f3460; display: flex; gap: 10px; align-items: center; }
+.sort-bar label { color: #aaa; font-size: 0.85em; }
+.sort-bar a { color: #e94560; text-decoration: none; font-size: 0.85em; padding: 4px 10px; border-radius: 10px; }
+.sort-bar a.active { background: #e94560; color: #fff; }
+.cat-filter { padding: 8px 20px; background: #16213e; display: flex; gap: 6px; flex-wrap: wrap; border-bottom: 1px solid #0f3460; }
+.cat-btn { padding: 5px 12px; border-radius: 15px; text-decoration: none; color: #888; background: #1a1a2e; font-size: 0.8em; }
+.cat-btn.active { background: #533483; color: #fff; }
+.info-bar { padding: 8px 20px; background: #0f3460; color: #888; font-size: 0.8em; border-bottom: 1px solid #1a1a2e; }
+.list { padding: 10px 20px; }
+.item { display: grid; grid-template-columns: 80px 1fr; gap: 15px; padding: 15px; margin-bottom: 10px; background: #16213e; border-radius: 10px; border: 1px solid #0f3460; }
+.item:hover { border-color: #e94560; }
+.item img { width: 80px; height: 80px; object-fit: contain; background: #f5f5f5; border-radius: 8px; }
+.item-info { display: flex; flex-direction: column; gap: 4px; }
+.item-info .name { font-weight: 600; font-size: 0.95em; }
+.item-info .color { color: #888; font-size: 0.8em; }
+.prices { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+.price-tag { padding: 4px 10px; border-radius: 6px; font-size: 0.8em; }
+.price-tag.tw { background: #1b3a5c; color: #8ecae6; }
+.price-tag.jp { background: #3a1b1b; color: #ff9999; }
+.price-tag.mo { background: #1b3a2a; color: #99ffcc; }
+.price-tag.es { background: #3a2a1b; color: #ffcc99; }
+.price-tag.cheapest { border: 2px solid #4caf50; font-weight: 700; }
+.savings { color: #4caf50; font-size: 0.8em; font-weight: 600; margin-top: 4px; }
+.footer { text-align: center; padding: 20px; color: #666; font-size: 0.8em; }
+@media (max-width: 600px) {
+    .item { grid-template-columns: 60px 1fr; gap: 10px; padding: 10px; }
+    .item img { width: 60px; height: 60px; }
+    .prices { gap: 6px; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+    <h1>💱 BV 各國商品比價</h1>
+    <div class="meta">台灣原價 vs 日本退稅9折 vs 澳門退稅9折 vs 西班牙退稅88折 — 統一換算台幣比較</div>
+</div>
+<div class="nav">
+    <a href="index.html">← 回目錄</a>
+    <a class="active" href="compare.html">💱 比價</a>
+</div>
+<div class="sort-bar">
+    <label>排序：</label>
+    <a class="" href="compare_slg.html">價格低→高</a>
+    <a class="active" href="compare_desc_slg.html">價格高→低</a>
+    <a class="" href="compare_savings_slg.html">省最多</a>
+</div>
+<div class="cat-filter">
+  <a class="cat-btn" href="compare_desc.html">全部</a>
+  <a class="cat-btn" href="compare_desc_accessories.html">💍 飾品 Accessories</a>
+  <a class="cat-btn" href="compare_desc_bags.html">👜 包包 Bags</a>
+  <a class="cat-btn" href="compare_desc_home.html">🏠 家居 Home</a>
+  <a class="cat-btn" href="compare_desc_other.html">🛍️ 其他 Other</a>
+  <a class="cat-btn" href="compare_desc_rtw.html">👗 服裝 Clothing</a>
+  <a class="cat-btn" href="compare_desc_shoes.html">👠 鞋子 Shoes</a>
+  <a class="cat-btn active" href="compare_desc_slg.html">👛 皮夾 Wallets</a>
+  <a class="cat-btn" href="compare_desc_travel.html">🧳 旅行 Travel</a>
+</div>
+
+<div class="info-bar">
+    📊 共 21 款商品可比價 | 匯率：1 JPY = 0.1986 TWD、1 MOP = 3.9118 TWD、1 EUR = 0.00 TWD | 日本/澳門退稅10%、西班牙退稅12%
+</div>
+<div class="list">
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/fe124017-66bd-4c3f-9a3e-16d38b9c4bd4/Thumbnail/876011V2HL08803_A.jpg" alt="Dustbag Bike" loading="lazy">
+    <div class="item-info">
+        <div class="name">Dustbag Bike</div>
+        <div class="color">black</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$76,600</span><span class="price-tag jp">🇯🇵 ¥360,800→NT$64,484</span><span class="price-tag mo">🇲🇴 MOP$19,000→NT$66,891</span><span class="price-tag es cheapest">🇪🇸 €1,950→NT$58,344</span></div>
+        <div class="savings">💰 西班牙買省 NT$18,256（-23.8%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/02a7b520-3d37-49e2-9531-d8b99665711a/Thumbnail/876011V2HL04330_A.jpg" alt="Dustbag Bike" loading="lazy">
+    <div class="item-info">
+        <div class="name">Dustbag Bike</div>
+        <div class="color">midnight</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$76,600</span><span class="price-tag jp">🇯🇵 ¥360,800→NT$64,484</span><span class="price-tag mo">🇲🇴 MOP$19,000→NT$66,891</span><span class="price-tag es cheapest">🇪🇸 €1,950→NT$58,344</span></div>
+        <div class="savings">💰 西班牙買省 NT$18,256（-23.8%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/3e31d39e-0f1d-4bec-ba4b-5d77d230e639/Thumbnail/876625V0HW01007_A.jpg" alt="Intrecciato Piccolo Medium Pouch" loading="lazy">
+    <div class="item-info">
+        <div class="name">Intrecciato Piccolo Medium Pouch</div>
+        <div class="color">black</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$71,200</span><span class="price-tag jp">🇯🇵 ¥335,500→NT$59,962</span><span class="price-tag mo">🇲🇴 MOP$17,700→NT$62,314</span><span class="price-tag es cheapest">🇪🇸 €1,800→NT$53,856</span></div>
+        <div class="savings">💰 西班牙買省 NT$17,344（-24.4%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/c1d93f57-0a5d-45ef-a3b8-2a882a7cb042/Thumbnail/876625V0HW06569_A.jpg" alt="Intrecciato Piccolo Medium Pouch" loading="lazy">
+    <div class="item-info">
+        <div class="name">Intrecciato Piccolo Medium Pouch</div>
+        <div class="color">lava red</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$71,200</span><span class="price-tag jp">🇯🇵 ¥335,500→NT$59,962</span><span class="price-tag mo">🇲🇴 MOP$17,700→NT$62,314</span><span class="price-tag es cheapest">🇪🇸 €1,800→NT$53,856</span></div>
+        <div class="savings">💰 西班牙買省 NT$17,344（-24.4%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/fe0baee6-519d-4de7-9657-c8c5d8b50005/Thumbnail/876344VCPP01019_A.jpg" alt="Andiamo Boat Pouch" loading="lazy">
+    <div class="item-info">
+        <div class="name">Andiamo Boat Pouch</div>
+        <div class="color">black</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$60,000</span><span class="price-tag jp">🇯🇵 ¥279,400→NT$49,936</span><span class="price-tag mo">🇲🇴 MOP$14,900→NT$52,457</span><span class="price-tag es cheapest">🇪🇸 €1,500→NT$44,880</span></div>
+        <div class="savings">💰 西班牙買省 NT$15,120（-25.2%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/57c6c5fa-c0a2-4717-977c-2cc3f2627898/Thumbnail/876345VCPP21019_A.jpg" alt="Andiamo Wallet Organizer" loading="lazy">
+    <div class="item-info">
+        <div class="name">Andiamo Wallet Organizer</div>
+        <div class="color">black</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$51,800</span><span class="price-tag jp">🇯🇵 ¥239,800→NT$42,858</span><span class="price-tag mo">🇲🇴 MOP$12,850→NT$45,239</span><span class="price-tag es cheapest">🇪🇸 €1,300→NT$38,896</span></div>
+        <div class="savings">💰 西班牙買省 NT$12,904（-24.9%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/25daec69-b620-4642-bd3c-ba41126f45eb/Thumbnail/875474V0HW48425_A.jpg" alt="Intrecciato Piccolo Long Wallet With Flap" loading="lazy">
+    <div class="item-info">
+        <div class="name">Intrecciato Piccolo Long Wallet With Flap</div>
+        <div class="color">black</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$37,300</span><span class="price-tag jp">🇯🇵 ¥174,900→NT$31,259</span><span class="price-tag mo">🇲🇴 MOP$9,250→NT$32,565</span><span class="price-tag es cheapest">🇪🇸 €950→NT$28,424</span></div>
+        <div class="savings">💰 西班牙買省 NT$8,876（-23.8%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/19c629d2-900d-4399-8a15-c003218e0013/Thumbnail/876346VCPP21019_A.jpg" alt="Andiamo Medium Bi-Fold Wallet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Andiamo Medium Bi-Fold Wallet</div>
+        <div class="color">black</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$36,900</span><span class="price-tag jp">🇯🇵 ¥169,400→NT$30,276</span><span class="price-tag mo">🇲🇴 MOP$9,150→NT$32,213</span><span class="price-tag es cheapest">🇪🇸 €920→NT$27,526</span></div>
+        <div class="savings">💰 西班牙買省 NT$9,374（-25.4%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/e4de052a-8139-4ea2-a6f4-6dfda5420d66/Thumbnail/876331V0HW48425_A.jpg" alt="Intrecciato Piccolo Medium Bi-Fold Zipped With Flap" loading="lazy">
+    <div class="item-info">
+        <div class="name">Intrecciato Piccolo Medium Bi-Fold Zipped With Flap</div>
+        <div class="color">black</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$34,000</span><span class="price-tag jp">🇯🇵 ¥158,400→NT$28,310</span><span class="price-tag mo">🇲🇴 MOP$8,450→NT$29,749</span><span class="price-tag es cheapest">🇪🇸 €850→NT$25,432</span></div>
+        <div class="savings">💰 西班牙買省 NT$8,568（-25.2%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/5630c145-33f9-4afb-81ad-ac2eaeffa215/Thumbnail/A003ADV6U306546_A.jpg" alt="Woven Mycelium Zip-Around Wallet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Woven Mycelium Zip-Around Wallet</div>
+        <div class="color">lava red</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$35,700</span><span class="price-tag jp">🇯🇵 ¥158,400→NT$28,310</span><span class="price-tag mo">🇲🇴 MOP$8,800→NT$30,981</span><span class="price-tag es cheapest">🇪🇸 €850→NT$25,432</span></div>
+        <div class="savings">💰 西班牙買省 NT$10,268（-28.8%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/2f40b621-2609-473d-9b49-188a7b835843/Thumbnail/A003ADV6U301674_A.jpg" alt="Woven Mycelium Zip-Around Wallet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Woven Mycelium Zip-Around Wallet</div>
+        <div class="color">mineral</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$35,700</span><span class="price-tag jp">🇯🇵 ¥158,400→NT$28,310</span><span class="price-tag mo">🇲🇴 MOP$8,800→NT$30,981</span><span class="price-tag es cheapest">🇪🇸 €850→NT$25,432</span></div>
+        <div class="savings">💰 西班牙買省 NT$10,268（-28.8%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/4b83893d-3ded-470a-9eea-eb2c85418e08/Thumbnail/876351VCPP21019_A.jpg" alt="Andiamo Small Bi-Fold Wallet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Andiamo Small Bi-Fold Wallet</div>
+        <div class="color">black</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$32,700</span><span class="price-tag jp">🇯🇵 ¥151,800→NT$27,130</span><span class="price-tag mo">🇲🇴 MOP$8,150→NT$28,693</span><span class="price-tag es cheapest">🇪🇸 €820→NT$24,534</span></div>
+        <div class="savings">💰 西班牙買省 NT$8,166（-25.0%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/8b282c9a-a14e-48d5-8b36-53d85bf6031c/Thumbnail/875463V0HW48425_A.jpg" alt="Intrecciato Piccolo Small Bi-Fold Zipped With Flap" loading="lazy">
+    <div class="item-info">
+        <div class="name">Intrecciato Piccolo Small Bi-Fold Zipped With Flap</div>
+        <div class="color">black</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$31,100</span><span class="price-tag jp">🇯🇵 ¥138,600→NT$24,771</span><span class="price-tag mo">🇲🇴 MOP$7,700→NT$27,108</span><span class="price-tag es cheapest">🇪🇸 €750→NT$22,440</span></div>
+        <div class="savings">💰 西班牙買省 NT$8,660（-27.8%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/9c1c8f9d-a952-4085-a5fa-6471e04bbf98/Thumbnail/876811V6U302006_A.jpg" alt="Woven Mycelium Bi-Fold Wallet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Woven Mycelium Bi-Fold Wallet</div>
+        <div class="color">espresso</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$24,500</span><span class="price-tag jp">🇯🇵 ¥108,900→NT$19,463</span><span class="price-tag mo">🇲🇴 MOP$6,100→NT$21,476</span><span class="price-tag es cheapest">🇪🇸 €590→NT$17,653</span></div>
+        <div class="savings">💰 西班牙買省 NT$6,847（-27.9%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/0a6c4d3b-d048-4210-84e5-8c0349c05f36/Thumbnail/876811V6U306525_A.jpg" alt="Woven Mycelium Bi-Fold Wallet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Woven Mycelium Bi-Fold Wallet</div>
+        <div class="color">lava red</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$24,500</span><span class="price-tag jp">🇯🇵 ¥108,900→NT$19,463</span><span class="price-tag mo">🇲🇴 MOP$6,100→NT$21,476</span><span class="price-tag es cheapest">🇪🇸 €590→NT$17,653</span></div>
+        <div class="savings">💰 西班牙買省 NT$6,847（-27.9%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/06938c08-fa18-4ced-95b3-ffb79bcca45b/Thumbnail/875447VCPP38425_A.jpg" alt="Intrecciato L-Zipped Card Case" loading="lazy">
+    <div class="item-info">
+        <div class="name">Intrecciato L-Zipped Card Case</div>
+        <div class="color">black</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$20,700</span><span class="price-tag jp">🇯🇵 ¥95,700→NT$17,104</span><span class="price-tag mo">🇲🇴 MOP$5,150→NT$18,131</span><span class="price-tag es cheapest">🇪🇸 €520→NT$15,558</span></div>
+        <div class="savings">💰 西班牙買省 NT$5,142（-24.8%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/4421dcd1-b465-4693-8d2c-ee1047ac8bf3/Thumbnail/876808V6U302008_A.jpg" alt="Woven Mycelium Zipped Card Case" loading="lazy">
+    <div class="item-info">
+        <div class="name">Woven Mycelium Zipped Card Case</div>
+        <div class="color">espresso</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$21,600</span><span class="price-tag jp">🇯🇵 ¥95,700→NT$17,104</span><span class="price-tag mo">🇲🇴 MOP$5,350→NT$18,835</span><span class="price-tag es cheapest">🇪🇸 €520→NT$15,558</span></div>
+        <div class="savings">💰 西班牙買省 NT$6,042（-28.0%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/09c2372f-7ca0-4e11-a813-e063c7712af7/Thumbnail/876808V6U306546_A.jpg" alt="Woven Mycelium Zipped Card Case" loading="lazy">
+    <div class="item-info">
+        <div class="name">Woven Mycelium Zipped Card Case</div>
+        <div class="color">lava red</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$21,600</span><span class="price-tag jp">🇯🇵 ¥95,700→NT$17,104</span><span class="price-tag mo">🇲🇴 MOP$5,350→NT$18,835</span><span class="price-tag es cheapest">🇪🇸 €520→NT$15,558</span></div>
+        <div class="savings">💰 西班牙買省 NT$6,042（-28.0%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/9c6a619b-a5c2-434c-8bca-1a93cda262d0/Thumbnail/876808V6U301674_A.jpg" alt="Woven Mycelium Zipped Card Case" loading="lazy">
+    <div class="item-info">
+        <div class="name">Woven Mycelium Zipped Card Case</div>
+        <div class="color">mineral</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$21,600</span><span class="price-tag jp">🇯🇵 ¥95,700→NT$17,104</span><span class="price-tag mo">🇲🇴 MOP$5,350→NT$18,835</span><span class="price-tag es cheapest">🇪🇸 €520→NT$15,558</span></div>
+        <div class="savings">💰 西班牙買省 NT$6,042（-28.0%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/d8fe4f95-9a24-4ca4-8c94-960fa312349a/Thumbnail/876803V6U306525_A.jpg" alt="Woven Mycelium Credit Card Case" loading="lazy">
+    <div class="item-info">
+        <div class="name">Woven Mycelium Credit Card Case</div>
+        <div class="color">lava red</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$15,800</span><span class="price-tag jp">🇯🇵 ¥71,500→NT$12,779</span><span class="price-tag mo">🇲🇴 MOP$3,950→NT$13,906</span><span class="price-tag es cheapest">🇪🇸 €390→NT$11,669</span></div>
+        <div class="savings">💰 西班牙買省 NT$4,131（-26.1%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/14e77e79-4992-4e5f-bbb1-6f7708bf950a/Thumbnail/876803V6U301670_A.jpg" alt="Woven Mycelium Credit Card Case" loading="lazy">
+    <div class="item-info">
+        <div class="name">Woven Mycelium Credit Card Case</div>
+        <div class="color">mineral</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$15,800</span><span class="price-tag jp">🇯🇵 ¥71,500→NT$12,779</span><span class="price-tag mo">🇲🇴 MOP$3,950→NT$13,906</span><span class="price-tag es cheapest">🇪🇸 €390→NT$11,669</span></div>
+        <div class="savings">💰 西班牙買省 NT$4,131（-26.1%）</div>
+    </div>
+</div>
+</div>
+<div class="footer">
+    資料更新：2026-05-23 16:42 | 匯率來源：exchangerate-api.com | 日本/澳門價格已乘 0.9（退稅）
+</div>
+</body>
+</html>

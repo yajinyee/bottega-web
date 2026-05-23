@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BV 各國比價 — 👗 服裝 Clothing</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #eee; }
+.header { background: #16213e; padding: 20px; text-align: center; border-bottom: 2px solid #0f3460; }
+.header h1 { font-size: 1.5em; color: #e94560; }
+.header .meta { color: #888; font-size: 0.85em; margin-top: 5px; }
+.nav { display: flex; gap: 10px; padding: 10px 20px; background: #16213e; align-items: center; flex-wrap: wrap; }
+.nav a { padding: 8px 16px; border-radius: 20px; text-decoration: none; color: #aaa; background: #0f3460; font-size: 0.85em; }
+.nav a.active { background: #e94560; color: #fff; }
+.sort-bar { padding: 10px 20px; background: #0f3460; display: flex; gap: 10px; align-items: center; }
+.sort-bar label { color: #aaa; font-size: 0.85em; }
+.sort-bar a { color: #e94560; text-decoration: none; font-size: 0.85em; padding: 4px 10px; border-radius: 10px; }
+.sort-bar a.active { background: #e94560; color: #fff; }
+.cat-filter { padding: 8px 20px; background: #16213e; display: flex; gap: 6px; flex-wrap: wrap; border-bottom: 1px solid #0f3460; }
+.cat-btn { padding: 5px 12px; border-radius: 15px; text-decoration: none; color: #888; background: #1a1a2e; font-size: 0.8em; }
+.cat-btn.active { background: #533483; color: #fff; }
+.info-bar { padding: 8px 20px; background: #0f3460; color: #888; font-size: 0.8em; border-bottom: 1px solid #1a1a2e; }
+.list { padding: 10px 20px; }
+.item { display: grid; grid-template-columns: 80px 1fr; gap: 15px; padding: 15px; margin-bottom: 10px; background: #16213e; border-radius: 10px; border: 1px solid #0f3460; }
+.item:hover { border-color: #e94560; }
+.item img { width: 80px; height: 80px; object-fit: contain; background: #f5f5f5; border-radius: 8px; }
+.item-info { display: flex; flex-direction: column; gap: 4px; }
+.item-info .name { font-weight: 600; font-size: 0.95em; }
+.item-info .color { color: #888; font-size: 0.8em; }
+.prices { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+.price-tag { padding: 4px 10px; border-radius: 6px; font-size: 0.8em; }
+.price-tag.tw { background: #1b3a5c; color: #8ecae6; }
+.price-tag.jp { background: #3a1b1b; color: #ff9999; }
+.price-tag.mo { background: #1b3a2a; color: #99ffcc; }
+.price-tag.es { background: #3a2a1b; color: #ffcc99; }
+.price-tag.cheapest { border: 2px solid #4caf50; font-weight: 700; }
+.savings { color: #4caf50; font-size: 0.8em; font-weight: 600; margin-top: 4px; }
+.footer { text-align: center; padding: 20px; color: #666; font-size: 0.8em; }
+@media (max-width: 600px) {
+    .item { grid-template-columns: 60px 1fr; gap: 10px; padding: 10px; }
+    .item img { width: 60px; height: 60px; }
+    .prices { gap: 6px; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+    <h1>💱 BV 各國商品比價</h1>
+    <div class="meta">台灣原價 vs 日本退稅9折 vs 澳門退稅9折 vs 西班牙退稅88折 — 統一換算台幣比較</div>
+</div>
+<div class="nav">
+    <a href="index.html">← 回目錄</a>
+    <a class="active" href="compare.html">💱 比價</a>
+</div>
+<div class="sort-bar">
+    <label>排序：</label>
+    <a class="" href="compare_rtw.html">價格低→高</a>
+    <a class="active" href="compare_desc_rtw.html">價格高→低</a>
+    <a class="" href="compare_savings_rtw.html">省最多</a>
+</div>
+<div class="cat-filter">
+  <a class="cat-btn" href="compare_desc.html">全部</a>
+  <a class="cat-btn" href="compare_desc_accessories.html">💍 飾品 Accessories</a>
+  <a class="cat-btn" href="compare_desc_bags.html">👜 包包 Bags</a>
+  <a class="cat-btn" href="compare_desc_home.html">🏠 家居 Home</a>
+  <a class="cat-btn" href="compare_desc_other.html">🛍️ 其他 Other</a>
+  <a class="cat-btn active" href="compare_desc_rtw.html">👗 服裝 Clothing</a>
+  <a class="cat-btn" href="compare_desc_shoes.html">👠 鞋子 Shoes</a>
+  <a class="cat-btn" href="compare_desc_slg.html">👛 皮夾 Wallets</a>
+  <a class="cat-btn" href="compare_desc_travel.html">🧳 旅行 Travel</a>
+</div>
+
+<div class="info-bar">
+    📊 共 28 款商品可比價 | 匯率：1 JPY = 0.1986 TWD、1 MOP = 3.9118 TWD、1 EUR = 0.00 TWD | 日本/澳門退稅10%、西班牙退稅12%
+</div>
+<div class="list">
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/e7bbc05e-5a47-48ee-a6a8-d49305e48ef1/Thumbnail/871537V6PE09742_A.jpg" alt="Mini Intreccio Suede Leather Skirt" loading="lazy">
+    <div class="item-info">
+        <div class="name">Mini Intreccio Suede Leather Skirt</div>
+        <div class="color">trench</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$257,700</span><span class="price-tag jp">🇯🇵 ¥1,299,100→NT$232,182</span><span class="price-tag mo">🇲🇴 MOP$64,000→NT$225,317</span><span class="price-tag es cheapest">🇪🇸 €6,500→NT$194,480</span></div>
+        <div class="savings">💰 西班牙買省 NT$63,220（-24.5%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/074ccaf6-1184-4de5-93da-9b35a5c3d000/Thumbnail/874736V61D03476_A.jpg" alt="Shiny Leather Blouson" loading="lazy">
+    <div class="item-info">
+        <div class="name">Shiny Leather Blouson</div>
+        <div class="color">wader green</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$246,100</span><span class="price-tag jp">🇯🇵 ¥1,239,700→NT$221,566</span><span class="price-tag mo">🇲🇴 MOP$61,100→NT$215,107</span><span class="price-tag es cheapest">🇪🇸 €6,200→NT$185,504</span></div>
+        <div class="savings">💰 西班牙買省 NT$60,596（-24.6%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/8de6d01d-8be8-463b-9594-1af8d7f23f59/Thumbnail/871519V61D03476_A.jpg" alt="Shiny Leather Pants" loading="lazy">
+    <div class="item-info">
+        <div class="name">Shiny Leather Pants</div>
+        <div class="color">wader green</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$194,400</span><span class="price-tag jp">🇯🇵 ¥980,100→NT$175,169</span><span class="price-tag mo">🇲🇴 MOP$48,300→NT$170,044</span><span class="price-tag es cheapest">🇪🇸 €4,900→NT$146,608</span></div>
+        <div class="savings">💰 西班牙買省 NT$47,792（-24.6%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/e5543b06-62a2-48f5-80b6-90bb5c1bc46f/Thumbnail/871388V6KO02549_A.jpg" alt="Cotton Trench Coat" loading="lazy">
+    <div class="item-info">
+        <div class="name">Cotton Trench Coat</div>
+        <div class="color">sahara</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$190,300</span><span class="price-tag jp">🇯🇵 ¥959,200→NT$171,433</span><span class="price-tag mo">🇲🇴 MOP$47,250→NT$166,347</span><span class="price-tag es cheapest">🇪🇸 €4,800→NT$143,616</span></div>
+        <div class="savings">💰 西班牙買省 NT$46,684（-24.5%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/d23eb3eb-d985-4b99-ae14-3e21794bcb06/Thumbnail/871316V6KO02549_A.jpg" alt="Light Cotton Trench Coat " loading="lazy">
+    <div class="item-info">
+        <div class="name">Light Cotton Trench Coat </div>
+        <div class="color">sahara</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$154,700</span><span class="price-tag jp">🇯🇵 ¥759,000→NT$135,652</span><span class="price-tag mo">🇲🇴 MOP$38,400→NT$135,190</span><span class="price-tag es cheapest">🇪🇸 €3,900→NT$116,688</span></div>
+        <div class="savings">💰 西班牙買省 NT$38,012（-24.6%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/8f704920-3274-4270-87a5-46bf5f53b1ca/Thumbnail/869436V6KO09000_A.jpg" alt="Cotton Blouson" loading="lazy">
+    <div class="item-info">
+        <div class="name">Cotton Blouson</div>
+        <div class="color">white</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$115,000</span><span class="price-tag jp">🇯🇵 ¥579,700→NT$103,607</span><span class="price-tag mo">🇲🇴 MOP$28,550→NT$100,512</span><span class="price-tag es cheapest">🇪🇸 €2,900→NT$86,768</span></div>
+        <div class="savings">💰 西班牙買省 NT$28,232（-24.5%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/07300ca1-2177-4136-8edd-9caac52fc0bc/Thumbnail/851565V6NB02512_A.jpg" alt="Wool And Cotton Jacket" loading="lazy">
+    <div class="item-info">
+        <div class="name">Wool And Cotton Jacket</div>
+        <div class="color">beige/light blue</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$115,000</span><span class="price-tag jp">🇯🇵 ¥579,700→NT$103,607</span><span class="price-tag mo">🇲🇴 MOP$28,550→NT$100,512</span><span class="price-tag es cheapest">🇪🇸 €2,900→NT$86,768</span></div>
+        <div class="savings">💰 西班牙買省 NT$28,232（-24.5%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/a68c3986-1042-4d89-80d6-022000eb3b20/Thumbnail/873841V6NI09107_A.jpg" alt="Floral Lace Dress" loading="lazy">
+    <div class="item-info">
+        <div class="name">Floral Lace Dress</div>
+        <div class="color">parchment</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$107,200</span><span class="price-tag jp">🇯🇵 ¥540,100→NT$96,530</span><span class="price-tag mo">🇲🇴 MOP$26,600→NT$93,647</span><span class="price-tag es cheapest">🇪🇸 €2,700→NT$80,784</span></div>
+        <div class="savings">💰 西班牙買省 NT$26,416（-24.6%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/98017563-480f-482d-b142-2d32b70800a4/Thumbnail/875076V6PS04075_A.jpg" alt="Printed Silk Twill Body" loading="lazy">
+    <div class="item-info">
+        <div class="name">Printed Silk Twill Body</div>
+        <div class="color">midnight blue/chalk</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$95,200</span><span class="price-tag jp">🇯🇵 ¥479,600→NT$85,717</span><span class="price-tag mo">🇲🇴 MOP$23,650→NT$83,262</span><span class="price-tag es cheapest">🇪🇸 €2,400→NT$71,808</span></div>
+        <div class="savings">💰 西班牙買省 NT$23,392（-24.6%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/6afb9104-d534-4735-ad68-4290a23c20a2/Thumbnail/869475V6NG02951_A.jpg" alt="Soft Wool Check Top" loading="lazy">
+    <div class="item-info">
+        <div class="name">Soft Wool Check Top</div>
+        <div class="color">chalk/carrubo/blue</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$74,100</span><span class="price-tag jp">🇯🇵 ¥380,600→NT$68,023</span><span class="price-tag mo">🇲🇴 MOP$18,400→NT$64,779</span><span class="price-tag es cheapest">🇪🇸 €1,900→NT$56,848</span></div>
+        <div class="savings">💰 西班牙買省 NT$17,252（-23.3%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/ece80f10-15da-46a7-a50a-5fec06c46043/Thumbnail/869426V6OB04030_A.jpg" alt="Technical Hooded Blouson" loading="lazy">
+    <div class="item-info">
+        <div class="name">Technical Hooded Blouson</div>
+        <div class="color">dark navy</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$74,100</span><span class="price-tag jp">🇯🇵 ¥380,600→NT$68,023</span><span class="price-tag mo">🇲🇴 MOP$18,400→NT$64,779</span><span class="price-tag es cheapest">🇪🇸 €1,900→NT$56,848</span></div>
+        <div class="savings">💰 西班牙買省 NT$17,252（-23.3%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/2780b68f-872a-44c5-a664-e85af31219fe/Thumbnail/852469V6CX04052_A.jpg" alt="Intrecciato Cotton Poplin Shirt" loading="lazy">
+    <div class="item-info">
+        <div class="name">Intrecciato Cotton Poplin Shirt</div>
+        <div class="color">oxford blue</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$62,500</span><span class="price-tag jp">🇯🇵 ¥320,100→NT$57,210</span><span class="price-tag mo">🇲🇴 MOP$15,550→NT$54,745</span><span class="price-tag es cheapest">🇪🇸 €1,600→NT$47,872</span></div>
+        <div class="savings">💰 西班牙買省 NT$14,628（-23.4%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/a083a326-34ee-4322-b64d-0ee75b0de091/Thumbnail/869475V6D109071_A.jpg" alt="Compact Cotton Toile Top" loading="lazy">
+    <div class="item-info">
+        <div class="name">Compact Cotton Toile Top</div>
+        <div class="color">chalk</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$59,600</span><span class="price-tag jp">🇯🇵 ¥300,300→NT$53,671</span><span class="price-tag mo">🇲🇴 MOP$14,800→NT$52,105</span><span class="price-tag es cheapest">🇪🇸 €1,500→NT$44,880</span></div>
+        <div class="savings">💰 西班牙買省 NT$14,720（-24.7%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/d617aaa1-76c1-4f5b-9232-daa85c4a40a0/Thumbnail/869475V6D101010_A.jpg" alt="Compact Cotton Toile Top" loading="lazy">
+    <div class="item-info">
+        <div class="name">Compact Cotton Toile Top</div>
+        <div class="color">double black</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$59,600</span><span class="price-tag jp">🇯🇵 ¥300,300→NT$53,671</span><span class="price-tag mo">🇲🇴 MOP$14,800→NT$52,105</span><span class="price-tag es cheapest">🇪🇸 €1,500→NT$44,880</span></div>
+        <div class="savings">💰 西班牙買省 NT$14,720（-24.7%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/208c4933-4ad5-4188-8869-adb4d3448779/Thumbnail/861970V6OG09006_A.jpg" alt="Cotton Poplin Pinstripes Shirt" loading="lazy">
+    <div class="item-info">
+        <div class="name">Cotton Poplin Pinstripes Shirt</div>
+        <div class="color">white/blue</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$59,600</span><span class="price-tag jp">🇯🇵 ¥300,300→NT$53,671</span><span class="price-tag mo">🇲🇴 MOP$14,800→NT$52,105</span><span class="price-tag es cheapest">🇪🇸 €1,500→NT$44,880</span></div>
+        <div class="savings">💰 西班牙買省 NT$14,720（-24.7%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/7895d41e-9323-4ca7-8eb0-8e1adccd7e3d/Thumbnail/871556V6CX04052_A.jpg" alt="Intrecciato Cotton Poplin Shorts" loading="lazy">
+    <div class="item-info">
+        <div class="name">Intrecciato Cotton Poplin Shorts</div>
+        <div class="color">oxford blue</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$59,600</span><span class="price-tag jp">🇯🇵 ¥300,300→NT$53,671</span><span class="price-tag mo">🇲🇴 MOP$14,800→NT$52,105</span><span class="price-tag es cheapest">🇪🇸 €1,500→NT$44,880</span></div>
+        <div class="savings">💰 西班牙買省 NT$14,720（-24.7%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/d242652a-739c-4978-b058-7af082e1b4c3/Thumbnail/873925V6OB02188_A.jpg" alt="Technical Blouson" loading="lazy">
+    <div class="item-info">
+        <div class="name">Technical Blouson</div>
+        <div class="color">desert taupe</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$59,600</span><span class="price-tag jp">🇯🇵 ¥300,300→NT$53,671</span><span class="price-tag mo">🇲🇴 MOP$14,800→NT$52,105</span><span class="price-tag es cheapest">🇪🇸 €1,500→NT$44,880</span></div>
+        <div class="savings">💰 西班牙買省 NT$14,720（-24.7%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/9ef01693-606b-4a40-98e6-c152ad25b286/Thumbnail/862131V6OO04493_A.jpg" alt="Cotton And Silk Check Pajama Shirt" loading="lazy">
+    <div class="item-info">
+        <div class="name">Cotton And Silk Check Pajama Shirt</div>
+        <div class="color">blue/white/stone</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$54,600</span><span class="price-tag jp">🇯🇵 ¥280,500→NT$50,132</span><span class="price-tag mo">🇲🇴 MOP$13,600→NT$47,880</span><span class="price-tag es cheapest">🇪🇸 €1,400→NT$41,888</span></div>
+        <div class="savings">💰 西班牙買省 NT$12,712（-23.3%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/30fb0761-72f9-425f-ab49-94c4a0c37763/Thumbnail/871159V6ON04071_A.jpg" alt="Cotton And Silk Shirt" loading="lazy">
+    <div class="item-info">
+        <div class="name">Cotton And Silk Shirt</div>
+        <div class="color">midnight blue</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$55,500</span><span class="price-tag jp">🇯🇵 ¥280,500→NT$50,132</span><span class="price-tag mo">🇲🇴 MOP$13,800→NT$48,584</span><span class="price-tag es cheapest">🇪🇸 €1,400→NT$41,888</span></div>
+        <div class="savings">💰 西班牙買省 NT$13,612（-24.5%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/8cc89659-8906-4b7a-a770-a9e4744f54dd/Thumbnail/A000HIV6M504071_A.jpg" alt="Cotton Crochet Polo" loading="lazy">
+    <div class="item-info">
+        <div class="name">Cotton Crochet Polo</div>
+        <div class="color">midnight blue</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$51,800</span><span class="price-tag jp">🇯🇵 ¥260,700→NT$46,594</span><span class="price-tag mo">🇲🇴 MOP$12,850→NT$45,239</span><span class="price-tag es cheapest">🇪🇸 €1,300→NT$38,896</span></div>
+        <div class="savings">💰 西班牙買省 NT$12,904（-24.9%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/20d59744-6dfd-42e6-80cf-776cfa07bf52/Thumbnail/862579V69R04946_A.jpg" alt="Sky Bleached Denim Overshirt" loading="lazy">
+    <div class="item-info">
+        <div class="name">Sky Bleached Denim Overshirt</div>
+        <div class="color">light bleach</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$43,900</span><span class="price-tag jp">🇯🇵 ¥220,000→NT$39,320</span><span class="price-tag mo">🇲🇴 MOP$10,900→NT$38,374</span><span class="price-tag es cheapest">🇪🇸 €1,100→NT$32,912</span></div>
+        <div class="savings">💰 西班牙買省 NT$10,988（-25.0%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/4a67ccde-bd57-4dc3-815c-e945712d057e/Thumbnail/851389V6OO04493_A.jpg" alt="Cotton And Silk Check Shorts" loading="lazy">
+    <div class="item-info">
+        <div class="name">Cotton And Silk Check Shorts</div>
+        <div class="color">blue/white/stone</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$36,900</span><span class="price-tag jp">🇯🇵 ¥190,300→NT$34,011</span><span class="price-tag mo">🇲🇴 MOP$9,150→NT$32,213</span><span class="price-tag es cheapest">🇪🇸 €950→NT$28,424</span></div>
+        <div class="savings">💰 西班牙買省 NT$8,476（-23.0%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/05d9ffea-ca58-48c1-8087-1f954c618755/Thumbnail/862104V6D202341_A.jpg" alt="Cotton Toile Cargo Shorts" loading="lazy">
+    <div class="item-info">
+        <div class="name">Cotton Toile Cargo Shorts</div>
+        <div class="color">stucco</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$36,900</span><span class="price-tag jp">🇯🇵 ¥190,300→NT$34,011</span><span class="price-tag mo">🇲🇴 MOP$9,150→NT$32,213</span><span class="price-tag es cheapest">🇪🇸 €950→NT$28,424</span></div>
+        <div class="savings">💰 西班牙買省 NT$8,476（-23.0%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/ee755a49-388d-4a78-917c-e6fe97ca7d27/Thumbnail/875204V6DB01010_A.jpg" alt="Light Wool Twill Shorts" loading="lazy">
+    <div class="item-info">
+        <div class="name">Light Wool Twill Shorts</div>
+        <div class="color">double black</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$37,700</span><span class="price-tag jp">🇯🇵 ¥190,300→NT$34,011</span><span class="price-tag mo">🇲🇴 MOP$9,350→NT$32,917</span><span class="price-tag es cheapest">🇪🇸 €950→NT$28,424</span></div>
+        <div class="savings">💰 西班牙買省 NT$9,276（-24.6%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/5a4d9f58-d81f-4429-bfe7-73acb73fd06f/Thumbnail/871852V6PS04075_A.jpg" alt="Printed Silk Twill Culotte" loading="lazy">
+    <div class="item-info">
+        <div class="name">Printed Silk Twill Culotte</div>
+        <div class="color">midnight blue/chalk</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$37,700</span><span class="price-tag jp">🇯🇵 ¥190,300→NT$34,011</span><span class="price-tag mo">🇲🇴 MOP$9,350→NT$32,917</span><span class="price-tag es cheapest">🇪🇸 €950→NT$28,424</span></div>
+        <div class="savings">💰 西班牙買省 NT$9,276（-24.6%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/15c66f44-318e-4753-98e0-3845d46b4bc5/Thumbnail/859749V69R04946_A.jpg" alt="Sky Bleached Wide Leg Jeans" loading="lazy">
+    <div class="item-info">
+        <div class="name">Sky Bleached Wide Leg Jeans</div>
+        <div class="color">light bleach</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$37,700</span><span class="price-tag jp">🇯🇵 ¥190,300→NT$34,011</span><span class="price-tag mo">🇲🇴 MOP$9,350→NT$32,917</span><span class="price-tag es cheapest">🇪🇸 €950→NT$28,424</span></div>
+        <div class="savings">💰 西班牙買省 NT$9,276（-24.6%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/2f2d18dc-0e66-4081-a495-6d5fd52d0c48/Thumbnail/876040V6OB04030_A.jpg" alt="Technical Shorts" loading="lazy">
+    <div class="item-info">
+        <div class="name">Technical Shorts</div>
+        <div class="color">dark navy</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$37,700</span><span class="price-tag jp">🇯🇵 ¥190,300→NT$34,011</span><span class="price-tag mo">🇲🇴 MOP$9,350→NT$32,917</span><span class="price-tag es cheapest">🇪🇸 €950→NT$28,424</span></div>
+        <div class="savings">💰 西班牙買省 NT$9,276（-24.6%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/7bb74337-5351-44ca-8d36-a5c6883df8c6/Thumbnail/861564V69R04946_A.jpg" alt="Sky Bleached Wide Leg Denim Shorts " loading="lazy">
+    <div class="item-info">
+        <div class="name">Sky Bleached Wide Leg Denim Shorts </div>
+        <div class="color">light bleach</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$31,900</span><span class="price-tag jp">🇯🇵 ¥160,600→NT$28,703</span><span class="price-tag mo">🇲🇴 MOP$7,950→NT$27,989</span><span class="price-tag es cheapest">🇪🇸 €800→NT$23,936</span></div>
+        <div class="savings">💰 西班牙買省 NT$7,964（-25.0%）</div>
+    </div>
+</div>
+</div>
+<div class="footer">
+    資料更新：2026-05-23 16:42 | 匯率來源：exchangerate-api.com | 日本/澳門價格已乘 0.9（退稅）
+</div>
+</body>
+</html>

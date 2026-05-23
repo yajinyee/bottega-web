@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BV 下架商品 — 西班牙 Spain</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee; }
+.header { background: #16213e; padding: 20px; text-align: center; border-bottom: 2px solid #0f3460; }
+.header h1 { font-size: 1.5em; color: #ff9800; }
+.header .meta { color: #888; font-size: 0.85em; margin-top: 5px; }
+.nav { display: flex; gap: 10px; padding: 10px 20px; background: #16213e; flex-wrap: wrap; }
+.nav a { padding: 8px 16px; border-radius: 20px; text-decoration: none; color: #aaa; background: #0f3460; font-size: 0.85em; }
+.nav a.active { background: #ff9800; color: #fff; }
+.tabs { display: flex; gap: 5px; padding: 10px 20px; background: #16213e; flex-wrap: wrap; }
+.tab { padding: 8px 16px; border-radius: 20px; text-decoration: none; color: #aaa; background: #0f3460; font-size: 0.85em; }
+.tab.active { background: #ff9800; color: #fff; }
+.sub-tabs { display: flex; gap: 5px; padding: 5px 20px 10px; background: #16213e; flex-wrap: wrap; }
+.sub-tab { padding: 5px 12px; border-radius: 15px; text-decoration: none; color: #888; background: #1a1a2e; font-size: 0.8em; }
+.sub-tab.active { background: #533483; color: #fff; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 15px; padding: 20px; }
+.card { background: #16213e; border-radius: 10px; overflow: hidden; border: 1px solid #333; cursor: pointer; opacity: 0.85; transition: opacity 0.2s; }
+.card:hover { opacity: 1; border-color: #ff9800; }
+.card img { width: 100%; height: 200px; object-fit: contain; background: #f5f5f5; filter: grayscale(30%); }
+.card .info { padding: 12px; }
+.card .name { font-weight: 600; font-size: 0.9em; }
+.card .color { color: #888; font-size: 0.8em; }
+.card .price { color: #ff9800; font-weight: 700; margin-top: 5px; }
+.card .dates { margin-top: 8px; font-size: 0.75em; color: #888; }
+.card .delisted-badge { background: #e94560; color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 0.7em; display: inline-block; margin-top: 5px; }
+.card .outlet-hint { color: #4caf50; font-size: 0.75em; margin-top: 5px; }
+.cat-header { padding: 15px 20px 5px; font-size: 1.1em; color: #ff9800; border-top: 1px solid #0f3460; }
+</style>
+</head>
+<body>
+<div class="header">
+    <h1>🏷️ 下架商品（Outlet 候選）</h1>
+    <div class="meta">共 0 件已下架商品 | 下架越久越可能出現在 Outlet</div>
+</div>
+<div class="nav">
+    <a href="index.html">📦 商品目錄</a>
+    <a href="delisted_tw.html" class="active">🏷️ 下架商品</a>
+    <a href="bespoke.html">✨ 訂製服務</a>
+</div>
+<div class="tabs">
+    <a class="tab " href="delisted_tw.html">台灣 Taiwan</a>
+    <a class="tab " href="delisted_jp.html">日本 Japan</a>
+    <a class="tab " href="delisted_mo.html">澳門 Macau</a>
+    <a class="tab active" href="delisted_es.html">西班牙 Spain</a>
+</div>
+<div class="sub-tabs">
+    <a class="sub-tab active" href="delisted_es.html">全部</a>
+</div>
+</body></html>

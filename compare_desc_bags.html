@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BV 各國比價 — 👜 包包 Bags</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #eee; }
+.header { background: #16213e; padding: 20px; text-align: center; border-bottom: 2px solid #0f3460; }
+.header h1 { font-size: 1.5em; color: #e94560; }
+.header .meta { color: #888; font-size: 0.85em; margin-top: 5px; }
+.nav { display: flex; gap: 10px; padding: 10px 20px; background: #16213e; align-items: center; flex-wrap: wrap; }
+.nav a { padding: 8px 16px; border-radius: 20px; text-decoration: none; color: #aaa; background: #0f3460; font-size: 0.85em; }
+.nav a.active { background: #e94560; color: #fff; }
+.sort-bar { padding: 10px 20px; background: #0f3460; display: flex; gap: 10px; align-items: center; }
+.sort-bar label { color: #aaa; font-size: 0.85em; }
+.sort-bar a { color: #e94560; text-decoration: none; font-size: 0.85em; padding: 4px 10px; border-radius: 10px; }
+.sort-bar a.active { background: #e94560; color: #fff; }
+.cat-filter { padding: 8px 20px; background: #16213e; display: flex; gap: 6px; flex-wrap: wrap; border-bottom: 1px solid #0f3460; }
+.cat-btn { padding: 5px 12px; border-radius: 15px; text-decoration: none; color: #888; background: #1a1a2e; font-size: 0.8em; }
+.cat-btn.active { background: #533483; color: #fff; }
+.info-bar { padding: 8px 20px; background: #0f3460; color: #888; font-size: 0.8em; border-bottom: 1px solid #1a1a2e; }
+.list { padding: 10px 20px; }
+.item { display: grid; grid-template-columns: 80px 1fr; gap: 15px; padding: 15px; margin-bottom: 10px; background: #16213e; border-radius: 10px; border: 1px solid #0f3460; }
+.item:hover { border-color: #e94560; }
+.item img { width: 80px; height: 80px; object-fit: contain; background: #f5f5f5; border-radius: 8px; }
+.item-info { display: flex; flex-direction: column; gap: 4px; }
+.item-info .name { font-weight: 600; font-size: 0.95em; }
+.item-info .color { color: #888; font-size: 0.8em; }
+.prices { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+.price-tag { padding: 4px 10px; border-radius: 6px; font-size: 0.8em; }
+.price-tag.tw { background: #1b3a5c; color: #8ecae6; }
+.price-tag.jp { background: #3a1b1b; color: #ff9999; }
+.price-tag.mo { background: #1b3a2a; color: #99ffcc; }
+.price-tag.es { background: #3a2a1b; color: #ffcc99; }
+.price-tag.cheapest { border: 2px solid #4caf50; font-weight: 700; }
+.savings { color: #4caf50; font-size: 0.8em; font-weight: 600; margin-top: 4px; }
+.footer { text-align: center; padding: 20px; color: #666; font-size: 0.8em; }
+@media (max-width: 600px) {
+    .item { grid-template-columns: 60px 1fr; gap: 10px; padding: 10px; }
+    .item img { width: 60px; height: 60px; }
+    .prices { gap: 6px; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+    <h1>💱 BV 各國商品比價</h1>
+    <div class="meta">台灣原價 vs 日本退稅9折 vs 澳門退稅9折 vs 西班牙退稅88折 — 統一換算台幣比較</div>
+</div>
+<div class="nav">
+    <a href="index.html">← 回目錄</a>
+    <a class="active" href="compare.html">💱 比價</a>
+</div>
+<div class="sort-bar">
+    <label>排序：</label>
+    <a class="" href="compare_bags.html">價格低→高</a>
+    <a class="active" href="compare_desc_bags.html">價格高→低</a>
+    <a class="" href="compare_savings_bags.html">省最多</a>
+</div>
+<div class="cat-filter">
+  <a class="cat-btn" href="compare_desc.html">全部</a>
+  <a class="cat-btn" href="compare_desc_accessories.html">💍 飾品 Accessories</a>
+  <a class="cat-btn active" href="compare_desc_bags.html">👜 包包 Bags</a>
+  <a class="cat-btn" href="compare_desc_home.html">🏠 家居 Home</a>
+  <a class="cat-btn" href="compare_desc_other.html">🛍️ 其他 Other</a>
+  <a class="cat-btn" href="compare_desc_rtw.html">👗 服裝 Clothing</a>
+  <a class="cat-btn" href="compare_desc_shoes.html">👠 鞋子 Shoes</a>
+  <a class="cat-btn" href="compare_desc_slg.html">👛 皮夾 Wallets</a>
+  <a class="cat-btn" href="compare_desc_travel.html">🧳 旅行 Travel</a>
+</div>
+
+<div class="info-bar">
+    📊 共 30 款商品可比價 | 匯率：1 JPY = 0.1986 TWD、1 MOP = 3.9118 TWD、1 EUR = 0.00 TWD | 日本/澳門退稅10%、西班牙退稅12%
+</div>
+<div class="list">
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/cf48cc25-ff96-4a6c-841a-a312ad7b161d/Thumbnail/868118V6G103779_A.jpg" alt="Maxi Barbara Tote" loading="lazy">
+    <div class="item-info">
+        <div class="name">Maxi Barbara Tote</div>
+        <div class="color">dark olive</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$310,300</span><span class="price-tag jp">🇯🇵 ¥1,485,000→NT$265,407</span><span class="price-tag mo">🇲🇴 MOP$77,000→NT$271,084</span><span class="price-tag es cheapest">🇪🇸 €8,000→NT$239,360</span></div>
+        <div class="savings">💰 西班牙買省 NT$70,940（-22.9%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/7ccc000f-cb04-4736-a094-b985f6db46f0/Thumbnail/868114V5KD01007_A.jpg" alt="Large Barbara Tote" loading="lazy">
+    <div class="item-info">
+        <div class="name">Large Barbara Tote</div>
+        <div class="color">black</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$251,900</span><span class="price-tag jp">🇯🇵 ¥1,210,000→NT$216,258</span><span class="price-tag mo">🇲🇴 MOP$62,550→NT$220,212</span><span class="price-tag es cheapest">🇪🇸 €6,500→NT$194,480</span></div>
+        <div class="savings">💰 西班牙買省 NT$57,420（-22.8%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/6130ae69-7106-43f4-b2f4-94048c4b934e/Thumbnail/868114V5KD02866_A.jpg" alt="Large Barbara Tote" loading="lazy">
+    <div class="item-info">
+        <div class="name">Large Barbara Tote</div>
+        <div class="color">gray clay</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$251,900</span><span class="price-tag jp">🇯🇵 ¥1,210,000→NT$216,258</span><span class="price-tag mo">🇲🇴 MOP$62,550→NT$220,212</span><span class="price-tag es cheapest">🇪🇸 €6,500→NT$194,480</span></div>
+        <div class="savings">💰 西班牙買省 NT$57,420（-22.8%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/a833e05c-0a43-4d82-9bb6-85f173b7b3cc/Thumbnail/868114V6G102094_A.jpg" alt="Large Barbara Tote" loading="lazy">
+    <div class="item-info">
+        <div class="name">Large Barbara Tote</div>
+        <div class="color">espresso</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$244,100</span><span class="price-tag jp">🇯🇵 ¥1,166,000→NT$208,394</span><span class="price-tag mo">🇲🇴 MOP$60,600→NT$213,347</span><span class="price-tag es cheapest">🇪🇸 €6,300→NT$188,496</span></div>
+        <div class="savings">💰 西班牙買省 NT$55,604（-22.8%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/e5aa75dd-9970-4fac-b0a6-e70c12affb24/Thumbnail/868327V5KD01007_A.jpg" alt="Barbara Tote" loading="lazy">
+    <div class="item-info">
+        <div class="name">Barbara Tote</div>
+        <div class="color">black</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$189,900</span><span class="price-tag jp">🇯🇵 ¥907,500→NT$162,193</span><span class="price-tag mo">🇲🇴 MOP$47,150→NT$165,995</span><span class="price-tag es cheapest">🇪🇸 €4,900→NT$146,608</span></div>
+        <div class="savings">💰 西班牙買省 NT$43,292（-22.8%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/8dc670d0-b542-45cf-80a7-e2b6d8250e73/Thumbnail/868327V5KD07263_A.jpg" alt="Barbara Tote" loading="lazy">
+    <div class="item-info">
+        <div class="name">Barbara Tote</div>
+        <div class="color">butter yellow</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$189,900</span><span class="price-tag jp">🇯🇵 ¥907,500→NT$162,193</span><span class="price-tag mo">🇲🇴 MOP$47,150→NT$165,995</span><span class="price-tag es cheapest">🇪🇸 €4,900→NT$146,608</span></div>
+        <div class="savings">💰 西班牙買省 NT$43,292（-22.8%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/58de50fa-d770-4489-bc29-8441865b8b29/Thumbnail/868327V5KD06149_A.jpg" alt="Barbara Tote" loading="lazy">
+    <div class="item-info">
+        <div class="name">Barbara Tote</div>
+        <div class="color">deep mahogany</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$189,900</span><span class="price-tag jp">🇯🇵 ¥907,500→NT$162,193</span><span class="price-tag mo">🇲🇴 MOP$47,150→NT$165,995</span><span class="price-tag es cheapest">🇪🇸 €4,900→NT$146,608</span></div>
+        <div class="savings">💰 西班牙買省 NT$43,292（-22.8%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/0857b0e3-6c7d-43e5-8eae-b90cf1fe28e7/Thumbnail/868327V5KD02094_A.jpg" alt="Barbara Tote" loading="lazy">
+    <div class="item-info">
+        <div class="name">Barbara Tote</div>
+        <div class="color">espresso</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$189,900</span><span class="price-tag jp">🇯🇵 ¥907,500→NT$162,193</span><span class="price-tag mo">🇲🇴 MOP$47,150→NT$165,995</span><span class="price-tag es cheapest">🇪🇸 €4,900→NT$146,608</span></div>
+        <div class="savings">💰 西班牙買省 NT$43,292（-22.8%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/a111f621-38d5-47cd-b64e-943c5a2b8376/Thumbnail/868327V0P601677_A.jpg" alt="Barbara Tote" loading="lazy">
+    <div class="item-info">
+        <div class="name">Barbara Tote</div>
+        <div class="color">mineral</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$189,900</span><span class="price-tag jp">🇯🇵 ¥907,500→NT$162,193</span><span class="price-tag mo">🇲🇴 MOP$47,150→NT$165,995</span><span class="price-tag es cheapest">🇪🇸 €4,900→NT$146,608</span></div>
+        <div class="savings">💰 西班牙買省 NT$43,292（-22.8%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/a312fd45-03d2-4242-8fc9-59493e18cbd2/Thumbnail/868327V6UD19965_A.jpg" alt="Barbara Tote" loading="lazy">
+    <div class="item-info">
+        <div class="name">Barbara Tote</div>
+        <div class="color">natural/espresso</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$182,900</span><span class="price-tag jp">🇯🇵 ¥874,500→NT$156,295</span><span class="price-tag mo">🇲🇴 MOP$45,400→NT$159,834</span><span class="price-tag es cheapest">🇪🇸 €4,700→NT$140,624</span></div>
+        <div class="savings">💰 西班牙買省 NT$42,276（-23.1%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/0c10c7ec-427d-4191-b1b3-0c11e00efcb9/Thumbnail/875932V5KD06149_A.jpg" alt="Small Barbara Tote" loading="lazy">
+    <div class="item-info">
+        <div class="name">Small Barbara Tote</div>
+        <div class="color">deep mahogany</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$167,600</span><span class="price-tag jp">🇯🇵 ¥803,000→NT$143,516</span><span class="price-tag mo">🇲🇴 MOP$41,600→NT$146,456</span><span class="price-tag es cheapest">🇪🇸 €4,300→NT$128,656</span></div>
+        <div class="savings">💰 西班牙買省 NT$38,944（-23.2%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/311215ce-5c26-42d8-9ad5-53878e371e02/Thumbnail/875932V5KD02998_A.jpg" alt="Small Barbara Tote" loading="lazy">
+    <div class="item-info">
+        <div class="name">Small Barbara Tote</div>
+        <div class="color">travertine</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$167,600</span><span class="price-tag jp">🇯🇵 ¥803,000→NT$143,516</span><span class="price-tag mo">🇲🇴 MOP$41,600→NT$146,456</span><span class="price-tag es cheapest">🇪🇸 €4,300→NT$128,656</span></div>
+        <div class="savings">💰 西班牙買省 NT$38,944（-23.2%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/c7e2e6c0-c542-4b4e-9084-fca19c0b327a/Thumbnail/876350V5KD08803_A.jpg" alt="Veneto Large Messenger" loading="lazy">
+    <div class="item-info">
+        <div class="name">Veneto Large Messenger</div>
+        <div class="color">black</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$163,400</span><span class="price-tag jp">🇯🇵 ¥781,000→NT$139,584</span><span class="price-tag mo">🇲🇴 MOP$40,600→NT$142,935</span><span class="price-tag es cheapest">🇪🇸 €4,200→NT$125,664</span></div>
+        <div class="savings">💰 西班牙買省 NT$37,736（-23.1%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/74799f57-c961-4c7d-b60d-0495d9a49726/Thumbnail/876350V5KD02008_A.jpg" alt="Veneto Large Messenger" loading="lazy">
+    <div class="item-info">
+        <div class="name">Veneto Large Messenger</div>
+        <div class="color">espresso</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$163,400</span><span class="price-tag jp">🇯🇵 ¥781,000→NT$139,584</span><span class="price-tag mo">🇲🇴 MOP$40,600→NT$142,935</span><span class="price-tag es cheapest">🇪🇸 €4,200→NT$125,664</span></div>
+        <div class="savings">💰 西班牙買省 NT$37,736（-23.1%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/2b5aadd8-fe76-47b2-915a-1aa97e5bd392/Thumbnail/867484V60G09533_A.jpg" alt="Corriere" loading="lazy">
+    <div class="item-info">
+        <div class="name">Corriere</div>
+        <div class="color">alabaster</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$155,200</span><span class="price-tag jp">🇯🇵 ¥726,000→NT$129,755</span><span class="price-tag mo">🇲🇴 MOP$38,500→NT$135,542</span><span class="price-tag es cheapest">🇪🇸 €3,900→NT$116,688</span></div>
+        <div class="savings">💰 西班牙買省 NT$38,512（-24.8%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/efeac96d-2342-4d50-8cbf-76fec41f0586/Thumbnail/867484V60G04330_A.jpg" alt="Corriere" loading="lazy">
+    <div class="item-info">
+        <div class="name">Corriere</div>
+        <div class="color">midnight</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$155,200</span><span class="price-tag jp">🇯🇵 ¥726,000→NT$129,755</span><span class="price-tag mo">🇲🇴 MOP$38,500→NT$135,542</span><span class="price-tag es cheapest">🇪🇸 €3,900→NT$116,688</span></div>
+        <div class="savings">💰 西班牙買省 NT$38,512（-24.8%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/f62d8322-be59-46fe-a7d6-8065b2be4a75/Thumbnail/876648V6JG01019_A.jpg" alt="Madison" loading="lazy">
+    <div class="item-info">
+        <div class="name">Madison</div>
+        <div class="color">black</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$152,700</span><span class="price-tag jp">🇯🇵 ¥726,000→NT$129,755</span><span class="price-tag mo">🇲🇴 MOP$37,900→NT$133,430</span><span class="price-tag es cheapest">🇪🇸 €3,900→NT$116,688</span></div>
+        <div class="savings">💰 西班牙買省 NT$36,012（-23.6%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/c891765b-ed27-44cc-ad07-bf30586eea8d/Thumbnail/876648V6JG09614_A.jpg" alt="Madison" loading="lazy">
+    <div class="item-info">
+        <div class="name">Madison</div>
+        <div class="color">ecru</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$152,700</span><span class="price-tag jp">🇯🇵 ¥726,000→NT$129,755</span><span class="price-tag mo">🇲🇴 MOP$37,900→NT$133,430</span><span class="price-tag es cheapest">🇪🇸 €3,900→NT$116,688</span></div>
+        <div class="savings">💰 西班牙買省 NT$36,012（-23.6%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/f5fd6b8f-b0a6-4c07-a5be-95007fa6ab3f/Thumbnail/876648V6JG02009_A.jpg" alt="Madison" loading="lazy">
+    <div class="item-info">
+        <div class="name">Madison</div>
+        <div class="color">espresso</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$152,700</span><span class="price-tag jp">🇯🇵 ¥726,000→NT$129,755</span><span class="price-tag mo">🇲🇴 MOP$37,900→NT$133,430</span><span class="price-tag es cheapest">🇪🇸 €3,900→NT$116,688</span></div>
+        <div class="savings">💰 西班牙買省 NT$36,012（-23.6%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/e3f8bb7e-acb5-43b7-9e91-d938c7ffaf34/Thumbnail/876648V6JG01671_A.jpg" alt="Madison" loading="lazy">
+    <div class="item-info">
+        <div class="name">Madison</div>
+        <div class="color">mineral</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$152,700</span><span class="price-tag jp">🇯🇵 ¥726,000→NT$129,755</span><span class="price-tag mo">🇲🇴 MOP$37,900→NT$133,430</span><span class="price-tag es cheapest">🇪🇸 €3,900→NT$116,688</span></div>
+        <div class="savings">💰 西班牙買省 NT$36,012（-23.6%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/0ab3fcc6-00b3-46b4-a7e5-9cc7d6db54b7/Thumbnail/867117V6FZ05679_A.jpg" alt="Small Cubo" loading="lazy">
+    <div class="item-info">
+        <div class="name">Small Cubo</div>
+        <div class="color">blush</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$155,200</span><span class="price-tag jp">🇯🇵 ¥726,000→NT$129,755</span><span class="price-tag mo">🇲🇴 MOP$38,550→NT$135,718</span><span class="price-tag es cheapest">🇪🇸 €3,900→NT$116,688</span></div>
+        <div class="savings">💰 西班牙買省 NT$38,512（-24.8%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/09b6b64b-b2a7-48ee-ba37-6d27feef8b78/Thumbnail/867117V6FZ06267_A.jpg" alt="Small Cubo" loading="lazy">
+    <div class="item-info">
+        <div class="name">Small Cubo</div>
+        <div class="color">cardinal</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$155,200</span><span class="price-tag jp">🇯🇵 ¥726,000→NT$129,755</span><span class="price-tag mo">🇲🇴 MOP$38,550→NT$135,718</span><span class="price-tag es cheapest">🇪🇸 €3,900→NT$116,688</span></div>
+        <div class="savings">💰 西班牙買省 NT$38,512（-24.8%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/d8ead86e-9d18-4b18-ad55-cf0453ed11b6/Thumbnail/874957VCPP19616_A.jpg" alt="Mini Andiamo" loading="lazy">
+    <div class="item-info">
+        <div class="name">Mini Andiamo</div>
+        <div class="color">ecru</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$136,100</span><span class="price-tag jp">🇯🇵 ¥649,000→NT$115,993</span><span class="price-tag mo">🇲🇴 MOP$33,800→NT$118,995</span><span class="price-tag es cheapest">🇪🇸 €3,500→NT$104,720</span></div>
+        <div class="savings">💰 西班牙買省 NT$31,380（-23.1%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/bbf90450-1155-4311-b230-342991de1704/Thumbnail/874957VCPP16551_A.jpg" alt="Mini Andiamo" loading="lazy">
+    <div class="item-info">
+        <div class="name">Mini Andiamo</div>
+        <div class="color">lava red</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$136,100</span><span class="price-tag jp">🇯🇵 ¥649,000→NT$115,993</span><span class="price-tag mo">🇲🇴 MOP$33,800→NT$118,995</span><span class="price-tag es cheapest">🇪🇸 €3,500→NT$104,720</span></div>
+        <div class="savings">💰 西班牙買省 NT$31,380（-23.1%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/7076873d-5a40-4872-ae6b-2d1f987818cf/Thumbnail/867404V6HU03123_A.jpg" alt="Angolo Messenger" loading="lazy">
+    <div class="item-info">
+        <div class="name">Angolo Messenger</div>
+        <div class="color">alpi green</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$86,500</span><span class="price-tag jp">🇯🇵 ¥407,000→NT$72,741</span><span class="price-tag mo">🇲🇴 MOP$21,500→NT$75,692</span><span class="price-tag es cheapest">🇪🇸 €2,200→NT$65,824</span></div>
+        <div class="savings">💰 西班牙買省 NT$20,676（-23.9%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/39e81bab-5f6c-413a-be46-8c75f518aacc/Thumbnail/867404V6HU08803_A.jpg" alt="Angolo Messenger" loading="lazy">
+    <div class="item-info">
+        <div class="name">Angolo Messenger</div>
+        <div class="color">black</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$86,500</span><span class="price-tag jp">🇯🇵 ¥407,000→NT$72,741</span><span class="price-tag mo">🇲🇴 MOP$21,500→NT$75,692</span><span class="price-tag es cheapest">🇪🇸 €2,200→NT$65,824</span></div>
+        <div class="savings">💰 西班牙買省 NT$20,676（-23.9%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/0a002df6-a8d3-4da9-a2b2-13e6838df7c2/Thumbnail/837112V4FV12145_A.jpg" alt="Diago Zipped Messenger" loading="lazy">
+    <div class="item-info">
+        <div class="name">Diago Zipped Messenger</div>
+        <div class="color">fondant</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$82,400</span><span class="price-tag mo">🇲🇴 MOP$20,450→NT$71,996</span><span class="price-tag es cheapest">🇪🇸 €2,100→NT$62,832</span></div>
+        <div class="savings">💰 西班牙買省 NT$19,568（-23.7%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/103a6a2c-82c4-485d-b4c4-826f9aef97a9/Thumbnail/837112V4FV12116_A.jpg" alt="Diago Zipped Messenger" loading="lazy">
+    <div class="item-info">
+        <div class="name">Diago Zipped Messenger</div>
+        <div class="color">old wood</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$82,400</span><span class="price-tag mo">🇲🇴 MOP$20,450→NT$71,996</span><span class="price-tag es cheapest">🇪🇸 €2,100→NT$62,832</span></div>
+        <div class="savings">💰 西班牙買省 NT$19,568（-23.7%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/3241b275-d4b6-4d3d-8758-1742f086ac96/Thumbnail/805773V4FV13123_A.jpg" alt="Diago Belt Bag" loading="lazy">
+    <div class="item-info">
+        <div class="name">Diago Belt Bag</div>
+        <div class="color">alpi green</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$74,100</span><span class="price-tag mo">🇲🇴 MOP$18,400→NT$64,779</span><span class="price-tag es cheapest">🇪🇸 €1,900→NT$56,848</span></div>
+        <div class="savings">💰 西班牙買省 NT$17,252（-23.3%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/7dc1b50f-30b6-474b-a2cc-ef267e419ef6/Thumbnail/805773V56A12008_A.jpg" alt="Diago Belt Bag" loading="lazy">
+    <div class="item-info">
+        <div class="name">Diago Belt Bag</div>
+        <div class="color">espresso/lava red</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$74,100</span><span class="price-tag mo">🇲🇴 MOP$18,400→NT$64,779</span><span class="price-tag es cheapest">🇪🇸 €1,900→NT$56,848</span></div>
+        <div class="savings">💰 西班牙買省 NT$17,252（-23.3%）</div>
+    </div>
+</div>
+</div>
+<div class="footer">
+    資料更新：2026-05-23 16:42 | 匯率來源：exchangerate-api.com | 日本/澳門價格已乘 0.9（退稅）
+</div>
+</body>
+</html>
