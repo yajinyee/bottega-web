@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Large Vaporetto — BV Catalog</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee; }
+.back { padding: 15px 20px; color: #e94560; text-decoration: none; display: inline-block; }
+.detail { max-width: 1200px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+@media (max-width: 768px) { .detail { grid-template-columns: 1fr; } }
+.gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.gallery img { width: 100%; border-radius: 8px; background: #f5f5f5; cursor: pointer; }
+.gallery img.main { grid-column: span 2; height: 400px; object-fit: contain; }
+.gallery img.thumb { height: 150px; object-fit: contain; }
+.product-info h1 { font-size: 1.5em; margin-bottom: 5px; }
+.product-info .color { color: #888; margin-bottom: 10px; }
+.product-info .price { color: #e94560; font-size: 1.8em; font-weight: 700; margin: 15px 0; }
+.product-info .meta { color: #666; font-size: 0.85em; margin: 5px 0; }
+.sizes { margin: 15px 0; }
+.sizes .label { color: #aaa; font-size: 0.85em; margin-bottom: 5px; }
+.size-chip { display: inline-block; padding: 5px 12px; margin: 3px; border-radius: 5px; font-size: 0.85em; }
+.size-chip.in { background: #1b5e20; color: #fff; }
+.size-chip.out { background: #333; color: #666; text-decoration: line-through; }
+.stock-section { margin-top: 20px; }
+.stock-section h3 { color: #e94560; margin-bottom: 10px; }
+.stock-table { width: 100%; border-collapse: collapse; font-size: 0.85em; }
+.stock-table th { text-align: left; padding: 8px; background: #0f3460; color: #aaa; }
+.stock-table td { padding: 8px; border-bottom: 1px solid #0f3460; }
+</style>
+</head>
+<body>
+<a class="back" href="javascript:history.back()">← 返回列表</a>
+<div class="detail">
+    <div class="gallery">
+        <img class="main" src="https://bottega-veneta.dam.kering.com/asset/8550922f-3483-4d21-8df8-e0b7ab68242d/Thumbnail/867386V60G12008_A.jpg" alt="主圖">
+        <img class="thumb" src="https://bottega-veneta.dam.kering.com/asset/8550922f-3483-4d21-8df8-e0b7ab68242d/Thumbnail/867386V60G12008_B.jpg" alt="角度圖" onclick="document.querySelector('.main').src=this.src">
+        <img class="thumb" src="https://bottega-veneta.dam.kering.com/asset/8550922f-3483-4d21-8df8-e0b7ab68242d/Thumbnail/867386V60G12008_C.jpg" alt="角度圖" onclick="document.querySelector('.main').src=this.src">
+        <img class="thumb" src="https://bottega-veneta.dam.kering.com/asset/8550922f-3483-4d21-8df8-e0b7ab68242d/Thumbnail/867386V60G12008_D.jpg" alt="角度圖" onclick="document.querySelector('.main').src=this.src">
+        <img class="thumb" src="https://bottega-veneta.dam.kering.com/asset/8550922f-3483-4d21-8df8-e0b7ab68242d/Thumbnail/867386V60G12008_G.jpg" alt="角度圖" onclick="document.querySelector('.main').src=this.src">
+    </div>
+    <div class="product-info">
+        <h1>Large Vaporetto</h1>
+        <div class="color">espresso</div>
+        <div class="price">NT$1,463,000</div>
+        <div class="meta">📅 上市：2026-05-16</div>
+        <div class="meta">📂 分類：bv_macro_travel</div>
+        <div class="meta">🆔 SKU：jp_867386V60G12008</div>
+
+        <div class="sizes">
+            <div class="label">📏 線上尺碼：</div>
+            <span class="size-chip in">U</span>
+        </div>
+
+        <div class="stock-section">
+            <h3>🏪 門市庫存（2026-05-22）</h3>
+            <table class="stock-table"><tr><th>門市</th><th>尺碼</th><th>狀態</th></tr><tr><td>Chiba - Sogo</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Kanazawa - Daiwa</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Kobe - Daimaru</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Kobe - Hankyu</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Kyoto - Daimaru</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Kyoto - JR Isetan</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Kyoto - Takashimaya</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Nagoya - JR Takashimaya - M</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Nagoya - JR Takashimaya - W</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Nagoya - Matsuzakaya</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Nagoya - Mitsukoshi</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Osaka - Abeno Harukas Kintetsu</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Osaka - Shinsaibashi Daimaru</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Osaka - Takashimaya Namba</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Osaka - Umeda Daimaru</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Osaka - Umeda Hankyu - LG</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Osaka - Umeda Hankyu - M</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Osaka - Umeda Hankyu - W</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Sendai - Fujisaki</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Tokyo - Azabudai Hills</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Tokyo - Daimaru</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Tokyo - Ginza</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Tokyo - Ginza Mitsukoshi</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Tokyo - HND Airport T3</td><td>—</td><td><span style="color:#e94560">❌ 無貨</span></td></tr><tr><td>Tokyo - Ikebukuro Seibu</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Tokyo - NRT Airport T1</td><td>—</td><td><span style="color:#e94560">❌ 無貨</span></td></tr><tr><td>Tokyo - NRT Airport T2</td><td>—</td><td><span style="color:#e94560">❌ 無貨</span></td></tr><tr><td>Tokyo - Nihonbashi Mitsukoshi</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Tokyo - Nihonbashi Takashimaya</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Tokyo - Omotesando</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Tokyo - Roppongi Hills</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Tokyo - Shinjuku Isetan - LG</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Tokyo - Shinjuku Isetan - M</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Tokyo - Shinjuku Isetan - W</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Tokyo - Shinjuku Takashimaya</td><td>—</td><td><span style="color:#e94560">❌ 無貨</span></td></tr><tr><td>Tokyo - Tamagawa Takashimaya</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Yokohama - Sogo</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Yokohama - Takashimaya</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr></table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

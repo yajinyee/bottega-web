@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BV 下架商品 — 台灣 Taiwan</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee; }
+.header { background: #16213e; padding: 20px; text-align: center; border-bottom: 2px solid #0f3460; }
+.header h1 { font-size: 1.5em; color: #ff9800; }
+.header .meta { color: #888; font-size: 0.85em; margin-top: 5px; }
+.nav { display: flex; gap: 10px; padding: 10px 20px; background: #16213e; flex-wrap: wrap; }
+.nav a { padding: 8px 16px; border-radius: 20px; text-decoration: none; color: #aaa; background: #0f3460; font-size: 0.85em; }
+.nav a.active { background: #ff9800; color: #fff; }
+.tabs { display: flex; gap: 5px; padding: 10px 20px; background: #16213e; flex-wrap: wrap; }
+.tab { padding: 8px 16px; border-radius: 20px; text-decoration: none; color: #aaa; background: #0f3460; font-size: 0.85em; }
+.tab.active { background: #ff9800; color: #fff; }
+.sub-tabs { display: flex; gap: 5px; padding: 5px 20px 10px; background: #16213e; flex-wrap: wrap; }
+.sub-tab { padding: 5px 12px; border-radius: 15px; text-decoration: none; color: #888; background: #1a1a2e; font-size: 0.8em; }
+.sub-tab.active { background: #533483; color: #fff; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 15px; padding: 20px; }
+.card { background: #16213e; border-radius: 10px; overflow: hidden; border: 1px solid #333; cursor: pointer; opacity: 0.85; transition: opacity 0.2s; }
+.card:hover { opacity: 1; border-color: #ff9800; }
+.card img { width: 100%; height: 200px; object-fit: contain; background: #f5f5f5; filter: grayscale(30%); }
+.card .info { padding: 12px; }
+.card .name { font-weight: 600; font-size: 0.9em; }
+.card .color { color: #888; font-size: 0.8em; }
+.card .price { color: #ff9800; font-weight: 700; margin-top: 5px; }
+.card .dates { margin-top: 8px; font-size: 0.75em; color: #888; }
+.card .delisted-badge { background: #e94560; color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 0.7em; display: inline-block; margin-top: 5px; }
+.card .outlet-hint { color: #4caf50; font-size: 0.75em; margin-top: 5px; }
+.cat-header { padding: 15px 20px 5px; font-size: 1.1em; color: #ff9800; border-top: 1px solid #0f3460; }
+</style>
+</head>
+<body>
+<div class="header">
+    <h1>🏷️ 下架商品（Outlet 候選）</h1>
+    <div class="meta">共 55 件已下架商品 | 下架越久越可能出現在 Outlet</div>
+</div>
+<div class="nav">
+    <a href="/">📦 商品目錄</a>
+    <a href="delisted_tw.html" class="active">🏷️ 下架商品</a>
+    <a href="bespoke.html">✨ 訂製服務</a>
+</div>
+<div class="tabs">
+    <a class="tab active" href="delisted_tw.html">台灣 Taiwan</a>
+    <a class="tab " href="delisted_jp.html">日本 Japan</a>
+    <a class="tab " href="delisted_mo.html">澳門 Macau</a>
+</div>
+<div class="sub-tabs">
+    <a class="sub-tab active" href="delisted_tw.html">全部</a>
+    <a class="sub-tab " href="/delisted?region=tw&cat=rtw">👗 服裝 Clothing (29)</a>
+    <a class="sub-tab " href="/delisted?region=tw&cat=slg">👛 皮夾 Wallets (21)</a>
+    <a class="sub-tab " href="/delisted?region=tw&cat=accessories">💍 飾品 Accessories (3)</a>
+    <a class="sub-tab " href="/delisted?region=tw&cat=travel">🧳 旅行 Travel (1)</a>
+    <a class="sub-tab " href="/delisted?region=tw&cat=home">🏠 家居 Home (1)</a>
+</div>
+<div class="cat-header">👗 服裝 Clothing — 29 件</div>
+<div class="grid">
+<div class="card" onclick="window.location='product/tw_871427V6NB02512.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/6f9c8c13-2692-405d-8d83-1f64b6a6f8bd/Thumbnail/871427V6NB02512_A.jpg" alt="Wool And Cotton Jacket" loading="lazy">
+    <div class="info">
+        <div class="name">Wool And Cotton Jacket</div>
+        <div class="color">beige/light blue</div>
+        <div class="price">NT$103,000</div>
+        <div class="dates">📅 上架：2026-05-21 → 下架：2026-05-21（2 天前）</div>
+        <div class="dates">🕐 在架 0 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$51,500~72,100</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_871457V6M804052.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/37f66171-d1a0-46b2-8184-7463c70be473/Thumbnail/871457V6M804052_A.jpg" alt="Silk Twill Shirt" loading="lazy">
+    <div class="info">
+        <div class="name">Silk Twill Shirt</div>
+        <div class="color">oxford blue</div>
+        <div class="price">NT$75,300</div>
+        <div class="dates">📅 上架：2026-05-21 → 下架：2026-05-21（2 天前）</div>
+        <div class="dates">🕐 在架 0 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$37,650~52,710</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_871516V5BW02046.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/4a44bc4e-6fa7-49f3-bb17-76a53c769294/Thumbnail/871516V5BW02046_A.jpg" alt="Papery Leather Blouson" loading="lazy">
+    <div class="info">
+        <div class="name">Papery Leather Blouson</div>
+        <div class="color">ebony</div>
+        <div class="price">NT$230,000</div>
+        <div class="dates">📅 上架：2026-05-21 → 下架：2026-05-21（2 天前）</div>
+        <div class="dates">🕐 在架 0 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$115,000~161,000</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_A002SGV4B709071.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/69b9b7de-09e5-43a7-b833-8daeb083028e/Thumbnail/A002SGV4B709071_A.jpg" alt="Cashmere T-Shirt" loading="lazy">
+    <div class="info">
+        <div class="name">Cashmere T-Shirt</div>
+        <div class="color">chalk</div>
+        <div class="price">NT$63,300</div>
+        <div class="dates">📅 上架：2026-05-21 → 下架：2026-05-21（2 天前）</div>
+        <div class="dates">🕐 在架 0 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$31,650~44,310</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_876040V6OB02188.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/3006c168-57fe-46c0-9756-e12a14dac7ac/Thumbnail/876040V6OB02188_A.jpg" alt="Technical Shorts" loading="lazy">
+    <div class="info">
+        <div class="name">Technical Shorts</div>
+        <div class="color">desert taupe</div>
+        <div class="price">NT$37,700</div>
+        <div class="dates">📅 上架：2026-05-21 → 下架：2026-05-21（2 天前）</div>
+        <div class="dates">🕐 在架 0 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$18,850~26,390</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_852530V6KO02549.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/5981ba5f-afc8-4f3a-b8b2-8513da369de4/Thumbnail/852530V6KO02549_A.jpg" alt="Light Cotton Jacket" loading="lazy">
+    <div class="info">
+        <div class="name">Light Cotton Jacket</div>
+        <div class="color">sahara</div>
+        <div class="price">NT$109,700</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$54,850~76,790</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_851389V6DH01010.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/f00b5eb4-5f90-47b9-8f41-277cca18b58e/Thumbnail/851389V6DH01010_A.jpg" alt="Wool Grain De Poudre Shorts" loading="lazy">
+    <div class="info">
+        <div class="name">Wool Grain De Poudre Shorts</div>
+        <div class="color">double black</div>
+        <div class="price">NT$37,300</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$18,650~26,110</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_862739V63P02640.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/5e440db2-2cf4-4f3b-a136-c756d1efbb71/Thumbnail/862739V63P02640_A.jpg" alt="Cashmere Sweater" loading="lazy">
+    <div class="info">
+        <div class="name">Cashmere Sweater</div>
+        <div class="color">camel</div>
+        <div class="price">NT$59,600</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$29,800~41,720</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_864789V6JW01010.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/c0fedd47-903a-4a8d-88ac-e546bd13a84e/Thumbnail/864789V6JW01010_A.jpg" alt="Cotton Jersey Printed T-Shirt " loading="lazy">
+    <div class="info">
+        <div class="name">Cotton Jersey Printed T-Shirt </div>
+        <div class="color">double black</div>
+        <div class="price">NT$22,000</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$11,000~15,399</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_852530V6D103976.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/7f40695c-6ceb-43c9-a0ff-d15e1baad0f2/Thumbnail/852530V6D103976_A.jpg" alt="Compact Cotton Jacket" loading="lazy">
+    <div class="info">
+        <div class="name">Compact Cotton Jacket</div>
+        <div class="color">steel</div>
+        <div class="price">NT$109,700</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$54,850~76,790</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_861018V6DH01010.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/9f366a52-d12b-4f8a-850b-fa6917f8a1ba/Thumbnail/861018V6DH01010_A.jpg" alt="Wool Grain De Poudre Overshirt" loading="lazy">
+    <div class="info">
+        <div class="name">Wool Grain De Poudre Overshirt</div>
+        <div class="color">double black</div>
+        <div class="price">NT$51,800</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$25,900~36,260</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_852496V6C502081.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/c3214f23-3094-4d3b-9c70-bd6400a8ffd1/Thumbnail/852496V6C502081_A.jpg" alt="Padded Nylon Bomber" loading="lazy">
+    <div class="info">
+        <div class="name">Padded Nylon Bomber</div>
+        <div class="color">chocolate</div>
+        <div class="price">NT$149,000</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$74,500~104,300</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_861018V6C503293.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/1d13b436-6978-4323-91c4-8b0c8e054bc7/Thumbnail/861018V6C503293_A.jpg" alt="Nylon Overshirt" loading="lazy">
+    <div class="info">
+        <div class="name">Nylon Overshirt</div>
+        <div class="color">shrub</div>
+        <div class="price">NT$47,600</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$23,800~33,320</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_861284V63P02159.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/57711f68-6362-4118-b341-d5e620a92fc4/Thumbnail/861284V63P02159_A.jpg" alt="Cashmere Sweater" loading="lazy">
+    <div class="info">
+        <div class="name">Cashmere Sweater</div>
+        <div class="color">linen melange</div>
+        <div class="price">NT$63,300</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$31,650~44,310</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_862729V68M02637.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/07be14b4-9b37-42d1-8ab2-dbeacd765141/Thumbnail/862729V68M02637_A.jpg" alt="Wool And Cotton Zip-Up Cardigan" loading="lazy">
+    <div class="info">
+        <div class="name">Wool And Cotton Zip-Up Cardigan</div>
+        <div class="color">dark moss</div>
+        <div class="price">NT$55,500</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$27,750~38,850</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_862600V69P04300.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/d439dd11-ae91-4ffb-89b0-a2c149bf8864/Thumbnail/862600V69P04300_A.jpg" alt="Medium Indigo Denim Jacket" loading="lazy">
+    <div class="info">
+        <div class="name">Medium Indigo Denim Jacket</div>
+        <div class="color">mid blue</div>
+        <div class="price">NT$86,500</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$43,250~60,549</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_861558V69P04300.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/85bd5ac8-e762-46eb-8a92-6ab267ef3fb4/Thumbnail/861558V69P04300_A.jpg" alt="Medium Indigo Straight Leg Jeans" loading="lazy">
+    <div class="info">
+        <div class="name">Medium Indigo Straight Leg Jeans</div>
+        <div class="color">mid blue</div>
+        <div class="price">NT$35,600</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$17,800~24,920</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_868891V6DD09107.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/972d97b1-1558-416d-ab9e-949d962cd6e1/Thumbnail/868891V6DD09107_A.jpg" alt="Wool Gabardine Dress" loading="lazy">
+    <div class="info">
+        <div class="name">Wool Gabardine Dress</div>
+        <div class="color">parchment</div>
+        <div class="price">NT$198,600</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$99,300~139,020</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_868025V66X04690.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/73c3c98c-96b3-4dc9-b720-ea3399f0b494/Thumbnail/868025V66X04690_A.jpg" alt="Cloudy Suede Pants" loading="lazy">
+    <div class="info">
+        <div class="name">Cloudy Suede Pants</div>
+        <div class="color">cloudy indigo</div>
+        <div class="price">NT$154,700</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$77,350~108,290</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_854949V63S01306.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/2285be5b-b6ac-4f9b-beca-396c715274e3/Thumbnail/854949V63S01306_A.jpg" alt="Wool Tailored Sweater" loading="lazy">
+    <div class="info">
+        <div class="name">Wool Tailored Sweater</div>
+        <div class="color">medium gray</div>
+        <div class="price">NT$63,300</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$31,650~44,310</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_861860V6FO04470.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/c2eab962-7a22-4cfa-a707-47de808ee12d/Thumbnail/861860V6FO04470_A.jpg" alt="Fringed Embroidery Skirt" loading="lazy">
+    <div class="info">
+        <div class="name">Fringed Embroidery Skirt</div>
+        <div class="color">blue gravel / multi</div>
+        <div class="price">NT$630,000</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$315,000~441,000</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_854664V6AR09071.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/968a0236-f6fb-46ec-9f43-19c81bf188b4/Thumbnail/854664V6AR09071_A.jpg" alt="Small Intrecciato Leather Pants" loading="lazy">
+    <div class="info">
+        <div class="name">Small Intrecciato Leather Pants</div>
+        <div class="color">chalk</div>
+        <div class="price">NT$353,300</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$176,650~247,309</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_868066V6GI01010.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/c5236831-d787-4374-9b0a-a1d8737a67df/Thumbnail/868066V6GI01010_A.jpg" alt="Cotton Jersey T-Shirt" loading="lazy">
+    <div class="info">
+        <div class="name">Cotton Jersey T-Shirt</div>
+        <div class="color">double black</div>
+        <div class="price">NT$24,000</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$12,000~16,800</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_854664V6AR02608.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/7459c0cd-0edf-4874-9b2e-68912416dfa0/Thumbnail/854664V6AR02608_A.jpg" alt="Intrecciato Leather Pants" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Leather Pants</div>
+        <div class="color">dark carrubo</div>
+        <div class="price">NT$353,300</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$176,650~247,309</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_869958V6D802608.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/6ef89aa7-8a61-4e1b-ba9a-d3b85eb7ce60/Thumbnail/869958V6D802608_A.jpg" alt="Washed Silk Taffeta Top" loading="lazy">
+    <div class="info">
+        <div class="name">Washed Silk Taffeta Top</div>
+        <div class="color">dark carrubo</div>
+        <div class="price">NT$43,500</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$21,750~30,449</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_853537V6D809483.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/1f443b4a-3336-4d57-9fd6-24ea10666dc2/Thumbnail/853537V6D809483_A.jpg" alt="Washed Silk Taffeta Dress" loading="lazy">
+    <div class="info">
+        <div class="name">Washed Silk Taffeta Dress</div>
+        <div class="color">tapioca</div>
+        <div class="price">NT$178,700</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$89,350~125,089</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_865989V6AU09071.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/175081c7-6753-4e26-8866-b6787bc5d97e/Thumbnail/865989V6AU09071_A.jpg" alt="Double Crepe Dress" loading="lazy">
+    <div class="info">
+        <div class="name">Double Crepe Dress</div>
+        <div class="color">chalk</div>
+        <div class="price">NT$230,000</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$115,000~161,000</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_871425V61D04071.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/6c33bad2-f287-480c-a22d-cbd6ce4649c2/Thumbnail/871425V61D04071_A.jpg" alt="Semi Shiny Leather Dress" loading="lazy">
+    <div class="info">
+        <div class="name">Semi Shiny Leather Dress</div>
+        <div class="color">midnight blue</div>
+        <div class="price">NT$337,100</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$168,550~235,969</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_853928V6BW02403.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/45cd619d-8291-4b82-b3f8-c5a67379a921/Thumbnail/853928V6BW02403_A.jpg" alt=" Scale Intreccio Leather Top" loading="lazy">
+    <div class="info">
+        <div class="name"> Scale Intreccio Leather Top</div>
+        <div class="color">burnt umber</div>
+        <div class="price">NT$317,300</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 7 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$158,650~222,110</div>
+    </div>
+</div>
+</div>
+<div class="cat-header">👛 皮夾 Wallets — 21 件</div>
+<div class="grid">
+<div class="card" onclick="window.location='product/tw_742330VCPP34019.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/359492fd-37eb-4bba-b4e4-1b0af2fa452e/Thumbnail/742330VCPP34019_A.jpg" alt="Intrecciato Small Bi-Fold Wallet" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Small Bi-Fold Wallet</div>
+        <div class="color">blue venezia</div>
+        <div class="price">NT$24,800</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-21（2 天前）</div>
+        <div class="dates">🕐 在架 8 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$12,400~17,360</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_742330VCPP35675.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/c98e505c-777a-4027-998a-74cc95a2b69e/Thumbnail/742330VCPP35675_A.jpg" alt="Intrecciato Small Bi-Fold Wallet" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Small Bi-Fold Wallet</div>
+        <div class="color">blush</div>
+        <div class="price">NT$24,800</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-21（2 天前）</div>
+        <div class="dates">🕐 在架 8 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$12,400~17,360</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_742330VCPP39615.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/90557889-45cb-4ece-90ef-0386e99c4245/Thumbnail/742330VCPP39615_A.jpg" alt="Intrecciato Small Bi-Fold Wallet" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Small Bi-Fold Wallet</div>
+        <div class="color">ecru</div>
+        <div class="price">NT$24,800</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-21（2 天前）</div>
+        <div class="dates">🕐 在架 8 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$12,400~17,360</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_742330VCPP32132.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/837fb2e7-86b5-42bb-92b2-bdead72cea55/Thumbnail/742330VCPP32132_A.jpg" alt="Intrecciato Small Bi-Fold Wallet" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Small Bi-Fold Wallet</div>
+        <div class="color">fondant</div>
+        <div class="price">NT$24,800</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-21（2 天前）</div>
+        <div class="dates">🕐 在架 8 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$12,400~17,360</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_A0037EV0HW01007.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/b183c806-bc6d-421f-8485-29d084a07a35/Thumbnail/A0037EV0HW01007_A.jpg" alt="Bacio Phone Bucket" loading="lazy">
+    <div class="info">
+        <div class="name">Bacio Phone Bucket</div>
+        <div class="color">black</div>
+        <div class="price">NT$62,900</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-19（4 天前）</div>
+        <div class="dates">🕐 在架 6 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$31,450~44,030</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_742330V2ZL31657.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/30644927-28c9-4b95-88a4-1ed481e16303/Thumbnail/742330V2ZL31657_A.jpg" alt="Intrecciato Small Bi-Fold Wallet" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Small Bi-Fold Wallet</div>
+        <div class="color">basalt/lava red</div>
+        <div class="price">NT$26,100</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-19（4 天前）</div>
+        <div class="dates">🕐 在架 6 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$13,050~18,270</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_742330V2ZL36160.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/da7d5a25-5414-497f-8f3c-100122d7fd36/Thumbnail/742330V2ZL36160_A.jpg" alt="Intrecciato Small Bi-Fold Wallet" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Small Bi-Fold Wallet</div>
+        <div class="color">deep mahogany/butter yellow</div>
+        <div class="price">NT$26,100</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-19（4 天前）</div>
+        <div class="dates">🕐 在架 6 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$13,050~18,270</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_788055V4R413050.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/b6baf43f-78f3-468d-a841-9987bc655750/Thumbnail/788055V4R413050_A.jpg" alt="Solstice Small Bi-Fold Wallet" loading="lazy">
+    <div class="info">
+        <div class="name">Solstice Small Bi-Fold Wallet</div>
+        <div class="color">emerald green</div>
+        <div class="price">NT$28,600</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-19（4 天前）</div>
+        <div class="dates">🕐 在架 6 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$14,300~20,020</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_749940VCPP24019.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/81b78a76-2ac7-400f-90cf-f1b9b9195676/Thumbnail/749940VCPP24019_A.jpg" alt="Intrecciato Medium Bi-Fold Wallet" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Medium Bi-Fold Wallet</div>
+        <div class="color">blue venezia</div>
+        <div class="price">NT$27,600</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-19（4 天前）</div>
+        <div class="dates">🕐 在架 6 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$13,800~19,320</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_796966V4LQ28803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/7f5bcfb1-0519-418f-97e9-09ee863ef345/Thumbnail/796966V4LQ28803_A.jpg" alt="Intrecciato Piccolo Bi-Fold Wallet" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Piccolo Bi-Fold Wallet</div>
+        <div class="color">black</div>
+        <div class="price">NT$24,500</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-14（9 天前）</div>
+        <div class="dates">🕐 在架 1 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$12,250~17,150</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_796966V5I411126.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/16790974-5254-46a5-96c8-b6ab9f4a55e3/Thumbnail/796966V5I411126_A.jpg" alt="Intrecciato Piccolo Bi-Fold Wallet" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Piccolo Bi-Fold Wallet</div>
+        <div class="color">black/midnight</div>
+        <div class="price">NT$25,700</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-14（9 天前）</div>
+        <div class="dates">🕐 在架 1 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$12,850~17,990</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_796966V6PD11263.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/72db0dd5-3d72-49ae-85fe-d18a42d7ca2d/Thumbnail/796966V6PD11263_A.jpg" alt="Intrecciato Piccolo Bi-Fold Wallet" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Piccolo Bi-Fold Wallet</div>
+        <div class="color">black/thunder</div>
+        <div class="price">NT$25,700</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-14（9 天前）</div>
+        <div class="dates">🕐 在架 1 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$12,850~17,990</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_796966V4LQ22145.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/0e132f3c-269f-4d2a-862a-564748d1ff8e/Thumbnail/796966V4LQ22145_A.jpg" alt="Intrecciato Piccolo Bi-Fold Wallet" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Piccolo Bi-Fold Wallet</div>
+        <div class="color">fondant</div>
+        <div class="price">NT$24,500</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-14（9 天前）</div>
+        <div class="dates">🕐 在架 1 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$12,250~17,150</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_743211VCPQ42145.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/69163ecb-a0b4-4303-9811-ba6a7368df24/Thumbnail/743211VCPQ42145_A.jpg" alt="Intrecciato Bi-Fold Wallet" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Bi-Fold Wallet</div>
+        <div class="color">fondant</div>
+        <div class="price">NT$22,800</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-14（9 天前）</div>
+        <div class="dates">🕐 在架 1 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$11,400~15,959</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_743211VCPQ64364.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/6e5e9361-59ea-40a4-ae2e-49f2fc4cbd02/Thumbnail/743211VCPQ64364_A.jpg" alt="Intrecciato Bi-Fold Wallet" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Bi-Fold Wallet</div>
+        <div class="color">midnight/basalt</div>
+        <div class="price">NT$24,500</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-14（9 天前）</div>
+        <div class="dates">🕐 在架 1 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$12,250~17,150</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_743211V5I511581.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/726f59c7-10e5-4d29-a08e-2e6d0ed117a7/Thumbnail/743211V5I511581_A.jpg" alt="Intrecciato Bi-Fold Wallet" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Bi-Fold Wallet</div>
+        <div class="color">basalt</div>
+        <div class="price">NT$22,800</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-14（9 天前）</div>
+        <div class="dates">🕐 在架 1 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$11,400~15,959</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_743211V63U11000.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/53baa18c-8824-41f8-b340-fb0989807a95/Thumbnail/743211V63U11000_A.jpg" alt="Intrecciato Bi-Fold Wallet" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Bi-Fold Wallet</div>
+        <div class="color">black</div>
+        <div class="price">NT$24,500</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-14（9 天前）</div>
+        <div class="dates">🕐 在架 1 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$12,250~17,150</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_876766V6PC31000.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/3fb9b1cd-057e-4777-b9a2-80dda52abfb3/Thumbnail/876766V6PC31000_A.jpg" alt="Intrecciato Bi-Fold Wallet" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Bi-Fold Wallet</div>
+        <div class="color">black</div>
+        <div class="price">NT$25,700</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-14（9 天前）</div>
+        <div class="dates">🕐 在架 1 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$12,850~17,990</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_743211V6UF14112.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/2b9cec59-7de1-4720-8c27-f25a7d9f2c5b/Thumbnail/743211V6UF14112_A.jpg" alt="Intrecciato Bi-Fold Wallet" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Bi-Fold Wallet</div>
+        <div class="color">midnight/taxi</div>
+        <div class="price">NT$24,500</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-14（9 天前）</div>
+        <div class="dates">🕐 在架 1 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$12,250~17,150</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_743211V6K414328.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/f292677a-abc0-418e-90d2-4452e2b4e822/Thumbnail/743211V6K414328_A.jpg" alt="Intrecciato Bi-Fold Wallet" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Bi-Fold Wallet</div>
+        <div class="color">midnight/espresso/deep mahogany</div>
+        <div class="price">NT$26,900</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-14（9 天前）</div>
+        <div class="dates">🕐 在架 1 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$13,450~18,830</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_743211V5XD18803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/00fdb44e-b72a-4ef8-937f-0febda0b8b13/Thumbnail/743211V5XD18803_A.jpg" alt="Intrecciato Bi-Fold Wallet" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Bi-Fold Wallet</div>
+        <div class="color">black</div>
+        <div class="price">NT$25,700</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-14（9 天前）</div>
+        <div class="dates">🕐 在架 1 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$12,850~17,990</div>
+    </div>
+</div>
+</div>
+<div class="cat-header">💍 飾品 Accessories — 3 件</div>
+<div class="grid">
+<div class="card" onclick="window.location='product/tw_796783V4LQ13009.html'">
+    <img src="https://bottega-veneta.dam.kering.com/m/29562f9f4c054e8/Thumbnail-796783V4LQ13009_A.jpg" alt="Intrecciato Piccolo Belt" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Piccolo Belt</div>
+        <div class="color">dark green</div>
+        <div class="price">NT$23,600</div>
+        <div class="dates">📅 上架：2026-05-15 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 5 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$11,800~16,520</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_796783V4LQ12145.html'">
+    <img src="https://bottega-veneta.dam.kering.com/m/5bae7395b9700bf3/Thumbnail-796783V4LQ12145_A.jpg" alt="Intrecciato Piccolo Belt" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Piccolo Belt</div>
+        <div class="color">fondant</div>
+        <div class="price">NT$23,600</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-19（4 天前）</div>
+        <div class="dates">🕐 在架 6 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$11,800~16,520</div>
+    </div>
+</div>
+<div class="card" onclick="window.location='product/tw_796783V4LQ18803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/m/371175e116599dbb/Thumbnail-796783V4LQ18803_A.jpg" alt="Intrecciato Piccolo Belt" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Piccolo Belt</div>
+        <div class="color">black</div>
+        <div class="price">NT$23,600</div>
+        <div class="dates">📅 上架：2026-05-13 → 下架：2026-05-19（4 天前）</div>
+        <div class="dates">🕐 在架 6 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$11,800~16,520</div>
+    </div>
+</div>
+</div>
+<div class="cat-header">🧳 旅行 Travel — 1 件</div>
+<div class="grid">
+<div class="card" onclick="window.location='product/tw_822479V5AO18803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/m/6dbbc65c702c6417/Thumbnail-822479V5AO18803_A.jpg" alt="Odyssey Cabin Suitcase" loading="lazy">
+    <div class="info">
+        <div class="name">Odyssey Cabin Suitcase</div>
+        <div class="color">black</div>
+        <div class="price">NT$105,500</div>
+        <div class="dates">📅 上架：2026-05-16 → 下架：2026-05-21（2 天前）</div>
+        <div class="dates">🕐 在架 5 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$52,750~73,850</div>
+    </div>
+</div>
+</div>
+<div class="cat-header">🏠 家居 Home — 1 件</div>
+<div class="grid">
+<div class="card" onclick="window.location='product/tw_819290V59D11244.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/08c067c6-8441-4959-bb22-43d9cf1e6a27/Thumbnail/819290V59D11244_A.jpg" alt="Intrecciato Shoe Horn" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Shoe Horn</div>
+        <div class="color">black/natural</div>
+        <div class="price">NT$12,200</div>
+        <div class="dates">📅 上架：2026-05-17 → 下架：2026-05-20（3 天前）</div>
+        <div class="dates">🕐 在架 3 天</div>
+        <span class="delisted-badge">已下架</span>
+        
+        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$6,100~8,540</div>
+    </div>
+</div>
+</div>
+</body></html>
