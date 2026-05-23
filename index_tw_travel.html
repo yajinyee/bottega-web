@@ -38,7 +38,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 <body>
 <div class="header">
     <h1>Bottega Veneta Catalog</h1>
-    <div class="meta">快照：2026-05-22 | 商品：215 | 有庫存資料：0 | <a href="delisted_tw.html" style="color:#ff9800">🏷️ 下架商品</a> | <a href="bespoke.html" style="color:#e94560">✨ 訂製服務</a></div>
+    <div class="meta">快照：2026-05-23 | 商品：215 | 有庫存資料：37 | <a href="compare.html" style="color:#4caf50">💱 各國比價</a> | <a href="delisted_tw.html" style="color:#ff9800">🏷️ 下架商品</a> | <a href="bespoke.html" style="color:#e94560">✨ 訂製服務</a></div>
 </div>
 <div class="tabs">
     <a class="tab active" href="index_tw.html">台灣 Taiwan</a>
@@ -54,6 +54,24 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <a class="sub-tab " href="index_tw_accessories.html">💍 飾品 Accessories (23)</a>
     <a class="sub-tab active" href="index_tw_travel.html">🧳 旅行 Travel (43)</a>
     <a class="sub-tab " href="index_tw_home.html">🏠 家居 Home (56)</a>
+</div>
+<div class="filters">
+  <label>📏 篩選尺碼：</label>
+  <select onchange="filterSize(this.value)">
+    <option value="">全部尺碼</option>
+    <option value="35">35</option>
+    <option value="35.5">35.5</option>
+    <option value="36">36</option>
+    <option value="37">37</option>
+    <option value="37.5">37.5</option>
+    <option value="38">38</option>
+    <option value="38.5">38.5</option>
+    <option value="39">39</option>
+    <option value="39.5">39.5</option>
+    <option value="40">40</option>
+    <option value="40.5">40.5</option>
+    <option value="41">41</option>
+  </select>
 </div>
 <div class="cat-header">🧳 旅行 Travel — 43 件</div>
 <div class="grid">
@@ -500,7 +518,7 @@ function filterSize(size) {
 }
 </script>
 <div class="stats">
-    Generated: 2026-05-23 15:22:29 | DB: 9984 KB
+    Generated: 2026-05-23 15:54:53 | DB: 10368 KB
 </div>
 </body>
 </html>
