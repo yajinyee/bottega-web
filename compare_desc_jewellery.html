@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BV 各國比價 — 💎 珠寶 Jewellery</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #eee; }
+.header { background: #16213e; padding: 20px; text-align: center; border-bottom: 2px solid #0f3460; }
+.header h1 { font-size: 1.5em; color: #e94560; }
+.header .meta { color: #888; font-size: 0.85em; margin-top: 5px; }
+.nav { display: flex; gap: 10px; padding: 10px 20px; background: #16213e; align-items: center; flex-wrap: wrap; }
+.nav a { padding: 8px 16px; border-radius: 20px; text-decoration: none; color: #aaa; background: #0f3460; font-size: 0.85em; }
+.nav a.active { background: #e94560; color: #fff; }
+.sort-bar { padding: 10px 20px; background: #0f3460; display: flex; gap: 10px; align-items: center; }
+.sort-bar label { color: #aaa; font-size: 0.85em; }
+.sort-bar a { color: #e94560; text-decoration: none; font-size: 0.85em; padding: 4px 10px; border-radius: 10px; }
+.sort-bar a.active { background: #e94560; color: #fff; }
+.cat-filter { padding: 8px 20px; background: #16213e; display: flex; gap: 6px; flex-wrap: wrap; border-bottom: 1px solid #0f3460; }
+.cat-btn { padding: 5px 12px; border-radius: 15px; text-decoration: none; color: #888; background: #1a1a2e; font-size: 0.8em; }
+.cat-btn.active { background: #533483; color: #fff; }
+.info-bar { padding: 8px 20px; background: #0f3460; color: #888; font-size: 0.8em; border-bottom: 1px solid #1a1a2e; }
+.list { padding: 10px 20px; }
+.item { display: grid; grid-template-columns: 80px 1fr; gap: 15px; padding: 15px; margin-bottom: 10px; background: #16213e; border-radius: 10px; border: 1px solid #0f3460; }
+.item:hover { border-color: #e94560; }
+.item img { width: 80px; height: 80px; object-fit: contain; background: #f5f5f5; border-radius: 8px; }
+.item-info { display: flex; flex-direction: column; gap: 4px; }
+.item-info .name { font-weight: 600; font-size: 0.95em; }
+.item-info .color { color: #888; font-size: 0.8em; }
+.prices { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+.price-tag { padding: 4px 10px; border-radius: 6px; font-size: 0.8em; }
+.price-tag.tw { background: #1b3a5c; color: #8ecae6; }
+.price-tag.jp { background: #3a1b1b; color: #ff9999; }
+.price-tag.mo { background: #1b3a2a; color: #99ffcc; }
+.price-tag.es { background: #3a2a1b; color: #ffcc99; }
+.price-tag.cheapest { border: 2px solid #4caf50; font-weight: 700; }
+.savings { color: #4caf50; font-size: 0.8em; font-weight: 600; margin-top: 4px; }
+.footer { text-align: center; padding: 20px; color: #666; font-size: 0.8em; }
+@media (max-width: 600px) {
+    .item { grid-template-columns: 60px 1fr; gap: 10px; padding: 10px; }
+    .item img { width: 60px; height: 60px; }
+    .prices { gap: 6px; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+    <h1>💱 BV 各國商品比價</h1>
+    <div class="meta">台灣原價 vs 日本退稅9折 vs 澳門退稅9折 vs 西班牙退稅88折 — 統一換算台幣比較</div>
+</div>
+<div class="nav">
+    <a href="index.html">← 回目錄</a>
+    <a class="active" href="compare.html">💱 比價</a>
+</div>
+<div class="sort-bar">
+    <label>排序：</label>
+    <a class="" href="compare_jewellery.html">價格低→高</a>
+    <a class="active" href="compare_desc_jewellery.html">價格高→低</a>
+    <a class="" href="compare_savings_jewellery.html">省最多</a>
+</div>
+<div class="cat-filter">
+  <a class="cat-btn" href="compare_desc.html">全部</a>
+  <a class="cat-btn" href="compare_desc_accessories.html">💍 飾品 Accessories</a>
+  <a class="cat-btn" href="compare_desc_bags.html">👜 包包 Bags</a>
+  <a class="cat-btn" href="compare_desc_eyewear.html">🕶️ 眼鏡 Eyewear</a>
+  <a class="cat-btn" href="compare_desc_home.html">🏠 家居 Home</a>
+  <a class="cat-btn active" href="compare_desc_jewellery.html">💎 珠寶 Jewellery</a>
+  <a class="cat-btn" href="compare_desc_rtw.html">👗 服裝 Clothing</a>
+  <a class="cat-btn" href="compare_desc_shoes.html">👠 鞋子 Shoes</a>
+  <a class="cat-btn" href="compare_desc_slg.html">👛 皮夾 Wallets</a>
+  <a class="cat-btn" href="compare_desc_travel.html">🧳 旅行 Travel</a>
+</div>
+
+<div class="info-bar">
+    📊 共 45 款商品可比價 | 匯率：1 JPY = 0.1979 TWD、1 MOP = 3.9007 TWD、1 EUR = 36.53 TWD | 日本/澳門退稅10%、西班牙退稅12%
+</div>
+<div class="list">
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/5736baf6-c434-4d6a-bc1f-b6a6bbbb3bb5/Thumbnail/857313VBOBC9000_A.jpg" alt="Sardine Necklace" loading="lazy">
+    <div class="item-info">
+        <div class="name">Sardine Necklace</div>
+        <div class="color">white</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$154,700</span><span class="price-tag jp">🇯🇵 ¥779,900→NT$138,876</span><span class="price-tag mo">🇲🇴 MOP$38,400→NT$134,807</span><span class="price-tag es cheapest">🇪🇸 €3,900→NT$125,379</span></div>
+        <div class="savings">💰 西班牙買省 NT$29,321（-19.0%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/d4be8dd6-383b-41de-87e8-ddcd0e83f300/Thumbnail/865891V1A951577_A.jpg" alt="Prisma Necklace" loading="lazy">
+    <div class="item-info">
+        <div class="name">Prisma Necklace</div>
+        <div class="color">basalt/transparent</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$107,200</span><span class="price-tag jp">🇯🇵 ¥540,100→NT$96,175</span><span class="price-tag mo">🇲🇴 MOP$26,600→NT$93,382</span><span class="price-tag es cheapest">🇪🇸 €2,700→NT$86,801</span></div>
+        <div class="savings">💰 西班牙買省 NT$20,399（-19.0%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/149915dc-6a0f-4f85-adfc-2321324c5baa/Thumbnail/857360VAHU08120_A.jpg" alt="Anemone Cuff Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Anemone Cuff Bracelet</div>
+        <div class="color">yellow gold</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$103,000</span><span class="price-tag jp">🇯🇵 ¥520,300→NT$92,649</span><span class="price-tag mo">🇲🇴 MOP$25,600→NT$89,872</span><span class="price-tag es cheapest">🇪🇸 €2,600→NT$83,586</span></div>
+        <div class="savings">💰 西班牙買省 NT$19,414（-18.8%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/ab4d7436-d85e-4cdc-85c6-36108b6bc198/Thumbnail/857360V50708117_A.jpg" alt="Anemone Cuff Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Anemone Cuff Bracelet</div>
+        <div class="color">silver</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$99,300</span><span class="price-tag jp">🇯🇵 ¥500,500→NT$89,124</span><span class="price-tag mo">🇲🇴 MOP$24,650→NT$86,536</span><span class="price-tag es cheapest">🇪🇸 €2,500→NT$80,371</span></div>
+        <div class="savings">💰 西班牙買省 NT$18,929（-19.1%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/2d7f9dbd-f1d7-4bc0-a391-0894406a53d1/Thumbnail/857317VBOBC9000_A.jpg" alt="Sardine Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Sardine Bracelet</div>
+        <div class="color">white</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$99,300</span><span class="price-tag jp">🇯🇵 ¥500,500→NT$89,124</span><span class="price-tag mo">🇲🇴 MOP$24,650→NT$86,536</span><span class="price-tag es cheapest">🇪🇸 €2,500→NT$80,371</span></div>
+        <div class="savings">💰 西班牙買省 NT$18,929（-19.1%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/fe0f23c9-519a-47ba-8060-8504682c2f66/Thumbnail/865898V1A919203_A.jpg" alt="Prisma Necklace" loading="lazy">
+    <div class="item-info">
+        <div class="name">Prisma Necklace</div>
+        <div class="color">taffy</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$86,900</span><span class="price-tag jp">🇯🇵 ¥440,000→NT$78,350</span><span class="price-tag mo">🇲🇴 MOP$21,600→NT$75,829</span><span class="price-tag es cheapest">🇪🇸 €2,200→NT$70,727</span></div>
+        <div class="savings">💰 西班牙買省 NT$16,173（-18.6%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/cd1f6723-7632-4e8f-a309-45047d992ee7/Thumbnail/857318V507D8119_A.jpg" alt="Sardine Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Sardine Bracelet</div>
+        <div class="color">silver/yellow gold</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$67,500</span><span class="price-tag jp">🇯🇵 ¥339,900→NT$60,526</span><span class="price-tag mo">🇲🇴 MOP$16,750→NT$58,803</span><span class="price-tag es cheapest">🇪🇸 €1,700→NT$54,652</span></div>
+        <div class="savings">💰 西班牙買省 NT$12,848（-19.0%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/8fd4c5e8-f9fe-4577-bde9-d56400cb2f2a/Thumbnail/865915V1A913791_A.jpg" alt="Prisma Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Prisma Bracelet</div>
+        <div class="color">grass green</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$63,300</span><span class="price-tag jp">🇯🇵 ¥320,100→NT$57,000</span><span class="price-tag mo">🇲🇴 MOP$15,750→NT$55,292</span><span class="price-tag es cheapest">🇪🇸 €1,600→NT$51,438</span></div>
+        <div class="savings">💰 西班牙買省 NT$11,862（-18.7%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/9a42a2fa-f4d5-4015-a8ca-86077c1999b7/Thumbnail/865906VAHUA9612_A.jpg" alt="Prisma Necklace" loading="lazy">
+    <div class="item-info">
+        <div class="name">Prisma Necklace</div>
+        <div class="color">ecru</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$63,300</span><span class="price-tag jp">🇯🇵 ¥320,100→NT$57,000</span><span class="price-tag mo">🇲🇴 MOP$15,750→NT$55,292</span><span class="price-tag es cheapest">🇪🇸 €1,600→NT$51,438</span></div>
+        <div class="savings">💰 西班牙買省 NT$11,862（-18.7%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/28299afe-5da7-4fd5-8eaf-a72b2c39a212/Thumbnail/857278VAOE53243_A.jpg" alt="Drop Marble Pendant Necklace" loading="lazy">
+    <div class="item-info">
+        <div class="name">Drop Marble Pendant Necklace</div>
+        <div class="color">green marble alpi</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$59,600</span><span class="price-tag jp">🇯🇵 ¥300,300→NT$53,474</span><span class="price-tag mo">🇲🇴 MOP$14,800→NT$51,957</span><span class="price-tag es cheapest">🇪🇸 €1,500→NT$48,223</span></div>
+        <div class="savings">💰 西班牙買省 NT$11,377（-19.1%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/c606bd9b-dfba-4fe2-89c6-88aae0ccd42e/Thumbnail/857278VAOE56751_A.jpg" alt="Drop Marble Pendant Necklace" loading="lazy">
+    <div class="item-info">
+        <div class="name">Drop Marble Pendant Necklace</div>
+        <div class="color">red marble</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$59,600</span><span class="price-tag jp">🇯🇵 ¥300,300→NT$53,474</span><span class="price-tag mo">🇲🇴 MOP$14,800→NT$51,957</span><span class="price-tag es cheapest">🇪🇸 €1,500→NT$48,223</span></div>
+        <div class="savings">💰 西班牙買省 NT$11,377（-19.1%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/9017e541-8583-432f-afc5-3a8dcafd83ce/Thumbnail/857277VAOE78957_A.jpg" alt="Drop Marble Necklace" loading="lazy">
+    <div class="item-info">
+        <div class="name">Drop Marble Necklace</div>
+        <div class="color">wood/green marble</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$47,600</span><span class="price-tag jp">🇯🇵 ¥239,800→NT$42,701</span><span class="price-tag mo">🇲🇴 MOP$11,850→NT$41,601</span><span class="price-tag es cheapest">🇪🇸 €1,200→NT$38,578</span></div>
+        <div class="savings">💰 西班牙買省 NT$9,022（-19.0%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/87a356a0-93c4-4529-8e56-f9b00e8eed47/Thumbnail/865972V507C8115_A.jpg" alt="Prisma Necklace" loading="lazy">
+    <div class="item-info">
+        <div class="name">Prisma Necklace</div>
+        <div class="color">silver/basalt</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$47,600</span><span class="price-tag jp">🇯🇵 ¥239,800→NT$42,701</span><span class="price-tag mo">🇲🇴 MOP$11,850→NT$41,601</span><span class="price-tag es cheapest">🇪🇸 €1,200→NT$38,578</span></div>
+        <div class="savings">💰 西班牙買省 NT$9,022（-19.0%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/m/269a57e79055ac74/Thumbnail-844748VAHU08120_A.jpg" alt="Sardine Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Sardine Bracelet</div>
+        <div class="color">yellow gold</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$47,600</span><span class="price-tag jp">🇯🇵 ¥239,800→NT$42,701</span><span class="price-tag mo">🇲🇴 MOP$11,850→NT$41,601</span><span class="price-tag es cheapest">🇪🇸 €1,200→NT$38,578</span></div>
+        <div class="savings">💰 西班牙買省 NT$9,022（-19.0%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/23849788-ff4b-4e85-9762-e406f5ecfd85/Thumbnail/857471V5HU14514_A.jpg" alt="Intreccio Pendant Necklace" loading="lazy">
+    <div class="item-info">
+        <div class="name">Intreccio Pendant Necklace</div>
+        <div class="color">blood stone</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$43,500</span><span class="price-tag jp">🇯🇵 ¥220,000→NT$39,175</span><span class="price-tag mo">🇲🇴 MOP$10,800→NT$37,915</span><span class="price-tag es cheapest">🇪🇸 €1,100→NT$35,363</span></div>
+        <div class="savings">💰 西班牙買省 NT$8,137（-18.7%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/cd1c5398-9b6c-4d38-956f-7aa3fefd92cb/Thumbnail/857508V507D8119_A.jpg" alt="Stack Cuff Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Stack Cuff Bracelet</div>
+        <div class="color">silver/yellow gold</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$37,700</span><span class="price-tag jp">🇯🇵 ¥190,300→NT$33,887</span><span class="price-tag mo">🇲🇴 MOP$9,350→NT$32,824</span><span class="price-tag es cheapest">🇪🇸 €950→NT$30,541</span></div>
+        <div class="savings">💰 西班牙買省 NT$7,159（-19.0%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/8cf314a0-5864-4b0b-a2da-f6e90db73056/Thumbnail/857315VAHUA1000_A.jpg" alt="Sardine Leather Necklace" loading="lazy">
+    <div class="item-info">
+        <div class="name">Sardine Leather Necklace</div>
+        <div class="color">nero</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$35,600</span><span class="price-tag jp">🇯🇵 ¥180,400→NT$32,124</span><span class="price-tag mo">🇲🇴 MOP$8,850→NT$31,069</span><span class="price-tag es cheapest">🇪🇸 €900→NT$28,934</span></div>
+        <div class="savings">💰 西班牙買省 NT$6,666（-18.7%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/e83a5597-1af3-43b1-aba2-c13ec3879d36/Thumbnail/857315VAHUA9196_A.jpg" alt="Sardine Leather Necklace" loading="lazy">
+    <div class="item-info">
+        <div class="name">Sardine Leather Necklace</div>
+        <div class="color">sea salt</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$35,600</span><span class="price-tag jp">🇯🇵 ¥180,400→NT$32,124</span><span class="price-tag mo">🇲🇴 MOP$8,850→NT$31,069</span><span class="price-tag es cheapest">🇪🇸 €900→NT$28,934</span></div>
+        <div class="savings">💰 西班牙買省 NT$6,666（-18.7%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/5e17297a-2def-4d31-b984-2774e3c04af9/Thumbnail/857315V507C5307_A.jpg" alt="Sardine Leather Necklace" loading="lazy">
+    <div class="item-info">
+        <div class="name">Sardine Leather Necklace</div>
+        <div class="color">mirth washed</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$34,000</span><span class="price-tag jp">🇯🇵 ¥170,500→NT$30,361</span><span class="price-tag mo">🇲🇴 MOP$8,450→NT$29,665</span><span class="price-tag es cheapest">🇪🇸 €850→NT$27,326</span></div>
+        <div class="savings">💰 西班牙買省 NT$6,674（-19.6%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/dd3a95b5-2f68-4a52-bbe2-ce2efea3a3ab/Thumbnail/857500V507D8119_A.jpg" alt="Stack Necklace" loading="lazy">
+    <div class="item-info">
+        <div class="name">Stack Necklace</div>
+        <div class="color">silver/yellow gold</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$34,000</span><span class="price-tag jp">🇯🇵 ¥170,500→NT$30,361</span><span class="price-tag mo">🇲🇴 MOP$8,450→NT$29,665</span><span class="price-tag es cheapest">🇪🇸 €850→NT$27,326</span></div>
+        <div class="savings">💰 西班牙買省 NT$6,674（-19.6%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/m/613d88db0088a483/Thumbnail-838326V50708117_A.jpg" alt="Intreccio Necklace" loading="lazy">
+    <div class="item-info">
+        <div class="name">Intreccio Necklace</div>
+        <div class="color">silver</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$31,900</span><span class="price-tag jp">🇯🇵 ¥160,600→NT$28,598</span><span class="price-tag mo">🇲🇴 MOP$7,950→NT$27,909</span><span class="price-tag es cheapest">🇪🇸 €800→NT$25,719</span></div>
+        <div class="savings">💰 西班牙買省 NT$6,181（-19.4%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/23bbb49c-e1fe-4535-8746-dd5a7b778635/Thumbnail/857498VAHU48822_A.jpg" alt="Cavallo Cufflinks" loading="lazy">
+    <div class="item-info">
+        <div class="name">Cavallo Cufflinks</div>
+        <div class="color">chili</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$27,800</span><span class="price-tag mo cheapest">🇲🇴 MOP$6,900→NT$24,223</span></div>
+        <div class="savings">💰 澳門買省 NT$3,577（-12.9%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/79b5c7cf-8ee5-4850-a4d5-6c6682aa0bca/Thumbnail/876431VAHU08120_A.jpg" alt="Sardine Pendant Necklace" loading="lazy">
+    <div class="item-info">
+        <div class="name">Sardine Pendant Necklace</div>
+        <div class="color">yellow gold</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$29,800</span><span class="price-tag jp">🇯🇵 ¥150,700→NT$26,835</span><span class="price-tag mo">🇲🇴 MOP$7,400→NT$25,978</span><span class="price-tag es cheapest">🇪🇸 €750→NT$24,111</span></div>
+        <div class="savings">💰 西班牙買省 NT$5,689（-19.1%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/f968151c-449e-44c9-8358-9cc385d9fbc7/Thumbnail/865853V50708117_A.jpg" alt="Veneta Necklace" loading="lazy">
+    <div class="item-info">
+        <div class="name">Veneta Necklace</div>
+        <div class="color">silver</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$29,800</span><span class="price-tag jp">🇯🇵 ¥150,700→NT$26,835</span><span class="price-tag mo">🇲🇴 MOP$7,400→NT$25,978</span><span class="price-tag es cheapest">🇪🇸 €750→NT$24,111</span></div>
+        <div class="savings">💰 西班牙買省 NT$5,689（-19.1%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/666fa0f3-c1c6-44a3-afe7-8976595ccbbf/Thumbnail/865855V50708117_A.jpg" alt="Veneta Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Veneta Bracelet</div>
+        <div class="color">silver</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$27,800</span><span class="price-tag jp">🇯🇵 ¥140,800→NT$25,072</span><span class="price-tag mo">🇲🇴 MOP$6,900→NT$24,223</span><span class="price-tag es cheapest">🇪🇸 €700→NT$22,504</span></div>
+        <div class="savings">💰 西班牙買省 NT$5,296（-19.1%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/m/7ff6dab51e16aef3/Thumbnail-844766V50708117_A.jpg" alt="Pen Necklace" loading="lazy">
+    <div class="item-info">
+        <div class="name">Pen Necklace</div>
+        <div class="color">silver</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$25,700</span><span class="price-tag jp">🇯🇵 ¥130,900→NT$23,309</span><span class="price-tag mo">🇲🇴 MOP$6,400→NT$22,468</span><span class="price-tag es cheapest">🇪🇸 €650→NT$20,897</span></div>
+        <div class="savings">💰 西班牙買省 NT$4,803（-18.7%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/m/27853c7e34ae46e3/Thumbnail-731880V50708117_A.jpg" alt="Drop Pendant Necklace" loading="lazy">
+    <div class="item-info">
+        <div class="name">Drop Pendant Necklace</div>
+        <div class="color">silver</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$24,800</span><span class="price-tag jp">🇯🇵 ¥121,000→NT$21,546</span><span class="price-tag mo">🇲🇴 MOP$6,100→NT$21,415</span><span class="price-tag es cheapest">🇪🇸 €620→NT$19,932</span></div>
+        <div class="savings">💰 西班牙買省 NT$4,868（-19.6%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/76013034-fb47-400e-9e6f-80a62e5184da/Thumbnail/829387V507C2587_A.jpg" alt="Leather Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Leather Bracelet</div>
+        <div class="color">amber</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$21,900</span><span class="price-tag jp">🇯🇵 ¥110,000→NT$19,588</span><span class="price-tag mo">🇲🇴 MOP$5,400→NT$18,957</span><span class="price-tag es cheapest">🇪🇸 €550→NT$17,682</span></div>
+        <div class="savings">💰 西班牙買省 NT$4,218（-19.3%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/647c0f94-914e-4ed7-b4ab-df7a70ed736b/Thumbnail/829387V507C4296_A.jpg" alt="Leather Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Leather Bracelet</div>
+        <div class="color">blue royal</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$21,900</span><span class="price-tag jp">🇯🇵 ¥110,000→NT$19,588</span><span class="price-tag mo">🇲🇴 MOP$5,400→NT$18,957</span><span class="price-tag es cheapest">🇪🇸 €550→NT$17,682</span></div>
+        <div class="savings">💰 西班牙買省 NT$4,218（-19.3%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/m/41cddee70d9d3910/Thumbnail-829387V507C2490_A.jpg" alt="Leather Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Leather Bracelet</div>
+        <div class="color">matcha</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$21,900</span><span class="price-tag jp">🇯🇵 ¥110,000→NT$19,588</span><span class="price-tag mo">🇲🇴 MOP$5,400→NT$18,957</span><span class="price-tag es cheapest">🇪🇸 €550→NT$17,682</span></div>
+        <div class="savings">💰 西班牙買省 NT$4,218（-19.3%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/b0b4ee09-4c68-4e65-8f27-03a58e7a89a0/Thumbnail/861375V50708117_A.jpg" alt="Stack Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Stack Bracelet</div>
+        <div class="color">silver</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$22,000</span><span class="price-tag jp">🇯🇵 ¥110,000→NT$19,588</span><span class="price-tag mo">🇲🇴 MOP$5,450→NT$19,133</span><span class="price-tag es cheapest">🇪🇸 €550→NT$17,682</span></div>
+        <div class="savings">💰 西班牙買省 NT$4,318（-19.6%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/f05f4c4a-b77f-43db-85b1-9d970ad86c60/Thumbnail/875870VAHUA2915_A.jpg" alt="Sardine Leather Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Sardine Leather Bracelet</div>
+        <div class="color">travertine</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$19,900</span><span class="price-tag jp">🇯🇵 ¥100,100→NT$17,825</span><span class="price-tag mo">🇲🇴 MOP$4,950→NT$17,377</span><span class="price-tag es cheapest">🇪🇸 €500→NT$16,074</span></div>
+        <div class="savings">💰 西班牙買省 NT$3,826（-19.2%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/8bc45bdc-04f4-42e3-a1d0-f6a51be99834/Thumbnail/876163V50708117_A.jpg" alt="Veneta Chain Necklace" loading="lazy">
+    <div class="item-info">
+        <div class="name">Veneta Chain Necklace</div>
+        <div class="color">silver</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$19,900</span><span class="price-tag jp">🇯🇵 ¥99,000→NT$17,629</span><span class="price-tag mo">🇲🇴 MOP$4,950→NT$17,377</span><span class="price-tag es cheapest">🇪🇸 €500→NT$16,074</span></div>
+        <div class="savings">💰 西班牙買省 NT$3,826（-19.2%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/0d74597c-a634-41ee-88be-84057806ebdc/Thumbnail/861670V507C2113_A.jpg" alt="Cavallo Leather Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Cavallo Leather Bracelet</div>
+        <div class="color">fondant</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$17,800</span><span class="price-tag mo cheapest">🇲🇴 MOP$4,450→NT$15,622</span></div>
+        <div class="savings">💰 澳門買省 NT$2,178（-12.2%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/56670cc7-847d-482c-abae-4b5bf7592a48/Thumbnail/861673V568D6643_A.jpg" alt="Cavallo Leather Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Cavallo Leather Bracelet</div>
+        <div class="color">lipstick/ chili</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$17,800</span><span class="price-tag mo cheapest">🇲🇴 MOP$4,450→NT$15,622</span></div>
+        <div class="savings">💰 澳門買省 NT$2,178（-12.2%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/m/78b3e0b5fb8a5979/Thumbnail-838327V50708117_A.jpg" alt="Intreccio Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Intreccio Bracelet</div>
+        <div class="color">silver</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$19,100</span><span class="price-tag jp">🇯🇵 ¥96,800→NT$17,237</span><span class="price-tag mo">🇲🇴 MOP$4,750→NT$16,675</span><span class="price-tag es cheapest">🇪🇸 €480→NT$15,431</span></div>
+        <div class="savings">💰 西班牙買省 NT$3,669（-19.2%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/9e9fde8a-aa86-4d31-b0ef-307ffe894f15/Thumbnail/846029VAHUA2241_A.jpg" alt="Leather Knot Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Leather Knot Bracelet</div>
+        <div class="color">dark barolo</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$19,100</span><span class="price-tag jp">🇯🇵 ¥96,800→NT$17,237</span><span class="price-tag mo">🇲🇴 MOP$4,750→NT$16,675</span><span class="price-tag es cheapest">🇪🇸 €480→NT$15,431</span></div>
+        <div class="savings">💰 西班牙買省 NT$3,669（-19.2%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/c77084cf-9470-4ea2-9b47-0e0339d6beca/Thumbnail/846029VAHUA2113_A.jpg" alt="Leather Knot Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Leather Knot Bracelet</div>
+        <div class="color">fondant</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$19,100</span><span class="price-tag jp">🇯🇵 ¥96,800→NT$17,237</span><span class="price-tag mo">🇲🇴 MOP$4,750→NT$16,675</span><span class="price-tag es cheapest">🇪🇸 €480→NT$15,431</span></div>
+        <div class="savings">💰 西班牙買省 NT$3,669（-19.2%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/1eaf3f90-c632-48d6-9681-b9c403f647bf/Thumbnail/846029VAHUA2785_A.jpg" alt="Leather Knot Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Leather Knot Bracelet</div>
+        <div class="color">pale brown</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$19,100</span><span class="price-tag jp">🇯🇵 ¥96,800→NT$17,237</span><span class="price-tag mo">🇲🇴 MOP$4,750→NT$16,675</span><span class="price-tag es cheapest">🇪🇸 €480→NT$15,431</span></div>
+        <div class="savings">💰 西班牙買省 NT$3,669（-19.2%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/79810e16-a6e3-4609-bb38-48a0bc3b80dc/Thumbnail/875870V507C2006_A.jpg" alt="Sardine Leather Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Sardine Leather Bracelet</div>
+        <div class="color">espresso</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$17,800</span><span class="price-tag jp">🇯🇵 ¥90,200→NT$16,062</span><span class="price-tag mo">🇲🇴 MOP$4,450→NT$15,622</span><span class="price-tag es cheapest">🇪🇸 €450→NT$14,467</span></div>
+        <div class="savings">💰 西班牙買省 NT$3,333（-18.7%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/1432483a-15ed-4136-b603-dd11caf87d02/Thumbnail/775231V507C2113_A.jpg" alt="Braid Leather Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Braid Leather Bracelet</div>
+        <div class="color">fondant</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$18,100</span><span class="price-tag jp cheapest">🇯🇵 ¥79,200→NT$14,103</span><span class="price-tag mo">🇲🇴 MOP$4,450→NT$15,622</span><span class="price-tag es">🇪🇸 €450→NT$14,467</span></div>
+        <div class="savings">💰 日本買省 NT$3,997（-22.1%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/aad41088-d185-445a-ba3a-4ff7caeeb513/Thumbnail/854538V50708117_A.jpg" alt="Sardine Cufflinks" loading="lazy">
+    <div class="item-info">
+        <div class="name">Sardine Cufflinks</div>
+        <div class="color">silver</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$15,800</span><span class="price-tag mo cheapest">🇲🇴 MOP$3,950→NT$13,867</span></div>
+        <div class="savings">💰 澳門買省 NT$1,933（-12.2%）</div>
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/m/6dcfde03000b438d/Thumbnail-844783V507C6534_A.jpg" alt="Leather Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Leather Bracelet</div>
+        <div class="color">cherry tomato</div>
+        <div class="prices"><span class="price-tag jp">🇯🇵 ¥80,300→NT$14,299</span><span class="price-tag es cheapest">🇪🇸 €400→NT$12,859</span></div>
+        
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/m/5c221642dfa4621e/Thumbnail-844783V507C2509_A.jpg" alt="Leather Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Leather Bracelet</div>
+        <div class="color">dark leather</div>
+        <div class="prices"><span class="price-tag jp">🇯🇵 ¥80,300→NT$14,299</span><span class="price-tag es cheapest">🇪🇸 €400→NT$12,859</span></div>
+        
+    </div>
+</div>
+<div class="item">
+    <img src="https://bottega-veneta.dam.kering.com/asset/47164632-ca12-4be5-ac85-2a4b12328f64/Thumbnail/876164V50708117_A.jpg" alt="Veneta Chain Bracelet" loading="lazy">
+    <div class="item-info">
+        <div class="name">Veneta Chain Bracelet</div>
+        <div class="color">silver</div>
+        <div class="prices"><span class="price-tag tw">🇹🇼 NT$14,900</span><span class="price-tag jp">🇯🇵 ¥77,000→NT$13,711</span><span class="price-tag mo">🇲🇴 MOP$3,700→NT$12,989</span><span class="price-tag es cheapest">🇪🇸 €380→NT$12,216</span></div>
+        <div class="savings">💰 西班牙買省 NT$2,684（-18.0%）</div>
+    </div>
+</div>
+</div>
+<div class="footer">
+    資料更新：2026-05-24 23:28 | 匯率來源：exchangerate-api.com | 日本/澳門價格已乘 0.9（退稅）
+</div>
+</body>
+</html>

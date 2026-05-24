@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BV 各國比價 — 🆕 新品 New Arrivals</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #eee; }
+.header { background: #16213e; padding: 20px; text-align: center; border-bottom: 2px solid #0f3460; }
+.header h1 { font-size: 1.5em; color: #e94560; }
+.header .meta { color: #888; font-size: 0.85em; margin-top: 5px; }
+.nav { display: flex; gap: 10px; padding: 10px 20px; background: #16213e; align-items: center; flex-wrap: wrap; }
+.nav a { padding: 8px 16px; border-radius: 20px; text-decoration: none; color: #aaa; background: #0f3460; font-size: 0.85em; }
+.nav a.active { background: #e94560; color: #fff; }
+.sort-bar { padding: 10px 20px; background: #0f3460; display: flex; gap: 10px; align-items: center; }
+.sort-bar label { color: #aaa; font-size: 0.85em; }
+.sort-bar a { color: #e94560; text-decoration: none; font-size: 0.85em; padding: 4px 10px; border-radius: 10px; }
+.sort-bar a.active { background: #e94560; color: #fff; }
+.cat-filter { padding: 8px 20px; background: #16213e; display: flex; gap: 6px; flex-wrap: wrap; border-bottom: 1px solid #0f3460; }
+.cat-btn { padding: 5px 12px; border-radius: 15px; text-decoration: none; color: #888; background: #1a1a2e; font-size: 0.8em; }
+.cat-btn.active { background: #533483; color: #fff; }
+.info-bar { padding: 8px 20px; background: #0f3460; color: #888; font-size: 0.8em; border-bottom: 1px solid #1a1a2e; }
+.list { padding: 10px 20px; }
+.item { display: grid; grid-template-columns: 80px 1fr; gap: 15px; padding: 15px; margin-bottom: 10px; background: #16213e; border-radius: 10px; border: 1px solid #0f3460; }
+.item:hover { border-color: #e94560; }
+.item img { width: 80px; height: 80px; object-fit: contain; background: #f5f5f5; border-radius: 8px; }
+.item-info { display: flex; flex-direction: column; gap: 4px; }
+.item-info .name { font-weight: 600; font-size: 0.95em; }
+.item-info .color { color: #888; font-size: 0.8em; }
+.prices { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+.price-tag { padding: 4px 10px; border-radius: 6px; font-size: 0.8em; }
+.price-tag.tw { background: #1b3a5c; color: #8ecae6; }
+.price-tag.jp { background: #3a1b1b; color: #ff9999; }
+.price-tag.mo { background: #1b3a2a; color: #99ffcc; }
+.price-tag.es { background: #3a2a1b; color: #ffcc99; }
+.price-tag.cheapest { border: 2px solid #4caf50; font-weight: 700; }
+.savings { color: #4caf50; font-size: 0.8em; font-weight: 600; margin-top: 4px; }
+.footer { text-align: center; padding: 20px; color: #666; font-size: 0.8em; }
+@media (max-width: 600px) {
+    .item { grid-template-columns: 60px 1fr; gap: 10px; padding: 10px; }
+    .item img { width: 60px; height: 60px; }
+    .prices { gap: 6px; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+    <h1>💱 BV 各國商品比價</h1>
+    <div class="meta">台灣原價 vs 日本退稅9折 vs 澳門退稅9折 vs 西班牙退稅88折 — 統一換算台幣比較</div>
+</div>
+<div class="nav">
+    <a href="index.html">← 回目錄</a>
+    <a class="active" href="compare.html">💱 比價</a>
+</div>
+<div class="sort-bar">
+    <label>排序：</label>
+    <a class="" href="compare_new.html">價格低→高</a>
+    <a class="" href="compare_desc_new.html">價格高→低</a>
+    <a class="active" href="compare_savings_new.html">省最多</a>
+</div>
+<div class="cat-filter">
+  <a class="cat-btn" href="compare_savings.html">全部</a>
+  <a class="cat-btn" href="compare_savings_accessories.html">💍 飾品 Accessories</a>
+  <a class="cat-btn" href="compare_savings_bags.html">👜 包包 Bags</a>
+  <a class="cat-btn" href="compare_savings_eyewear.html">🕶️ 眼鏡 Eyewear</a>
+  <a class="cat-btn" href="compare_savings_home.html">🏠 家居 Home</a>
+  <a class="cat-btn" href="compare_savings_jewellery.html">💎 珠寶 Jewellery</a>
+  <a class="cat-btn" href="compare_savings_rtw.html">👗 服裝 Clothing</a>
+  <a class="cat-btn" href="compare_savings_shoes.html">👠 鞋子 Shoes</a>
+  <a class="cat-btn" href="compare_savings_slg.html">👛 皮夾 Wallets</a>
+  <a class="cat-btn" href="compare_savings_travel.html">🧳 旅行 Travel</a>
+</div>
+
+<div class="info-bar">
+    📊 共 0 款商品可比價 | 匯率：1 JPY = 0.1979 TWD、1 MOP = 3.9007 TWD、1 EUR = 36.53 TWD | 日本/澳門退稅10%、西班牙退稅12%
+</div>
+<div class="list">
+</div>
+<div class="footer">
+    資料更新：2026-05-24 23:28 | 匯率來源：exchangerate-api.com | 日本/澳門價格已乘 0.9（退稅）
+</div>
+</body>
+</html>
