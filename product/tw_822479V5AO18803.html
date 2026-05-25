@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Odyssey Cabin Suitcase — BV Catalog</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee; }
+.back { padding: 15px 20px; color: #e94560; text-decoration: none; display: inline-block; }
+.detail { max-width: 1200px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+@media (max-width: 768px) { .detail { grid-template-columns: 1fr; } }
+.gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.gallery img { width: 100%; border-radius: 8px; background: #f5f5f5; cursor: pointer; }
+.gallery img.main { grid-column: span 2; height: 400px; object-fit: contain; }
+.gallery img.thumb { height: 150px; object-fit: contain; }
+.product-info h1 { font-size: 1.5em; margin-bottom: 5px; }
+.product-info .color { color: #888; margin-bottom: 10px; }
+.product-info .price { color: #e94560; font-size: 1.8em; font-weight: 700; margin: 15px 0; }
+.product-info .meta { color: #666; font-size: 0.85em; margin: 5px 0; }
+.sizes { margin: 15px 0; }
+.sizes .label { color: #aaa; font-size: 0.85em; margin-bottom: 5px; }
+.size-chip { display: inline-block; padding: 5px 12px; margin: 3px; border-radius: 5px; font-size: 0.85em; }
+.size-chip.in { background: #1b5e20; color: #fff; }
+.size-chip.out { background: #333; color: #666; text-decoration: line-through; }
+.stock-section { margin-top: 20px; }
+.stock-section h3 { color: #e94560; margin-bottom: 10px; }
+.stock-table { width: 100%; border-collapse: collapse; font-size: 0.85em; }
+.stock-table th { text-align: left; padding: 8px; background: #0f3460; color: #aaa; }
+.stock-table td { padding: 8px; border-bottom: 1px solid #0f3460; }
+</style>
+</head>
+<body>
+<a class="back" href="../index.html" onclick="if(history.length>1){history.back();return false;}">← 返回列表</a>
+<div class="detail">
+    <div class="gallery">
+        <img class="main" src="https://bottega-veneta.dam.kering.com/m/6dbbc65c702c6417/Thumbnail-822479V5AO18803_A.jpg" alt="主圖">
+        <img class="thumb" src="https://bottega-veneta.dam.kering.com/m/6dbbc65c702c6417/Thumbnail-822479V5AO18803_B.jpg" alt="角度圖" onclick="document.querySelector('.main').src=this.src">
+        <img class="thumb" src="https://bottega-veneta.dam.kering.com/m/6dbbc65c702c6417/Thumbnail-822479V5AO18803_C.jpg" alt="角度圖" onclick="document.querySelector('.main').src=this.src">
+        <img class="thumb" src="https://bottega-veneta.dam.kering.com/m/6dbbc65c702c6417/Thumbnail-822479V5AO18803_D.jpg" alt="角度圖" onclick="document.querySelector('.main').src=this.src">
+        <img class="thumb" src="https://bottega-veneta.dam.kering.com/m/6dbbc65c702c6417/Thumbnail-822479V5AO18803_G.jpg" alt="角度圖" onclick="document.querySelector('.main').src=this.src">
+    </div>
+    <div class="product-info">
+        <h1>Odyssey Cabin Suitcase</h1>
+        <div class="color">black</div>
+        <div class="price">NT$105,500</div>
+        <div class="meta">📅 上市：2026-05-16</div>
+        <div class="meta">📂 分類：bv_macro_travel</div>
+        <div class="meta">🆔 SKU：tw_822479V5AO18803</div>
+
+        <div class="sizes">
+            <div class="label">📏 線上尺碼：</div>
+            <span class="size-chip in">U</span>
+        </div>
+
+        <div class="stock-section">
+            <h3>🏪 門市庫存（2026-05-21）</h3>
+            <table class="stock-table"><tr><th>門市</th><th>尺碼</th><th>狀態</th></tr><tr><td>Taipei - 101</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Taipei - Breeze Center</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Taipei - Breeze Nanshan</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Taipei - Breeze XinYi</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Taipei - Far Eastern</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Taipei - Neihu Downtown Galleria Duty Free</td><td>—</td><td><span style="color:#e94560">❌ 無貨</span></td></tr><tr><td>Taipei - SKM</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Taipei - Sogo BR4</td><td>U</td><td><span style="color:#4caf50">✅ U</span></td></tr><tr><td>Taipei - Songshan Airport</td><td>—</td><td><span style="color:#e94560">❌ 無貨</span></td></tr></table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
