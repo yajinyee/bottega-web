@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Small Andiamo — BV Catalog</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee; }
+.back { padding: 15px 20px; color: #e94560; text-decoration: none; display: inline-block; }
+.detail { max-width: 1200px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+@media (max-width: 768px) { .detail { grid-template-columns: 1fr; } }
+.gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.gallery img { width: 100%; border-radius: 8px; background: #f5f5f5; cursor: pointer; }
+.gallery img.main { grid-column: span 2; height: 400px; object-fit: contain; }
+.gallery img.thumb { height: 150px; object-fit: contain; }
+.product-info h1 { font-size: 1.5em; margin-bottom: 5px; }
+.product-info .color { color: #888; margin-bottom: 10px; }
+.product-info .price { color: #e94560; font-size: 1.8em; font-weight: 700; margin: 15px 0; }
+.product-info .meta { color: #666; font-size: 0.85em; margin: 5px 0; }
+.sizes { margin: 15px 0; }
+.sizes .label { color: #aaa; font-size: 0.85em; margin-bottom: 5px; }
+.size-chip { display: inline-block; padding: 5px 12px; margin: 3px; border-radius: 5px; font-size: 0.85em; }
+.size-chip.in { background: #1b5e20; color: #fff; }
+.size-chip.out { background: #333; color: #666; text-decoration: line-through; }
+.stock-section { margin-top: 20px; }
+.stock-section h3 { color: #e94560; margin-bottom: 10px; }
+.stock-table { width: 100%; border-collapse: collapse; font-size: 0.85em; }
+.stock-table th { text-align: left; padding: 8px; background: #0f3460; color: #aaa; }
+.stock-table td { padding: 8px; border-bottom: 1px solid #0f3460; }
+</style>
+</head>
+<body>
+<a class="back" href="../index.html" onclick="if(history.length>1){history.back();return false;}">← 返回列表</a>
+<div class="detail">
+    <div class="gallery">
+        <img class="main" src="https://bottega-veneta.dam.kering.com/asset/d44b919a-d5ef-4ea8-8ccf-c016c06f53e6/Thumbnail/766014V6FQ14550_A.jpg" alt="主圖">
+        <img class="thumb" src="https://bottega-veneta.dam.kering.com/asset/d44b919a-d5ef-4ea8-8ccf-c016c06f53e6/Thumbnail/766014V6FQ14550_B.jpg" alt="角度圖" onclick="document.querySelector('.main').src=this.src">
+        <img class="thumb" src="https://bottega-veneta.dam.kering.com/asset/d44b919a-d5ef-4ea8-8ccf-c016c06f53e6/Thumbnail/766014V6FQ14550_C.jpg" alt="角度圖" onclick="document.querySelector('.main').src=this.src">
+        <img class="thumb" src="https://bottega-veneta.dam.kering.com/asset/d44b919a-d5ef-4ea8-8ccf-c016c06f53e6/Thumbnail/766014V6FQ14550_D.jpg" alt="角度圖" onclick="document.querySelector('.main').src=this.src">
+        <img class="thumb" src="https://bottega-veneta.dam.kering.com/asset/d44b919a-d5ef-4ea8-8ccf-c016c06f53e6/Thumbnail/766014V6FQ14550_G.jpg" alt="角度圖" onclick="document.querySelector('.main').src=this.src">
+    </div>
+    <div class="product-info">
+        <h1>Small Andiamo</h1>
+        <div class="color">cloudy indigo/gravel</div>
+        <div class="price">NT$8,160</div>
+        <div class="meta">📅 上市：2026-06-03</div>
+        <div class="meta">📂 分類：bv_macro_women_bags</div>
+        <div class="meta">🆔 SKU：tw_766014V6FQ14550</div>
+
+        <div class="sizes">
+            <div class="label">📏 線上尺碼：</div>
+            <span style="color:#888">無尺碼資料</span>
+        </div>
+
+        <div class="stock-section">
+            <h3>🏪 門市庫存（）</h3>
+            <p style="color:#888">⚠️ 無庫存快照資料</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
