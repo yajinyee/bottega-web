@@ -19,6 +19,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .filters { padding: 10px 20px; background: #0f3460; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
 .filters label { color: #aaa; font-size: 0.8em; }
 .filters select { background: #1a1a2e; color: #eee; border: 1px solid #333; padding: 5px 10px; border-radius: 5px; }
+.search-bar { padding: 10px 20px; background: #16213e; border-bottom: 1px solid #0f3460; }
+.search-bar input { width: 100%; max-width: 500px; padding: 10px 15px; border-radius: 25px; border: 1px solid #333; background: #1a1a2e; color: #eee; font-size: 0.9em; outline: none; }
+.search-bar input:focus { border-color: #e94560; }
+.search-bar input::placeholder { color: #666; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 15px; padding: 20px; }
 .card { background: #16213e; border-radius: 10px; overflow: hidden; border: 1px solid #0f3460; cursor: pointer; transition: transform 0.2s; }
 .card:hover { transform: scale(1.02); border-color: #e94560; }
@@ -38,7 +42,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 <body>
 <div class="header">
     <h1>Bottega Veneta Catalog</h1>
-    <div class="meta">快照：2026-06-10 | 商品：1681 | 有庫存資料：1628 | <a href="compare.html" style="color:#4caf50">💱 各國比價</a> | <a href="delisted_tw.html" style="color:#ff9800">🏷️ 下架商品</a> | <a href="bespoke.html" style="color:#e94560">✨ 訂製服務</a></div>
+    <div class="meta">快照：2026-06-11 | 商品：1681 | 有庫存資料：611 | <a href="compare.html" style="color:#4caf50">💱 各國比價</a> | <a href="delisted_tw.html" style="color:#ff9800">🏷️ 下架商品</a> | <a href="bespoke.html" style="color:#e94560">✨ 訂製服務</a></div>
 </div>
 <div class="tabs">
     <a class="tab active" href="index_tw.html">台灣 Taiwan</a>
@@ -59,6 +63,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <a class="sub-tab " href="index_tw_travel.html">🧳 旅行 Travel (70)</a>
     <a class="sub-tab " href="index_tw_home.html">🏠 家居 Home (63)</a>
 </div>
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="🔍 搜尋商品名稱、顏色（例：Madison、black、Jodie）" oninput="searchProducts(this.value)">
+</div>
 <div class="filters">
   <label>📏 篩選尺碼：</label>
   <select onchange="filterSize(this.value)">
@@ -68,10 +75,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <option value="M">M</option>
     <option value="L">L</option>
     <option value="XL">XL</option>
-    <option value="34">34</option>
-    <option value="34.5">34.5</option>
     <option value="35">35</option>
-    <option value="35.5">35.5</option>
     <option value="36">36</option>
     <option value="36.5">36.5</option>
     <option value="37">37</option>
@@ -83,15 +87,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <option value="40">40</option>
     <option value="40.5">40.5</option>
     <option value="41">41</option>
-    <option value="41.5">41.5</option>
     <option value="42">42</option>
     <option value="42.5">42.5</option>
     <option value="43">43</option>
     <option value="43.5">43.5</option>
     <option value="44">44</option>
-    <option value="44.5">44.5</option>
     <option value="45">45</option>
-    <option value="45.5">45.5</option>
     <option value="46">46</option>
     <option value="47">47</option>
     <option value="48">48</option>
@@ -120,9 +121,33 @@ function filterSize(size) {
         card.style.display = sizes.split(',').includes(size) ? '' : 'none';
     });
 }
+
+function searchProducts(query) {
+    const cards = document.querySelectorAll('.card');
+    const q = query.toLowerCase().trim();
+    let visibleCount = 0;
+    cards.forEach(card => {
+        if (!q) { card.style.display = ''; visibleCount++; return; }
+        const name = (card.dataset.name || '').toLowerCase();
+        // 模糊搜尋：每個關鍵字都要匹配
+        const keywords = q.split(/\s+/);
+        const match = keywords.every(kw => name.includes(kw));
+        card.style.display = match ? '' : 'none';
+        if (match) visibleCount++;
+    });
+    // 隱藏空的分類標題
+    document.querySelectorAll('.cat-header').forEach(header => {
+        const grid = header.nextElementSibling;
+        if (grid && grid.classList.contains('grid')) {
+            const visible = grid.querySelectorAll('.card:not([style*="display: none"])').length;
+            header.style.display = visible > 0 ? '' : 'none';
+            grid.style.display = visible > 0 ? '' : 'none';
+        }
+    });
+}
 </script>
 <div class="stats">
-    Generated: 2026-06-11 11:02:16 | DB: 110936 KB
+    Generated: 2026-06-11 16:27:20 | DB: 117704 KB
 </div>
 </body>
 </html>

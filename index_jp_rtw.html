@@ -19,6 +19,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .filters { padding: 10px 20px; background: #0f3460; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
 .filters label { color: #aaa; font-size: 0.8em; }
 .filters select { background: #1a1a2e; color: #eee; border: 1px solid #333; padding: 5px 10px; border-radius: 5px; }
+.search-bar { padding: 10px 20px; background: #16213e; border-bottom: 1px solid #0f3460; }
+.search-bar input { width: 100%; max-width: 500px; padding: 10px 15px; border-radius: 25px; border: 1px solid #333; background: #1a1a2e; color: #eee; font-size: 0.9em; outline: none; }
+.search-bar input:focus { border-color: #e94560; }
+.search-bar input::placeholder { color: #666; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 15px; padding: 20px; }
 .card { background: #16213e; border-radius: 10px; overflow: hidden; border: 1px solid #0f3460; cursor: pointer; transition: transform 0.2s; }
 .card:hover { transform: scale(1.02); border-color: #e94560; }
@@ -38,7 +42,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 <body>
 <div class="header">
     <h1>Bottega Veneta Catalog</h1>
-    <div class="meta">快照：2026-06-10 | 商品：1692 | 有庫存資料：0 | <a href="compare.html" style="color:#4caf50">💱 各國比價</a> | <a href="delisted_jp.html" style="color:#ff9800">🏷️ 下架商品</a> | <a href="bespoke.html" style="color:#e94560">✨ 訂製服務</a></div>
+    <div class="meta">快照：2026-06-11 | 商品：1692 | 有庫存資料：0 | <a href="compare.html" style="color:#4caf50">💱 各國比價</a> | <a href="delisted_jp.html" style="color:#ff9800">🏷️ 下架商品</a> | <a href="bespoke.html" style="color:#e94560">✨ 訂製服務</a></div>
 </div>
 <div class="tabs">
     <a class="tab " href="index_tw.html">台灣 Taiwan</a>
@@ -59,9 +63,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <a class="sub-tab " href="index_jp_travel.html">🧳 旅行 Travel (71)</a>
     <a class="sub-tab " href="index_jp_home.html">🏠 家居 Home (63)</a>
 </div>
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="🔍 搜尋商品名稱、顏色（例：Madison、black、Jodie）" oninput="searchProducts(this.value)">
+</div>
 <div class="cat-header">👗 服裝 Clothing — 74 件</div>
 <div class="grid">
-<div class="card" data-sizes="" onclick="window.location='product/jp_875124V64W03476.html'">
+<div class="card" data-sizes="" data-name=" Leather Blouson wader green" onclick="window.location='product/jp_875124V64W03476.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/b8c0a186-f718-47b2-bfcb-f9d42ce48820/Thumbnail/875124V64W03476_A.jpg" alt=" Leather Blouson" loading="lazy">
     <div class="info">
         <div class="name"> Leather Blouson</div>
@@ -72,7 +79,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_862131V6OO04493.html'">
+<div class="card" data-sizes="" data-name="Cotton And Silk Check Pajama Shirt blue/white/stone" onclick="window.location='product/jp_862131V6OO04493.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/9ef01693-606b-4a40-98e6-c152ad25b286/Thumbnail/862131V6OO04493_A.jpg" alt="Cotton And Silk Check Pajama Shirt" loading="lazy">
     <div class="info">
         <div class="name">Cotton And Silk Check Pajama Shirt</div>
@@ -83,7 +90,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_851389V6OO04493.html'">
+<div class="card" data-sizes="" data-name="Cotton And Silk Check Shorts blue/white/stone" onclick="window.location='product/jp_851389V6OO04493.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/4a67ccde-bd57-4dc3-815c-e945712d057e/Thumbnail/851389V6OO04493_A.jpg" alt="Cotton And Silk Check Shorts" loading="lazy">
     <div class="info">
         <div class="name">Cotton And Silk Check Shorts</div>
@@ -94,7 +101,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871341V6ON09107.html'">
+<div class="card" data-sizes="" data-name="Cotton And Silk Pants parchment" onclick="window.location='product/jp_871341V6ON09107.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/6b5bd8f4-ecdf-40ea-9e83-db4b42eeaf7d/Thumbnail/871341V6ON09107_A.jpg" alt="Cotton And Silk Pants" loading="lazy">
     <div class="info">
         <div class="name">Cotton And Silk Pants</div>
@@ -105,7 +112,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871159V6ON04071.html'">
+<div class="card" data-sizes="" data-name="Cotton And Silk Shirt midnight blue" onclick="window.location='product/jp_871159V6ON04071.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/30fb0761-72f9-425f-ab49-94c4a0c37763/Thumbnail/871159V6ON04071_A.jpg" alt="Cotton And Silk Shirt" loading="lazy">
     <div class="info">
         <div class="name">Cotton And Silk Shirt</div>
@@ -116,7 +123,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_A000HIV6M504071.html'">
+<div class="card" data-sizes="" data-name="Cotton Crochet Polo midnight blue" onclick="window.location='product/jp_A000HIV6M504071.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/8cc89659-8906-4b7a-a770-a9e4744f54dd/Thumbnail/A000HIV6M504071_A.jpg" alt="Cotton Crochet Polo" loading="lazy">
     <div class="info">
         <div class="name">Cotton Crochet Polo</div>
@@ -127,7 +134,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_861970V6OG09006.html'">
+<div class="card" data-sizes="" data-name="Cotton Poplin Pinstripes Shirt white/blue" onclick="window.location='product/jp_861970V6OG09006.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/208c4933-4ad5-4188-8869-adb4d3448779/Thumbnail/861970V6OG09006_A.jpg" alt="Cotton Poplin Pinstripes Shirt" loading="lazy">
     <div class="info">
         <div class="name">Cotton Poplin Pinstripes Shirt</div>
@@ -138,7 +145,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871218V6CV04105.html'">
+<div class="card" data-sizes="" data-name="Cotton Poplin Shirt blue shirt" onclick="window.location='product/jp_871218V6CV04105.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/2f1b9f6e-d9aa-44b1-9322-7c1297ae3a5e/Thumbnail/871218V6CV04105_A.jpg" alt="Cotton Poplin Shirt" loading="lazy">
     <div class="info">
         <div class="name">Cotton Poplin Shirt</div>
@@ -149,7 +156,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871219V6CV09000.html'">
+<div class="card" data-sizes="" data-name="Cotton Poplin Shirt white" onclick="window.location='product/jp_871219V6CV09000.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/cfaefb7d-ce19-41f4-b489-e89110142833/Thumbnail/871219V6CV09000_A.jpg" alt="Cotton Poplin Shirt" loading="lazy">
     <div class="info">
         <div class="name">Cotton Poplin Shirt</div>
@@ -160,7 +167,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_862103V6D202341.html'">
+<div class="card" data-sizes="" data-name="Cotton Toile Cargo Pants stucco" onclick="window.location='product/jp_862103V6D202341.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/7ecd3c31-f6be-4c0a-89f7-e02923adfaca/Thumbnail/862103V6D202341_A.jpg" alt="Cotton Toile Cargo Pants" loading="lazy">
     <div class="info">
         <div class="name">Cotton Toile Cargo Pants</div>
@@ -171,7 +178,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_862104V6D202341.html'">
+<div class="card" data-sizes="" data-name="Cotton Toile Cargo Shorts stucco" onclick="window.location='product/jp_862104V6D202341.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/05d9ffea-ca58-48c1-8087-1f954c618755/Thumbnail/862104V6D202341_A.jpg" alt="Cotton Toile Cargo Shorts" loading="lazy">
     <div class="info">
         <div class="name">Cotton Toile Cargo Shorts</div>
@@ -182,7 +189,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_874227V6D202341.html'">
+<div class="card" data-sizes="" data-name="Cotton Toile Shirt stucco" onclick="window.location='product/jp_874227V6D202341.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/ebf96f6f-8cf3-4a08-8857-a7e304e85056/Thumbnail/874227V6D202341_A.jpg" alt="Cotton Toile Shirt" loading="lazy">
     <div class="info">
         <div class="name">Cotton Toile Shirt</div>
@@ -193,7 +200,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_852469V6CX04052.html'">
+<div class="card" data-sizes="" data-name="Intrecciato Cotton Poplin Shirt oxford blue" onclick="window.location='product/jp_852469V6CX04052.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/2780b68f-872a-44c5-a664-e85af31219fe/Thumbnail/852469V6CX04052_A.jpg" alt="Intrecciato Cotton Poplin Shirt" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Cotton Poplin Shirt</div>
@@ -204,7 +211,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871556V6CX04052.html'">
+<div class="card" data-sizes="" data-name="Intrecciato Cotton Poplin Shorts oxford blue" onclick="window.location='product/jp_871556V6CX04052.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/7895d41e-9323-4ca7-8eb0-8e1adccd7e3d/Thumbnail/871556V6CX04052_A.jpg" alt="Intrecciato Cotton Poplin Shorts" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Cotton Poplin Shorts</div>
@@ -215,7 +222,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871348V64W03476.html'">
+<div class="card" data-sizes="" data-name="Leather Pants  wader green" onclick="window.location='product/jp_871348V64W03476.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/c99f2d3c-5559-4c75-95c4-222d886c1583/Thumbnail/871348V64W03476_A.jpg" alt="Leather Pants " loading="lazy">
     <div class="info">
         <div class="name">Leather Pants </div>
@@ -226,7 +233,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871316V6KO02549.html'">
+<div class="card" data-sizes="" data-name="Light Cotton Trench Coat  sahara" onclick="window.location='product/jp_871316V6KO02549.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/d23eb3eb-d985-4b99-ae14-3e21794bcb06/Thumbnail/871316V6KO02549_A.jpg" alt="Light Cotton Trench Coat " loading="lazy">
     <div class="info">
         <div class="name">Light Cotton Trench Coat </div>
@@ -237,7 +244,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871162V6O608531.html'">
+<div class="card" data-sizes="" data-name="Light Wool Toile Hooded Shirt light gray melange" onclick="window.location='product/jp_871162V6O608531.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/dee3b212-3eb9-4fa0-afce-90ac855d3542/Thumbnail/871162V6O608531_A.jpg" alt="Light Wool Toile Hooded Shirt" loading="lazy">
     <div class="info">
         <div class="name">Light Wool Toile Hooded Shirt</div>
@@ -248,7 +255,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_859298V6O608531.html'">
+<div class="card" data-sizes="" data-name="Light Wool Toile Pants light gray melange" onclick="window.location='product/jp_859298V6O608531.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/f7a9f47f-3816-4661-b390-b300603eb7f0/Thumbnail/859298V6O608531_A.jpg" alt="Light Wool Toile Pants" loading="lazy">
     <div class="info">
         <div class="name">Light Wool Toile Pants</div>
@@ -259,7 +266,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_874123V6D203476.html'">
+<div class="card" data-sizes="" data-name="Macro Intreccio Cotton Shirt wader green" onclick="window.location='product/jp_874123V6D203476.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/40821027-0359-4f48-ae60-ebbbe1f2f3d5/Thumbnail/874123V6D203476_A.jpg" alt="Macro Intreccio Cotton Shirt" loading="lazy">
     <div class="info">
         <div class="name">Macro Intreccio Cotton Shirt</div>
@@ -270,7 +277,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_874118V6D203476.html'">
+<div class="card" data-sizes="" data-name="Macro Intreccio Cotton Shorts wader green" onclick="window.location='product/jp_874118V6D203476.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/7b1b1c3a-6fba-43b5-b950-764fcb1f9d31/Thumbnail/874118V6D203476_A.jpg" alt="Macro Intreccio Cotton Shorts" loading="lazy">
     <div class="info">
         <div class="name">Macro Intreccio Cotton Shorts</div>
@@ -281,7 +288,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871226V6OF01010.html'">
+<div class="card" data-sizes="" data-name="Mohair And Wool Jacket  double black" onclick="window.location='product/jp_871226V6OF01010.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/a1acaf02-19b5-476e-bf10-8ed1da19f376/Thumbnail/871226V6OF01010_A.jpg" alt="Mohair And Wool Jacket " loading="lazy">
     <div class="info">
         <div class="name">Mohair And Wool Jacket </div>
@@ -292,7 +299,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_874971V6OF01010.html'">
+<div class="card" data-sizes="" data-name="Mohair And Wool Pants double black" onclick="window.location='product/jp_874971V6OF01010.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/dd0f4850-5543-4b3b-ac88-e6c44fe073fe/Thumbnail/874971V6OF01010_A.jpg" alt="Mohair And Wool Pants" loading="lazy">
     <div class="info">
         <div class="name">Mohair And Wool Pants</div>
@@ -303,7 +310,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_862579V69R04946.html'">
+<div class="card" data-sizes="" data-name="Sky Bleached Denim Overshirt light bleach" onclick="window.location='product/jp_862579V69R04946.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/20d59744-6dfd-42e6-80cf-776cfa07bf52/Thumbnail/862579V69R04946_A.jpg" alt="Sky Bleached Denim Overshirt" loading="lazy">
     <div class="info">
         <div class="name">Sky Bleached Denim Overshirt</div>
@@ -314,7 +321,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_861564V69R04946.html'">
+<div class="card" data-sizes="" data-name="Sky Bleached Wide Leg Denim Shorts  light bleach" onclick="window.location='product/jp_861564V69R04946.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/7bb74337-5351-44ca-8d36-a5c6883df8c6/Thumbnail/861564V69R04946_A.jpg" alt="Sky Bleached Wide Leg Denim Shorts " loading="lazy">
     <div class="info">
         <div class="name">Sky Bleached Wide Leg Denim Shorts </div>
@@ -325,7 +332,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_859749V69R04946.html'">
+<div class="card" data-sizes="" data-name="Sky Bleached Wide Leg Jeans light bleach" onclick="window.location='product/jp_859749V69R04946.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/15c66f44-318e-4753-98e0-3845d46b4bc5/Thumbnail/859749V69R04946_A.jpg" alt="Sky Bleached Wide Leg Jeans" loading="lazy">
     <div class="info">
         <div class="name">Sky Bleached Wide Leg Jeans</div>
@@ -336,7 +343,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871347V4LG01796.html'">
+<div class="card" data-sizes="" data-name="Suede Leather Jacket gray seal" onclick="window.location='product/jp_871347V4LG01796.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/a4e20b59-f0ed-4320-94d6-690ce2d8279f/Thumbnail/871347V4LG01796_A.jpg" alt="Suede Leather Jacket" loading="lazy">
     <div class="info">
         <div class="name">Suede Leather Jacket</div>
@@ -347,7 +354,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871346V4LG01796.html'">
+<div class="card" data-sizes="" data-name="Suede Leather Pants gray seal" onclick="window.location='product/jp_871346V4LG01796.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/8300bb6b-558e-4a4c-8512-9f37f93b6bef/Thumbnail/871346V4LG01796_A.jpg" alt="Suede Leather Pants" loading="lazy">
     <div class="info">
         <div class="name">Suede Leather Pants</div>
@@ -358,7 +365,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_873925V6OB02188.html'">
+<div class="card" data-sizes="" data-name="Technical Blouson desert taupe" onclick="window.location='product/jp_873925V6OB02188.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/d242652a-739c-4978-b058-7af082e1b4c3/Thumbnail/873925V6OB02188_A.jpg" alt="Technical Blouson" loading="lazy">
     <div class="info">
         <div class="name">Technical Blouson</div>
@@ -369,7 +376,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_869426V6OB04030.html'">
+<div class="card" data-sizes="" data-name="Technical Hooded Blouson dark navy" onclick="window.location='product/jp_869426V6OB04030.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/ece80f10-15da-46a7-a50a-5fec06c46043/Thumbnail/869426V6OB04030_A.jpg" alt="Technical Hooded Blouson" loading="lazy">
     <div class="info">
         <div class="name">Technical Hooded Blouson</div>
@@ -380,7 +387,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_854174V6OB04030.html'">
+<div class="card" data-sizes="" data-name="Technical Pants  dark navy" onclick="window.location='product/jp_854174V6OB04030.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/2dd0f963-c243-4f1e-a3f5-aa94ec126251/Thumbnail/854174V6OB04030_A.jpg" alt="Technical Pants " loading="lazy">
     <div class="info">
         <div class="name">Technical Pants </div>
@@ -391,7 +398,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_876040V6OB04030.html'">
+<div class="card" data-sizes="" data-name="Technical Shorts dark navy" onclick="window.location='product/jp_876040V6OB04030.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/2f2d18dc-0e66-4081-a495-6d5fd52d0c48/Thumbnail/876040V6OB04030_A.jpg" alt="Technical Shorts" loading="lazy">
     <div class="info">
         <div class="name">Technical Shorts</div>
@@ -402,7 +409,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_876040V6OB02188.html'">
+<div class="card" data-sizes="" data-name="Technical Shorts desert taupe" onclick="window.location='product/jp_876040V6OB02188.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/3006c168-57fe-46c0-9756-e12a14dac7ac/Thumbnail/876040V6OB02188_A.jpg" alt="Technical Shorts" loading="lazy">
     <div class="info">
         <div class="name">Technical Shorts</div>
@@ -413,7 +420,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_851565V6NB02512.html'">
+<div class="card" data-sizes="" data-name="Wool And Cotton Jacket beige/light blue" onclick="window.location='product/jp_851565V6NB02512.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/07300ca1-2177-4136-8edd-9caac52fc0bc/Thumbnail/851565V6NB02512_A.jpg" alt="Wool And Cotton Jacket" loading="lazy">
     <div class="info">
         <div class="name">Wool And Cotton Jacket</div>
@@ -424,7 +431,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871290V6O202527.html'">
+<div class="card" data-sizes="" data-name="Wool And Mohair Blouson desert/gray melange" onclick="window.location='product/jp_871290V6O202527.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/df469704-23ac-4fb1-a856-165e37995786/Thumbnail/871290V6O202527_A.jpg" alt="Wool And Mohair Blouson" loading="lazy">
     <div class="info">
         <div class="name">Wool And Mohair Blouson</div>
@@ -435,7 +442,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_870467V6O202527.html'">
+<div class="card" data-sizes="" data-name="Wool And Mohair Pants desert/gray melange" onclick="window.location='product/jp_870467V6O202527.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/a105acbc-2ac6-4891-be55-942be1e03f95/Thumbnail/870467V6O202527_A.jpg" alt="Wool And Mohair Pants" loading="lazy">
     <div class="info">
         <div class="name">Wool And Mohair Pants</div>
@@ -446,7 +453,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871585V6O202527.html'">
+<div class="card" data-sizes="" data-name="Wool And Mohair Shirt desert/gray melange" onclick="window.location='product/jp_871585V6O202527.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/713df8f1-5c88-4abd-8194-a61902bba4a7/Thumbnail/871585V6O202527_A.jpg" alt="Wool And Mohair Shirt" loading="lazy">
     <div class="info">
         <div class="name">Wool And Mohair Shirt</div>
@@ -457,7 +464,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_A00132V6D109071.html'">
+<div class="card" data-sizes="" data-name="Compact Cotton Dress chalk" onclick="window.location='product/jp_A00132V6D109071.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/df2abe19-28ab-4755-9dfc-e358c4b7cd0a/Thumbnail/A00132V6D109071_A.jpg" alt="Compact Cotton Dress" loading="lazy">
     <div class="info">
         <div class="name">Compact Cotton Dress</div>
@@ -468,7 +475,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_875274V6D109107.html'">
+<div class="card" data-sizes="" data-name="Compact Cotton Toile Pants parchment" onclick="window.location='product/jp_875274V6D109107.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/3949a297-47fe-425c-beb1-b183a313285a/Thumbnail/875274V6D109107_A.jpg" alt="Compact Cotton Toile Pants" loading="lazy">
     <div class="info">
         <div class="name">Compact Cotton Toile Pants</div>
@@ -479,7 +486,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_872760V6D101010.html'">
+<div class="card" data-sizes="" data-name="Compact Cotton Toile Skirt double black" onclick="window.location='product/jp_872760V6D101010.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/5c38d5a3-3fad-48c2-b7e7-e6ddb4d1cd75/Thumbnail/872760V6D101010_A.jpg" alt="Compact Cotton Toile Skirt" loading="lazy">
     <div class="info">
         <div class="name">Compact Cotton Toile Skirt</div>
@@ -490,7 +497,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_869475V6D109071.html'">
+<div class="card" data-sizes="" data-name="Compact Cotton Toile Top chalk" onclick="window.location='product/jp_869475V6D109071.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/a083a326-34ee-4322-b64d-0ee75b0de091/Thumbnail/869475V6D109071_A.jpg" alt="Compact Cotton Toile Top" loading="lazy">
     <div class="info">
         <div class="name">Compact Cotton Toile Top</div>
@@ -501,7 +508,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_869475V6D101010.html'">
+<div class="card" data-sizes="" data-name="Compact Cotton Toile Top double black" onclick="window.location='product/jp_869475V6D101010.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/d617aaa1-76c1-4f5b-9232-daa85c4a40a0/Thumbnail/869475V6D101010_A.jpg" alt="Compact Cotton Toile Top" loading="lazy">
     <div class="info">
         <div class="name">Compact Cotton Toile Top</div>
@@ -512,7 +519,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_869436V6KO09000.html'">
+<div class="card" data-sizes="" data-name="Cotton Blouson white" onclick="window.location='product/jp_869436V6KO09000.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/8f704920-3274-4270-87a5-46bf5f53b1ca/Thumbnail/869436V6KO09000_A.jpg" alt="Cotton Blouson" loading="lazy">
     <div class="info">
         <div class="name">Cotton Blouson</div>
@@ -523,7 +530,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_A003NEV6NP01010.html'">
+<div class="card" data-sizes="" data-name="Cotton Gabardine Skirt double black" onclick="window.location='product/jp_A003NEV6NP01010.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/8934a52a-edf9-4fa4-bb45-db47fa367e8c/Thumbnail/A003NEV6NP01010_A.jpg" alt="Cotton Gabardine Skirt" loading="lazy">
     <div class="info">
         <div class="name">Cotton Gabardine Skirt</div>
@@ -534,7 +541,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_873834V6NP01010.html'">
+<div class="card" data-sizes="" data-name="Cotton Gabardine Skirt double black" onclick="window.location='product/jp_873834V6NP01010.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/c2980ece-acad-405a-94c8-b73a0624e7ff/Thumbnail/873834V6NP01010_A.jpg" alt="Cotton Gabardine Skirt" loading="lazy">
     <div class="info">
         <div class="name">Cotton Gabardine Skirt</div>
@@ -545,7 +552,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871388V6KO02549.html'">
+<div class="card" data-sizes="" data-name="Cotton Trench Coat sahara" onclick="window.location='product/jp_871388V6KO02549.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/e5543b06-62a2-48f5-80b6-90bb5c1bc46f/Thumbnail/871388V6KO02549_A.jpg" alt="Cotton Trench Coat" loading="lazy">
     <div class="info">
         <div class="name">Cotton Trench Coat</div>
@@ -556,7 +563,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_874798V6KO02549.html'">
+<div class="card" data-sizes="" data-name="Cotton Trench Coat sahara" onclick="window.location='product/jp_874798V6KO02549.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/5f4b9694-33d2-4b77-a161-7fab1a94ff74/Thumbnail/874798V6KO02549_A.jpg" alt="Cotton Trench Coat" loading="lazy">
     <div class="info">
         <div class="name">Cotton Trench Coat</div>
@@ -567,7 +574,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_876819V6NJ01010.html'">
+<div class="card" data-sizes="" data-name="Crepe Viscose Jersey Dress double black" onclick="window.location='product/jp_876819V6NJ01010.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/da26212c-a250-4710-a4ec-2e7d81a023fd/Thumbnail/876819V6NJ01010_A.jpg" alt="Crepe Viscose Jersey Dress" loading="lazy">
     <div class="info">
         <div class="name">Crepe Viscose Jersey Dress</div>
@@ -578,7 +585,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871540V6NJ01010.html'">
+<div class="card" data-sizes="" data-name="Crepe Viscose Jersey Dress double black" onclick="window.location='product/jp_871540V6NJ01010.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/dd03f4e4-906c-4701-943e-31d86edff45e/Thumbnail/871540V6NJ01010_A.jpg" alt="Crepe Viscose Jersey Dress" loading="lazy">
     <div class="info">
         <div class="name">Crepe Viscose Jersey Dress</div>
@@ -589,7 +596,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_873841V6NI09107.html'">
+<div class="card" data-sizes="" data-name="Floral Lace Dress parchment" onclick="window.location='product/jp_873841V6NI09107.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/a68c3986-1042-4d89-80d6-022000eb3b20/Thumbnail/873841V6NI09107_A.jpg" alt="Floral Lace Dress" loading="lazy">
     <div class="info">
         <div class="name">Floral Lace Dress</div>
@@ -600,7 +607,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871458V6NH04071.html'">
+<div class="card" data-sizes="" data-name="Fluid Silk And Viscose Shirt  midnight blue" onclick="window.location='product/jp_871458V6NH04071.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/0d887911-08e3-44a8-a02e-4d89a517b82e/Thumbnail/871458V6NH04071_A.jpg" alt="Fluid Silk And Viscose Shirt " loading="lazy">
     <div class="info">
         <div class="name">Fluid Silk And Viscose Shirt </div>
@@ -611,7 +618,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_874803V6BD01010.html'">
+<div class="card" data-sizes="" data-name="Fluid Silk Satin Dress double black" onclick="window.location='product/jp_874803V6BD01010.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/ffe8c80a-6bc8-47f9-99f3-a5ce76448411/Thumbnail/874803V6BD01010_A.jpg" alt="Fluid Silk Satin Dress" loading="lazy">
     <div class="info">
         <div class="name">Fluid Silk Satin Dress</div>
@@ -622,7 +629,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871550V6BD01010.html'">
+<div class="card" data-sizes="" data-name="Fluid Silk Satin Top  double black" onclick="window.location='product/jp_871550V6BD01010.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/eeea8848-511a-4379-aa4d-d14d925d671e/Thumbnail/871550V6BD01010_A.jpg" alt="Fluid Silk Satin Top " loading="lazy">
     <div class="info">
         <div class="name">Fluid Silk Satin Top </div>
@@ -633,7 +640,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_861751V6O604274.html'">
+<div class="card" data-sizes="" data-name="Light Wool Toile Blouse blue shirt melange" onclick="window.location='product/jp_861751V6O604274.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/e9b1e3dc-48ce-4140-a426-78986d9d6f8e/Thumbnail/861751V6O604274_A.jpg" alt="Light Wool Toile Blouse" loading="lazy">
     <div class="info">
         <div class="name">Light Wool Toile Blouse</div>
@@ -644,7 +651,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_861751V6O602605.html'">
+<div class="card" data-sizes="" data-name="Light Wool Toile Blouse camel melange" onclick="window.location='product/jp_861751V6O602605.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/447715e3-192a-4e8f-93d5-f8de773cf0d2/Thumbnail/861751V6O602605_A.jpg" alt="Light Wool Toile Blouse" loading="lazy">
     <div class="info">
         <div class="name">Light Wool Toile Blouse</div>
@@ -655,7 +662,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_873913V6O602605.html'">
+<div class="card" data-sizes="" data-name="Light Wool Toile Skirt camel melange" onclick="window.location='product/jp_873913V6O602605.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/ffce0334-4698-4c50-a4df-2c42ebebe9f9/Thumbnail/873913V6O602605_A.jpg" alt="Light Wool Toile Skirt" loading="lazy">
     <div class="info">
         <div class="name">Light Wool Toile Skirt</div>
@@ -666,7 +673,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_875204V6DB01010.html'">
+<div class="card" data-sizes="" data-name="Light Wool Twill Shorts double black" onclick="window.location='product/jp_875204V6DB01010.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/ee755a49-388d-4a78-917c-e6fe97ca7d27/Thumbnail/875204V6DB01010_A.jpg" alt="Light Wool Twill Shorts" loading="lazy">
     <div class="info">
         <div class="name">Light Wool Twill Shorts</div>
@@ -677,7 +684,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871537V6PE09742.html'">
+<div class="card" data-sizes="" data-name="Mini Intreccio Suede Leather Skirt trench" onclick="window.location='product/jp_871537V6PE09742.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/e7bbc05e-5a47-48ee-a6a8-d49305e48ef1/Thumbnail/871537V6PE09742_A.jpg" alt="Mini Intreccio Suede Leather Skirt" loading="lazy">
     <div class="info">
         <div class="name">Mini Intreccio Suede Leather Skirt</div>
@@ -688,7 +695,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_A0024VV6NC02207.html'">
+<div class="card" data-sizes="" data-name="Prince Of Wales Wool Jacket silt/stucco melange" onclick="window.location='product/jp_A0024VV6NC02207.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/16ecf43e-222a-4811-9f19-dd59f7d3cb1c/Thumbnail/A0024VV6NC02207_A.jpg" alt="Prince Of Wales Wool Jacket" loading="lazy">
     <div class="info">
         <div class="name">Prince Of Wales Wool Jacket</div>
@@ -699,7 +706,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871844V6NC02207.html'">
+<div class="card" data-sizes="" data-name="Prince Of Wales Wool Shorts silt/stucco melange" onclick="window.location='product/jp_871844V6NC02207.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/4ead425e-4663-41ff-baec-e926e0075475/Thumbnail/871844V6NC02207_A.jpg" alt="Prince Of Wales Wool Shorts" loading="lazy">
     <div class="info">
         <div class="name">Prince Of Wales Wool Shorts</div>
@@ -710,7 +717,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_875076V6PS04075.html'">
+<div class="card" data-sizes="" data-name="Printed Silk Twill Body midnight blue/chalk" onclick="window.location='product/jp_875076V6PS04075.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/98017563-480f-482d-b142-2d32b70800a4/Thumbnail/875076V6PS04075_A.jpg" alt="Printed Silk Twill Body" loading="lazy">
     <div class="info">
         <div class="name">Printed Silk Twill Body</div>
@@ -721,7 +728,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871852V6PS04075.html'">
+<div class="card" data-sizes="" data-name="Printed Silk Twill Culotte midnight blue/chalk" onclick="window.location='product/jp_871852V6PS04075.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/5a4d9f58-d81f-4429-bfe7-73acb73fd06f/Thumbnail/871852V6PS04075_A.jpg" alt="Printed Silk Twill Culotte" loading="lazy">
     <div class="info">
         <div class="name">Printed Silk Twill Culotte</div>
@@ -732,7 +739,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_873930V6MY04073.html'">
+<div class="card" data-sizes="" data-name="Silk Double Knit Cardigan midnight blue/chalk" onclick="window.location='product/jp_873930V6MY04073.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/1d34b169-f4a5-4750-b6e6-4aa2d6bd4da0/Thumbnail/873930V6MY04073_A.jpg" alt="Silk Double Knit Cardigan" loading="lazy">
     <div class="info">
         <div class="name">Silk Double Knit Cardigan</div>
@@ -743,7 +750,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_873893V6NA04073.html'">
+<div class="card" data-sizes="" data-name="Silk Double Knit Skirt midnight blue/chalk" onclick="window.location='product/jp_873893V6NA04073.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/f35dd012-fd5c-4115-bc28-32655f22a97e/Thumbnail/873893V6NA04073_A.jpg" alt="Silk Double Knit Skirt" loading="lazy">
     <div class="info">
         <div class="name">Silk Double Knit Skirt</div>
@@ -754,7 +761,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_873893V6NA01331.html'">
+<div class="card" data-sizes="" data-name="Silk Double Knit Skirt prosecco/chalk" onclick="window.location='product/jp_873893V6NA01331.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/9e2ebcaf-abb0-4583-b44c-164cfb31e963/Thumbnail/873893V6NA01331_A.jpg" alt="Silk Double Knit Skirt" loading="lazy">
     <div class="info">
         <div class="name">Silk Double Knit Skirt</div>
@@ -765,7 +772,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_873890V6M301326.html'">
+<div class="card" data-sizes="" data-name="Silk Knit Top prosecco" onclick="window.location='product/jp_873890V6M301326.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/464bfeae-a35d-47e2-a399-3fec76201141/Thumbnail/873890V6M301326_A.jpg" alt="Silk Knit Top" loading="lazy">
     <div class="info">
         <div class="name">Silk Knit Top</div>
@@ -776,7 +783,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_869475V6NG02951.html'">
+<div class="card" data-sizes="" data-name="Soft Wool Check Top chalk/carrubo/blue" onclick="window.location='product/jp_869475V6NG02951.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/6afb9104-d534-4735-ad68-4290a23c20a2/Thumbnail/869475V6NG02951_A.jpg" alt="Soft Wool Check Top" loading="lazy">
     <div class="info">
         <div class="name">Soft Wool Check Top</div>
@@ -787,7 +794,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871530V64Z06124.html'">
+<div class="card" data-sizes="" data-name="Suede Leather Shirt crave" onclick="window.location='product/jp_871530V64Z06124.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/16092e31-2178-4174-9751-3c6126b937ca/Thumbnail/871530V64Z06124_A.jpg" alt="Suede Leather Shirt" loading="lazy">
     <div class="info">
         <div class="name">Suede Leather Shirt</div>
@@ -798,7 +805,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_873561V64Z06124.html'">
+<div class="card" data-sizes="" data-name="Suede Leather Skirt crave" onclick="window.location='product/jp_873561V64Z06124.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/61f59bd1-5123-4d0c-aca7-5c51a6b56a08/Thumbnail/873561V64Z06124_A.jpg" alt="Suede Leather Skirt" loading="lazy">
     <div class="info">
         <div class="name">Suede Leather Skirt</div>
@@ -809,7 +816,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871422V6O204418.html'">
+<div class="card" data-sizes="" data-name="Wool And Mohair Jacket blue/gray melange" onclick="window.location='product/jp_871422V6O204418.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/9c288d5c-5ea1-49ab-8d77-6f11bf9cd9f4/Thumbnail/871422V6O204418_A.jpg" alt="Wool And Mohair Jacket" loading="lazy">
     <div class="info">
         <div class="name">Wool And Mohair Jacket</div>
@@ -820,7 +827,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_875139V6O204418.html'">
+<div class="card" data-sizes="" data-name="Wool And Mohair Trench Coat blue/gray melange" onclick="window.location='product/jp_875139V6O204418.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/d3beb73c-8dbd-4310-b7d9-009a0aa764c8/Thumbnail/875139V6O204418_A.jpg" alt="Wool And Mohair Trench Coat" loading="lazy">
     <div class="info">
         <div class="name">Wool And Mohair Trench Coat</div>
@@ -831,7 +838,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_859168V6OA09071.html'">
+<div class="card" data-sizes="" data-name="Wool And Silk Satin Top chalk" onclick="window.location='product/jp_859168V6OA09071.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/ae5470a6-3aba-44ca-b471-1ab0696d416d/Thumbnail/859168V6OA09071_A.jpg" alt="Wool And Silk Satin Top" loading="lazy">
     <div class="info">
         <div class="name">Wool And Silk Satin Top</div>
@@ -842,7 +849,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871427V66I01010.html'">
+<div class="card" data-sizes="" data-name="Wool Grain De Poudre Jacket double black" onclick="window.location='product/jp_871427V66I01010.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/7c31db82-df0f-43e0-aa05-aed050acbdb0/Thumbnail/871427V66I01010_A.jpg" alt="Wool Grain De Poudre Jacket" loading="lazy">
     <div class="info">
         <div class="name">Wool Grain De Poudre Jacket</div>
@@ -853,7 +860,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_871847V66I01010.html'">
+<div class="card" data-sizes="" data-name="Wool Grain De Poudre Pants double black" onclick="window.location='product/jp_871847V66I01010.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/194c247e-5163-405d-9410-4deb4a98e821/Thumbnail/871847V66I01010_A.jpg" alt="Wool Grain De Poudre Pants" loading="lazy">
     <div class="info">
         <div class="name">Wool Grain De Poudre Pants</div>
@@ -864,7 +871,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" onclick="window.location='product/jp_869829V6DB01010.html'">
+<div class="card" data-sizes="" data-name="Wool Twill Shirt double black" onclick="window.location='product/jp_869829V6DB01010.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/d044427a-4118-44db-97e4-cc362f78cf32/Thumbnail/869829V6DB01010_A.jpg" alt="Wool Twill Shirt" loading="lazy">
     <div class="info">
         <div class="name">Wool Twill Shirt</div>
@@ -886,9 +893,33 @@ function filterSize(size) {
         card.style.display = sizes.split(',').includes(size) ? '' : 'none';
     });
 }
+
+function searchProducts(query) {
+    const cards = document.querySelectorAll('.card');
+    const q = query.toLowerCase().trim();
+    let visibleCount = 0;
+    cards.forEach(card => {
+        if (!q) { card.style.display = ''; visibleCount++; return; }
+        const name = (card.dataset.name || '').toLowerCase();
+        // 模糊搜尋：每個關鍵字都要匹配
+        const keywords = q.split(/\s+/);
+        const match = keywords.every(kw => name.includes(kw));
+        card.style.display = match ? '' : 'none';
+        if (match) visibleCount++;
+    });
+    // 隱藏空的分類標題
+    document.querySelectorAll('.cat-header').forEach(header => {
+        const grid = header.nextElementSibling;
+        if (grid && grid.classList.contains('grid')) {
+            const visible = grid.querySelectorAll('.card:not([style*="display: none"])').length;
+            header.style.display = visible > 0 ? '' : 'none';
+            grid.style.display = visible > 0 ? '' : 'none';
+        }
+    });
+}
 </script>
 <div class="stats">
-    Generated: 2026-06-11 11:02:18 | DB: 110936 KB
+    Generated: 2026-06-11 16:27:23 | DB: 117704 KB
 </div>
 </body>
 </html>
