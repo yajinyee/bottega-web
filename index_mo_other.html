@@ -19,6 +19,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .filters { padding: 10px 20px; background: #0f3460; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
 .filters label { color: #aaa; font-size: 0.8em; }
 .filters select { background: #1a1a2e; color: #eee; border: 1px solid #333; padding: 5px 10px; border-radius: 5px; }
+.search-bar { padding: 10px 20px; background: #16213e; border-bottom: 1px solid #0f3460; }
+.search-bar input { width: 100%; max-width: 500px; padding: 10px 15px; border-radius: 25px; border: 1px solid #333; background: #1a1a2e; color: #eee; font-size: 0.9em; outline: none; }
+.search-bar input:focus { border-color: #e94560; }
+.search-bar input::placeholder { color: #666; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 15px; padding: 20px; }
 .card { background: #16213e; border-radius: 10px; overflow: hidden; border: 1px solid #0f3460; cursor: pointer; transition: transform 0.2s; }
 .card:hover { transform: scale(1.02); border-color: #e94560; }
@@ -59,6 +63,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <a class="sub-tab " href="index_mo_travel.html">🧳 旅行 Travel (69)</a>
     <a class="sub-tab " href="index_mo_home.html">🏠 家居 Home (62)</a>
 </div>
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="🔍 搜尋商品名稱、顏色（例：Madison、black、Jodie）" oninput="searchProducts(this.value)">
+</div>
 
 <script>
 function filterSize(size) {
@@ -69,9 +76,33 @@ function filterSize(size) {
         card.style.display = sizes.split(',').includes(size) ? '' : 'none';
     });
 }
+
+function searchProducts(query) {
+    const cards = document.querySelectorAll('.card');
+    const q = query.toLowerCase().trim();
+    let visibleCount = 0;
+    cards.forEach(card => {
+        if (!q) { card.style.display = ''; visibleCount++; return; }
+        const name = (card.dataset.name || '').toLowerCase();
+        // 模糊搜尋：每個關鍵字都要匹配
+        const keywords = q.split(/\s+/);
+        const match = keywords.every(kw => name.includes(kw));
+        card.style.display = match ? '' : 'none';
+        if (match) visibleCount++;
+    });
+    // 隱藏空的分類標題
+    document.querySelectorAll('.cat-header').forEach(header => {
+        const grid = header.nextElementSibling;
+        if (grid && grid.classList.contains('grid')) {
+            const visible = grid.querySelectorAll('.card:not([style*="display: none"])').length;
+            header.style.display = visible > 0 ? '' : 'none';
+            grid.style.display = visible > 0 ? '' : 'none';
+        }
+    });
+}
 </script>
 <div class="stats">
-    Generated: 2026-06-12 10:50:25 | DB: 129180 KB
+    Generated: 2026-06-12 10:58:49 | DB: 129184 KB
 </div>
 </body>
 </html>
