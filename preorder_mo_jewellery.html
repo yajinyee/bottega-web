@@ -78,7 +78,7 @@ function applyFilters() {
     const priceMax = parseFloat(document.getElementById('priceMax')?.value) || Infinity;
     document.querySelectorAll('.card').forEach(card => {
         const name = (card.dataset.name || '').toLowerCase();
-        const keywords = q ? q.split(/\s+/) : [];
+        const keywords = q ? q.split(/[ 	]+/) : [];
         const matchName = keywords.length === 0 || keywords.every(kw => name.includes(kw));
         const price = parseFloat(card.dataset.price) || 0;
         const matchPrice = price === 0 || (price >= priceMin && price <= priceMax);
