@@ -45,7 +45,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 <body>
 <div class="header">
     <h1>Bottega Veneta Catalog</h1>
-    <div class="meta">快照：2026-07-19 | 商品：1545 | 有庫存資料：0</div>
+    <div class="meta">快照：2026-07-20 | 商品：1545 | 有庫存資料：0</div>
 </div>
 <div class="nav">
     <a href="index.html" class="active">📦 商品目錄</a>
@@ -58,7 +58,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <a class="tab " href="index_tw.html">台灣 Taiwan</a>
     <a class="tab " href="index_jp.html">日本 Japan</a>
     <a class="tab active" href="index_mo.html">澳門 Macau</a>
-    <a class="tab " href="index_es.html">西班牙 Spain</a>
+    <a class="tab " href="index_hk.html">香港 Hong Kong</a>
 </div>
 <div class="sub-tabs">
     <a class="sub-tab " href="index_mo.html">全部</a>
@@ -74,374 +74,18 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <a class="sub-tab " href="index_mo_home.html">🏠 家居 Home (63)</a>
 </div>
 <div class="search-bar">
-  <input type="text" id="searchInput" placeholder="🔍 搜尋商品名稱、顏色（例：Madison、black、Jodie）" oninput="searchProducts(this.value)">
+  <input type="text" id="searchInput" placeholder="🔍 搜尋商品名稱、顏色（例：Madison、black、Jodie）" oninput="applyFilters()">
+</div>
+<div class="filters">
+  <label>💰 價格：</label>
+  <input type="number" id="priceMin" placeholder="最低" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
+  <span style="color:#888">—</span>
+  <input type="number" id="priceMax" placeholder="最高" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
+  <button onclick="clearFilters()" style="background:#0f3460;color:#aaa;border:none;padding:5px 12px;border-radius:5px;cursor:pointer;font-size:0.8em;">✕ 清除</button>
 </div>
 <div class="cat-header">🧳 旅行 Travel — 69 件</div>
 <div class="grid">
-<div class="card" data-sizes="" data-name="Andiamo Backpack fondant" onclick="window.location='product/mo_856159V4O912272.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/b22b43c2-f847-4891-af3a-4041e916a940/Thumbnail/856159V4O912272_A.jpg" alt="Andiamo Backpack" loading="lazy">
-    <div class="info">
-        <div class="name">Andiamo Backpack</div>
-        <div class="color">fondant</div>
-        <div class="price">MOP$41,600</div>
-        <div class="date">上市：2026-05-16</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Back To School Backpack black" onclick="window.location='product/mo_805971V2HL18803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/m/3ddfbb60c9945e91/Thumbnail-805971V2HL18803_A.jpg" alt="Back To School Backpack" loading="lazy">
-    <div class="info">
-        <div class="name">Back To School Backpack</div>
-        <div class="color">black</div>
-        <div class="price">MOP$40,600</div>
-        <div class="date">上市：2026-06-03</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Back To School Backpack denim" onclick="window.location='product/mo_805971V2HL14093.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/a3dca429-5045-4fec-958e-6076e778a9d3/Thumbnail/805971V2HL14093_A.jpg" alt="Back To School Backpack" loading="lazy">
-    <div class="info">
-        <div class="name">Back To School Backpack</div>
-        <div class="color">denim</div>
-        <div class="price">MOP$40,600</div>
-        <div class="date">上市：2026-06-03</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Cassette Passport Case emerald green" onclick="window.location='product/mo_814698VCQC13049.html'">
-    <img src="https://bottega-veneta.dam.kering.com/m/7c3250536c9edfd8/Thumbnail-814698VCQC13049_A.jpg" alt="Cassette Passport Case" loading="lazy">
-    <div class="info">
-        <div class="name">Cassette Passport Case</div>
-        <div class="color">emerald green</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-06-03</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Getaway Tag Holder basil" onclick="window.location='product/mo_826257V2BE23010.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/3641356f-7336-4115-bc04-c21cfff7bc73/Thumbnail/826257V2BE23010_A.jpg" alt="Getaway Tag Holder" loading="lazy">
-    <div class="info">
-        <div class="name">Getaway Tag Holder</div>
-        <div class="color">basil</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-05-17</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Getaway Tag Holder black" onclick="window.location='product/mo_826257V63U21000.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/d3bea16c-e966-4c37-aec8-ba677b7b4b5a/Thumbnail/826257V63U21000_A.jpg" alt="Getaway Tag Holder" loading="lazy">
-    <div class="info">
-        <div class="name">Getaway Tag Holder</div>
-        <div class="color">black</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-05-17</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Getaway Tag Holder blue venezia" onclick="window.location='product/mo_826257V2BE24015.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/1a92ae5d-43fc-4e3b-9223-81d2095c0cd6/Thumbnail/826257V2BE24015_A.jpg" alt="Getaway Tag Holder" loading="lazy">
-    <div class="info">
-        <div class="name">Getaway Tag Holder</div>
-        <div class="color">blue venezia</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-06-05</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Getaway Tag Holder taxi" onclick="window.location='product/mo_826257V2BE27270.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/784b3361-16e9-46ea-b972-d93b8da1e27b/Thumbnail/826257V2BE27270_A.jpg" alt="Getaway Tag Holder" loading="lazy">
-    <div class="info">
-        <div class="name">Getaway Tag Holder</div>
-        <div class="color">taxi</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-06-05</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Getaway Weekender black" onclick="window.location='product/mo_766372V2HL18803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/4d3b0617-ce9f-403e-a2c8-52d3ba4a0565/Thumbnail/766372V2HL18803_A.jpg" alt="Getaway Weekender" loading="lazy">
-    <div class="info">
-        <div class="name">Getaway Weekender</div>
-        <div class="color">black</div>
-        <div class="price">MOP$50,250</div>
-        <div class="date">上市：2026-06-03</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato  Passport Case black" onclick="window.location='product/mo_749441VCPQ48803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/4a6cdf3a-eccf-45db-8f74-8ecfb2117141/Thumbnail/749441VCPQ48803_A.jpg" alt="Intrecciato  Passport Case" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato  Passport Case</div>
-        <div class="color">black</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-05-17</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato 1975 Backpack black" onclick="window.location='product/mo_876359V4RT31208.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/974ae9cf-c798-470d-8581-e3c6400d040c/Thumbnail/876359V4RT31208_A.jpg" alt="Intrecciato 1975 Backpack" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato 1975 Backpack</div>
-        <div class="color">black</div>
-        <div class="price">MOP$40,600</div>
-        <div class="date">上市：2026-06-12</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato 1975 Backpack midnight" onclick="window.location='product/mo_876359V4RT34329.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/433b8978-874c-4f25-b76e-2df129a6df7a/Thumbnail/876359V4RT34329_A.jpg" alt="Intrecciato 1975 Backpack" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato 1975 Backpack</div>
-        <div class="color">midnight</div>
-        <div class="price">MOP$40,600</div>
-        <div class="date">上市：2026-06-12</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Back To School Backpack black" onclick="window.location='product/mo_805971V4FW28803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/61aeb7fb-e7ed-4046-847c-b959037eeeb0/Thumbnail/805971V4FW28803_A.jpg" alt="Intrecciato Back To School Backpack" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Back To School Backpack</div>
-        <div class="color">black</div>
-        <div class="price">MOP$43,650</div>
-        <div class="date">上市：2026-06-03</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Back To School Backpack deep mahogany" onclick="window.location='product/mo_805971V2HL16144.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/ecb2773c-38b7-429f-91ab-7555cb4e010b/Thumbnail/805971V2HL16144_A.jpg" alt="Intrecciato Back To School Backpack" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Back To School Backpack</div>
-        <div class="color">deep mahogany</div>
-        <div class="price">MOP$40,600</div>
-        <div class="date">上市：2026-05-16</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Backpack fondant" onclick="window.location='product/mo_828527V2HL22145.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/d3216591-5520-4a49-b5bd-3ce5883b7752/Thumbnail/828527V2HL22145_A.jpg" alt="Intrecciato Backpack" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Backpack</div>
-        <div class="color">fondant</div>
-        <div class="price">MOP$36,900</div>
-        <div class="date">上市：2026-05-16</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Backpack fondant/old wood" onclick="window.location='product/mo_828527V4O9P2104.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/b28074b2-7d84-4d24-ac84-2fa8394b9c13/Thumbnail/828527V4O9P2104_A.jpg" alt="Intrecciato Backpack" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Backpack</div>
-        <div class="color">fondant/old wood</div>
-        <div class="price">MOP$40,600</div>
-        <div class="date">上市：2026-05-16</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Backpack natural/fondant" onclick="window.location='product/mo_874794V3BOD9814.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/2513d9dd-5070-40d9-8497-262546076d8b/Thumbnail/874794V3BOD9814_A.jpg" alt="Intrecciato Backpack" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Backpack</div>
-        <div class="color">natural/fondant</div>
-        <div class="price">MOP$34,850</div>
-        <div class="date">上市：2026-05-16</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Cabin Duffle black" onclick="window.location='product/mo_795287V2HL18803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/c6704950-ab76-49f2-b3e1-76e2a343bcfa/Thumbnail/795287V2HL18803_A.jpg" alt="Intrecciato Cabin Duffle" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Cabin Duffle</div>
-        <div class="color">black</div>
-        <div class="price">MOP$51,250</div>
-        <div class="date">上市：2026-06-03</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Cabin Duffle deep mahogany" onclick="window.location='product/mo_795287V2HL16144.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/4983fb7b-e387-4673-8300-2d2ab682f89f/Thumbnail/795287V2HL16144_A.jpg" alt="Intrecciato Cabin Duffle" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Cabin Duffle</div>
-        <div class="color">deep mahogany</div>
-        <div class="price">MOP$51,250</div>
-        <div class="date">上市：2026-05-16</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Check-In Organizer black" onclick="window.location='product/mo_855189V2HL38803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/a52dff1a-d171-4ba0-baa3-0215a46f0b73/Thumbnail/855189V2HL38803_A.jpg" alt="Intrecciato Check-In Organizer" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Check-In Organizer</div>
-        <div class="color">black</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-05-17</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Check-In Organizer fondant" onclick="window.location='product/mo_855189V2HL32145.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/ffe4e6a9-baec-4b26-815e-5f2c3f46c9b3/Thumbnail/855189V2HL32145_A.jpg" alt="Intrecciato Check-In Organizer" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Check-In Organizer</div>
-        <div class="color">fondant</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-05-17</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Duffle black" onclick="window.location='product/mo_781053V2HL18803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/m/641a6bb845cab2b2/Thumbnail-781053V2HL18803_A.jpg" alt="Intrecciato Duffle" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Duffle</div>
-        <div class="color">black</div>
-        <div class="price">MOP$47,150</div>
-        <div class="date">上市：2026-05-16</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Duffle denim" onclick="window.location='product/mo_781053V2HL14093.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/0203bdfd-0ec4-490e-862c-d189001ae3b2/Thumbnail/781053V2HL14093_A.jpg" alt="Intrecciato Duffle" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Duffle</div>
-        <div class="color">denim</div>
-        <div class="price">MOP$47,150</div>
-        <div class="date">上市：2026-05-16</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Duffle fondant" onclick="window.location='product/mo_781053V2HL12145.html'">
-    <img src="https://bottega-veneta.dam.kering.com/m/50698a2eadaceba4/Thumbnail-781053V2HL12145_A.jpg" alt="Intrecciato Duffle" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Duffle</div>
-        <div class="color">fondant</div>
-        <div class="price">MOP$47,150</div>
-        <div class="date">上市：2026-05-16</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Duffle midnight/black" onclick="window.location='product/mo_781053V3BOC4367.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/16174995-e6fa-4f47-b36c-8fbbe13f8eac/Thumbnail/781053V3BOC4367_A.jpg" alt="Intrecciato Duffle" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Duffle</div>
-        <div class="color">midnight/black</div>
-        <div class="price">MOP$45,700</div>
-        <div class="date">上市：2026-05-16</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Large Organizer black" onclick="window.location='product/mo_765804V2HL08803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/bdd192bd-0951-4aae-8aa8-3d6b4d2e771e/Thumbnail/765804V2HL08803_A.jpg" alt="Intrecciato Large Organizer" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Large Organizer</div>
-        <div class="color">black</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-05-17</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Long Tag Holder black" onclick="window.location='product/mo_786628V2HL11000.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/a69cf541-a9d9-4a13-ba4a-2715a1c675cb/Thumbnail/786628V2HL11000_A.jpg" alt="Intrecciato Long Tag Holder" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Long Tag Holder</div>
-        <div class="color">black</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-05-17</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Long Tag Holder fondant" onclick="window.location='product/mo_786628V2HL12113.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/ce290043-2465-4602-b9bc-49b2f80017ee/Thumbnail/786628V2HL12113_A.jpg" alt="Intrecciato Long Tag Holder" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Long Tag Holder</div>
-        <div class="color">fondant</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-05-17</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Long Tag Holder shadow" onclick="window.location='product/mo_786628V2HL14207.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/bae665c1-0eb8-4f36-9fd9-d599f80138ff/Thumbnail/786628V2HL14207_A.jpg" alt="Intrecciato Long Tag Holder" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Long Tag Holder</div>
-        <div class="color">shadow</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-06-05</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Passport Case basalt/lava red" onclick="window.location='product/mo_749954VCPP61658.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/df2fe8eb-370f-4870-b8f1-10613b62f3df/Thumbnail/749954VCPP61658_A.jpg" alt="Intrecciato Passport Case" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Passport Case</div>
-        <div class="color">basalt/lava red</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-05-17</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Passport Case black grass" onclick="window.location='product/mo_749441VCPQ61027.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/78c8e431-e64a-4f0e-adc8-c78015fb72a8/Thumbnail/749441VCPQ61027_A.jpg" alt="Intrecciato Passport Case" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Passport Case</div>
-        <div class="color">black grass</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-05-17</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Passport Case blush" onclick="window.location='product/mo_749954VCPP25675.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/40227e1a-5167-4798-809d-fbd4ec0f5505/Thumbnail/749954VCPP25675_A.jpg" alt="Intrecciato Passport Case" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Passport Case</div>
-        <div class="color">blush</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-05-17</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Passport Case deep mahogany/butter yellow" onclick="window.location='product/mo_749954VCPP66161.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/e170745b-fb44-4294-8a74-9002efaee817/Thumbnail/749954VCPP66161_A.jpg" alt="Intrecciato Passport Case" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Passport Case</div>
-        <div class="color">deep mahogany/butter yellow</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-06-06</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Passport Case green tweed/mineral" onclick="window.location='product/mo_749441VCPQ63825.html'">
+<div class="card" data-sizes="" data-name="Intrecciato Passport Case green tweed/mineral" data-price="0" onclick="window.location='product/mo_749441VCPQ63825.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/ac8c0478-a729-4da8-b74c-54a1aec1a14e/Thumbnail/749441VCPQ63825_A.jpg" alt="Intrecciato Passport Case" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Passport Case</div>
@@ -452,51 +96,29 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Intrecciato Passport Case midnight/basalt" onclick="window.location='product/mo_749441VCPQ64364.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/97cb0390-5df6-44a2-93ef-b12f22d08c99/Thumbnail/749441VCPQ64364_A.jpg" alt="Intrecciato Passport Case" loading="lazy">
+<div class="card" data-sizes="" data-name="Intrecciato 1975 Backpack black" data-price="40600" onclick="window.location='product/mo_876359V4RT31208.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/974ae9cf-c798-470d-8581-e3c6400d040c/Thumbnail/876359V4RT31208_A.jpg" alt="Intrecciato 1975 Backpack" loading="lazy">
     <div class="info">
-        <div class="name">Intrecciato Passport Case</div>
-        <div class="color">midnight/basalt</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-06-05</div>
+        <div class="name">Intrecciato 1975 Backpack</div>
+        <div class="color">black</div>
+        <div class="price">MOP$40,600</div>
+        <div class="date">上市：2026-06-12</div>
         <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Intrecciato Passport Case midnight/espresso/deep mahogany" onclick="window.location='product/mo_749441V6K414328.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/3f104571-d0b9-43bc-8a16-226d4a01ea86/Thumbnail/749441V6K414328_A.jpg" alt="Intrecciato Passport Case" loading="lazy">
+<div class="card" data-sizes="" data-name="Intrecciato 1975 Backpack midnight" data-price="40600" onclick="window.location='product/mo_876359V4RT34329.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/433b8978-874c-4f25-b76e-2df129a6df7a/Thumbnail/876359V4RT34329_A.jpg" alt="Intrecciato 1975 Backpack" loading="lazy">
     <div class="info">
-        <div class="name">Intrecciato Passport Case</div>
-        <div class="color">midnight/espresso/deep mahogany</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-05-17</div>
+        <div class="name">Intrecciato 1975 Backpack</div>
+        <div class="color">midnight</div>
+        <div class="price">MOP$40,600</div>
+        <div class="date">上市：2026-06-12</div>
         <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Intrecciato Passport Case midnight/taxi" onclick="window.location='product/mo_749441V6UF14112.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/03e52d0e-0377-47b6-a1ee-2ff9f4b0afc7/Thumbnail/749441V6UF14112_A.jpg" alt="Intrecciato Passport Case" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Passport Case</div>
-        <div class="color">midnight/taxi</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-05-17</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Passport Case taxi" onclick="window.location='product/mo_749954VCPP27275.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/77a4f650-3c52-4dcb-b1c8-a5eeafec0845/Thumbnail/749954VCPP27275_A.jpg" alt="Intrecciato Passport Case" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Passport Case</div>
-        <div class="color">taxi</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-06-03</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Piccolo Passport Case With Zip black" onclick="window.location='product/mo_854453V4J138803.html'">
+<div class="card" data-sizes="" data-name="Intrecciato Piccolo Passport Case With Zip black" data-price="0" onclick="window.location='product/mo_854453V4J138803.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/1b40f24b-8b25-4c11-99ce-fba8bf5e88df/Thumbnail/854453V4J138803_A.jpg" alt="Intrecciato Piccolo Passport Case With Zip" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Piccolo Passport Case With Zip</div>
@@ -507,117 +129,29 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Intrecciato Piccolo Travel Pouch fondant" onclick="window.location='product/mo_855367V4J102145.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/5d948b7e-b148-4f77-81ca-02f869583ec1/Thumbnail/855367V4J102145_A.jpg" alt="Intrecciato Piccolo Travel Pouch" loading="lazy">
+<div class="card" data-sizes="" data-name="Intrecciato Long Tag Holder shadow" data-price="0" onclick="window.location='product/mo_786628V2HL14207.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/bae665c1-0eb8-4f36-9fd9-d599f80138ff/Thumbnail/786628V2HL14207_A.jpg" alt="Intrecciato Long Tag Holder" loading="lazy">
     <div class="info">
-        <div class="name">Intrecciato Piccolo Travel Pouch</div>
-        <div class="color">fondant</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-05-17</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Roll-On Cable Case black" onclick="window.location='product/mo_817885V2HL08803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/m/30d018c135ea7f8b/Thumbnail-817885V2HL08803_A.jpg" alt="Intrecciato Roll-On Cable Case" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Roll-On Cable Case</div>
-        <div class="color">black</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-06-03</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Small Organizer black" onclick="window.location='product/mo_765800V2HL08803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/77e1aea4-8925-4f05-89b2-596147666f6c/Thumbnail/765800V2HL08803_A.jpg" alt="Intrecciato Small Organizer" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Small Organizer</div>
-        <div class="color">black</div>
+        <div class="name">Intrecciato Long Tag Holder</div>
+        <div class="color">shadow</div>
         <div class="price">—</div>
         <div class="date">上市：2026-06-05</div>
         <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Intrecciato Small Packing Cube black" onclick="window.location='product/mo_764718V2HL08803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/a6ec0f6e-494f-4d3e-b20e-99d4328a9f93/Thumbnail/764718V2HL08803_A.jpg" alt="Intrecciato Small Packing Cube" loading="lazy">
+<div class="card" data-sizes="" data-name="Getaway Tag Holder taxi" data-price="0" onclick="window.location='product/mo_826257V2BE27270.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/784b3361-16e9-46ea-b972-d93b8da1e27b/Thumbnail/826257V2BE27270_A.jpg" alt="Getaway Tag Holder" loading="lazy">
     <div class="info">
-        <div class="name">Intrecciato Small Packing Cube</div>
-        <div class="color">black</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-05-17</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Teen Organizer space" onclick="window.location='product/mo_776595V2HL08838.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/91fb71f1-df0a-449b-8ba9-cb796c747e90/Thumbnail/776595V2HL08838_A.jpg" alt="Intrecciato Teen Organizer" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Teen Organizer</div>
-        <div class="color">space</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-06-03</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Travel Pouch alpi green" onclick="window.location='product/mo_729295V5I503123.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/a39436de-9a8b-4e47-a7fa-7c7a12495ae1/Thumbnail/729295V5I503123_A.jpg" alt="Intrecciato Travel Pouch" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Travel Pouch</div>
-        <div class="color">alpi green</div>
+        <div class="name">Getaway Tag Holder</div>
+        <div class="color">taxi</div>
         <div class="price">—</div>
         <div class="date">上市：2026-06-05</div>
         <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Intrecciato Travel Pouch black" onclick="window.location='product/mo_A000DPV6PC18803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/650c498a-f98e-4f01-b714-608d00a067f3/Thumbnail/A000DPV6PC18803_A.jpg" alt="Intrecciato Travel Pouch" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Travel Pouch</div>
-        <div class="color">black</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-05-17</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Travel Pouch black" onclick="window.location='product/mo_729295V5I508803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/0f176513-46a5-436d-aecf-a2f9cfffa83d/Thumbnail/729295V5I508803_A.jpg" alt="Intrecciato Travel Pouch" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Travel Pouch</div>
-        <div class="color">black</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-05-24</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Travel Pouch black" onclick="window.location='product/mo_729295VCPQ18803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/42b01e44-49b1-49f3-9582-f311e52fbf9d/Thumbnail/729295VCPQ18803_A.jpg" alt="Intrecciato Travel Pouch" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Travel Pouch</div>
-        <div class="color">black</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-05-24</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Travel Pouch fondant" onclick="window.location='product/mo_729295V5I502145.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/89b796ce-9817-4ff7-9b56-a3a18833178a/Thumbnail/729295V5I502145_A.jpg" alt="Intrecciato Travel Pouch" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Travel Pouch</div>
-        <div class="color">fondant</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-06-05</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Intrecciato Travel Pouch green tweed/mineral" onclick="window.location='product/mo_729295VCPQD3828.html'">
+<div class="card" data-sizes="" data-name="Intrecciato Travel Pouch green tweed/mineral" data-price="0" onclick="window.location='product/mo_729295VCPQD3828.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/f982aea5-cd8b-4ba8-80f4-e080e2957990/Thumbnail/729295VCPQD3828_A.jpg" alt="Intrecciato Travel Pouch" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Travel Pouch</div>
@@ -628,21 +162,98 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Intrecciato Travel Pouch midnight/basalt" onclick="window.location='product/mo_729295VCPQD4365.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/75f2f9a0-8822-4480-a934-7f4dba241086/Thumbnail/729295VCPQD4365_A.jpg" alt="Intrecciato Travel Pouch" loading="lazy">
+<div class="card" data-sizes="" data-name="Intrecciato Roll-On Cable Case black" data-price="0" onclick="window.location='product/mo_817885V2HL08803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/m/30d018c135ea7f8b/Thumbnail-817885V2HL08803_A.jpg" alt="Intrecciato Roll-On Cable Case" loading="lazy">
     <div class="info">
-        <div class="name">Intrecciato Travel Pouch</div>
-        <div class="color">midnight/basalt</div>
+        <div class="name">Intrecciato Roll-On Cable Case</div>
+        <div class="color">black</div>
         <div class="price">—</div>
-        <div class="date">上市：2026-06-05</div>
+        <div class="date">上市：2026-06-03</div>
         <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Intrecciato Travel Pouch midnight/taxi" onclick="window.location='product/mo_729295V6UF04161.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/43fc43de-ebab-48ff-bff7-58f1173a510d/Thumbnail/729295V6UF04161_A.jpg" alt="Intrecciato Travel Pouch" loading="lazy">
+<div class="card" data-sizes="" data-name="Intrecciato Passport Case taxi" data-price="0" onclick="window.location='product/mo_749954VCPP27275.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/77a4f650-3c52-4dcb-b1c8-a5eeafec0845/Thumbnail/749954VCPP27275_A.jpg" alt="Intrecciato Passport Case" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Passport Case</div>
+        <div class="color">taxi</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-06-03</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Cassette Passport Case emerald green" data-price="0" onclick="window.location='product/mo_814698VCQC13049.html'">
+    <img src="https://bottega-veneta.dam.kering.com/m/7c3250536c9edfd8/Thumbnail-814698VCQC13049_A.jpg" alt="Cassette Passport Case" loading="lazy">
+    <div class="info">
+        <div class="name">Cassette Passport Case</div>
+        <div class="color">emerald green</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-06-03</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Cabin Duffle black" data-price="51250" onclick="window.location='product/mo_795287V2HL18803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/c6704950-ab76-49f2-b3e1-76e2a343bcfa/Thumbnail/795287V2HL18803_A.jpg" alt="Intrecciato Cabin Duffle" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Cabin Duffle</div>
+        <div class="color">black</div>
+        <div class="price">MOP$51,250</div>
+        <div class="date">上市：2026-06-03</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Back To School Backpack denim" data-price="40600" onclick="window.location='product/mo_805971V2HL14093.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/a3dca429-5045-4fec-958e-6076e778a9d3/Thumbnail/805971V2HL14093_A.jpg" alt="Back To School Backpack" loading="lazy">
+    <div class="info">
+        <div class="name">Back To School Backpack</div>
+        <div class="color">denim</div>
+        <div class="price">MOP$40,600</div>
+        <div class="date">上市：2026-06-03</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Travel Pouch black" data-price="0" onclick="window.location='product/mo_729295V5I508803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/0f176513-46a5-436d-aecf-a2f9cfffa83d/Thumbnail/729295V5I508803_A.jpg" alt="Intrecciato Travel Pouch" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Travel Pouch</div>
+        <div class="color">black</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-05-24</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Travel Pouch black" data-price="0" onclick="window.location='product/mo_729295VCPQ18803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/42b01e44-49b1-49f3-9582-f311e52fbf9d/Thumbnail/729295VCPQ18803_A.jpg" alt="Intrecciato Travel Pouch" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Travel Pouch</div>
+        <div class="color">black</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-05-24</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato  Passport Case black" data-price="0" onclick="window.location='product/mo_749441VCPQ48803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/4a6cdf3a-eccf-45db-8f74-8ecfb2117141/Thumbnail/749441VCPQ48803_A.jpg" alt="Intrecciato  Passport Case" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato  Passport Case</div>
+        <div class="color">black</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-05-17</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Passport Case midnight/taxi" data-price="0" onclick="window.location='product/mo_749441V6UF14112.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/03e52d0e-0377-47b6-a1ee-2ff9f4b0afc7/Thumbnail/749441V6UF14112_A.jpg" alt="Intrecciato Passport Case" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Passport Case</div>
         <div class="color">midnight/taxi</div>
         <div class="price">—</div>
         <div class="date">上市：2026-05-17</div>
@@ -650,106 +261,95 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Large Getaway Weekender black" onclick="window.location='product/mo_765620V2HL18803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/m/3a96c0179ad9d464/Thumbnail-765620V2HL18803_A.jpg" alt="Large Getaway Weekender" loading="lazy">
+<div class="card" data-sizes="" data-name="Intrecciato Passport Case midnight/espresso/deep mahogany" data-price="0" onclick="window.location='product/mo_749441V6K414328.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/3f104571-d0b9-43bc-8a16-226d4a01ea86/Thumbnail/749441V6K414328_A.jpg" alt="Intrecciato Passport Case" loading="lazy">
     <div class="info">
-        <div class="name">Large Getaway Weekender</div>
-        <div class="color">black</div>
-        <div class="price">MOP$60,500</div>
-        <div class="date">上市：2026-06-03</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Large Nodo Pouch espresso" onclick="window.location='product/mo_876512V0HW82028.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/e769ba62-98c4-40d1-b205-0fe7a81d9a62/Thumbnail/876512V0HW82028_A.jpg" alt="Large Nodo Pouch" loading="lazy">
-    <div class="info">
-        <div class="name">Large Nodo Pouch</div>
-        <div class="color">espresso</div>
+        <div class="name">Intrecciato Passport Case</div>
+        <div class="color">midnight/espresso/deep mahogany</div>
         <div class="price">—</div>
-        <div class="date">上市：2026-05-24</div>
+        <div class="date">上市：2026-05-17</div>
         <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Large Vaporetto espresso" onclick="window.location='product/mo_867386V60G12008.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/8550922f-3483-4d21-8df8-e0b7ab68242d/Thumbnail/867386V60G12008_A.jpg" alt="Large Vaporetto" loading="lazy">
+<div class="card" data-sizes="" data-name="Intrecciato Passport Case black grass" data-price="0" onclick="window.location='product/mo_749441VCPQ61027.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/78c8e431-e64a-4f0e-adc8-c78015fb72a8/Thumbnail/749441VCPQ61027_A.jpg" alt="Intrecciato Passport Case" loading="lazy">
     <div class="info">
-        <div class="name">Large Vaporetto</div>
-        <div class="color">espresso</div>
-        <div class="price">MOP$76,000</div>
-        <div class="date">上市：2026-05-16</div>
+        <div class="name">Intrecciato Passport Case</div>
+        <div class="color">black grass</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-05-17</div>
         <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Odissey Check-In Suitcase black" onclick="window.location='product/mo_848885V5AO18803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/4fbadb80-9938-4bdc-8be3-ffaffd9f0272/Thumbnail/848885V5AO18803_A.jpg" alt="Odissey Check-In Suitcase" loading="lazy">
+<div class="card" data-sizes="" data-name="Intrecciato Check-In Organizer black" data-price="0" onclick="window.location='product/mo_855189V2HL38803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/a52dff1a-d171-4ba0-baa3-0215a46f0b73/Thumbnail/855189V2HL38803_A.jpg" alt="Intrecciato Check-In Organizer" loading="lazy">
     <div class="info">
-        <div class="name">Odissey Check-In Suitcase</div>
+        <div class="name">Intrecciato Check-In Organizer</div>
         <div class="color">black</div>
-        <div class="price">MOP$30,300</div>
-        <div class="date">上市：2026-05-16</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-05-17</div>
         <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Odyssey Cabin Suitcase black" onclick="window.location='product/mo_822479V5AO18803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/m/6dbbc65c702c6417/Thumbnail-822479V5AO18803_A.jpg" alt="Odyssey Cabin Suitcase" loading="lazy">
+<div class="card" data-sizes="" data-name="Intrecciato Travel Pouch black" data-price="0" onclick="window.location='product/mo_A000DPV6PC18803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/650c498a-f98e-4f01-b714-608d00a067f3/Thumbnail/A000DPV6PC18803_A.jpg" alt="Intrecciato Travel Pouch" loading="lazy">
     <div class="info">
-        <div class="name">Odyssey Cabin Suitcase</div>
+        <div class="name">Intrecciato Travel Pouch</div>
         <div class="color">black</div>
-        <div class="price">MOP$26,200</div>
-        <div class="date">上市：2026-05-16</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-05-17</div>
         <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Odyssey Cabin Suitcase seaweed" onclick="window.location='product/mo_822479V5AO18412.html'">
-    <img src="https://bottega-veneta.dam.kering.com/m/219a9ffba8a142d1/Thumbnail-822479V5AO18412_A.jpg" alt="Odyssey Cabin Suitcase" loading="lazy">
+<div class="card" data-sizes="" data-name="Getaway Tag Holder basil" data-price="0" onclick="window.location='product/mo_826257V2BE23010.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/3641356f-7336-4115-bc04-c21cfff7bc73/Thumbnail/826257V2BE23010_A.jpg" alt="Getaway Tag Holder" loading="lazy">
     <div class="info">
-        <div class="name">Odyssey Cabin Suitcase</div>
-        <div class="color">seaweed</div>
-        <div class="price">MOP$26,200</div>
-        <div class="date">上市：2026-05-16</div>
+        <div class="name">Getaway Tag Holder</div>
+        <div class="color">basil</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-05-17</div>
         <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Odyssey Garment Bag black" onclick="window.location='product/mo_867428V60G08803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/0223239b-38ac-4362-8509-4c53761c6702/Thumbnail/867428V60G08803_A.jpg" alt="Odyssey Garment Bag" loading="lazy">
+<div class="card" data-sizes="" data-name="Getaway Tag Holder black" data-price="0" onclick="window.location='product/mo_826257V63U21000.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/d3bea16c-e966-4c37-aec8-ba677b7b4b5a/Thumbnail/826257V63U21000_A.jpg" alt="Getaway Tag Holder" loading="lazy">
     <div class="info">
-        <div class="name">Odyssey Garment Bag</div>
+        <div class="name">Getaway Tag Holder</div>
         <div class="color">black</div>
-        <div class="price">MOP$57,400</div>
-        <div class="date">上市：2026-05-16</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-05-17</div>
         <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Odyssey Garment Bag espresso" onclick="window.location='product/mo_867428V60G02008.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/e95a874a-c391-4efd-b85e-522e5ffc9d0a/Thumbnail/867428V60G02008_A.jpg" alt="Odyssey Garment Bag" loading="lazy">
+<div class="card" data-sizes="" data-name="Intrecciato Long Tag Holder black" data-price="0" onclick="window.location='product/mo_786628V2HL11000.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/a69cf541-a9d9-4a13-ba4a-2715a1c675cb/Thumbnail/786628V2HL11000_A.jpg" alt="Intrecciato Long Tag Holder" loading="lazy">
     <div class="info">
-        <div class="name">Odyssey Garment Bag</div>
-        <div class="color">espresso</div>
-        <div class="price">MOP$57,400</div>
-        <div class="date">上市：2026-05-16</div>
-        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
-        
-    </div>
-</div>
-<div class="card" data-sizes="" data-name="Odyssey Intrecciato Cabin Suitcase black" onclick="window.location='product/mo_851376V56Y18803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/c2f34a68-626c-4813-8381-01e83549452d/Thumbnail/851376V56Y18803_A.jpg" alt="Odyssey Intrecciato Cabin Suitcase" loading="lazy">
-    <div class="info">
-        <div class="name">Odyssey Intrecciato Cabin Suitcase</div>
+        <div class="name">Intrecciato Long Tag Holder</div>
         <div class="color">black</div>
-        <div class="price">MOP$73,950</div>
-        <div class="date">上市：2026-05-16</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-05-17</div>
         <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Odyssey Intrecciato Cabin Suitcase fondant" onclick="window.location='product/mo_851376V56Y12145.html'">
+<div class="card" data-sizes="" data-name="Intrecciato Long Tag Holder fondant" data-price="0" onclick="window.location='product/mo_786628V2HL12113.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/ce290043-2465-4602-b9bc-49b2f80017ee/Thumbnail/786628V2HL12113_A.jpg" alt="Intrecciato Long Tag Holder" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Long Tag Holder</div>
+        <div class="color">fondant</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-05-17</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Odyssey Intrecciato Cabin Suitcase fondant" data-price="73950" onclick="window.location='product/mo_851376V56Y12145.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/f9a6a216-5e58-43f7-9401-f1ac4bf9f9b5/Thumbnail/851376V56Y12145_A.jpg" alt="Odyssey Intrecciato Cabin Suitcase" loading="lazy">
     <div class="info">
         <div class="name">Odyssey Intrecciato Cabin Suitcase</div>
@@ -760,29 +360,29 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Palazzo Slipper With Travel Case black" onclick="window.location='product/mo_837952V2ED01000.html'">
-    <img src="https://bottega-veneta.dam.kering.com/m/2bd86fee4a06cbbf/Thumbnail-837952V2ED01000_A.jpg" alt="Palazzo Slipper With Travel Case" loading="lazy">
+<div class="card" data-sizes="" data-name="Odissey Check-In Suitcase black" data-price="30300" onclick="window.location='product/mo_848885V5AO18803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/4fbadb80-9938-4bdc-8be3-ffaffd9f0272/Thumbnail/848885V5AO18803_A.jpg" alt="Odissey Check-In Suitcase" loading="lazy">
     <div class="info">
-        <div class="name">Palazzo Slipper With Travel Case</div>
+        <div class="name">Odissey Check-In Suitcase</div>
         <div class="color">black</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-05-24</div>
+        <div class="price">MOP$30,300</div>
+        <div class="date">上市：2026-05-16</div>
         <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Palazzo Slipper With Travel Case fondant" onclick="window.location='product/mo_837952V2ED02113.html'">
-    <img src="https://bottega-veneta.dam.kering.com/m/3e680ba8c1660389/Thumbnail-837952V2ED02113_A.jpg" alt="Palazzo Slipper With Travel Case" loading="lazy">
+<div class="card" data-sizes="" data-name="Intrecciato Duffle midnight/black" data-price="45700" onclick="window.location='product/mo_781053V3BOC4367.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/16174995-e6fa-4f47-b36c-8fbbe13f8eac/Thumbnail/781053V3BOC4367_A.jpg" alt="Intrecciato Duffle" loading="lazy">
     <div class="info">
-        <div class="name">Palazzo Slipper With Travel Case</div>
-        <div class="color">fondant</div>
-        <div class="price">—</div>
-        <div class="date">上市：2026-05-24</div>
+        <div class="name">Intrecciato Duffle</div>
+        <div class="color">midnight/black</div>
+        <div class="price">MOP$45,700</div>
+        <div class="date">上市：2026-05-16</div>
         <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Small Intrecciato Backpack black" onclick="window.location='product/mo_828524V2HL28803.html'">
+<div class="card" data-sizes="" data-name="Small Intrecciato Backpack black" data-price="32750" onclick="window.location='product/mo_828524V2HL28803.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/d915c18f-ccf2-4c69-a25c-eed0edddc53e/Thumbnail/828524V2HL28803_A.jpg" alt="Small Intrecciato Backpack" loading="lazy">
     <div class="info">
         <div class="name">Small Intrecciato Backpack</div>
@@ -793,18 +393,95 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Vaporetto black" onclick="window.location='product/mo_867385V60G18803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/b100cb24-9a9a-43e1-a887-cb9f9835b64c/Thumbnail/867385V60G18803_A.jpg" alt="Vaporetto" loading="lazy">
+<div class="card" data-sizes="" data-name="Andiamo Backpack fondant" data-price="41600" onclick="window.location='product/mo_856159V4O912272.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/b22b43c2-f847-4891-af3a-4041e916a940/Thumbnail/856159V4O912272_A.jpg" alt="Andiamo Backpack" loading="lazy">
     <div class="info">
-        <div class="name">Vaporetto</div>
-        <div class="color">black</div>
-        <div class="price">MOP$57,000</div>
+        <div class="name">Andiamo Backpack</div>
+        <div class="color">fondant</div>
+        <div class="price">MOP$41,600</div>
         <div class="date">上市：2026-05-16</div>
         <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Woven Mycelium Passport Case espresso" onclick="window.location='product/mo_876813V6U302006.html'">
+<div class="card" data-sizes="" data-name="Odyssey Cabin Suitcase seaweed" data-price="26200" onclick="window.location='product/mo_822479V5AO18412.html'">
+    <img src="https://bottega-veneta.dam.kering.com/m/219a9ffba8a142d1/Thumbnail-822479V5AO18412_A.jpg" alt="Odyssey Cabin Suitcase" loading="lazy">
+    <div class="info">
+        <div class="name">Odyssey Cabin Suitcase</div>
+        <div class="color">seaweed</div>
+        <div class="price">MOP$26,200</div>
+        <div class="date">上市：2026-05-16</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Odyssey Garment Bag espresso" data-price="57400" onclick="window.location='product/mo_867428V60G02008.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/e95a874a-c391-4efd-b85e-522e5ffc9d0a/Thumbnail/867428V60G02008_A.jpg" alt="Odyssey Garment Bag" loading="lazy">
+    <div class="info">
+        <div class="name">Odyssey Garment Bag</div>
+        <div class="color">espresso</div>
+        <div class="price">MOP$57,400</div>
+        <div class="date">上市：2026-05-16</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Backpack natural/fondant" data-price="34850" onclick="window.location='product/mo_874794V3BOD9814.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/2513d9dd-5070-40d9-8497-262546076d8b/Thumbnail/874794V3BOD9814_A.jpg" alt="Intrecciato Backpack" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Backpack</div>
+        <div class="color">natural/fondant</div>
+        <div class="price">MOP$34,850</div>
+        <div class="date">上市：2026-05-16</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Odyssey Cabin Suitcase black" data-price="26200" onclick="window.location='product/mo_822479V5AO18803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/m/6dbbc65c702c6417/Thumbnail-822479V5AO18803_A.jpg" alt="Odyssey Cabin Suitcase" loading="lazy">
+    <div class="info">
+        <div class="name">Odyssey Cabin Suitcase</div>
+        <div class="color">black</div>
+        <div class="price">MOP$26,200</div>
+        <div class="date">上市：2026-05-16</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Duffle denim" data-price="47150" onclick="window.location='product/mo_781053V2HL14093.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/0203bdfd-0ec4-490e-862c-d189001ae3b2/Thumbnail/781053V2HL14093_A.jpg" alt="Intrecciato Duffle" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Duffle</div>
+        <div class="color">denim</div>
+        <div class="price">MOP$47,150</div>
+        <div class="date">上市：2026-05-16</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Back To School Backpack deep mahogany" data-price="40600" onclick="window.location='product/mo_805971V2HL16144.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/ecb2773c-38b7-429f-91ab-7555cb4e010b/Thumbnail/805971V2HL16144_A.jpg" alt="Intrecciato Back To School Backpack" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Back To School Backpack</div>
+        <div class="color">deep mahogany</div>
+        <div class="price">MOP$40,600</div>
+        <div class="date">上市：2026-05-16</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Backpack fondant/old wood" data-price="40600" onclick="window.location='product/mo_828527V4O9P2104.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/b28074b2-7d84-4d24-ac84-2fa8394b9c13/Thumbnail/828527V4O9P2104_A.jpg" alt="Intrecciato Backpack" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Backpack</div>
+        <div class="color">fondant/old wood</div>
+        <div class="price">MOP$40,600</div>
+        <div class="date">上市：2026-05-16</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Woven Mycelium Passport Case espresso" data-price="0" onclick="window.location='product/mo_876813V6U302006.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/61f60b04-6ae0-496d-be82-8aa07699828d/Thumbnail/876813V6U302006_A.jpg" alt="Woven Mycelium Passport Case" loading="lazy">
     <div class="info">
         <div class="name">Woven Mycelium Passport Case</div>
@@ -815,7 +492,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Woven Mycelium Passport Case lava red" onclick="window.location='product/mo_876813V6U306525.html'">
+<div class="card" data-sizes="" data-name="Woven Mycelium Passport Case lava red" data-price="0" onclick="window.location='product/mo_876813V6U306525.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/8d848c97-e700-47f4-8e6a-436d9ff44694/Thumbnail/876813V6U306525_A.jpg" alt="Woven Mycelium Passport Case" loading="lazy">
     <div class="info">
         <div class="name">Woven Mycelium Passport Case</div>
@@ -826,7 +503,260 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
-<div class="card" data-sizes="" data-name="Woven Mycelium Passport Case mineral" onclick="window.location='product/mo_876813V6U301670.html'">
+<div class="card" data-sizes="" data-name="Intrecciato Passport Case deep mahogany/butter yellow" data-price="0" onclick="window.location='product/mo_749954VCPP66161.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/e170745b-fb44-4294-8a74-9002efaee817/Thumbnail/749954VCPP66161_A.jpg" alt="Intrecciato Passport Case" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Passport Case</div>
+        <div class="color">deep mahogany/butter yellow</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-06-06</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Travel Pouch midnight/taxi" data-price="0" onclick="window.location='product/mo_729295V6UF04161.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/43fc43de-ebab-48ff-bff7-58f1173a510d/Thumbnail/729295V6UF04161_A.jpg" alt="Intrecciato Travel Pouch" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Travel Pouch</div>
+        <div class="color">midnight/taxi</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-05-17</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Small Organizer black" data-price="0" onclick="window.location='product/mo_765800V2HL08803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/77e1aea4-8925-4f05-89b2-596147666f6c/Thumbnail/765800V2HL08803_A.jpg" alt="Intrecciato Small Organizer" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Small Organizer</div>
+        <div class="color">black</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-06-05</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Travel Pouch alpi green" data-price="0" onclick="window.location='product/mo_729295V5I503123.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/a39436de-9a8b-4e47-a7fa-7c7a12495ae1/Thumbnail/729295V5I503123_A.jpg" alt="Intrecciato Travel Pouch" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Travel Pouch</div>
+        <div class="color">alpi green</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-06-05</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Travel Pouch midnight/basalt" data-price="0" onclick="window.location='product/mo_729295VCPQD4365.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/75f2f9a0-8822-4480-a934-7f4dba241086/Thumbnail/729295VCPQD4365_A.jpg" alt="Intrecciato Travel Pouch" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Travel Pouch</div>
+        <div class="color">midnight/basalt</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-06-05</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Passport Case midnight/basalt" data-price="0" onclick="window.location='product/mo_749441VCPQ64364.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/97cb0390-5df6-44a2-93ef-b12f22d08c99/Thumbnail/749441VCPQ64364_A.jpg" alt="Intrecciato Passport Case" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Passport Case</div>
+        <div class="color">midnight/basalt</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-06-05</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Getaway Tag Holder blue venezia" data-price="0" onclick="window.location='product/mo_826257V2BE24015.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/1a92ae5d-43fc-4e3b-9223-81d2095c0cd6/Thumbnail/826257V2BE24015_A.jpg" alt="Getaway Tag Holder" loading="lazy">
+    <div class="info">
+        <div class="name">Getaway Tag Holder</div>
+        <div class="color">blue venezia</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-06-05</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Travel Pouch fondant" data-price="0" onclick="window.location='product/mo_729295V5I502145.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/89b796ce-9817-4ff7-9b56-a3a18833178a/Thumbnail/729295V5I502145_A.jpg" alt="Intrecciato Travel Pouch" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Travel Pouch</div>
+        <div class="color">fondant</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-06-05</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Back To School Backpack black" data-price="43650" onclick="window.location='product/mo_805971V4FW28803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/61aeb7fb-e7ed-4046-847c-b959037eeeb0/Thumbnail/805971V4FW28803_A.jpg" alt="Intrecciato Back To School Backpack" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Back To School Backpack</div>
+        <div class="color">black</div>
+        <div class="price">MOP$43,650</div>
+        <div class="date">上市：2026-06-03</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Getaway Weekender black" data-price="50250" onclick="window.location='product/mo_766372V2HL18803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/4d3b0617-ce9f-403e-a2c8-52d3ba4a0565/Thumbnail/766372V2HL18803_A.jpg" alt="Getaway Weekender" loading="lazy">
+    <div class="info">
+        <div class="name">Getaway Weekender</div>
+        <div class="color">black</div>
+        <div class="price">MOP$50,250</div>
+        <div class="date">上市：2026-06-03</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Large Getaway Weekender black" data-price="60500" onclick="window.location='product/mo_765620V2HL18803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/m/3a96c0179ad9d464/Thumbnail-765620V2HL18803_A.jpg" alt="Large Getaway Weekender" loading="lazy">
+    <div class="info">
+        <div class="name">Large Getaway Weekender</div>
+        <div class="color">black</div>
+        <div class="price">MOP$60,500</div>
+        <div class="date">上市：2026-06-03</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Back To School Backpack black" data-price="40600" onclick="window.location='product/mo_805971V2HL18803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/m/3ddfbb60c9945e91/Thumbnail-805971V2HL18803_A.jpg" alt="Back To School Backpack" loading="lazy">
+    <div class="info">
+        <div class="name">Back To School Backpack</div>
+        <div class="color">black</div>
+        <div class="price">MOP$40,600</div>
+        <div class="date">上市：2026-06-03</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Large Nodo Pouch espresso" data-price="0" onclick="window.location='product/mo_876512V0HW82028.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/e769ba62-98c4-40d1-b205-0fe7a81d9a62/Thumbnail/876512V0HW82028_A.jpg" alt="Large Nodo Pouch" loading="lazy">
+    <div class="info">
+        <div class="name">Large Nodo Pouch</div>
+        <div class="color">espresso</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-05-24</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Passport Case basalt/lava red" data-price="0" onclick="window.location='product/mo_749954VCPP61658.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/df2fe8eb-370f-4870-b8f1-10613b62f3df/Thumbnail/749954VCPP61658_A.jpg" alt="Intrecciato Passport Case" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Passport Case</div>
+        <div class="color">basalt/lava red</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-05-17</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Check-In Organizer fondant" data-price="0" onclick="window.location='product/mo_855189V2HL32145.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/ffe4e6a9-baec-4b26-815e-5f2c3f46c9b3/Thumbnail/855189V2HL32145_A.jpg" alt="Intrecciato Check-In Organizer" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Check-In Organizer</div>
+        <div class="color">fondant</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-05-17</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Piccolo Travel Pouch fondant" data-price="0" onclick="window.location='product/mo_855367V4J102145.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/5d948b7e-b148-4f77-81ca-02f869583ec1/Thumbnail/855367V4J102145_A.jpg" alt="Intrecciato Piccolo Travel Pouch" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Piccolo Travel Pouch</div>
+        <div class="color">fondant</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-05-17</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Passport Case blush" data-price="0" onclick="window.location='product/mo_749954VCPP25675.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/40227e1a-5167-4798-809d-fbd4ec0f5505/Thumbnail/749954VCPP25675_A.jpg" alt="Intrecciato Passport Case" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Passport Case</div>
+        <div class="color">blush</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-05-17</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Vaporetto black" data-price="57000" onclick="window.location='product/mo_867385V60G18803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/b100cb24-9a9a-43e1-a887-cb9f9835b64c/Thumbnail/867385V60G18803_A.jpg" alt="Vaporetto" loading="lazy">
+    <div class="info">
+        <div class="name">Vaporetto</div>
+        <div class="color">black</div>
+        <div class="price">MOP$57,000</div>
+        <div class="date">上市：2026-05-16</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Odyssey Garment Bag black" data-price="57400" onclick="window.location='product/mo_867428V60G08803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/0223239b-38ac-4362-8509-4c53761c6702/Thumbnail/867428V60G08803_A.jpg" alt="Odyssey Garment Bag" loading="lazy">
+    <div class="info">
+        <div class="name">Odyssey Garment Bag</div>
+        <div class="color">black</div>
+        <div class="price">MOP$57,400</div>
+        <div class="date">上市：2026-05-16</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Duffle black" data-price="47150" onclick="window.location='product/mo_781053V2HL18803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/m/641a6bb845cab2b2/Thumbnail-781053V2HL18803_A.jpg" alt="Intrecciato Duffle" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Duffle</div>
+        <div class="color">black</div>
+        <div class="price">MOP$47,150</div>
+        <div class="date">上市：2026-05-16</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Duffle fondant" data-price="47150" onclick="window.location='product/mo_781053V2HL12145.html'">
+    <img src="https://bottega-veneta.dam.kering.com/m/50698a2eadaceba4/Thumbnail-781053V2HL12145_A.jpg" alt="Intrecciato Duffle" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Duffle</div>
+        <div class="color">fondant</div>
+        <div class="price">MOP$47,150</div>
+        <div class="date">上市：2026-05-16</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Cabin Duffle deep mahogany" data-price="51250" onclick="window.location='product/mo_795287V2HL16144.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/4983fb7b-e387-4673-8300-2d2ab682f89f/Thumbnail/795287V2HL16144_A.jpg" alt="Intrecciato Cabin Duffle" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Cabin Duffle</div>
+        <div class="color">deep mahogany</div>
+        <div class="price">MOP$51,250</div>
+        <div class="date">上市：2026-05-16</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Backpack fondant" data-price="36900" onclick="window.location='product/mo_828527V2HL22145.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/d3216591-5520-4a49-b5bd-3ce5883b7752/Thumbnail/828527V2HL22145_A.jpg" alt="Intrecciato Backpack" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Backpack</div>
+        <div class="color">fondant</div>
+        <div class="price">MOP$36,900</div>
+        <div class="date">上市：2026-05-16</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Woven Mycelium Passport Case mineral" data-price="0" onclick="window.location='product/mo_876813V6U301670.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/2772a437-ce89-4e6c-8b65-b30ade4cfb7c/Thumbnail/876813V6U301670_A.jpg" alt="Woven Mycelium Passport Case" loading="lazy">
     <div class="info">
         <div class="name">Woven Mycelium Passport Case</div>
@@ -837,30 +767,104 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
         
     </div>
 </div>
+<div class="card" data-sizes="" data-name="Intrecciato Teen Organizer space" data-price="0" onclick="window.location='product/mo_776595V2HL08838.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/91fb71f1-df0a-449b-8ba9-cb796c747e90/Thumbnail/776595V2HL08838_A.jpg" alt="Intrecciato Teen Organizer" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Teen Organizer</div>
+        <div class="color">space</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-06-03</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Palazzo Slipper With Travel Case black" data-price="0" onclick="window.location='product/mo_837952V2ED01000.html'">
+    <img src="https://bottega-veneta.dam.kering.com/m/2bd86fee4a06cbbf/Thumbnail-837952V2ED01000_A.jpg" alt="Palazzo Slipper With Travel Case" loading="lazy">
+    <div class="info">
+        <div class="name">Palazzo Slipper With Travel Case</div>
+        <div class="color">black</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-05-24</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Palazzo Slipper With Travel Case fondant" data-price="0" onclick="window.location='product/mo_837952V2ED02113.html'">
+    <img src="https://bottega-veneta.dam.kering.com/m/3e680ba8c1660389/Thumbnail-837952V2ED02113_A.jpg" alt="Palazzo Slipper With Travel Case" loading="lazy">
+    <div class="info">
+        <div class="name">Palazzo Slipper With Travel Case</div>
+        <div class="color">fondant</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-05-24</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Large Organizer black" data-price="0" onclick="window.location='product/mo_765804V2HL08803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/bdd192bd-0951-4aae-8aa8-3d6b4d2e771e/Thumbnail/765804V2HL08803_A.jpg" alt="Intrecciato Large Organizer" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Large Organizer</div>
+        <div class="color">black</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-05-17</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Small Packing Cube black" data-price="0" onclick="window.location='product/mo_764718V2HL08803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/a6ec0f6e-494f-4d3e-b20e-99d4328a9f93/Thumbnail/764718V2HL08803_A.jpg" alt="Intrecciato Small Packing Cube" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Small Packing Cube</div>
+        <div class="color">black</div>
+        <div class="price">—</div>
+        <div class="date">上市：2026-05-17</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Odyssey Intrecciato Cabin Suitcase black" data-price="73950" onclick="window.location='product/mo_851376V56Y18803.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/c2f34a68-626c-4813-8381-01e83549452d/Thumbnail/851376V56Y18803_A.jpg" alt="Odyssey Intrecciato Cabin Suitcase" loading="lazy">
+    <div class="info">
+        <div class="name">Odyssey Intrecciato Cabin Suitcase</div>
+        <div class="color">black</div>
+        <div class="price">MOP$73,950</div>
+        <div class="date">上市：2026-05-16</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Large Vaporetto espresso" data-price="76000" onclick="window.location='product/mo_867386V60G12008.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/8550922f-3483-4d21-8df8-e0b7ab68242d/Thumbnail/867386V60G12008_A.jpg" alt="Large Vaporetto" loading="lazy">
+    <div class="info">
+        <div class="name">Large Vaporetto</div>
+        <div class="color">espresso</div>
+        <div class="price">MOP$76,000</div>
+        <div class="date">上市：2026-05-16</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
 </div>
 
 <script>
-function filterSize(size) {
+function applyFilters() {
+    const q = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
+    const size = document.getElementById('sizeFilter')?.value || '';
+    const priceMin = parseFloat(document.getElementById('priceMin')?.value) || 0;
+    const priceMax = parseFloat(document.getElementById('priceMax')?.value) || Infinity;
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
-        if (!size) { card.style.display = ''; return; }
-        const sizes = card.dataset.sizes || '';
-        card.style.display = sizes.split(',').includes(size) ? '' : 'none';
-    });
-}
-
-function searchProducts(query) {
-    const cards = document.querySelectorAll('.card');
-    const q = query.toLowerCase().trim();
-    let visibleCount = 0;
-    cards.forEach(card => {
-        if (!q) { card.style.display = ''; visibleCount++; return; }
+        // 名稱搜尋
         const name = (card.dataset.name || '').toLowerCase();
-        // 模糊搜尋：每個關鍵字都要匹配
-        const keywords = q.split(/\s+/);
-        const match = keywords.every(kw => name.includes(kw));
-        card.style.display = match ? '' : 'none';
-        if (match) visibleCount++;
+        const keywords = q ? q.split(/\s+/) : [];
+        const matchName = keywords.length === 0 || keywords.every(kw => name.includes(kw));
+        // 尺碼篩選
+        const sizes = card.dataset.sizes || '';
+        const matchSize = !size || sizes.split(',').includes(size);
+        // 價格篩選
+        const price = parseFloat(card.dataset.price) || 0;
+        const matchPrice = price === 0 || (price >= priceMin && price <= priceMax);
+        card.style.display = (matchName && matchSize && matchPrice) ? '' : 'none';
     });
     // 隱藏空的分類標題
     document.querySelectorAll('.cat-header').forEach(header => {
@@ -872,9 +876,25 @@ function searchProducts(query) {
         }
     });
 }
+
+function clearFilters() {
+    const si = document.getElementById('searchInput');
+    const sf = document.getElementById('sizeFilter');
+    const pmin = document.getElementById('priceMin');
+    const pmax = document.getElementById('priceMax');
+    if (si) si.value = '';
+    if (sf) sf.value = '';
+    if (pmin) pmin.value = '';
+    if (pmax) pmax.value = '';
+    applyFilters();
+}
+
+// 相容舊版呼叫
+function filterSize(v) { if(document.getElementById('sizeFilter')) document.getElementById('sizeFilter').value=v; applyFilters(); }
+function searchProducts(q) { if(document.getElementById('searchInput')) document.getElementById('searchInput').value=q; applyFilters(); }
 </script>
 <div class="stats">
-    Generated: 2026-07-20 10:59:58 | DB: 634836 KB
+    Generated: 2026-07-20 22:01:06 | DB: 649204 KB
 </div>
 </body>
 </html>
