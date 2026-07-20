@@ -58,7 +58,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <a class="tab " href="index_tw.html">台灣 Taiwan</a>
     <a class="tab active" href="index_jp.html">日本 Japan</a>
     <a class="tab " href="index_mo.html">澳門 Macau</a>
-    <a class="tab " href="index_hk.html">香港 Hong Kong</a>
+    <a class="tab " href="index_es.html">西班牙 Spain</a>
 </div>
 <div class="sub-tabs">
     <a class="sub-tab " href="index_jp.html">全部</a>
@@ -74,35 +74,31 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <a class="sub-tab " href="index_jp_home.html">🏠 家居 Home (63)</a>
 </div>
 <div class="search-bar">
-  <input type="text" id="searchInput" placeholder="🔍 搜尋商品名稱、顏色（例：Madison、black、Jodie）" oninput="applyFilters()">
-</div>
-<div class="filters">
-  <label>💰 價格：</label>
-  <input type="number" id="priceMin" placeholder="最低" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
-  <span style="color:#888">—</span>
-  <input type="number" id="priceMax" placeholder="最高" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
-  <button onclick="clearFilters()" style="background:#0f3460;color:#aaa;border:none;padding:5px 12px;border-radius:5px;cursor:pointer;font-size:0.8em;">✕ 清除</button>
+  <input type="text" id="searchInput" placeholder="🔍 搜尋商品名稱、顏色（例：Madison、black、Jodie）" oninput="searchProducts(this.value)">
 </div>
 
 <script>
-function applyFilters() {
-    const q = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
-    const size = document.getElementById('sizeFilter')?.value || '';
-    const priceMin = parseFloat(document.getElementById('priceMin')?.value) || 0;
-    const priceMax = parseFloat(document.getElementById('priceMax')?.value) || Infinity;
+function filterSize(size) {
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
-        // 名稱搜尋
-        const name = (card.dataset.name || '').toLowerCase();
-        const keywords = q ? q.split(/\s+/) : [];
-        const matchName = keywords.length === 0 || keywords.every(kw => name.includes(kw));
-        // 尺碼篩選
+        if (!size) { card.style.display = ''; return; }
         const sizes = card.dataset.sizes || '';
-        const matchSize = !size || sizes.split(',').includes(size);
-        // 價格篩選
-        const price = parseFloat(card.dataset.price) || 0;
-        const matchPrice = price === 0 || (price >= priceMin && price <= priceMax);
-        card.style.display = (matchName && matchSize && matchPrice) ? '' : 'none';
+        card.style.display = sizes.split(',').includes(size) ? '' : 'none';
+    });
+}
+
+function searchProducts(query) {
+    const cards = document.querySelectorAll('.card');
+    const q = query.toLowerCase().trim();
+    let visibleCount = 0;
+    cards.forEach(card => {
+        if (!q) { card.style.display = ''; visibleCount++; return; }
+        const name = (card.dataset.name || '').toLowerCase();
+        // 模糊搜尋：每個關鍵字都要匹配
+        const keywords = q.split(/\s+/);
+        const match = keywords.every(kw => name.includes(kw));
+        card.style.display = match ? '' : 'none';
+        if (match) visibleCount++;
     });
     // 隱藏空的分類標題
     document.querySelectorAll('.cat-header').forEach(header => {
@@ -114,25 +110,9 @@ function applyFilters() {
         }
     });
 }
-
-function clearFilters() {
-    const si = document.getElementById('searchInput');
-    const sf = document.getElementById('sizeFilter');
-    const pmin = document.getElementById('priceMin');
-    const pmax = document.getElementById('priceMax');
-    if (si) si.value = '';
-    if (sf) sf.value = '';
-    if (pmin) pmin.value = '';
-    if (pmax) pmax.value = '';
-    applyFilters();
-}
-
-// 相容舊版呼叫
-function filterSize(v) { if(document.getElementById('sizeFilter')) document.getElementById('sizeFilter').value=v; applyFilters(); }
-function searchProducts(q) { if(document.getElementById('searchInput')) document.getElementById('searchInput').value=q; applyFilters(); }
 </script>
 <div class="stats">
-    Generated: 2026-07-20 10:03:31 | DB: 634820 KB
+    Generated: 2026-07-20 10:59:57 | DB: 634836 KB
 </div>
 </body>
 </html>
