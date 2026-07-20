@@ -63,9 +63,19 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
     <a class="sub-tab " href="delisted_hk_travel.html">🧳 旅行 Travel (6)</a>
     <a class="sub-tab active" href="delisted_hk_home.html">🏠 家居 Home (169)</a>
 </div>
+<div class="search-bar" style="padding:10px 20px;background:#16213e;border-bottom:1px solid #0f3460;">
+  <input type="text" id="searchInput" placeholder="🔍 搜尋商品名稱、顏色" oninput="applyFilters()" style="width:100%;max-width:500px;padding:10px 15px;border-radius:25px;border:1px solid #333;background:#1a1a2e;color:#eee;font-size:0.9em;outline:none;">
+</div>
+<div class="filters" style="padding:10px 20px;background:#0f3460;display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+  <label style="color:#aaa;font-size:0.8em;">💰 原價：</label>
+  <input type="number" id="priceMin" placeholder="最低" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
+  <span style="color:#888">—</span>
+  <input type="number" id="priceMax" placeholder="最高" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
+  <button onclick="clearFilters()" style="background:#1a1a2e;color:#aaa;border:none;padding:5px 12px;border-radius:5px;cursor:pointer;font-size:0.8em;">✕ 清除</button>
+</div>
 <div class="cat-header">🏠 家居 Home — 169 件</div>
 <div class="grid">
-<div class="card" onclick="window.location='product/hk_837887V4VE04015.html'">
+<div class="card" data-name="Rosa Ballerina blu venezia" data-price="0" onclick="window.location='product/hk_837887V4VE04015.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Rosa Ballerina" loading="lazy">
     <div class="info">
         <div class="name">Rosa Ballerina</div>
@@ -78,7 +88,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_837887V4VE06176.html'">
+<div class="card" data-name="Rosa Ballerina deep mahogany" data-price="0" onclick="window.location='product/hk_837887V4VE06176.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Rosa Ballerina" loading="lazy">
     <div class="info">
         <div class="name">Rosa Ballerina</div>
@@ -91,7 +101,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_742330VCPP35675.html'">
+<div class="card" data-name="Intrecciato Small Bi-Fold Wallet blush" data-price="0" onclick="window.location='product/hk_742330VCPP35675.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Intrecciato Small Bi-Fold Wallet" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Small Bi-Fold Wallet</div>
@@ -104,7 +114,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_861467V6CW06724.html'">
+<div class="card" data-name="Cotton Oxford Belted Shirt pale pink/white" data-price="0" onclick="window.location='product/hk_861467V6CW06724.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Cotton Oxford Belted Shirt" loading="lazy">
     <div class="info">
         <div class="name">Cotton Oxford Belted Shirt</div>
@@ -117,7 +127,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_853568V6DL03133.html'">
+<div class="card" data-name="Wool And Linen Pants green/lava mel" data-price="0" onclick="window.location='product/hk_853568V6DL03133.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Wool And Linen Pants" loading="lazy">
     <div class="info">
         <div class="name">Wool And Linen Pants</div>
@@ -130,7 +140,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_864810V6BY03476.html'">
+<div class="card" data-name="Cotton And Silk Crinkled Shorts wader green" data-price="0" onclick="window.location='product/hk_864810V6BY03476.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Cotton And Silk Crinkled Shorts" loading="lazy">
     <div class="info">
         <div class="name">Cotton And Silk Crinkled Shorts</div>
@@ -143,7 +153,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_852469V6CV01427.html'">
+<div class="card" data-name="Cotton Poplin Shirt pearl gray" data-price="0" onclick="window.location='product/hk_852469V6CV01427.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Cotton Poplin Shirt" loading="lazy">
     <div class="info">
         <div class="name">Cotton Poplin Shirt</div>
@@ -156,7 +166,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_871457V6M804052.html'">
+<div class="card" data-name="Silk Twill Shirt oxford blue" data-price="0" onclick="window.location='product/hk_871457V6M804052.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Silk Twill Shirt" loading="lazy">
     <div class="info">
         <div class="name">Silk Twill Shirt</div>
@@ -169,7 +179,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_857382VAHU48822.html'">
+<div class="card" data-name="Cavallo Earrings chili" data-price="0" onclick="window.location='product/hk_857382VAHU48822.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Cavallo Earrings" loading="lazy">
     <div class="info">
         <div class="name">Cavallo Earrings</div>
@@ -182,7 +192,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_852568V60Y01010.html'">
+<div class="card" data-name="Crackled Leather Jacket double black" data-price="0" onclick="window.location='product/hk_852568V60Y01010.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Crackled Leather Jacket" loading="lazy">
     <div class="info">
         <div class="name">Crackled Leather Jacket</div>
@@ -195,7 +205,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_763110V50708117.html'">
+<div class="card" data-name="Sardine Earrings silver" data-price="0" onclick="window.location='product/hk_763110V50708117.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Sardine Earrings" loading="lazy">
     <div class="info">
         <div class="name">Sardine Earrings</div>
@@ -208,7 +218,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_720038VAHU08120.html'">
+<div class="card" data-name="Large Drop Earrings yellow gold" data-price="0" onclick="window.location='product/hk_720038VAHU08120.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Large Drop Earrings" loading="lazy">
     <div class="info">
         <div class="name">Large Drop Earrings</div>
@@ -221,7 +231,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_795592VAHU46300.html'">
+<div class="card" data-name="Drop Earrings syrup" data-price="0" onclick="window.location='product/hk_795592VAHU46300.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Drop Earrings" loading="lazy">
     <div class="info">
         <div class="name">Drop Earrings</div>
@@ -234,7 +244,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_827020VAHU08120.html'">
+<div class="card" data-name="Drop Earrings yellow gold" data-price="0" onclick="window.location='product/hk_827020VAHU08120.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Drop Earrings" loading="lazy">
     <div class="info">
         <div class="name">Drop Earrings</div>
@@ -247,7 +257,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_795593VAHU08120.html'">
+<div class="card" data-name="Drop Medium Earrings yellow gold" data-price="0" onclick="window.location='product/hk_795593VAHU08120.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Drop Medium Earrings" loading="lazy">
     <div class="info">
         <div class="name">Drop Medium Earrings</div>
@@ -260,7 +270,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_854949V63S01306.html'">
+<div class="card" data-name="Wool Tailored Sweater medium gray" data-price="0" onclick="window.location='product/hk_854949V63S01306.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Wool Tailored Sweater" loading="lazy">
     <div class="info">
         <div class="name">Wool Tailored Sweater</div>
@@ -273,7 +283,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_857363VAHU08120.html'">
+<div class="card" data-name="Small Anemone Earrings yellow gold" data-price="0" onclick="window.location='product/hk_857363VAHU08120.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Small Anemone Earrings" loading="lazy">
     <div class="info">
         <div class="name">Small Anemone Earrings</div>
@@ -286,7 +296,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_862817V69P04300.html'">
+<div class="card" data-name="Medium Indigo Wide Leg Jeans mid blue" data-price="0" onclick="window.location='product/hk_862817V69P04300.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Medium Indigo Wide Leg Jeans" loading="lazy">
     <div class="info">
         <div class="name">Medium Indigo Wide Leg Jeans</div>
@@ -299,7 +309,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_847278V4YX02487.html'">
+<div class="card" data-name="Crepe Viscose Jersey Dress clove" data-price="0" onclick="window.location='product/hk_847278V4YX02487.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Crepe Viscose Jersey Dress" loading="lazy">
     <div class="info">
         <div class="name">Crepe Viscose Jersey Dress</div>
@@ -312,7 +322,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_815876V5HU14514.html'">
+<div class="card" data-name="Small Ellipse Earrings blood stone" data-price="0" onclick="window.location='product/hk_815876V5HU14514.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Small Ellipse Earrings" loading="lazy">
     <div class="info">
         <div class="name">Small Ellipse Earrings</div>
@@ -325,7 +335,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_837028V5O302674.html'">
+<div class="card" data-name="Tech Nylon Puffer Jacket grey putty" data-price="0" onclick="window.location='product/hk_837028V5O302674.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Tech Nylon Puffer Jacket" loading="lazy">
     <div class="info">
         <div class="name">Tech Nylon Puffer Jacket</div>
@@ -338,7 +348,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_847256V5LV02113.html'">
+<div class="card" data-name="Wool English Rib Dress fondant" data-price="0" onclick="window.location='product/hk_847256V5LV02113.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Wool English Rib Dress" loading="lazy">
     <div class="info">
         <div class="name">Wool English Rib Dress</div>
@@ -351,7 +361,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_835258V3OO02783.html'">
+<div class="card" data-name="Wool And Cashmere Cropped Jacket sandshell melange" data-price="0" onclick="window.location='product/hk_835258V3OO02783.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Wool And Cashmere Cropped Jacket" loading="lazy">
     <div class="info">
         <div class="name">Wool And Cashmere Cropped Jacket</div>
@@ -364,7 +374,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_841017V4ZN02082.html'">
+<div class="card" data-name="Brown Straight Jeans brown" data-price="0" onclick="window.location='product/hk_841017V4ZN02082.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Brown Straight Jeans" loading="lazy">
     <div class="info">
         <div class="name">Brown Straight Jeans</div>
@@ -377,7 +387,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_841032V5SO01003.html'">
+<div class="card" data-name="Black Denim Jeans washed black" data-price="0" onclick="window.location='product/hk_841032V5SO01003.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Black Denim Jeans" loading="lazy">
     <div class="info">
         <div class="name">Black Denim Jeans</div>
@@ -390,7 +400,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_724937V2JP01243.html'">
+<div class="card" data-name="Light Viscose Sequins Dress grey" data-price="0" onclick="window.location='product/hk_724937V2JP01243.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Light Viscose Sequins Dress" loading="lazy">
     <div class="info">
         <div class="name">Light Viscose Sequins Dress</div>
@@ -403,7 +413,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_809558VF4K01000.html'">
+<div class="card" data-name="Tech Nylon Puffer Jacket black" data-price="0" onclick="window.location='product/hk_809558VF4K01000.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Tech Nylon Puffer Jacket" loading="lazy">
     <div class="info">
         <div class="name">Tech Nylon Puffer Jacket</div>
@@ -416,7 +426,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_868211VBSD09117.html'">
+<div class="card" data-name="Charlotte Mary-Jane Ballerina alabaster" data-price="0" onclick="window.location='product/hk_868211VBSD09117.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Charlotte Mary-Jane Ballerina" loading="lazy">
     <div class="info">
         <div class="name">Charlotte Mary-Jane Ballerina</div>
@@ -429,7 +439,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_868225VBSD05672.html'">
+<div class="card" data-name="Cherry Mule blush" data-price="0" onclick="window.location='product/hk_868225VBSD05672.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Cherry Mule" loading="lazy">
     <div class="info">
         <div class="name">Cherry Mule</div>
@@ -442,7 +452,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_814838VCPQ61027.html'">
+<div class="card" data-name="Intrecciato Zip Around Wallet black grass" data-price="0" onclick="window.location='product/hk_814838VCPQ61027.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Intrecciato Zip Around Wallet" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Zip Around Wallet</div>
@@ -455,7 +465,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_840080VAHU08120.html'">
+<div class="card" data-name="Large Drop Brooch yellow gold" data-price="0" onclick="window.location='product/hk_840080VAHU08120.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Large Drop Brooch" loading="lazy">
     <div class="info">
         <div class="name">Large Drop Brooch</div>
@@ -468,7 +478,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_841427V5VP01000.html'">
+<div class="card" data-name="Bonded Tech Wool Blouson black" data-price="0" onclick="window.location='product/hk_841427V5VP01000.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Bonded Tech Wool Blouson" loading="lazy">
     <div class="info">
         <div class="name">Bonded Tech Wool Blouson</div>
@@ -481,7 +491,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_749441VCPQ43248.html'">
+<div class="card" data-name="Intrecciato Passport Case crocodile" data-price="0" onclick="window.location='product/hk_749441VCPQ43248.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Intrecciato Passport Case" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Passport Case</div>
@@ -494,7 +504,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_843951V4QN02113.html'">
+<div class="card" data-name="James Ankle Boot fondant" data-price="0" onclick="window.location='product/hk_843951V4QN02113.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="James Ankle Boot" loading="lazy">
     <div class="info">
         <div class="name">James Ankle Boot</div>
@@ -507,7 +517,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_873759V3D806260.html'">
+<div class="card" data-name="Seashell Knot Shoe Charm cardinal" data-price="0" onclick="window.location='product/hk_873759V3D806260.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Seashell Knot Shoe Charm" loading="lazy">
     <div class="info">
         <div class="name">Seashell Knot Shoe Charm</div>
@@ -520,7 +530,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_843952V4QN02113.html'">
+<div class="card" data-name="James Boot fondant" data-price="0" onclick="window.location='product/hk_843952V4QN02113.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="James Boot" loading="lazy">
     <div class="info">
         <div class="name">James Boot</div>
@@ -533,7 +543,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_796696V3QE19612.html'">
+<div class="card" data-name="Astaire Loafer ecru" data-price="0" onclick="window.location='product/hk_796696V3QE19612.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Astaire Loafer" loading="lazy">
     <div class="info">
         <div class="name">Astaire Loafer</div>
@@ -546,7 +556,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_872964VCRL01000.html'">
+<div class="card" data-name="Intrecciato Iphone 17 Pro Case black" data-price="0" onclick="window.location='product/hk_872964VCRL01000.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Intrecciato Iphone 17 Pro Case" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Iphone 17 Pro Case</div>
@@ -559,7 +569,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_800553V2HL08803.html'">
+<div class="card" data-name="Tab Key Ring black" data-price="0" onclick="window.location='product/hk_800553V2HL08803.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Tab Key Ring" loading="lazy">
     <div class="info">
         <div class="name">Tab Key Ring</div>
@@ -572,7 +582,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_845580V5NZ06114.html'">
+<div class="card" data-name="Intrecciato Leather Aviator Hat jam/popcorn" data-price="0" onclick="window.location='product/hk_845580V5NZ06114.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Intrecciato Leather Aviator Hat" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Leather Aviator Hat</div>
@@ -585,7 +595,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_715597V01716206.html'">
+<div class="card" data-name="Intrecciato Leather Midi Gloves jam" data-price="0" onclick="window.location='product/hk_715597V01716206.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Intrecciato Leather Midi Gloves" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Leather Midi Gloves</div>
@@ -598,7 +608,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_857272V66T09676.html'">
+<div class="card" data-name="Straw Horse Charm plaster/caramel" data-price="0" onclick="window.location='product/hk_857272V66T09676.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Straw Horse Charm" loading="lazy">
     <div class="info">
         <div class="name">Straw Horse Charm</div>
@@ -611,7 +621,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_867410V3D807806.html'">
+<div class="card" data-name="Onda Charm sunflower" data-price="0" onclick="window.location='product/hk_867410V3D807806.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Onda Charm" loading="lazy">
     <div class="info">
         <div class="name">Onda Charm</div>
@@ -624,7 +634,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_844673V3D812844.html'">
+<div class="card" data-name="Letter D Charm mud" data-price="0" onclick="window.location='product/hk_844673V3D812844.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Letter D Charm" loading="lazy">
     <div class="info">
         <div class="name">Letter D Charm</div>
@@ -637,7 +647,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_844675V3D811501.html'">
+<div class="card" data-name="Letter E Charm sterling" data-price="0" onclick="window.location='product/hk_844675V3D811501.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Letter E Charm" loading="lazy">
     <div class="info">
         <div class="name">Letter E Charm</div>
@@ -650,7 +660,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_844692V3D812844.html'">
+<div class="card" data-name="Letter S Charm mud" data-price="0" onclick="window.location='product/hk_844692V3D812844.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Letter S Charm" loading="lazy">
     <div class="info">
         <div class="name">Letter S Charm</div>
@@ -663,7 +673,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_844697V3D814140.html'">
+<div class="card" data-name="Letter W Charm abyss" data-price="0" onclick="window.location='product/hk_844697V3D814140.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Letter W Charm" loading="lazy">
     <div class="info">
         <div class="name">Letter W Charm</div>
@@ -676,7 +686,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_755000V0HW09143.html'">
+<div class="card" data-name="Long Intreccio Key Ring chalk" data-price="0" onclick="window.location='product/hk_755000V0HW09143.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Long Intreccio Key Ring" loading="lazy">
     <div class="info">
         <div class="name">Long Intreccio Key Ring</div>
@@ -689,7 +699,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_798326V4KA01030.html'">
+<div class="card" data-name="Cashmere Blanket With Intreccio Motif grey" data-price="0" onclick="window.location='product/hk_798326V4KA01030.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Cashmere Blanket With Intreccio Motif" loading="lazy">
     <div class="info">
         <div class="name">Cashmere Blanket With Intreccio Motif</div>
@@ -702,7 +712,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_820282V5A101099.html'">
+<div class="card" data-name="Volcanic Bouclè Cushion red/black/white" data-price="0" onclick="window.location='product/hk_820282V5A101099.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Volcanic Bouclè Cushion" loading="lazy">
     <div class="info">
         <div class="name">Volcanic Bouclè Cushion</div>
@@ -715,7 +725,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_843955V2WTB2119.html'">
+<div class="card" data-name="Lug Hiking Ankle Boot toffee/porridge" data-price="0" onclick="window.location='product/hk_843955V2WTB2119.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Lug Hiking Ankle Boot" loading="lazy">
     <div class="info">
         <div class="name">Lug Hiking Ankle Boot</div>
@@ -728,7 +738,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_634396VBS501000.html'">
+<div class="card" data-name="Lug Chelsea Ankle Boot black" data-price="0" onclick="window.location='product/hk_634396VBS501000.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Lug Chelsea Ankle Boot" loading="lazy">
     <div class="info">
         <div class="name">Lug Chelsea Ankle Boot</div>
@@ -741,7 +751,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_763831V3M709031.html'">
+<div class="card" data-name="Knot Ankle Boot sea salt" data-price="0" onclick="window.location='product/hk_763831V3M709031.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Knot Ankle Boot" loading="lazy">
     <div class="info">
         <div class="name">Knot Ankle Boot</div>
@@ -754,7 +764,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_835297V5BX04225.html'">
+<div class="card" data-name="Leather Skirt admiral" data-price="0" onclick="window.location='product/hk_835297V5BX04225.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Leather Skirt" loading="lazy">
     <div class="info">
         <div class="name">Leather Skirt</div>
@@ -767,7 +777,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_843999V5BX01000.html'">
+<div class="card" data-name="Leather Blouson black" data-price="0" onclick="window.location='product/hk_843999V5BX01000.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Leather Blouson" loading="lazy">
     <div class="info">
         <div class="name">Leather Blouson</div>
@@ -780,7 +790,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_837887V4VE03134.html'">
+<div class="card" data-name="Rosa Ballerina new emerald green" data-price="0" onclick="window.location='product/hk_837887V4VE03134.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Rosa Ballerina" loading="lazy">
     <div class="info">
         <div class="name">Rosa Ballerina</div>
@@ -793,7 +803,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_843963V5XR14306.html'">
+<div class="card" data-name="Rosa Ballerina ocean" data-price="0" onclick="window.location='product/hk_843963V5XR14306.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Rosa Ballerina" loading="lazy">
     <div class="info">
         <div class="name">Rosa Ballerina</div>
@@ -806,7 +816,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_862816V69P04300.html'">
+<div class="card" data-name="Medium Indigo Straight Jeans mid blue" data-price="0" onclick="window.location='product/hk_862816V69P04300.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Medium Indigo Straight Jeans" loading="lazy">
     <div class="info">
         <div class="name">Medium Indigo Straight Jeans</div>
@@ -819,7 +829,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_815946VAHU08120.html'">
+<div class="card" data-name="Knot Ring yellow gold" data-price="0" onclick="window.location='product/hk_815946VAHU08120.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Knot Ring" loading="lazy">
     <div class="info">
         <div class="name">Knot Ring</div>
@@ -832,7 +842,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_825154V4N509000.html'">
+<div class="card" data-name="Cotton Jersey T-Shirt white" data-price="0" onclick="window.location='product/hk_825154V4N509000.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Cotton Jersey T-Shirt" loading="lazy">
     <div class="info">
         <div class="name">Cotton Jersey T-Shirt</div>
@@ -845,7 +855,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_832289V5VQ04023.html'">
+<div class="card" data-name="Melange Wool Shirt dark indigo" data-price="0" onclick="window.location='product/hk_832289V5VQ04023.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Melange Wool Shirt" loading="lazy">
     <div class="info">
         <div class="name">Melange Wool Shirt</div>
@@ -858,7 +868,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_867616V6D809071.html'">
+<div class="card" data-name="Washed Silk Taffeta Shirt chalk" data-price="0" onclick="window.location='product/hk_867616V6D809071.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Washed Silk Taffeta Shirt" loading="lazy">
     <div class="info">
         <div class="name">Washed Silk Taffeta Shirt</div>
@@ -871,7 +881,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_868248V3H907243.html'">
+<div class="card" data-name="Vesta Sling Back Pump butter yellow" data-price="0" onclick="window.location='product/hk_868248V3H907243.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Vesta Sling Back Pump" loading="lazy">
     <div class="info">
         <div class="name">Vesta Sling Back Pump</div>
@@ -884,7 +894,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_857255VAHU08120.html'">
+<div class="card" data-name="Drop Ring yellow gold" data-price="0" onclick="window.location='product/hk_857255VAHU08120.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Drop Ring" loading="lazy">
     <div class="info">
         <div class="name">Drop Ring</div>
@@ -897,7 +907,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_855210VBPB01000.html'">
+<div class="card" data-name="James Loafer black" data-price="0" onclick="window.location='product/hk_855210VBPB01000.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="James Loafer" loading="lazy">
     <div class="info">
         <div class="name">James Loafer</div>
@@ -910,7 +920,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_796528V4BH01000.html'">
+<div class="card" data-name="Knot Pump black" data-price="0" onclick="window.location='product/hk_796528V4BH01000.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Knot Pump" loading="lazy">
     <div class="info">
         <div class="name">Knot Pump</div>
@@ -923,7 +933,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_836093V3PP08687.html'">
+<div class="card" data-name="Stretch Nylon Bikini lava" data-price="0" onclick="window.location='product/hk_836093V3PP08687.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Stretch Nylon Bikini" loading="lazy">
     <div class="info">
         <div class="name">Stretch Nylon Bikini</div>
@@ -936,7 +946,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_814215V4D704212.html'">
+<div class="card" data-name="Technical Cotton Blouson midnight blue/black" data-price="0" onclick="window.location='product/hk_814215V4D704212.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Technical Cotton Blouson" loading="lazy">
     <div class="info">
         <div class="name">Technical Cotton Blouson</div>
@@ -949,7 +959,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_837737V2ED07176.html'">
+<div class="card" data-name="Parco Flat Mule daffodil" data-price="0" onclick="window.location='product/hk_837737V2ED07176.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Parco Flat Mule" loading="lazy">
     <div class="info">
         <div class="name">Parco Flat Mule</div>
@@ -962,7 +972,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_865923VAHU08120.html'">
+<div class="card" data-name="Large Prisma Earrings yellow gold" data-price="0" onclick="window.location='product/hk_865923VAHU08120.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Large Prisma Earrings" loading="lazy">
     <div class="info">
         <div class="name">Large Prisma Earrings</div>
@@ -975,7 +985,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_866730V3H909117.html'">
+<div class="card" data-name="Sabato Slipper alabaster" data-price="0" onclick="window.location='product/hk_866730V3H909117.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Sabato Slipper" loading="lazy">
     <div class="info">
         <div class="name">Sabato Slipper</div>
@@ -988,7 +998,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_862473V6CZ09071.html'">
+<div class="card" data-name="Fluid Silk Viscose Top chalk" data-price="0" onclick="window.location='product/hk_862473V6CZ09071.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Fluid Silk Viscose Top" loading="lazy">
     <div class="info">
         <div class="name">Fluid Silk Viscose Top</div>
@@ -1001,7 +1011,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_835467V5L709071.html'">
+<div class="card" data-name="Wool Rib Top chalk" data-price="0" onclick="window.location='product/hk_835467V5L709071.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Wool Rib Top" loading="lazy">
     <div class="info">
         <div class="name">Wool Rib Top</div>
@@ -1014,7 +1024,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_715043V2I509071.html'">
+<div class="card" data-name="Stretch Rib Cotton Tank Top chalk" data-price="0" onclick="window.location='product/hk_715043V2I509071.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Stretch Rib Cotton Tank Top" loading="lazy">
     <div class="info">
         <div class="name">Stretch Rib Cotton Tank Top</div>
@@ -1027,7 +1037,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_864453V2DK03476.html'">
+<div class="card" data-name="Cashmere And Silk Rib Shirt wader green" data-price="0" onclick="window.location='product/hk_864453V2DK03476.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Cashmere And Silk Rib Shirt" loading="lazy">
     <div class="info">
         <div class="name">Cashmere And Silk Rib Shirt</div>
@@ -1040,7 +1050,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_831607V5SN04245.html'">
+<div class="card" data-name="Indigo Straight Jeans indigo" data-price="0" onclick="window.location='product/hk_831607V5SN04245.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Indigo Straight Jeans" loading="lazy">
     <div class="info">
         <div class="name">Indigo Straight Jeans</div>
@@ -1053,7 +1063,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_812471V4WQ04033.html'">
+<div class="card" data-name="Wool Boucle Skirt bubble" data-price="0" onclick="window.location='product/hk_812471V4WQ04033.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Wool Boucle Skirt" loading="lazy">
     <div class="info">
         <div class="name">Wool Boucle Skirt</div>
@@ -1066,7 +1076,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_812469V4WQ02151.html'">
+<div class="card" data-name="Wool Bouclé Cardigan oxblood melange" data-price="0" onclick="window.location='product/hk_812469V4WQ02151.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Wool Bouclé Cardigan" loading="lazy">
     <div class="info">
         <div class="name">Wool Bouclé Cardigan</div>
@@ -1079,7 +1089,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_838107V5LV09317.html'">
+<div class="card" data-name="Wool English Rib Cardigan dove" data-price="0" onclick="window.location='product/hk_838107V5LV09317.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Wool English Rib Cardigan" loading="lazy">
     <div class="info">
         <div class="name">Wool English Rib Cardigan</div>
@@ -1092,7 +1102,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_841817V5M504121.html'">
+<div class="card" data-name="Cotton And Viscose Twinset navy" data-price="0" onclick="window.location='product/hk_841817V5M504121.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Cotton And Viscose Twinset" loading="lazy">
     <div class="info">
         <div class="name">Cotton And Viscose Twinset</div>
@@ -1105,7 +1115,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_839375VBOB79766.html'">
+<div class="card" data-name="Ape Ring white/gold caramel" data-price="0" onclick="window.location='product/hk_839375VBOB79766.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Ape Ring" loading="lazy">
     <div class="info">
         <div class="name">Ape Ring</div>
@@ -1118,7 +1128,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_838184VBOB69000.html'">
+<div class="card" data-name="Intreccio Ring white" data-price="0" onclick="window.location='product/hk_838184VBOB69000.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Intreccio Ring" loading="lazy">
     <div class="info">
         <div class="name">Intreccio Ring</div>
@@ -1131,7 +1141,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_837039V5O302674.html'">
+<div class="card" data-name="Tech Nylon Blouson grey putty" data-price="0" onclick="window.location='product/hk_837039V5O302674.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Tech Nylon Blouson" loading="lazy">
     <div class="info">
         <div class="name">Tech Nylon Blouson</div>
@@ -1144,7 +1154,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_862600V69O01000.html'">
+<div class="card" data-name="Faded Black Denim Jacket black" data-price="0" onclick="window.location='product/hk_862600V69O01000.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Faded Black Denim Jacket" loading="lazy">
     <div class="info">
         <div class="name">Faded Black Denim Jacket</div>
@@ -1157,7 +1167,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_838937V4N509071.html'">
+<div class="card" data-name="Cotton Printed Jersey T-Shirt chalk" data-price="0" onclick="window.location='product/hk_838937V4N509071.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Cotton Printed Jersey T-Shirt" loading="lazy">
     <div class="info">
         <div class="name">Cotton Printed Jersey T-Shirt</div>
@@ -1170,7 +1180,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_730273V2ED03025.html'">
+<div class="card" data-name="Sunday Slipper travertine" data-price="0" onclick="window.location='product/hk_730273V2ED03025.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Sunday Slipper" loading="lazy">
     <div class="info">
         <div class="name">Sunday Slipper</div>
@@ -1183,7 +1193,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_A003A7V6U301674.html'">
+<div class="card" data-name="Woven Mycelium Key Ring mineral" data-price="0" onclick="window.location='product/hk_A003A7V6U301674.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Woven Mycelium Key Ring" loading="lazy">
     <div class="info">
         <div class="name">Woven Mycelium Key Ring</div>
@@ -1196,7 +1206,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_815968V50708117.html'">
+<div class="card" data-name="Rivet Earrings silver" data-price="0" onclick="window.location='product/hk_815968V50708117.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Rivet Earrings" loading="lazy">
     <div class="info">
         <div class="name">Rivet Earrings</div>
@@ -1209,7 +1219,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_833878V5PI05259.html'">
+<div class="card" data-name="Stripe Cotton And Linen Shirt cloud/fondant/lava" data-price="0" onclick="window.location='product/hk_833878V5PI05259.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Stripe Cotton And Linen Shirt" loading="lazy">
     <div class="info">
         <div class="name">Stripe Cotton And Linen Shirt</div>
@@ -1222,7 +1232,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_703578V5CN04245.html'">
+<div class="card" data-name="Wool And Cotton Shirt indigo" data-price="0" onclick="window.location='product/hk_703578V5CN04245.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Wool And Cotton Shirt" loading="lazy">
     <div class="info">
         <div class="name">Wool And Cotton Shirt</div>
@@ -1235,7 +1245,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_798323V3PH01000.html'">
+<div class="card" data-name="Wool Twill Shirt black" data-price="0" onclick="window.location='product/hk_798323V3PH01000.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Wool Twill Shirt" loading="lazy">
     <div class="info">
         <div class="name">Wool Twill Shirt</div>
@@ -1248,7 +1258,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_743211V5I514182.html'">
+<div class="card" data-name="Intrecciato Bi-Fold Wallet nocturnal" data-price="0" onclick="window.location='product/hk_743211V5I514182.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Intrecciato Bi-Fold Wallet" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Bi-Fold Wallet</div>
@@ -1261,7 +1271,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_795612VCPQ33248.html'">
+<div class="card" data-name="Intrecciato Credit Card Case crocodile" data-price="0" onclick="window.location='product/hk_795612VCPQ33248.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Intrecciato Credit Card Case" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Credit Card Case</div>
@@ -1274,7 +1284,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_838801V2HL01000.html'">
+<div class="card" data-name="Intrecciato Iphone 16 Pro Foglio Case black" data-price="0" onclick="window.location='product/hk_838801V2HL01000.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Intrecciato Iphone 16 Pro Foglio Case" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Iphone 16 Pro Foglio Case</div>
@@ -1287,7 +1297,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_709727VMAY18803.html'">
+<div class="card" data-name="Intreccio Key Ring black" data-price="0" onclick="window.location='product/hk_709727VMAY18803.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Intreccio Key Ring" loading="lazy">
     <div class="info">
         <div class="name">Intreccio Key Ring</div>
@@ -1300,7 +1310,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_830104V3OO02783.html'">
+<div class="card" data-name="Wool And Cashmere Overshirt sandshell melange" data-price="0" onclick="window.location='product/hk_830104V3OO02783.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Wool And Cashmere Overshirt" loading="lazy">
     <div class="info">
         <div class="name">Wool And Cashmere Overshirt</div>
@@ -1313,7 +1323,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_847521V4C201000.html'">
+<div class="card" data-name="Grain De Poudre Tuxedo Jacket black" data-price="0" onclick="window.location='product/hk_847521V4C201000.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Grain De Poudre Tuxedo Jacket" loading="lazy">
     <div class="info">
         <div class="name">Grain De Poudre Tuxedo Jacket</div>
@@ -1326,7 +1336,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_833836V4XP01307.html'">
+<div class="card" data-name="Fine Wool Kimono Blouson charcoal melange" data-price="0" onclick="window.location='product/hk_833836V4XP01307.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Fine Wool Kimono Blouson" loading="lazy">
     <div class="info">
         <div class="name">Fine Wool Kimono Blouson</div>
@@ -1339,7 +1349,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_831605V42W04715.html'">
+<div class="card" data-name="Vintage Indigo Straight Jeans mid blue" data-price="0" onclick="window.location='product/hk_831605V42W04715.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Vintage Indigo Straight Jeans" loading="lazy">
     <div class="info">
         <div class="name">Vintage Indigo Straight Jeans</div>
@@ -1352,7 +1362,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_833832V34N01003.html'">
+<div class="card" data-name="Double Wool Coat anthracite melange" data-price="0" onclick="window.location='product/hk_833832V34N01003.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Double Wool Coat" loading="lazy">
     <div class="info">
         <div class="name">Double Wool Coat</div>
@@ -1365,7 +1375,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_837036V5O609028.html'">
+<div class="card" data-name="Quilted Cotton Overshirt sea salt" data-price="0" onclick="window.location='product/hk_837036V5O609028.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Quilted Cotton Overshirt" loading="lazy">
     <div class="info">
         <div class="name">Quilted Cotton Overshirt</div>
@@ -1378,7 +1388,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_837409V5AC01352.html'">
+<div class="card" data-name="Leather Nappa Shorts olive oil" data-price="0" onclick="window.location='product/hk_837409V5AC01352.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Leather Nappa Shorts" loading="lazy">
     <div class="info">
         <div class="name">Leather Nappa Shorts</div>
@@ -1391,7 +1401,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_833836V5QR02674.html'">
+<div class="card" data-name="Viscose And Silk Kimono Blouson grey putty" data-price="0" onclick="window.location='product/hk_833836V5QR02674.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Viscose And Silk Kimono Blouson" loading="lazy">
     <div class="info">
         <div class="name">Viscose And Silk Kimono Blouson</div>
@@ -1404,7 +1414,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_729758V2Q103749.html'">
+<div class="card" data-name="Nylon Intrecciato Pattern Swim Shorts camo" data-price="0" onclick="window.location='product/hk_729758V2Q103749.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Nylon Intrecciato Pattern Swim Shorts" loading="lazy">
     <div class="info">
         <div class="name">Nylon Intrecciato Pattern Swim Shorts</div>
@@ -1417,7 +1427,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_796983V5T205259.html'">
+<div class="card" data-name="Stripe Nylon Swim Shorts cloud/fondant/lava" data-price="0" onclick="window.location='product/hk_796983V5T205259.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Stripe Nylon Swim Shorts" loading="lazy">
     <div class="info">
         <div class="name">Stripe Nylon Swim Shorts</div>
@@ -1430,7 +1440,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_826331V5D201592.html'">
+<div class="card" data-name="Resinated Cotton Blouson vulcano" data-price="0" onclick="window.location='product/hk_826331V5D201592.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Resinated Cotton Blouson" loading="lazy">
     <div class="info">
         <div class="name">Resinated Cotton Blouson</div>
@@ -1443,7 +1453,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_815200V1LE09523.html'">
+<div class="card" data-name="Frosted Poplin Puffer Gilet liana" data-price="0" onclick="window.location='product/hk_815200V1LE09523.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Frosted Poplin Puffer Gilet" loading="lazy">
     <div class="info">
         <div class="name">Frosted Poplin Puffer Gilet</div>
@@ -1456,7 +1466,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_815297V4C206113.html'">
+<div class="card" data-name="Wool Grain De Poudre Trousers eclipse" data-price="0" onclick="window.location='product/hk_815297V4C206113.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Wool Grain De Poudre Trousers" loading="lazy">
     <div class="info">
         <div class="name">Wool Grain De Poudre Trousers</div>
@@ -1469,7 +1479,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_862216V6E001532.html'">
+<div class="card" data-name="Light Wool Pinstripes Jacket medium gray/white" data-price="0" onclick="window.location='product/hk_862216V6E001532.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Light Wool Pinstripes Jacket" loading="lazy">
     <div class="info">
         <div class="name">Light Wool Pinstripes Jacket</div>
@@ -1482,7 +1492,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_862382V6CV01427.html'">
+<div class="card" data-name="Cotton Poplin Shirt pearl gray" data-price="0" onclick="window.location='product/hk_862382V6CV01427.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Cotton Poplin Shirt" loading="lazy">
     <div class="info">
         <div class="name">Cotton Poplin Shirt</div>
@@ -1495,7 +1505,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_862579V69P04300.html'">
+<div class="card" data-name="Medium Indigo Denim Overshirt mid blue" data-price="0" onclick="window.location='product/hk_862579V69P04300.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Medium Indigo Denim Overshirt" loading="lazy">
     <div class="info">
         <div class="name">Medium Indigo Denim Overshirt</div>
@@ -1508,7 +1518,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_861970V6CV09000.html'">
+<div class="card" data-name="Cotton Poplin Shirt white" data-price="0" onclick="window.location='product/hk_861970V6CV09000.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Cotton Poplin Shirt" loading="lazy">
     <div class="info">
         <div class="name">Cotton Poplin Shirt</div>
@@ -1521,7 +1531,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_852473V6DB02524.html'">
+<div class="card" data-name="Light Wool Shirt caiman" data-price="0" onclick="window.location='product/hk_852473V6DB02524.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Light Wool Shirt" loading="lazy">
     <div class="info">
         <div class="name">Light Wool Shirt</div>
@@ -1534,7 +1544,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_743211V5I512145.html'">
+<div class="card" data-name="Intrecciato Bi-Fold Wallet fondant" data-price="0" onclick="window.location='product/hk_743211V5I512145.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Intrecciato Bi-Fold Wallet" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Bi-Fold Wallet</div>
@@ -1547,7 +1557,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_815346V5BX06840.html'">
+<div class="card" data-name="Leather Hat aubergine" data-price="0" onclick="window.location='product/hk_815346V5BX06840.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Leather Hat" loading="lazy">
     <div class="info">
         <div class="name">Leather Hat</div>
@@ -1560,7 +1570,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_842683V3F709039.html'">
+<div class="card" data-name="Soft Wool Blouson dark jute melange" data-price="0" onclick="window.location='product/hk_842683V3F709039.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Soft Wool Blouson" loading="lazy">
     <div class="info">
         <div class="name">Soft Wool Blouson</div>
@@ -1573,7 +1583,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_775316V2ED02354.html'">
+<div class="card" data-name="Sunday Slipper pinecone" data-price="0" onclick="window.location='product/hk_775316V2ED02354.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Sunday Slipper" loading="lazy">
     <div class="info">
         <div class="name">Sunday Slipper</div>
@@ -1586,7 +1596,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_865951VAHU08120.html'">
+<div class="card" data-name="Knot Earrings yellow gold" data-price="0" onclick="window.location='product/hk_865951VAHU08120.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Knot Earrings" loading="lazy">
     <div class="info">
         <div class="name">Knot Earrings</div>
@@ -1599,7 +1609,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_859098V5VJ04121.html'">
+<div class="card" data-name="Nylon Pants navy" data-price="0" onclick="window.location='product/hk_859098V5VJ04121.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Nylon Pants" loading="lazy">
     <div class="info">
         <div class="name">Nylon Pants</div>
@@ -1612,7 +1622,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_749412V5I513009.html'">
+<div class="card" data-name="Intrecciato Bi-Fold Wallet With Coin Purse dark green" data-price="0" onclick="window.location='product/hk_749412V5I513009.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Intrecciato Bi-Fold Wallet With Coin Purse" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Bi-Fold Wallet With Coin Purse</div>
@@ -1625,7 +1635,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_838272V50708117.html'">
+<div class="card" data-name="Mini Fin Earrings silver" data-price="0" onclick="window.location='product/hk_838272V50708117.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Mini Fin Earrings" loading="lazy">
     <div class="info">
         <div class="name">Mini Fin Earrings</div>
@@ -1638,7 +1648,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_815893VAHU48822.html'">
+<div class="card" data-name="Medium Drop Earrings chili" data-price="0" onclick="window.location='product/hk_815893VAHU48822.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Medium Drop Earrings" loading="lazy">
     <div class="info">
         <div class="name">Medium Drop Earrings</div>
@@ -1651,7 +1661,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_786247VBOH33046.html'">
+<div class="card" data-name="Small Drop Earrings emerald green" data-price="0" onclick="window.location='product/hk_786247VBOH33046.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Small Drop Earrings" loading="lazy">
     <div class="info">
         <div class="name">Small Drop Earrings</div>
@@ -1664,7 +1674,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_795593V50708117.html'">
+<div class="card" data-name="Medium Drop Earrings silver" data-price="0" onclick="window.location='product/hk_795593V50708117.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Medium Drop Earrings" loading="lazy">
     <div class="info">
         <div class="name">Medium Drop Earrings</div>
@@ -1677,7 +1687,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_819728VBOH78117.html'">
+<div class="card" data-name="Drop Hair Clip silver" data-price="0" onclick="window.location='product/hk_819728VBOH78117.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Drop Hair Clip" loading="lazy">
     <div class="info">
         <div class="name">Drop Hair Clip</div>
@@ -1690,7 +1700,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_795805V507D8119.html'">
+<div class="card" data-name="Knot Earrings silver/yellow gold" data-price="0" onclick="window.location='product/hk_795805V507D8119.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Knot Earrings" loading="lazy">
     <div class="info">
         <div class="name">Knot Earrings</div>
@@ -1703,7 +1713,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_786216V2KC29071.html'">
+<div class="card" data-name="Large Fin Earrings chalk" data-price="0" onclick="window.location='product/hk_786216V2KC29071.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Large Fin Earrings" loading="lazy">
     <div class="info">
         <div class="name">Large Fin Earrings</div>
@@ -1716,7 +1726,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_867619V4YX01000.html'">
+<div class="card" data-name="Crepe Viscose Jersey Dress black" data-price="0" onclick="window.location='product/hk_867619V4YX01000.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Crepe Viscose Jersey Dress" loading="lazy">
     <div class="info">
         <div class="name">Crepe Viscose Jersey Dress</div>
@@ -1729,7 +1739,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_862817V69O01000.html'">
+<div class="card" data-name="Faded Black Wide Leg Jeans black" data-price="0" onclick="window.location='product/hk_862817V69O01000.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Faded Black Wide Leg Jeans" loading="lazy">
     <div class="info">
         <div class="name">Faded Black Wide Leg Jeans</div>
@@ -1742,7 +1752,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_838225VAHU08120.html'">
+<div class="card" data-name="Small Ellipse Earrings yellow gold" data-price="0" onclick="window.location='product/hk_838225VAHU08120.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Small Ellipse Earrings" loading="lazy">
     <div class="info">
         <div class="name">Small Ellipse Earrings</div>
@@ -1755,7 +1765,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_804866V507D8119.html'">
+<div class="card" data-name="Ellipse Small Earrings silver/yellow gold" data-price="0" onclick="window.location='product/hk_804866V507D8119.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Ellipse Small Earrings" loading="lazy">
     <div class="info">
         <div class="name">Ellipse Small Earrings</div>
@@ -1768,7 +1778,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_844030V4YX04140.html'">
+<div class="card" data-name="Crepe Viscose Jersey Dress abyss" data-price="0" onclick="window.location='product/hk_844030V4YX04140.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Crepe Viscose Jersey Dress" loading="lazy">
     <div class="info">
         <div class="name">Crepe Viscose Jersey Dress</div>
@@ -1781,7 +1791,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_835294V4CB01307.html'">
+<div class="card" data-name="Double Face Wool Gilet charcoal melange" data-price="0" onclick="window.location='product/hk_835294V4CB01307.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Double Face Wool Gilet" loading="lazy">
     <div class="info">
         <div class="name">Double Face Wool Gilet</div>
@@ -1794,7 +1804,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_837465V27W08399.html'">
+<div class="card" data-name="Toscana Shearling Cropped Gilet metallic mist" data-price="0" onclick="window.location='product/hk_837465V27W08399.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Toscana Shearling Cropped Gilet" loading="lazy">
     <div class="info">
         <div class="name">Toscana Shearling Cropped Gilet</div>
@@ -1807,7 +1817,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_815668V36K01292.html'">
+<div class="card" data-name="Striped Wool Jacket black/dark blue" data-price="0" onclick="window.location='product/hk_815668V36K01292.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Striped Wool Jacket" loading="lazy">
     <div class="info">
         <div class="name">Striped Wool Jacket</div>
@@ -1820,7 +1830,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_814254564.html'">
+<div class="card" data-name="Prisma Cat Eye Sunglasses black/green" data-price="0" onclick="window.location='product/hk_814254564.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Prisma Cat Eye Sunglasses" loading="lazy">
     <div class="info">
         <div class="name">Prisma Cat Eye Sunglasses</div>
@@ -1833,7 +1843,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_876093V00108803.html'">
+<div class="card" data-name="Intrecciato Piccolo Prism Pouch black" data-price="0" onclick="window.location='product/hk_876093V00108803.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Intrecciato Piccolo Prism Pouch" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Piccolo Prism Pouch</div>
@@ -1846,7 +1856,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_806850V2ED01000.html'">
+<div class="card" data-name="Atomic Ballerina black" data-price="0" onclick="window.location='product/hk_806850V2ED01000.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Atomic Ballerina" loading="lazy">
     <div class="info">
         <div class="name">Atomic Ballerina</div>
@@ -1859,7 +1869,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_811087V3H682113.html'">
+<div class="card" data-name="Atomic Ankle Boot fondant" data-price="0" onclick="window.location='product/hk_811087V3H682113.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Atomic Ankle Boot" loading="lazy">
     <div class="info">
         <div class="name">Atomic Ankle Boot</div>
@@ -1872,7 +1882,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_814698VCQC18425.html'">
+<div class="card" data-name="Cassette Passport Case black" data-price="0" onclick="window.location='product/hk_814698VCQC18425.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Cassette Passport Case" loading="lazy">
     <div class="info">
         <div class="name">Cassette Passport Case</div>
@@ -1885,7 +1895,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_743209VCPQ38838.html'">
+<div class="card" data-name="Intrecciato Credit Card Case deep blue" data-price="0" onclick="window.location='product/hk_743209VCPQ38838.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Intrecciato Credit Card Case" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Credit Card Case</div>
@@ -1898,7 +1908,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_749455VBWD28803.html'">
+<div class="card" data-name="Cassette Bi-Fold Wallet With Coin Purse black" data-price="0" onclick="window.location='product/hk_749455VBWD28803.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Cassette Bi-Fold Wallet With Coin Purse" loading="lazy">
     <div class="info">
         <div class="name">Cassette Bi-Fold Wallet With Coin Purse</div>
@@ -1911,7 +1921,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_857328VBOH78120.html'">
+<div class="card" data-name="Sardine Hair Clip yellow gold" data-price="0" onclick="window.location='product/hk_857328VBOH78120.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Sardine Hair Clip" loading="lazy">
     <div class="info">
         <div class="name">Sardine Hair Clip</div>
@@ -1924,7 +1934,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_841289V5VM03490.html'">
+<div class="card" data-name="Tech Jersey Tank Top rainforest" data-price="0" onclick="window.location='product/hk_841289V5VM03490.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Tech Jersey Tank Top" loading="lazy">
     <div class="info">
         <div class="name">Tech Jersey Tank Top</div>
@@ -1937,7 +1947,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_786204VAHU08120.html'">
+<div class="card" data-name="Small Fin Earrings yellow gold" data-price="0" onclick="window.location='product/hk_786204VAHU08120.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Small Fin Earrings" loading="lazy">
     <div class="info">
         <div class="name">Small Fin Earrings</div>
@@ -1950,7 +1960,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_838373V3MS24290.html'">
+<div class="card" data-name="Orbit Flash Sneaker abyss/ice/egg yolk" data-price="0" onclick="window.location='product/hk_838373V3MS24290.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Orbit Flash Sneaker" loading="lazy">
     <div class="info">
         <div class="name">Orbit Flash Sneaker</div>
@@ -1963,7 +1973,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_811525V4HG03008.html'">
+<div class="card" data-name="Intrecciato Suede Leather Blouson travertine" data-price="0" onclick="window.location='product/hk_811525V4HG03008.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Intrecciato Suede Leather Blouson" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Suede Leather Blouson</div>
@@ -1976,7 +1986,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_804439V01711000.html'">
+<div class="card" data-name="Intrecciato Leather Gloves nero" data-price="0" onclick="window.location='product/hk_804439V01711000.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Intrecciato Leather Gloves" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Leather Gloves</div>
@@ -1989,7 +1999,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_867134V64A07400.html'">
+<div class="card" data-name="Rabbit Charm sherbet" data-price="0" onclick="window.location='product/hk_867134V64A07400.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Rabbit Charm" loading="lazy">
     <div class="info">
         <div class="name">Rabbit Charm</div>
@@ -2002,7 +2012,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_844672V3D812628.html'">
+<div class="card" data-name="Letter C Charm wood" data-price="0" onclick="window.location='product/hk_844672V3D812628.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Letter C Charm" loading="lazy">
     <div class="info">
         <div class="name">Letter C Charm</div>
@@ -2015,7 +2025,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_844681V3D814140.html'">
+<div class="card" data-name="Letter I Charm abyss" data-price="0" onclick="window.location='product/hk_844681V3D814140.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Letter I Charm" loading="lazy">
     <div class="info">
         <div class="name">Letter I Charm</div>
@@ -2028,7 +2038,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_844688V3D812240.html'">
+<div class="card" data-name="Letter O Charm barolo" data-price="0" onclick="window.location='product/hk_844688V3D812240.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Letter O Charm" loading="lazy">
     <div class="info">
         <div class="name">Letter O Charm</div>
@@ -2041,7 +2051,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_844689V3D812113.html'">
+<div class="card" data-name="Letter P Charm fondant" data-price="0" onclick="window.location='product/hk_844689V3D812113.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Letter P Charm" loading="lazy">
     <div class="info">
         <div class="name">Letter P Charm</div>
@@ -2054,7 +2064,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_619100V00508425.html'">
+<div class="card" data-name="Double Knot Key Ring black" data-price="0" onclick="window.location='product/hk_619100V00508425.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Double Knot Key Ring" loading="lazy">
     <div class="info">
         <div class="name">Double Knot Key Ring</div>
@@ -2067,7 +2077,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_875533V6R704644.html'">
+<div class="card" data-name="Cotton Beach Towel air/night residue" data-price="0" onclick="window.location='product/hk_875533V6R704644.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Cotton Beach Towel" loading="lazy">
     <div class="info">
         <div class="name">Cotton Beach Towel</div>
@@ -2080,7 +2090,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_819720V59Q09311.html'">
+<div class="card" data-name="Shearling Cassette Cushion butter" data-price="0" onclick="window.location='product/hk_819720V59Q09311.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Shearling Cassette Cushion" loading="lazy">
     <div class="info">
         <div class="name">Shearling Cassette Cushion</div>
@@ -2093,7 +2103,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_779737V01444002.html'">
+<div class="card" data-name="Tweed Blanket blue" data-price="0" onclick="window.location='product/hk_779737V01444002.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Tweed Blanket" loading="lazy">
     <div class="info">
         <div class="name">Tweed Blanket</div>
@@ -2106,7 +2116,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_779736V01448597.html'">
+<div class="card" data-name="Lava Cushion yellow/black/white" data-price="0" onclick="window.location='product/hk_779736V01448597.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Lava Cushion" loading="lazy">
     <div class="info">
         <div class="name">Lava Cushion</div>
@@ -2119,7 +2129,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_796697V4R309306.html'">
+<div class="card" data-name="Astaire Loafer light butterscotch" data-price="0" onclick="window.location='product/hk_796697V4R309306.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Astaire Loafer" loading="lazy">
     <div class="info">
         <div class="name">Astaire Loafer</div>
@@ -2132,7 +2142,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_838387V54Q08746.html'">
+<div class="card" data-name="Astaire Loafer navy/white" data-price="0" onclick="window.location='product/hk_838387V54Q08746.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Astaire Loafer" loading="lazy">
     <div class="info">
         <div class="name">Astaire Loafer</div>
@@ -2145,7 +2155,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_843952V60E02113.html'">
+<div class="card" data-name="James Boot fondant" data-price="0" onclick="window.location='product/hk_843952V60E02113.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="James Boot" loading="lazy">
     <div class="info">
         <div class="name">James Boot</div>
@@ -2158,7 +2168,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_845972V4XP01000.html'">
+<div class="card" data-name="Fine Wool Cargo Pants black" data-price="0" onclick="window.location='product/hk_845972V4XP01000.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Fine Wool Cargo Pants" loading="lazy">
     <div class="info">
         <div class="name">Fine Wool Cargo Pants</div>
@@ -2171,7 +2181,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_844757V721K7567.html'">
+<div class="card" data-name="Twist Earrings citrine/white" data-price="0" onclick="window.location='product/hk_844757V721K7567.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Twist Earrings" loading="lazy">
     <div class="info">
         <div class="name">Twist Earrings</div>
@@ -2184,7 +2194,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_835883V5RR02241.html'">
+<div class="card" data-name="Mini Intrecciato Leather Shirt dark barolo" data-price="0" onclick="window.location='product/hk_835883V5RR02241.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Mini Intrecciato Leather Shirt" loading="lazy">
     <div class="info">
         <div class="name">Mini Intrecciato Leather Shirt</div>
@@ -2197,7 +2207,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_868075V2AS07243.html'">
+<div class="card" data-name="Gondola Clog butter yellow" data-price="0" onclick="window.location='product/hk_868075V2AS07243.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Gondola Clog" loading="lazy">
     <div class="info">
         <div class="name">Gondola Clog</div>
@@ -2210,7 +2220,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_708285VAHU08120.html'">
+<div class="card" data-name="Knot Earrings yellow gold" data-price="0" onclick="window.location='product/hk_708285VAHU08120.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Knot Earrings" loading="lazy">
     <div class="info">
         <div class="name">Knot Earrings</div>
@@ -2223,7 +2233,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_868895V6D109071.html'">
+<div class="card" data-name="Compact Cotton Toile Shirt chalk" data-price="0" onclick="window.location='product/hk_868895V6D109071.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Compact Cotton Toile Shirt" loading="lazy">
     <div class="info">
         <div class="name">Compact Cotton Toile Shirt</div>
@@ -2236,7 +2246,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_837886VBSD01000.html'">
+<div class="card" data-name="Rosa Ballerina black" data-price="0" onclick="window.location='product/hk_837886VBSD01000.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Rosa Ballerina" loading="lazy">
     <div class="info">
         <div class="name">Rosa Ballerina</div>
@@ -2249,7 +2259,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/hk_857320VAHU08120.html'">
+<div class="card" data-name="Small Sardine Earrings yellow gold" data-price="0" onclick="window.location='product/hk_857320VAHU08120.html'">
     <img src="https://via.placeholder.com/260x200?text=No+Image" alt="Small Sardine Earrings" loading="lazy">
     <div class="info">
         <div class="name">Small Sardine Earrings</div>
@@ -2263,4 +2273,32 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
     </div>
 </div>
 </div>
+
+<script>
+function applyFilters() {
+    const q = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
+    const priceMin = parseFloat(document.getElementById('priceMin')?.value) || 0;
+    const priceMax = parseFloat(document.getElementById('priceMax')?.value) || Infinity;
+    document.querySelectorAll('.card').forEach(card => {
+        const name = (card.dataset.name || '').toLowerCase();
+        const keywords = q ? q.split(/[ 	]+/) : [];
+        const matchName = keywords.length === 0 || keywords.every(kw => name.includes(kw));
+        const price = parseFloat(card.dataset.price) || 0;
+        const matchPrice = price === 0 || (price >= priceMin && price <= priceMax);
+        card.style.display = (matchName && matchPrice) ? '' : 'none';
+    });
+    document.querySelectorAll('.cat-header').forEach(header => {
+        const grid = header.nextElementSibling;
+        if (grid && grid.classList.contains('grid')) {
+            const visible = grid.querySelectorAll('.card:not([style*="display: none"])').length;
+            header.style.display = visible > 0 ? '' : 'none';
+            grid.style.display = visible > 0 ? '' : 'none';
+        }
+    });
+}
+function clearFilters() {
+    ['searchInput','priceMin','priceMax'].forEach(id => { const el = document.getElementById(id); if(el) el.value=''; });
+    applyFilters();
+}
+</script>
 </body></html>

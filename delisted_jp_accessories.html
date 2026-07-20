@@ -63,9 +63,19 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
     <a class="sub-tab " href="delisted_jp_travel.html">🧳 旅行 Travel (10)</a>
     <a class="sub-tab " href="delisted_jp_home.html">🏠 家居 Home (174)</a>
 </div>
+<div class="search-bar" style="padding:10px 20px;background:#16213e;border-bottom:1px solid #0f3460;">
+  <input type="text" id="searchInput" placeholder="🔍 搜尋商品名稱、顏色" oninput="applyFilters()" style="width:100%;max-width:500px;padding:10px 15px;border-radius:25px;border:1px solid #333;background:#1a1a2e;color:#eee;font-size:0.9em;outline:none;">
+</div>
+<div class="filters" style="padding:10px 20px;background:#0f3460;display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+  <label style="color:#aaa;font-size:0.8em;">💰 原價：</label>
+  <input type="number" id="priceMin" placeholder="最低" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
+  <span style="color:#888">—</span>
+  <input type="number" id="priceMax" placeholder="最高" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
+  <button onclick="clearFilters()" style="background:#1a1a2e;color:#aaa;border:none;padding:5px 12px;border-radius:5px;cursor:pointer;font-size:0.8em;">✕ 清除</button>
+</div>
 <div class="cat-header">💍 飾品 Accessories — 11 件</div>
 <div class="grid">
-<div class="card" onclick="window.location='product/jp_796783V4LQ13009.html'">
+<div class="card" data-name="Intrecciato Piccolo Belt dark green" data-price="108900" onclick="window.location='product/jp_796783V4LQ13009.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/29562f9f4c054e8/Thumbnail-796783V4LQ13009_A.jpg" alt="Intrecciato Piccolo Belt" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Piccolo Belt</div>
@@ -78,7 +88,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：¥54,450~76,230</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/jp_690597VCPQ48803.html'">
+<div class="card" data-name="Key Pouch black" data-price="90200" onclick="window.location='product/jp_690597VCPQ48803.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/551e10d8edd53ffb/Thumbnail-690597VCPQ48803_A.jpg" alt="Key Pouch" loading="lazy">
     <div class="info">
         <div class="name">Key Pouch</div>
@@ -91,7 +101,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：¥45,100~63,139</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/jp_7213454V0181000.html'">
+<div class="card" data-name="Silk Twill Tie black" data-price="30800" onclick="window.location='product/jp_7213454V0181000.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/4b27884af02793af/Thumbnail-7213454V0181000_A.jpg" alt="Silk Twill Tie" loading="lazy">
     <div class="info">
         <div class="name">Silk Twill Tie</div>
@@ -104,7 +114,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：¥15,400~21,560</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/jp_812758V1I448933.html'">
+<div class="card" data-name="Printed Leather Tie white/beige/black/orange" data-price="150700" onclick="window.location='product/jp_812758V1I448933.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/5d072a37a702e4bf/Thumbnail-812758V1I448933_A.jpg" alt="Printed Leather Tie" loading="lazy">
     <div class="info">
         <div class="name">Printed Leather Tie</div>
@@ -117,7 +127,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：¥75,350~105,490</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/jp_835969V64A06337.html'">
+<div class="card" data-name="Cat Charm bordeaux" data-price="0" onclick="window.location='product/jp_835969V64A06337.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/d54022d9-495b-4d9c-bf32-8c3fdcee5ee0/Thumbnail/835969V64A06337_A.jpg" alt="Cat Charm" loading="lazy">
     <div class="info">
         <div class="name">Cat Charm</div>
@@ -130,7 +140,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/jp_867134V6FJ09000.html'">
+<div class="card" data-name="Rabbit Charm white" data-price="0" onclick="window.location='product/jp_867134V6FJ09000.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/a3a3d1d1-cb91-4153-a81b-2419833b3029/Thumbnail/867134V6FJ09000_A.jpg" alt="Rabbit Charm" loading="lazy">
     <div class="info">
         <div class="name">Rabbit Charm</div>
@@ -143,7 +153,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/jp_867410V3D806176.html'">
+<div class="card" data-name="Onda Charm deep mahogany" data-price="0" onclick="window.location='product/jp_867410V3D806176.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/0c75dad8-2029-499b-ae82-100829f2bd2f/Thumbnail/867410V3D806176_A.jpg" alt="Onda Charm" loading="lazy">
     <div class="info">
         <div class="name">Onda Charm</div>
@@ -156,7 +166,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/jp_867867V3D806149.html'">
+<div class="card" data-name="Onda Key Ring deep mahogany" data-price="0" onclick="window.location='product/jp_867867V3D806149.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/72dfd019-0906-41f0-a1e7-ce31c8e95d65/Thumbnail/867867V3D806149_A.jpg" alt="Onda Key Ring" loading="lazy">
     <div class="info">
         <div class="name">Onda Key Ring</div>
@@ -169,7 +179,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/jp_835969V6FJ09000.html'">
+<div class="card" data-name="Cat Charm white" data-price="0" onclick="window.location='product/jp_835969V6FJ09000.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/120b69fd-9a71-4fc9-9c05-1d31325b2f7f/Thumbnail/835969V6FJ09000_A.jpg" alt="Cat Charm" loading="lazy">
     <div class="info">
         <div class="name">Cat Charm</div>
@@ -182,7 +192,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" onclick="window.location='product/jp_873237V2EZ09538.html'">
+<div class="card" data-name="Tosca Key Holder alabaster" data-price="239800" onclick="window.location='product/jp_873237V2EZ09538.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/fa46f691-3521-49de-ae36-cd2532de6f96/Thumbnail/873237V2EZ09538_A.jpg" alt="Tosca Key Holder" loading="lazy">
     <div class="info">
         <div class="name">Tosca Key Holder</div>
@@ -195,7 +205,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：¥119,900~167,860</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/jp_796783V4LQ12145.html'">
+<div class="card" data-name="Intrecciato Piccolo Belt fondant" data-price="0" onclick="window.location='product/jp_796783V4LQ12145.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/5bae7395b9700bf3/Thumbnail-796783V4LQ12145_A.jpg" alt="Intrecciato Piccolo Belt" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Piccolo Belt</div>
@@ -209,4 +219,32 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
     </div>
 </div>
 </div>
+
+<script>
+function applyFilters() {
+    const q = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
+    const priceMin = parseFloat(document.getElementById('priceMin')?.value) || 0;
+    const priceMax = parseFloat(document.getElementById('priceMax')?.value) || Infinity;
+    document.querySelectorAll('.card').forEach(card => {
+        const name = (card.dataset.name || '').toLowerCase();
+        const keywords = q ? q.split(/[ 	]+/) : [];
+        const matchName = keywords.length === 0 || keywords.every(kw => name.includes(kw));
+        const price = parseFloat(card.dataset.price) || 0;
+        const matchPrice = price === 0 || (price >= priceMin && price <= priceMax);
+        card.style.display = (matchName && matchPrice) ? '' : 'none';
+    });
+    document.querySelectorAll('.cat-header').forEach(header => {
+        const grid = header.nextElementSibling;
+        if (grid && grid.classList.contains('grid')) {
+            const visible = grid.querySelectorAll('.card:not([style*="display: none"])').length;
+            header.style.display = visible > 0 ? '' : 'none';
+            grid.style.display = visible > 0 ? '' : 'none';
+        }
+    });
+}
+function clearFilters() {
+    ['searchInput','priceMin','priceMax'].forEach(id => { const el = document.getElementById(id); if(el) el.value=''; });
+    applyFilters();
+}
+</script>
 </body></html>
