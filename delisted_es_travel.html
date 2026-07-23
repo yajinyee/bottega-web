@@ -36,7 +36,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
 <body>
 <div class="header">
     <h1>🏷️ 下架商品（Outlet 候選）</h1>
-    <div class="meta">共 1531 件已下架商品 | 下架越久越可能出現在 Outlet</div>
+    <div class="meta">共 425 件已下架商品 | 下架越久越可能出現在 Outlet</div>
 </div>
 <div class="nav">
     <a href="index.html">📦 商品目錄</a>
@@ -48,63 +48,33 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
 <div class="tabs">
     <a class="tab " href="delisted_tw.html">台灣 Taiwan</a>
     <a class="tab " href="delisted_jp.html">日本 Japan</a>
-    <a class="tab " href="delisted_mo.html">澳門 Macau</a>
     <a class="tab active" href="delisted_es.html">西班牙 Spain</a>
 </div>
 <div class="sub-tabs">
     <a class="sub-tab " href="delisted_es.html">全部</a>
-    <a class="sub-tab " href="delisted_es_bags.html">👜 包包 Bags (432)</a>
-    <a class="sub-tab " href="delisted_es_shoes.html">👠 鞋子 Shoes (237)</a>
-    <a class="sub-tab " href="delisted_es_rtw.html">👗 服裝 Clothing (43)</a>
-    <a class="sub-tab " href="delisted_es_slg.html">👛 皮夾 Wallets (93)</a>
-    <a class="sub-tab " href="delisted_es_jewellery.html">💎 珠寶 Jewellery (49)</a>
-    <a class="sub-tab " href="delisted_es_accessories.html">💍 飾品 Accessories (57)</a>
-    <a class="sub-tab " href="delisted_es_eyewear.html">🕶️ 眼鏡 Eyewear (48)</a>
-    <a class="sub-tab active" href="delisted_es_travel.html">🧳 旅行 Travel (19)</a>
-    <a class="sub-tab " href="delisted_es_home.html">🏠 家居 Home (553)</a>
+    <a class="sub-tab " href="delisted_es_bags.html">👜 包包 Bags (59)</a>
+    <a class="sub-tab " href="delisted_es_shoes.html">👠 鞋子 Shoes (84)</a>
+    <a class="sub-tab " href="delisted_es_rtw.html">👗 服裝 Clothing (22)</a>
+    <a class="sub-tab " href="delisted_es_slg.html">👛 皮夾 Wallets (15)</a>
+    <a class="sub-tab " href="delisted_es_jewellery.html">💎 珠寶 Jewellery (2)</a>
+    <a class="sub-tab " href="delisted_es_accessories.html">💍 飾品 Accessories (8)</a>
+    <a class="sub-tab " href="delisted_es_eyewear.html">🕶️ 眼鏡 Eyewear (2)</a>
+    <a class="sub-tab active" href="delisted_es_travel.html">🧳 旅行 Travel (3)</a>
+    <a class="sub-tab " href="delisted_es_home.html">🏠 家居 Home (230)</a>
 </div>
-<div class="cat-header">🧳 旅行 Travel — 19 件</div>
+<div class="search-bar" style="padding:10px 20px;background:#16213e;border-bottom:1px solid #0f3460;">
+  <input type="text" id="searchInput" placeholder="🔍 搜尋商品名稱、顏色" oninput="applyFilters()" style="width:100%;max-width:500px;padding:10px 15px;border-radius:25px;border:1px solid #333;background:#1a1a2e;color:#eee;font-size:0.9em;outline:none;">
+</div>
+<div class="filters" style="padding:10px 20px;background:#0f3460;display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+  <label style="color:#aaa;font-size:0.8em;">💰 原價：</label>
+  <input type="number" id="priceMin" placeholder="最低" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
+  <span style="color:#888">—</span>
+  <input type="number" id="priceMax" placeholder="最高" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
+  <button onclick="clearFilters()" style="background:#1a1a2e;color:#aaa;border:none;padding:5px 12px;border-radius:5px;cursor:pointer;font-size:0.8em;">✕ 清除</button>
+</div>
+<div class="cat-header">🧳 旅行 Travel — 3 件</div>
 <div class="grid">
-<div class="card" onclick="window.location='product/es_876813V6U301670.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/2772a437-ce89-4e6c-8b65-b30ade4cfb7c/Thumbnail/876813V6U301670_A.jpg" alt="Woven Mycelium Passport Case" loading="lazy">
-    <div class="info">
-        <div class="name">Woven Mycelium Passport Case</div>
-        <div class="color">mineral</div>
-        <div class="price">€450</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€225~315</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_876813V6U302006.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/61f60b04-6ae0-496d-be82-8aa07699828d/Thumbnail/876813V6U302006_A.jpg" alt="Woven Mycelium Passport Case" loading="lazy">
-    <div class="info">
-        <div class="name">Woven Mycelium Passport Case</div>
-        <div class="color">espresso</div>
-        <div class="price">€450</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€225~315</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_876813V6U306525.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/8d848c97-e700-47f4-8e6a-436d9ff44694/Thumbnail/876813V6U306525_A.jpg" alt="Woven Mycelium Passport Case" loading="lazy">
-    <div class="info">
-        <div class="name">Woven Mycelium Passport Case</div>
-        <div class="color">lava red</div>
-        <div class="price">€450</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€225~315</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_817398V2BEA4032.html'">
+<div class="card" data-name="Intrecciato Piccolo Passport Case neptune" data-price="520" onclick="window.location='product/es_817398V2BEA4032.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/2bf20947-29bc-4727-a5ee-dd36b3af5b1a/Thumbnail/817398V2BEA4032_A.jpg" alt="Intrecciato Piccolo Passport Case" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Piccolo Passport Case</div>
@@ -117,46 +87,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€260~364</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_749441VCPQ48803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/4a6cdf3a-eccf-45db-8f74-8ecfb2117141/Thumbnail/749441VCPQ48803_A.jpg" alt="Intrecciato  Passport Case" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato  Passport Case</div>
-        <div class="color">black</div>
-        <div class="price">€420</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€210~294</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_749441V6UF14112.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/03e52d0e-0377-47b6-a1ee-2ff9f4b0afc7/Thumbnail/749441V6UF14112_A.jpg" alt="Intrecciato Passport Case" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Passport Case</div>
-        <div class="color">midnight/taxi</div>
-        <div class="price">€450</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€225~315</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_826257V2BE23010.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/3641356f-7336-4115-bc04-c21cfff7bc73/Thumbnail/826257V2BE23010_A.jpg" alt="Getaway Tag Holder" loading="lazy">
-    <div class="info">
-        <div class="name">Getaway Tag Holder</div>
-        <div class="color">basil</div>
-        <div class="price">€350</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€175~244</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_826257V2BE24296.html'">
+<div class="card" data-name="Getaway Tag Holder blue royal" data-price="350" onclick="window.location='product/es_826257V2BE24296.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/92f3de9c-f685-4f22-8bb3-c18182daaf9f/Thumbnail/826257V2BE24296_A.jpg" alt="Getaway Tag Holder" loading="lazy">
     <div class="info">
         <div class="name">Getaway Tag Holder</div>
@@ -169,7 +100,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€175~244</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_826257V2BE25550.html'">
+<div class="card" data-name="Getaway Tag Holder cinnabar" data-price="350" onclick="window.location='product/es_826257V2BE25550.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/c437db78-606f-4a60-bd85-d170bbce44d7/Thumbnail/826257V2BE25550_A.jpg" alt="Getaway Tag Holder" loading="lazy">
     <div class="info">
         <div class="name">Getaway Tag Holder</div>
@@ -182,135 +113,33 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€175~244</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_826257V63U21000.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/d3bea16c-e966-4c37-aec8-ba677b7b4b5a/Thumbnail/826257V63U21000_A.jpg" alt="Getaway Tag Holder" loading="lazy">
-    <div class="info">
-        <div class="name">Getaway Tag Holder</div>
-        <div class="color">black</div>
-        <div class="price">€390</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€195~273</div>
-    </div>
 </div>
-<div class="card" onclick="window.location='product/es_786628V2HL11000.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/a69cf541-a9d9-4a13-ba4a-2715a1c675cb/Thumbnail/786628V2HL11000_A.jpg" alt="Intrecciato Long Tag Holder" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Long Tag Holder</div>
-        <div class="color">black</div>
-        <div class="price">€390</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€195~273</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_786628V2HL12113.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/ce290043-2465-4602-b9bc-49b2f80017ee/Thumbnail/786628V2HL12113_A.jpg" alt="Intrecciato Long Tag Holder" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Long Tag Holder</div>
-        <div class="color">fondant</div>
-        <div class="price">€390</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€195~273</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_749441V6K414328.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/3f104571-d0b9-43bc-8a16-226d4a01ea86/Thumbnail/749441V6K414328_A.jpg" alt="Intrecciato Passport Case" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Passport Case</div>
-        <div class="color">midnight/espresso/deep mahogany</div>
-        <div class="price">€520</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€260~364</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_855189V2HL38803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/a52dff1a-d171-4ba0-baa3-0215a46f0b73/Thumbnail/855189V2HL38803_A.jpg" alt="Intrecciato Check-In Organizer" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Check-In Organizer</div>
-        <div class="color">black</div>
-        <div class="price">€990</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€495~693</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_765804V2HL08803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/bdd192bd-0951-4aae-8aa8-3d6b4d2e771e/Thumbnail/765804V2HL08803_A.jpg" alt="Intrecciato Large Organizer" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Large Organizer</div>
-        <div class="color">black</div>
-        <div class="price">€1,100</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€550~770</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_764718V2HL08803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/a6ec0f6e-494f-4d3e-b20e-99d4328a9f93/Thumbnail/764718V2HL08803_A.jpg" alt="Intrecciato Small Packing Cube" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Small Packing Cube</div>
-        <div class="color">black</div>
-        <div class="price">€1,500</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€750~1,050</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_855367V4J102145.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/5d948b7e-b148-4f77-81ca-02f869583ec1/Thumbnail/855367V4J102145_A.jpg" alt="Intrecciato Piccolo Travel Pouch" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Piccolo Travel Pouch</div>
-        <div class="color">fondant</div>
-        <div class="price">€1,800</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€900~1,260</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_A000DPV6PC18803.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/650c498a-f98e-4f01-b714-608d00a067f3/Thumbnail/A000DPV6PC18803_A.jpg" alt="Intrecciato Travel Pouch" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Travel Pouch</div>
-        <div class="color">black</div>
-        <div class="price">€1,700</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€850~1,190</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_729295V6UF04161.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/43fc43de-ebab-48ff-bff7-58f1173a510d/Thumbnail/729295V6UF04161_A.jpg" alt="Intrecciato Travel Pouch" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Travel Pouch</div>
-        <div class="color">midnight/taxi</div>
-        <div class="price">€1,600</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€800~1,120</div>
-    </div>
-</div>
-</div>
+
+<script>
+function applyFilters() {
+    const q = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
+    const priceMin = parseFloat(document.getElementById('priceMin')?.value) || 0;
+    const priceMax = parseFloat(document.getElementById('priceMax')?.value) || Infinity;
+    document.querySelectorAll('.card').forEach(card => {
+        const name = (card.dataset.name || '').toLowerCase();
+        const keywords = q ? q.split(/[ 	]+/) : [];
+        const matchName = keywords.length === 0 || keywords.every(kw => name.includes(kw));
+        const price = parseFloat(card.dataset.price) || 0;
+        const matchPrice = price === 0 || (price >= priceMin && price <= priceMax);
+        card.style.display = (matchName && matchPrice) ? '' : 'none';
+    });
+    document.querySelectorAll('.cat-header').forEach(header => {
+        const grid = header.nextElementSibling;
+        if (grid && grid.classList.contains('grid')) {
+            const visible = grid.querySelectorAll('.card:not([style*="display: none"])').length;
+            header.style.display = visible > 0 ? '' : 'none';
+            grid.style.display = visible > 0 ? '' : 'none';
+        }
+    });
+}
+function clearFilters() {
+    ['searchInput','priceMin','priceMax'].forEach(id => { const el = document.getElementById(id); if(el) el.value=''; });
+    applyFilters();
+}
+</script>
 </body></html>

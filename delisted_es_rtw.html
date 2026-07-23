@@ -36,7 +36,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
 <body>
 <div class="header">
     <h1>🏷️ 下架商品（Outlet 候選）</h1>
-    <div class="meta">共 1531 件已下架商品 | 下架越久越可能出現在 Outlet</div>
+    <div class="meta">共 425 件已下架商品 | 下架越久越可能出現在 Outlet</div>
 </div>
 <div class="nav">
     <a href="index.html">📦 商品目錄</a>
@@ -48,63 +48,33 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
 <div class="tabs">
     <a class="tab " href="delisted_tw.html">台灣 Taiwan</a>
     <a class="tab " href="delisted_jp.html">日本 Japan</a>
-    <a class="tab " href="delisted_mo.html">澳門 Macau</a>
     <a class="tab active" href="delisted_es.html">西班牙 Spain</a>
 </div>
 <div class="sub-tabs">
     <a class="sub-tab " href="delisted_es.html">全部</a>
-    <a class="sub-tab " href="delisted_es_bags.html">👜 包包 Bags (432)</a>
-    <a class="sub-tab " href="delisted_es_shoes.html">👠 鞋子 Shoes (237)</a>
-    <a class="sub-tab active" href="delisted_es_rtw.html">👗 服裝 Clothing (43)</a>
-    <a class="sub-tab " href="delisted_es_slg.html">👛 皮夾 Wallets (93)</a>
-    <a class="sub-tab " href="delisted_es_jewellery.html">💎 珠寶 Jewellery (49)</a>
-    <a class="sub-tab " href="delisted_es_accessories.html">💍 飾品 Accessories (57)</a>
-    <a class="sub-tab " href="delisted_es_eyewear.html">🕶️ 眼鏡 Eyewear (48)</a>
-    <a class="sub-tab " href="delisted_es_travel.html">🧳 旅行 Travel (19)</a>
-    <a class="sub-tab " href="delisted_es_home.html">🏠 家居 Home (553)</a>
+    <a class="sub-tab " href="delisted_es_bags.html">👜 包包 Bags (59)</a>
+    <a class="sub-tab " href="delisted_es_shoes.html">👠 鞋子 Shoes (84)</a>
+    <a class="sub-tab active" href="delisted_es_rtw.html">👗 服裝 Clothing (22)</a>
+    <a class="sub-tab " href="delisted_es_slg.html">👛 皮夾 Wallets (15)</a>
+    <a class="sub-tab " href="delisted_es_jewellery.html">💎 珠寶 Jewellery (2)</a>
+    <a class="sub-tab " href="delisted_es_accessories.html">💍 飾品 Accessories (8)</a>
+    <a class="sub-tab " href="delisted_es_eyewear.html">🕶️ 眼鏡 Eyewear (2)</a>
+    <a class="sub-tab " href="delisted_es_travel.html">🧳 旅行 Travel (3)</a>
+    <a class="sub-tab " href="delisted_es_home.html">🏠 家居 Home (230)</a>
 </div>
-<div class="cat-header">👗 服裝 Clothing — 43 件</div>
+<div class="search-bar" style="padding:10px 20px;background:#16213e;border-bottom:1px solid #0f3460;">
+  <input type="text" id="searchInput" placeholder="🔍 搜尋商品名稱、顏色" oninput="applyFilters()" style="width:100%;max-width:500px;padding:10px 15px;border-radius:25px;border:1px solid #333;background:#1a1a2e;color:#eee;font-size:0.9em;outline:none;">
+</div>
+<div class="filters" style="padding:10px 20px;background:#0f3460;display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+  <label style="color:#aaa;font-size:0.8em;">💰 原價：</label>
+  <input type="number" id="priceMin" placeholder="最低" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
+  <span style="color:#888">—</span>
+  <input type="number" id="priceMax" placeholder="最高" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
+  <button onclick="clearFilters()" style="background:#1a1a2e;color:#aaa;border:none;padding:5px 12px;border-radius:5px;cursor:pointer;font-size:0.8em;">✕ 清除</button>
+</div>
+<div class="cat-header">👗 服裝 Clothing — 22 件</div>
 <div class="grid">
-<div class="card" onclick="window.location='product/es_869475V6D109071.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/a083a326-34ee-4322-b64d-0ee75b0de091/Thumbnail/869475V6D109071_A.jpg" alt="Compact Cotton Toile Top" loading="lazy">
-    <div class="info">
-        <div class="name">Compact Cotton Toile Top</div>
-        <div class="color">chalk</div>
-        <div class="price">€2,920</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€1,460~2,043</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_871537V6PE09742.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/e7bbc05e-5a47-48ee-a6a8-d49305e48ef1/Thumbnail/871537V6PE09742_A.jpg" alt="Mini Intreccio Suede Leather Skirt" loading="lazy">
-    <div class="info">
-        <div class="name">Mini Intreccio Suede Leather Skirt</div>
-        <div class="color">trench</div>
-        <div class="price">€12,870</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€6,435~9,009</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_851565V6NB02512.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/07300ca1-2177-4136-8edd-9caac52fc0bc/Thumbnail/851565V6NB02512_A.jpg" alt="Wool And Cotton Jacket" loading="lazy">
-    <div class="info">
-        <div class="name">Wool And Cotton Jacket</div>
-        <div class="color">beige/light blue</div>
-        <div class="price">€5,750</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€2,875~4,024</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_861970V6OG09006.html'">
+<div class="card" data-name="Cotton Poplin Pinstripes Shirt white/blue" data-price="2980" onclick="window.location='product/es_861970V6OG09006.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/208c4933-4ad5-4188-8869-adb4d3448779/Thumbnail/861970V6OG09006_A.jpg" alt="Cotton Poplin Pinstripes Shirt" loading="lazy">
     <div class="info">
         <div class="name">Cotton Poplin Pinstripes Shirt</div>
@@ -117,7 +87,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€1,490~2,086</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_871316V6KO02549.html'">
+<div class="card" data-name="Light Cotton Trench Coat  sahara" data-price="7730" onclick="window.location='product/es_871316V6KO02549.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/d23eb3eb-d985-4b99-ae14-3e21794bcb06/Thumbnail/871316V6KO02549_A.jpg" alt="Light Cotton Trench Coat " loading="lazy">
     <div class="info">
         <div class="name">Light Cotton Trench Coat </div>
@@ -130,46 +100,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€3,865~5,411</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_862104V6D202341.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/05d9ffea-ca58-48c1-8087-1f954c618755/Thumbnail/862104V6D202341_A.jpg" alt="Cotton Toile Cargo Shorts" loading="lazy">
-    <div class="info">
-        <div class="name">Cotton Toile Cargo Shorts</div>
-        <div class="color">stucco</div>
-        <div class="price">€1,840</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€920~1,288</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_869475V6D101010.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/d617aaa1-76c1-4f5b-9232-daa85c4a40a0/Thumbnail/869475V6D101010_A.jpg" alt="Compact Cotton Toile Top" loading="lazy">
-    <div class="info">
-        <div class="name">Compact Cotton Toile Top</div>
-        <div class="color">double black</div>
-        <div class="price">€2,920</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€1,460~2,043</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_875204V6DB01010.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/ee755a49-388d-4a78-917c-e6fe97ca7d27/Thumbnail/875204V6DB01010_A.jpg" alt="Light Wool Twill Shorts" loading="lazy">
-    <div class="info">
-        <div class="name">Light Wool Twill Shorts</div>
-        <div class="color">double black</div>
-        <div class="price">€1,880</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€940~1,316</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_871388V6KO02549.html'">
+<div class="card" data-name="Cotton Trench Coat sahara" data-price="9510" onclick="window.location='product/es_871388V6KO02549.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/e5543b06-62a2-48f5-80b6-90bb5c1bc46f/Thumbnail/871388V6KO02549_A.jpg" alt="Cotton Trench Coat" loading="lazy">
     <div class="info">
         <div class="name">Cotton Trench Coat</div>
@@ -182,7 +113,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€4,755~6,657</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_873841V6NI09107.html'">
+<div class="card" data-name="Floral Lace Dress parchment" data-price="5280" onclick="window.location='product/es_873841V6NI09107.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/a68c3986-1042-4d89-80d6-022000eb3b20/Thumbnail/873841V6NI09107_A.jpg" alt="Floral Lace Dress" loading="lazy">
     <div class="info">
         <div class="name">Floral Lace Dress</div>
@@ -195,7 +126,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€2,640~3,695</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_874736V61D03476.html'">
+<div class="card" data-name="Shiny Leather Blouson wader green" data-price="12000" onclick="window.location='product/es_874736V61D03476.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/074ccaf6-1184-4de5-93da-9b35a5c3d000/Thumbnail/874736V61D03476_A.jpg" alt="Shiny Leather Blouson" loading="lazy">
     <div class="info">
         <div class="name">Shiny Leather Blouson</div>
@@ -208,7 +139,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€6,000~8,400</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_871519V61D03476.html'">
+<div class="card" data-name="Shiny Leather Pants wader green" data-price="9710" onclick="window.location='product/es_871519V61D03476.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/8de6d01d-8be8-463b-9594-1af8d7f23f59/Thumbnail/871519V61D03476_A.jpg" alt="Shiny Leather Pants" loading="lazy">
     <div class="info">
         <div class="name">Shiny Leather Pants</div>
@@ -221,111 +152,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€4,855~6,797</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_869436V6KO09000.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/8f704920-3274-4270-87a5-46bf5f53b1ca/Thumbnail/869436V6KO09000_A.jpg" alt="Cotton Blouson" loading="lazy">
-    <div class="info">
-        <div class="name">Cotton Blouson</div>
-        <div class="color">white</div>
-        <div class="price">€5,650</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€2,825~3,954</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_869475V6NG02951.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/6afb9104-d534-4735-ad68-4290a23c20a2/Thumbnail/869475V6NG02951_A.jpg" alt="Soft Wool Check Top" loading="lazy">
-    <div class="info">
-        <div class="name">Soft Wool Check Top</div>
-        <div class="color">chalk/carrubo/blue</div>
-        <div class="price">€3,700</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€1,850~2,590</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_862131V6OO04493.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/9ef01693-606b-4a40-98e6-c152ad25b286/Thumbnail/862131V6OO04493_A.jpg" alt="Cotton And Silk Check Pajama Shirt" loading="lazy">
-    <div class="info">
-        <div class="name">Cotton And Silk Check Pajama Shirt</div>
-        <div class="color">blue/white/stone</div>
-        <div class="price">€2,730</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€1,365~1,910</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_851389V6OO04493.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/4a67ccde-bd57-4dc3-815c-e945712d057e/Thumbnail/851389V6OO04493_A.jpg" alt="Cotton And Silk Check Shorts" loading="lazy">
-    <div class="info">
-        <div class="name">Cotton And Silk Check Shorts</div>
-        <div class="color">blue/white/stone</div>
-        <div class="price">€1,840</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€920~1,288</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_A000HIV6M504071.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/8cc89659-8906-4b7a-a770-a9e4744f54dd/Thumbnail/A000HIV6M504071_A.jpg" alt="Cotton Crochet Polo" loading="lazy">
-    <div class="info">
-        <div class="name">Cotton Crochet Polo</div>
-        <div class="color">midnight blue</div>
-        <div class="price">€2,530</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€1,265~1,771</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_861564V69R04946.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/7bb74337-5351-44ca-8d36-a5c6883df8c6/Thumbnail/861564V69R04946_A.jpg" alt="Sky Bleached Wide Leg Denim Shorts " loading="lazy">
-    <div class="info">
-        <div class="name">Sky Bleached Wide Leg Denim Shorts </div>
-        <div class="color">light bleach</div>
-        <div class="price">€1,600</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€800~1,120</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_862579V69R04946.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/20d59744-6dfd-42e6-80cf-776cfa07bf52/Thumbnail/862579V69R04946_A.jpg" alt="Sky Bleached Denim Overshirt" loading="lazy">
-    <div class="info">
-        <div class="name">Sky Bleached Denim Overshirt</div>
-        <div class="color">light bleach</div>
-        <div class="price">€2,190</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€1,095~1,533</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_859749V69R04946.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/15c66f44-318e-4753-98e0-3845d46b4bc5/Thumbnail/859749V69R04946_A.jpg" alt="Sky Bleached Wide Leg Jeans" loading="lazy">
-    <div class="info">
-        <div class="name">Sky Bleached Wide Leg Jeans</div>
-        <div class="color">light bleach</div>
-        <div class="price">€1,880</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€940~1,316</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_871159V6ON04071.html'">
+<div class="card" data-name="Cotton And Silk Shirt midnight blue" data-price="2770" onclick="window.location='product/es_871159V6ON04071.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/30fb0761-72f9-425f-ab49-94c4a0c37763/Thumbnail/871159V6ON04071_A.jpg" alt="Cotton And Silk Shirt" loading="lazy">
     <div class="info">
         <div class="name">Cotton And Silk Shirt</div>
@@ -338,7 +165,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€1,385~1,938</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_871556V6CX04052.html'">
+<div class="card" data-name="Intrecciato Cotton Poplin Shorts oxford blue" data-price="2980" onclick="window.location='product/es_871556V6CX04052.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/7895d41e-9323-4ca7-8eb0-8e1adccd7e3d/Thumbnail/871556V6CX04052_A.jpg" alt="Intrecciato Cotton Poplin Shorts" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Cotton Poplin Shorts</div>
@@ -351,20 +178,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€1,490~2,086</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_852469V6CX04052.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/2780b68f-872a-44c5-a664-e85af31219fe/Thumbnail/852469V6CX04052_A.jpg" alt="Intrecciato Cotton Poplin Shirt" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Cotton Poplin Shirt</div>
-        <div class="color">oxford blue</div>
-        <div class="price">€3,120</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€1,560~2,184</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_876040V6OB04030.html'">
+<div class="card" data-name="Technical Shorts dark navy" data-price="1880" onclick="window.location='product/es_876040V6OB04030.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/2f2d18dc-0e66-4081-a495-6d5fd52d0c48/Thumbnail/876040V6OB04030_A.jpg" alt="Technical Shorts" loading="lazy">
     <div class="info">
         <div class="name">Technical Shorts</div>
@@ -377,7 +191,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€940~1,316</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_869426V6OB04030.html'">
+<div class="card" data-name="Technical Hooded Blouson dark navy" data-price="3710" onclick="window.location='product/es_869426V6OB04030.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/ece80f10-15da-46a7-a50a-5fec06c46043/Thumbnail/869426V6OB04030_A.jpg" alt="Technical Hooded Blouson" loading="lazy">
     <div class="info">
         <div class="name">Technical Hooded Blouson</div>
@@ -390,33 +204,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€1,855~2,597</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_873925V6OB02188.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/d242652a-739c-4978-b058-7af082e1b4c3/Thumbnail/873925V6OB02188_A.jpg" alt="Technical Blouson" loading="lazy">
-    <div class="info">
-        <div class="name">Technical Blouson</div>
-        <div class="color">desert taupe</div>
-        <div class="price">€2,980</div>
-        <div class="dates">📅 上架：2026-05-23 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 11 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€1,490~2,086</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_876040V6OB02188.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/3006c168-57fe-46c0-9756-e12a14dac7ac/Thumbnail/876040V6OB02188_A.jpg" alt="Technical Shorts" loading="lazy">
-    <div class="info">
-        <div class="name">Technical Shorts</div>
-        <div class="color">desert taupe</div>
-        <div class="price">€1,880</div>
-        <div class="dates">📅 上架：2026-06-03 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 0 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€940~1,316</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_854174V6OB04030.html'">
+<div class="card" data-name="Technical Pants  dark navy" data-price="2190" onclick="window.location='product/es_854174V6OB04030.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/2dd0f963-c243-4f1e-a3f5-aa94ec126251/Thumbnail/854174V6OB04030_A.jpg" alt="Technical Pants " loading="lazy">
     <div class="info">
         <div class="name">Technical Pants </div>
@@ -429,7 +217,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€1,095~1,533</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_873908V6Q401427.html'">
+<div class="card" data-name="Small Intrecciato Leather Blouson pearl gray" data-price="18570" onclick="window.location='product/es_873908V6Q401427.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/347d2451-e214-4b60-b7cf-9c093f1c9b34/Thumbnail/873908V6Q401427_A.jpg" alt="Small Intrecciato Leather Blouson" loading="lazy">
     <div class="info">
         <div class="name">Small Intrecciato Leather Blouson</div>
@@ -442,20 +230,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€9,285~12,999</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_863688V6NB02512.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/67735d09-8d3c-459a-a220-c79bd982ff67/Thumbnail/863688V6NB02512_A.jpg" alt="Wool And Cotton Pants" loading="lazy">
-    <div class="info">
-        <div class="name">Wool And Cotton Pants</div>
-        <div class="color">beige/light blue</div>
-        <div class="price">€2,380</div>
-        <div class="dates">📅 上架：2026-06-03 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 0 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€1,190~1,666</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_859733V6OF01010.html'">
+<div class="card" data-name="Mohair And Wool Jacket double black" data-price="5350" onclick="window.location='product/es_859733V6OF01010.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/5c731244-aad2-4d2a-9961-909752066604/Thumbnail/859733V6OF01010_A.jpg" alt="Mohair And Wool Jacket" loading="lazy">
     <div class="info">
         <div class="name">Mohair And Wool Jacket</div>
@@ -468,7 +243,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€2,675~3,744</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_871867V6M509123.html'">
+<div class="card" data-name="Cotton Crochet Sweater chalk/midnight blue" data-price="2590" onclick="window.location='product/es_871867V6M509123.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/d997fdb5-0d25-446f-a163-edcb33757f07/Thumbnail/871867V6M509123_A.jpg" alt="Cotton Crochet Sweater" loading="lazy">
     <div class="info">
         <div class="name">Cotton Crochet Sweater</div>
@@ -481,20 +256,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€1,295~1,812</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_871427V6NB02512.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/6f9c8c13-2692-405d-8d83-1f64b6a6f8bd/Thumbnail/871427V6NB02512_A.jpg" alt="Wool And Cotton Jacket" loading="lazy">
-    <div class="info">
-        <div class="name">Wool And Cotton Jacket</div>
-        <div class="color">beige/light blue</div>
-        <div class="price">€5,150</div>
-        <div class="dates">📅 上架：2026-06-03 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 0 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€2,575~3,604</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_873930V6MY01331.html'">
+<div class="card" data-name="Silk Double Knit Cardigan prosecco/chalk" data-price="4480" onclick="window.location='product/es_873930V6MY01331.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/e7a6011e-8ac9-4d8c-8cb4-bce88c47dbb5/Thumbnail/873930V6MY01331_A.jpg" alt="Silk Double Knit Cardigan" loading="lazy">
     <div class="info">
         <div class="name">Silk Double Knit Cardigan</div>
@@ -507,33 +269,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€2,240~3,136</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_873890V6M301326.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/464bfeae-a35d-47e2-a399-3fec76201141/Thumbnail/873890V6M301326_A.jpg" alt="Silk Knit Top" loading="lazy">
-    <div class="info">
-        <div class="name">Silk Knit Top</div>
-        <div class="color">prosecco</div>
-        <div class="price">€2,190</div>
-        <div class="dates">📅 上架：2026-06-03 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 0 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€1,095~1,533</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_873893V6NA01331.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/9e2ebcaf-abb0-4583-b44c-164cfb31e963/Thumbnail/873893V6NA01331_A.jpg" alt="Silk Double Knit Skirt" loading="lazy">
-    <div class="info">
-        <div class="name">Silk Double Knit Skirt</div>
-        <div class="color">prosecco/chalk</div>
-        <div class="price">€2,980</div>
-        <div class="dates">📅 上架：2026-06-03 → 下架：2026-06-03（50 天前）</div>
-        <div class="dates">🕐 在架 0 天</div>
-        <span class="delisted-badge">已下架</span>
-        <div class='outlet-hint'>⏳ 觀察中</div>
-        <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€1,490~2,086</div>
-    </div>
-</div>
-<div class="card" onclick="window.location='product/es_871516V5BW02046.html'">
+<div class="card" data-name="Papery Leather Blouson ebony" data-price="11490" onclick="window.location='product/es_871516V5BW02046.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/4a44bc4e-6fa7-49f3-bb17-76a53c769294/Thumbnail/871516V5BW02046_A.jpg" alt="Papery Leather Blouson" loading="lazy">
     <div class="info">
         <div class="name">Papery Leather Blouson</div>
@@ -546,7 +282,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€5,745~8,042</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_869829V6S902123.html'">
+<div class="card" data-name="Cotton Poplin Shirt prosecco/brown/white" data-price="2340" onclick="window.location='product/es_869829V6S902123.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/f96bd8cb-cd90-4c31-91f7-c8e93328c5c1/Thumbnail/869829V6S902123_A.jpg" alt="Cotton Poplin Shirt" loading="lazy">
     <div class="info">
         <div class="name">Cotton Poplin Shirt</div>
@@ -559,7 +295,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€1,170~1,638</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_862817V69R04946.html'">
+<div class="card" data-name="Sky Bleached Wide Leg Jeans light bleach" data-price="1990" onclick="window.location='product/es_862817V69R04946.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/13524ffc-5f88-436a-a507-d4601eda2d07/Thumbnail/862817V69R04946_A.jpg" alt="Sky Bleached Wide Leg Jeans" loading="lazy">
     <div class="info">
         <div class="name">Sky Bleached Wide Leg Jeans</div>
@@ -572,7 +308,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€995~1,393</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_871427V66I01010.html'">
+<div class="card" data-name="Wool Grain De Poudre Jacket double black" data-price="4960" onclick="window.location='product/es_871427V66I01010.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/7c31db82-df0f-43e0-aa05-aed050acbdb0/Thumbnail/871427V66I01010_A.jpg" alt="Wool Grain De Poudre Jacket" loading="lazy">
     <div class="info">
         <div class="name">Wool Grain De Poudre Jacket</div>
@@ -585,7 +321,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€2,480~3,472</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_872760V6D101010.html'">
+<div class="card" data-name="Compact Cotton Toile Skirt double black" data-price="2730" onclick="window.location='product/es_872760V6D101010.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/5c38d5a3-3fad-48c2-b7e7-e6ddb4d1cd75/Thumbnail/872760V6D101010_A.jpg" alt="Compact Cotton Toile Skirt" loading="lazy">
     <div class="info">
         <div class="name">Compact Cotton Toile Skirt</div>
@@ -598,7 +334,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€1,365~1,910</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_873843V6M804052.html'">
+<div class="card" data-name="Silk Twill Shirt Dress oxford blue" data-price="7730" onclick="window.location='product/es_873843V6M804052.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/bd791296-cffe-4e0a-9a52-e1e397bc3a07/Thumbnail/873843V6M804052_A.jpg" alt="Silk Twill Shirt Dress" loading="lazy">
     <div class="info">
         <div class="name">Silk Twill Shirt Dress</div>
@@ -611,7 +347,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€3,865~5,411</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/es_876819V6NJ01010.html'">
+<div class="card" data-name="Crepe Viscose Jersey Dress double black" data-price="6940" onclick="window.location='product/es_876819V6NJ01010.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/da26212c-a250-4710-a4ec-2e7d81a023fd/Thumbnail/876819V6NJ01010_A.jpg" alt="Crepe Viscose Jersey Dress" loading="lazy">
     <div class="info">
         <div class="name">Crepe Viscose Jersey Dress</div>
@@ -625,4 +361,32 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
     </div>
 </div>
 </div>
+
+<script>
+function applyFilters() {
+    const q = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
+    const priceMin = parseFloat(document.getElementById('priceMin')?.value) || 0;
+    const priceMax = parseFloat(document.getElementById('priceMax')?.value) || Infinity;
+    document.querySelectorAll('.card').forEach(card => {
+        const name = (card.dataset.name || '').toLowerCase();
+        const keywords = q ? q.split(/[ 	]+/) : [];
+        const matchName = keywords.length === 0 || keywords.every(kw => name.includes(kw));
+        const price = parseFloat(card.dataset.price) || 0;
+        const matchPrice = price === 0 || (price >= priceMin && price <= priceMax);
+        card.style.display = (matchName && matchPrice) ? '' : 'none';
+    });
+    document.querySelectorAll('.cat-header').forEach(header => {
+        const grid = header.nextElementSibling;
+        if (grid && grid.classList.contains('grid')) {
+            const visible = grid.querySelectorAll('.card:not([style*="display: none"])').length;
+            header.style.display = visible > 0 ? '' : 'none';
+            grid.style.display = visible > 0 ? '' : 'none';
+        }
+    });
+}
+function clearFilters() {
+    ['searchInput','priceMin','priceMax'].forEach(id => { const el = document.getElementById(id); if(el) el.value=''; });
+    applyFilters();
+}
+</script>
 </body></html>

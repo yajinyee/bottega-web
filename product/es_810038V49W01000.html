@@ -34,7 +34,11 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
 <a class="back" href="../index.html" onclick="if(history.length>1){history.back();return false;}">← 返回列表</a>
 <div class="detail">
     <div class="gallery">
-        <img class="main" src="" alt="主圖">
+        <img class="main" src="https://bottega-veneta.dam.kering.com/m/585dce7f72d057f1/Thumbnail-810038V49W01000_A.jpg" alt="主圖">
+        <img class="thumb" src="https://bottega-veneta.dam.kering.com/m/585dce7f72d057f1/Thumbnail-810038V49W01000_B.jpg" alt="角度圖" onclick="document.querySelector('.main').src=this.src">
+        <img class="thumb" src="https://bottega-veneta.dam.kering.com/m/585dce7f72d057f1/Thumbnail-810038V49W01000_C.jpg" alt="角度圖" onclick="document.querySelector('.main').src=this.src">
+        <img class="thumb" src="https://bottega-veneta.dam.kering.com/m/585dce7f72d057f1/Thumbnail-810038V49W01000_D.jpg" alt="角度圖" onclick="document.querySelector('.main').src=this.src">
+        <img class="thumb" src="https://bottega-veneta.dam.kering.com/m/585dce7f72d057f1/Thumbnail-810038V49W01000_G.jpg" alt="角度圖" onclick="document.querySelector('.main').src=this.src">
     </div>
     <div class="product-info">
         <h1>Small Model 600</h1>
@@ -52,6 +56,13 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div class="stock-section">
             <h3>🏪 門市庫存（）</h3>
             <p style="color:#888">⚠️ 無庫存快照資料</p>
+        </div>
+
+        
+
+        <div class="stock-section">
+            <h3>📈 價格歷史</h3>
+            <div class="price-history"><h4>es </h4><p>現價 <strong>1,200</strong></p><table class="stock-table"><tr><th>日期</th><th>價格</th><th>變動</th></tr><tr><td>2026-05-23</td><td>1,200</td><td>—</td></tr></table></div>
         </div>
     </div>
 </div>
