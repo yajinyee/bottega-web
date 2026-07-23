@@ -49,7 +49,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
     <a class="tab " href="delisted_tw.html">台灣 Taiwan</a>
     <a class="tab active" href="delisted_jp.html">日本 Japan</a>
     <a class="tab " href="delisted_mo.html">澳門 Macau</a>
-    <a class="tab " href="delisted_hk.html">香港 Hong Kong</a>
+    <a class="tab " href="delisted_es.html">西班牙 Spain</a>
 </div>
 <div class="sub-tabs">
     <a class="sub-tab " href="delisted_jp.html">全部</a>
@@ -63,42 +63,4 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
     <a class="sub-tab " href="delisted_jp_travel.html">🧳 旅行 Travel (14)</a>
     <a class="sub-tab " href="delisted_jp_home.html">🏠 家居 Home (170)</a>
 </div>
-<div class="search-bar" style="padding:10px 20px;background:#16213e;border-bottom:1px solid #0f3460;">
-  <input type="text" id="searchInput" placeholder="🔍 搜尋商品名稱、顏色" oninput="applyFilters()" style="width:100%;max-width:500px;padding:10px 15px;border-radius:25px;border:1px solid #333;background:#1a1a2e;color:#eee;font-size:0.9em;outline:none;">
-</div>
-<div class="filters" style="padding:10px 20px;background:#0f3460;display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
-  <label style="color:#aaa;font-size:0.8em;">💰 原價：</label>
-  <input type="number" id="priceMin" placeholder="最低" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
-  <span style="color:#888">—</span>
-  <input type="number" id="priceMax" placeholder="最高" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
-  <button onclick="clearFilters()" style="background:#1a1a2e;color:#aaa;border:none;padding:5px 12px;border-radius:5px;cursor:pointer;font-size:0.8em;">✕ 清除</button>
-</div>
-
-<script>
-function applyFilters() {
-    const q = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
-    const priceMin = parseFloat(document.getElementById('priceMin')?.value) || 0;
-    const priceMax = parseFloat(document.getElementById('priceMax')?.value) || Infinity;
-    document.querySelectorAll('.card').forEach(card => {
-        const name = (card.dataset.name || '').toLowerCase();
-        const keywords = q ? q.split(/[ 	]+/) : [];
-        const matchName = keywords.length === 0 || keywords.every(kw => name.includes(kw));
-        const price = parseFloat(card.dataset.price) || 0;
-        const matchPrice = price === 0 || (price >= priceMin && price <= priceMax);
-        card.style.display = (matchName && matchPrice) ? '' : 'none';
-    });
-    document.querySelectorAll('.cat-header').forEach(header => {
-        const grid = header.nextElementSibling;
-        if (grid && grid.classList.contains('grid')) {
-            const visible = grid.querySelectorAll('.card:not([style*="display: none"])').length;
-            header.style.display = visible > 0 ? '' : 'none';
-            grid.style.display = visible > 0 ? '' : 'none';
-        }
-    });
-}
-function clearFilters() {
-    ['searchInput','priceMin','priceMax'].forEach(id => { const el = document.getElementById(id); if(el) el.value=''; });
-    applyFilters();
-}
-</script>
 </body></html>
