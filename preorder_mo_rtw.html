@@ -48,7 +48,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
     <a class="tab " href="preorder_tw.html">台灣 Taiwan</a>
     <a class="tab " href="preorder_jp.html">日本 Japan</a>
     <a class="tab active" href="preorder_mo.html">澳門 Macau</a>
-    <a class="tab " href="preorder_es.html">西班牙 Spain</a>
+    <a class="tab " href="preorder_hk.html">香港 Hong Kong</a>
 </div>
 <div class="sub-tabs">
     <a class="sub-tab " href="preorder_mo.html">全部</a>
@@ -60,9 +60,19 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
     <a class="sub-tab " href="preorder_mo_eyewear.html">🕶️ 眼鏡 Eyewear (2)</a>
     <a class="sub-tab " href="preorder_mo_travel.html">🧳 旅行 Travel (2)</a>
 </div>
+<div class="search-bar" style="padding:10px 20px;background:#16213e;border-bottom:1px solid #0f3460;">
+  <input type="text" id="searchInput" placeholder="🔍 搜尋商品名稱、顏色" oninput="applyFilters()" style="width:100%;max-width:500px;padding:10px 15px;border-radius:25px;border:1px solid #333;background:#1a1a2e;color:#eee;font-size:0.9em;outline:none;">
+</div>
+<div class="filters" style="padding:10px 20px;background:#0f3460;display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+  <label style="color:#aaa;font-size:0.8em;">💰 價格：</label>
+  <input type="number" id="priceMin" placeholder="最低" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
+  <span style="color:#888">—</span>
+  <input type="number" id="priceMax" placeholder="最高" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
+  <button onclick="clearFilters()" style="background:#1a1a2e;color:#aaa;border:none;padding:5px 12px;border-radius:5px;cursor:pointer;font-size:0.8em;">✕ 清除</button>
+</div>
 <div class="cat-header">👗 服裝 Clothing — 2 件</div>
 <div class="grid">
-<div class="card" onclick="window.location='product/mo_871540V6NJ01010.html'">
+<div class="card" data-name="Crepe Viscose Jersey Dress double black" data-price="31550" onclick="window.location='product/mo_871540V6NJ01010.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/dd03f4e4-906c-4701-943e-31d86edff45e/Thumbnail/871540V6NJ01010_A.jpg" alt="Crepe Viscose Jersey Dress" loading="lazy">
     <div class="info">
         <div class="name">Crepe Viscose Jersey Dress</div>
@@ -72,7 +82,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <span class="preorder-badge">🔖 預購中</span>
     </div>
 </div>
-<div class="card" onclick="window.location='product/mo_875076V6PS04075.html'">
+<div class="card" data-name="Printed Silk Twill Body midnight blue/chalk" data-price="23650" onclick="window.location='product/mo_875076V6PS04075.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/98017563-480f-482d-b142-2d32b70800a4/Thumbnail/875076V6PS04075_A.jpg" alt="Printed Silk Twill Body" loading="lazy">
     <div class="info">
         <div class="name">Printed Silk Twill Body</div>
@@ -83,4 +93,32 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
     </div>
 </div>
 </div>
+
+<script>
+function applyFilters() {
+    const q = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
+    const priceMin = parseFloat(document.getElementById('priceMin')?.value) || 0;
+    const priceMax = parseFloat(document.getElementById('priceMax')?.value) || Infinity;
+    document.querySelectorAll('.card').forEach(card => {
+        const name = (card.dataset.name || '').toLowerCase();
+        const keywords = q ? q.split(/[ 	]+/) : [];
+        const matchName = keywords.length === 0 || keywords.every(kw => name.includes(kw));
+        const price = parseFloat(card.dataset.price) || 0;
+        const matchPrice = price === 0 || (price >= priceMin && price <= priceMax);
+        card.style.display = (matchName && matchPrice) ? '' : 'none';
+    });
+    document.querySelectorAll('.cat-header').forEach(header => {
+        const grid = header.nextElementSibling;
+        if (grid && grid.classList.contains('grid')) {
+            const visible = grid.querySelectorAll('.card:not([style*="display: none"])').length;
+            header.style.display = visible > 0 ? '' : 'none';
+            grid.style.display = visible > 0 ? '' : 'none';
+        }
+    });
+}
+function clearFilters() {
+    ['searchInput','priceMin','priceMax'].forEach(id => { const el = document.getElementById(id); if(el) el.value=''; });
+    applyFilters();
+}
+</script>
 </body></html>

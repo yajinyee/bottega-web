@@ -49,7 +49,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
     <a class="tab active" href="delisted_tw.html">台灣 Taiwan</a>
     <a class="tab " href="delisted_jp.html">日本 Japan</a>
     <a class="tab " href="delisted_mo.html">澳門 Macau</a>
-    <a class="tab " href="delisted_es.html">西班牙 Spain</a>
+    <a class="tab " href="delisted_hk.html">香港 Hong Kong</a>
 </div>
 <div class="sub-tabs">
     <a class="sub-tab " href="delisted_tw.html">全部</a>
@@ -63,9 +63,19 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
     <a class="sub-tab " href="delisted_tw_travel.html">🧳 旅行 Travel (10)</a>
     <a class="sub-tab " href="delisted_tw_home.html">🏠 家居 Home (155)</a>
 </div>
+<div class="search-bar" style="padding:10px 20px;background:#16213e;border-bottom:1px solid #0f3460;">
+  <input type="text" id="searchInput" placeholder="🔍 搜尋商品名稱、顏色" oninput="applyFilters()" style="width:100%;max-width:500px;padding:10px 15px;border-radius:25px;border:1px solid #333;background:#1a1a2e;color:#eee;font-size:0.9em;outline:none;">
+</div>
+<div class="filters" style="padding:10px 20px;background:#0f3460;display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+  <label style="color:#aaa;font-size:0.8em;">💰 原價：</label>
+  <input type="number" id="priceMin" placeholder="最低" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
+  <span style="color:#888">—</span>
+  <input type="number" id="priceMax" placeholder="最高" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
+  <button onclick="clearFilters()" style="background:#1a1a2e;color:#aaa;border:none;padding:5px 12px;border-radius:5px;cursor:pointer;font-size:0.8em;">✕ 清除</button>
+</div>
 <div class="cat-header">🕶️ 眼鏡 Eyewear — 17 件</div>
 <div class="grid">
-<div class="card" onclick="window.location='product/tw_832952V2Q301423.html'">
+<div class="card" data-name="Dizzy Round Eyeglasses black/transparent" data-price="18700" onclick="window.location='product/tw_832952V2Q301423.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/77d7cd41-b3ce-4f40-a7f7-89d81395358d/Thumbnail/832952V2Q301423_A.jpg" alt="Dizzy Round Eyeglasses" loading="lazy">
     <div class="info">
         <div class="name">Dizzy Round Eyeglasses</div>
@@ -78,7 +88,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$9,350~13,090</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/tw_832952V2Q301511.html'">
+<div class="card" data-name="Dizzy Round Eyeglasses havana/transparent" data-price="18700" onclick="window.location='product/tw_832952V2Q301511.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/018cde11-6689-42c8-a9ab-ed53bd112faa/Thumbnail/832952V2Q301511_A.jpg" alt="Dizzy Round Eyeglasses" loading="lazy">
     <div class="info">
         <div class="name">Dizzy Round Eyeglasses</div>
@@ -91,7 +101,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$9,350~13,090</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/tw_832954V2Q301295.html'">
+<div class="card" data-name="Forte Panthos Eyeglasses black/transparent" data-price="17300" onclick="window.location='product/tw_832954V2Q301295.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/33ce6920-84b4-4708-bdaa-83cb57df6f60/Thumbnail/832954V2Q301295_A.jpg" alt="Forte Panthos Eyeglasses" loading="lazy">
     <div class="info">
         <div class="name">Forte Panthos Eyeglasses</div>
@@ -104,7 +114,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$8,650~12,110</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/tw_799397V2Q301423.html'">
+<div class="card" data-name="Classic Panthos Eyeglasses black/transparent" data-price="12300" onclick="window.location='product/tw_799397V2Q301423.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/65cd2b4fa2a4228e/Thumbnail-799397V2Q301423_A.jpg" alt="Classic Panthos Eyeglasses" loading="lazy">
     <div class="info">
         <div class="name">Classic Panthos Eyeglasses</div>
@@ -117,7 +127,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$6,150~8,610</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/tw_799397V2Q301511.html'">
+<div class="card" data-name="Classic Panthos Eyeglasses havana/transparent" data-price="12300" onclick="window.location='product/tw_799397V2Q301511.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/945026b845a16c4/Thumbnail-799397V2Q301511_A.jpg" alt="Classic Panthos Eyeglasses" loading="lazy">
     <div class="info">
         <div class="name">Classic Panthos Eyeglasses</div>
@@ -130,7 +140,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$6,150~8,610</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/tw_845791V44501251.html'">
+<div class="card" data-name="Fin Aviator Sunglasses gold/brown" data-price="23700" onclick="window.location='product/tw_845791V44501251.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/8ecb7bf6-9977-4b1a-b6db-ea44d3f11698/Thumbnail/845791V44501251_A.jpg" alt="Fin Aviator Sunglasses" loading="lazy">
     <div class="info">
         <div class="name">Fin Aviator Sunglasses</div>
@@ -143,7 +153,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$11,850~16,590</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/tw_872761V2Q303344.html'">
+<div class="card" data-name="Bombe Cat Eye Sunglasses green" data-price="17800" onclick="window.location='product/tw_872761V2Q303344.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/5f1fc424-eb65-421e-885c-2567792c8cea/Thumbnail/872761V2Q303344_A.jpg" alt="Bombe Cat Eye Sunglasses" loading="lazy">
     <div class="info">
         <div class="name">Bombe Cat Eye Sunglasses</div>
@@ -156,7 +166,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$8,900~12,460</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/tw_872761V2Q305124.html'">
+<div class="card" data-name="Bombe Cat Eye Sunglasses pink/red" data-price="17800" onclick="window.location='product/tw_872761V2Q305124.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/81cf0434-dd49-4cc1-b6f0-25443f160e99/Thumbnail/872761V2Q305124_A.jpg" alt="Bombe Cat Eye Sunglasses" loading="lazy">
     <div class="info">
         <div class="name">Bombe Cat Eye Sunglasses</div>
@@ -169,7 +179,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$8,900~12,460</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/tw_841169VBL801508.html'">
+<div class="card" data-name="Dash Cat Eye Sunglasses havana/brown" data-price="16000" onclick="window.location='product/tw_841169VBL801508.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/3ba813e8599a116f/Thumbnail-841169VBL801508_A.jpg" alt="Dash Cat Eye Sunglasses" loading="lazy">
     <div class="info">
         <div class="name">Dash Cat Eye Sunglasses</div>
@@ -182,7 +192,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$8,000~11,200</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/tw_719771V44501251.html'">
+<div class="card" data-name="Turn Cat-Eye Sunglasses gold / brown" data-price="18700" onclick="window.location='product/tw_719771V44501251.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/154cd6f059964755/Thumbnail-719771V44501251_A.jpg" alt="Turn Cat-Eye Sunglasses" loading="lazy">
     <div class="info">
         <div class="name">Turn Cat-Eye Sunglasses</div>
@@ -195,7 +205,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$9,350~13,090</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/tw_821514V2Q301136.html'">
+<div class="card" data-name="Ultrathin Squared Sunglasses black/black/brown" data-price="16900" onclick="window.location='product/tw_821514V2Q301136.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/3faa014fd11786cb/Thumbnail-821514V2Q301136_A.jpg" alt="Ultrathin Squared Sunglasses" loading="lazy">
     <div class="info">
         <div class="name">Ultrathin Squared Sunglasses</div>
@@ -208,7 +218,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$8,450~11,830</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/tw_821505V2Q301049.html'">
+<div class="card" data-name="Ultrathin Squared Sunglasses black/black/grey" data-price="16900" onclick="window.location='product/tw_821505V2Q301049.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/2fad906279739c06/Thumbnail-821505V2Q301049_A.jpg" alt="Ultrathin Squared Sunglasses" loading="lazy">
     <div class="info">
         <div class="name">Ultrathin Squared Sunglasses</div>
@@ -221,7 +231,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$8,450~11,830</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/tw_821505V2Q302819.html'">
+<div class="card" data-name="Ultrathin Squared Sunglasses havana/havana/brown" data-price="16900" onclick="window.location='product/tw_821505V2Q302819.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/610abe25d5334a8d/Thumbnail-821505V2Q302819_A.jpg" alt="Ultrathin Squared Sunglasses" loading="lazy">
     <div class="info">
         <div class="name">Ultrathin Squared Sunglasses</div>
@@ -234,7 +244,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$8,450~11,830</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/tw_845794V2Q301049.html'">
+<div class="card" data-name="Classic Aviator Sunglasses black/grey" data-price="16900" onclick="window.location='product/tw_845794V2Q301049.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/0265ad78-4995-42d4-85a0-c064c6099cdc/Thumbnail/845794V2Q301049_A.jpg" alt="Classic Aviator Sunglasses" loading="lazy">
     <div class="info">
         <div class="name">Classic Aviator Sunglasses</div>
@@ -247,7 +257,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$8,450~11,830</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/tw_832796V44508107.html'">
+<div class="card" data-name="Forte Aviator Sunglasses lightblue/grey" data-price="17300" onclick="window.location='product/tw_832796V44508107.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/3114ae13226c812/Thumbnail-832796V44508107_A.jpg" alt="Forte Aviator Sunglasses" loading="lazy">
     <div class="info">
         <div class="name">Forte Aviator Sunglasses</div>
@@ -260,7 +270,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$8,650~12,110</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/tw_832879V44501398.html'">
+<div class="card" data-name="Fin Panthos Sunglasses silver/brown" data-price="23700" onclick="window.location='product/tw_832879V44501398.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/5b80d80a7a551706/Thumbnail-832879V44501398_A.jpg" alt="Fin Panthos Sunglasses" loading="lazy">
     <div class="info">
         <div class="name">Fin Panthos Sunglasses</div>
@@ -273,7 +283,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$11,850~16,590</div>
     </div>
 </div>
-<div class="card" onclick="window.location='product/tw_734056V2Q301049.html'">
+<div class="card" data-name="Classic Square Sunglasses black / grey" data-price="15100" onclick="window.location='product/tw_734056V2Q301049.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/1787a2ddb7f0da66/Thumbnail-734056V2Q301049_A.jpg" alt="Classic Square Sunglasses" loading="lazy">
     <div class="info">
         <div class="name">Classic Square Sunglasses</div>
@@ -287,4 +297,32 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
     </div>
 </div>
 </div>
+
+<script>
+function applyFilters() {
+    const q = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
+    const priceMin = parseFloat(document.getElementById('priceMin')?.value) || 0;
+    const priceMax = parseFloat(document.getElementById('priceMax')?.value) || Infinity;
+    document.querySelectorAll('.card').forEach(card => {
+        const name = (card.dataset.name || '').toLowerCase();
+        const keywords = q ? q.split(/[ 	]+/) : [];
+        const matchName = keywords.length === 0 || keywords.every(kw => name.includes(kw));
+        const price = parseFloat(card.dataset.price) || 0;
+        const matchPrice = price === 0 || (price >= priceMin && price <= priceMax);
+        card.style.display = (matchName && matchPrice) ? '' : 'none';
+    });
+    document.querySelectorAll('.cat-header').forEach(header => {
+        const grid = header.nextElementSibling;
+        if (grid && grid.classList.contains('grid')) {
+            const visible = grid.querySelectorAll('.card:not([style*="display: none"])').length;
+            header.style.display = visible > 0 ? '' : 'none';
+            grid.style.display = visible > 0 ? '' : 'none';
+        }
+    });
+}
+function clearFilters() {
+    ['searchInput','priceMin','priceMax'].forEach(id => { const el = document.getElementById(id); if(el) el.value=''; });
+    applyFilters();
+}
+</script>
 </body></html>
