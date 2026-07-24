@@ -48,6 +48,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
 <div class="tabs">
     <a class="tab " href="delisted_tw.html">台灣 Taiwan</a>
     <a class="tab " href="delisted_jp.html">日本 Japan</a>
+    <a class="tab " href="delisted_mo.html">澳門 Macau</a>
     <a class="tab active" href="delisted_es.html">西班牙 Spain</a>
 </div>
 <div class="sub-tabs">
@@ -62,19 +63,9 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
     <a class="sub-tab " href="delisted_es_travel.html">🧳 旅行 Travel (3)</a>
     <a class="sub-tab " href="delisted_es_home.html">🏠 家居 Home (229)</a>
 </div>
-<div class="search-bar" style="padding:10px 20px;background:#16213e;border-bottom:1px solid #0f3460;">
-  <input type="text" id="searchInput" placeholder="🔍 搜尋商品名稱、顏色" oninput="applyFilters()" style="width:100%;max-width:500px;padding:10px 15px;border-radius:25px;border:1px solid #333;background:#1a1a2e;color:#eee;font-size:0.9em;outline:none;">
-</div>
-<div class="filters" style="padding:10px 20px;background:#0f3460;display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
-  <label style="color:#aaa;font-size:0.8em;">💰 原價：</label>
-  <input type="number" id="priceMin" placeholder="最低" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
-  <span style="color:#888">—</span>
-  <input type="number" id="priceMax" placeholder="最高" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
-  <button onclick="clearFilters()" style="background:#1a1a2e;color:#aaa;border:none;padding:5px 12px;border-radius:5px;cursor:pointer;font-size:0.8em;">✕ 清除</button>
-</div>
 <div class="cat-header">🕶️ 眼鏡 Eyewear — 3 件</div>
 <div class="grid">
-<div class="card" data-name="Forte Panthos Eyeglasses black/transparent" data-price="380" onclick="window.location='product/es_832954V2Q301295.html'">
+<div class="card" onclick="window.location='product/es_832954V2Q301295.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/33ce6920-84b4-4708-bdaa-83cb57df6f60/Thumbnail/832954V2Q301295_A.jpg" alt="Forte Panthos Eyeglasses" loading="lazy">
     <div class="info">
         <div class="name">Forte Panthos Eyeglasses</div>
@@ -87,7 +78,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€190~266</div>
     </div>
 </div>
-<div class="card" data-name="Fin Aviator Sunglasses gold/brown" data-price="520" onclick="window.location='product/es_845791V44501251.html'">
+<div class="card" onclick="window.location='product/es_845791V44501251.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/8ecb7bf6-9977-4b1a-b6db-ea44d3f11698/Thumbnail/845791V44501251_A.jpg" alt="Fin Aviator Sunglasses" loading="lazy">
     <div class="info">
         <div class="name">Fin Aviator Sunglasses</div>
@@ -100,7 +91,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：€260~364</div>
     </div>
 </div>
-<div class="card" data-name="Dizzy Round Eyeglasses havana/transparent" data-price="410" onclick="window.location='product/es_832952V2Q301511.html'">
+<div class="card" onclick="window.location='product/es_832952V2Q301511.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/018cde11-6689-42c8-a9ab-ed53bd112faa/Thumbnail/832952V2Q301511_A.jpg" alt="Dizzy Round Eyeglasses" loading="lazy">
     <div class="info">
         <div class="name">Dizzy Round Eyeglasses</div>
@@ -114,32 +105,4 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
     </div>
 </div>
 </div>
-
-<script>
-function applyFilters() {
-    const q = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
-    const priceMin = parseFloat(document.getElementById('priceMin')?.value) || 0;
-    const priceMax = parseFloat(document.getElementById('priceMax')?.value) || Infinity;
-    document.querySelectorAll('.card').forEach(card => {
-        const name = (card.dataset.name || '').toLowerCase();
-        const keywords = q ? q.split(/[ 	]+/) : [];
-        const matchName = keywords.length === 0 || keywords.every(kw => name.includes(kw));
-        const price = parseFloat(card.dataset.price) || 0;
-        const matchPrice = price === 0 || (price >= priceMin && price <= priceMax);
-        card.style.display = (matchName && matchPrice) ? '' : 'none';
-    });
-    document.querySelectorAll('.cat-header').forEach(header => {
-        const grid = header.nextElementSibling;
-        if (grid && grid.classList.contains('grid')) {
-            const visible = grid.querySelectorAll('.card:not([style*="display: none"])').length;
-            header.style.display = visible > 0 ? '' : 'none';
-            grid.style.display = visible > 0 ? '' : 'none';
-        }
-    });
-}
-function clearFilters() {
-    ['searchInput','priceMin','priceMax'].forEach(id => { const el = document.getElementById(id); if(el) el.value=''; });
-    applyFilters();
-}
-</script>
 </body></html>

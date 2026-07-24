@@ -48,6 +48,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
 <div class="tabs">
     <a class="tab active" href="delisted_tw.html">台灣 Taiwan</a>
     <a class="tab " href="delisted_jp.html">日本 Japan</a>
+    <a class="tab " href="delisted_mo.html">澳門 Macau</a>
     <a class="tab " href="delisted_es.html">西班牙 Spain</a>
 </div>
 <div class="sub-tabs">
@@ -62,19 +63,9 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
     <a class="sub-tab " href="delisted_tw_travel.html">🧳 旅行 Travel (13)</a>
     <a class="sub-tab " href="delisted_tw_home.html">🏠 家居 Home (155)</a>
 </div>
-<div class="search-bar" style="padding:10px 20px;background:#16213e;border-bottom:1px solid #0f3460;">
-  <input type="text" id="searchInput" placeholder="🔍 搜尋商品名稱、顏色" oninput="applyFilters()" style="width:100%;max-width:500px;padding:10px 15px;border-radius:25px;border:1px solid #333;background:#1a1a2e;color:#eee;font-size:0.9em;outline:none;">
-</div>
-<div class="filters" style="padding:10px 20px;background:#0f3460;display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
-  <label style="color:#aaa;font-size:0.8em;">💰 原價：</label>
-  <input type="number" id="priceMin" placeholder="最低" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
-  <span style="color:#888">—</span>
-  <input type="number" id="priceMax" placeholder="最高" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
-  <button onclick="clearFilters()" style="background:#1a1a2e;color:#aaa;border:none;padding:5px 12px;border-radius:5px;cursor:pointer;font-size:0.8em;">✕ 清除</button>
-</div>
 <div class="cat-header">💍 飾品 Accessories — 18 件</div>
 <div class="grid">
-<div class="card" data-name="Knot Belt black" data-price="24000" onclick="window.location='product/tw_754139VALKO1019.html'">
+<div class="card" onclick="window.location='product/tw_754139VALKO1019.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/6ebacccca2bf638d/Thumbnail-754139VALKO1019_A.jpg" alt="Knot Belt" loading="lazy">
     <div class="info">
         <div class="name">Knot Belt</div>
@@ -87,7 +78,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$12,000~16,800</div>
     </div>
 </div>
-<div class="card" data-name="Sardine Belt string" data-price="25700" onclick="window.location='product/tw_794486V2BE73236.html'">
+<div class="card" onclick="window.location='product/tw_794486V2BE73236.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/5c25327c1172e412/Thumbnail-794486V2BE73236_A.jpg" alt="Sardine Belt" loading="lazy">
     <div class="info">
         <div class="name">Sardine Belt</div>
@@ -100,7 +91,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$12,850~17,990</div>
     </div>
 </div>
-<div class="card" data-name="Intrecciato Piccolo Belt dark green" data-price="23600" onclick="window.location='product/tw_796783V4LQ13009.html'">
+<div class="card" onclick="window.location='product/tw_796783V4LQ13009.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/29562f9f4c054e8/Thumbnail-796783V4LQ13009_A.jpg" alt="Intrecciato Piccolo Belt" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Piccolo Belt</div>
@@ -113,7 +104,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$11,800~16,520</div>
     </div>
 </div>
-<div class="card" data-name="Intrecciato Leather Tie fondant" data-price="34100" onclick="window.location='product/tw_813612V2JG02113.html'">
+<div class="card" onclick="window.location='product/tw_813612V2JG02113.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/4f2b59527d6f3bf0/Thumbnail-813612V2JG02113_A.jpg" alt="Intrecciato Leather Tie" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Leather Tie</div>
@@ -126,7 +117,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$17,050~23,870</div>
     </div>
 </div>
-<div class="card" data-name="Leather Tie fondant" data-price="16000" onclick="window.location='product/tw_762027V3Y602113.html'">
+<div class="card" onclick="window.location='product/tw_762027V3Y602113.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/67bee6ee-7b22-4702-a8af-dbcf89097a12/Thumbnail/762027V3Y602113_A.jpg" alt="Leather Tie" loading="lazy">
     <div class="info">
         <div class="name">Leather Tie</div>
@@ -139,7 +130,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$8,000~11,200</div>
     </div>
 </div>
-<div class="card" data-name="Bi-Color Cashmere Scarf white grey" data-price="37700" onclick="window.location='product/tw_837676V5TX01722.html'">
+<div class="card" onclick="window.location='product/tw_837676V5TX01722.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/7374d5f29a30f37a/Thumbnail-837676V5TX01722_A.jpg" alt="Bi-Color Cashmere Scarf" loading="lazy">
     <div class="info">
         <div class="name">Bi-Color Cashmere Scarf</div>
@@ -152,7 +143,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$18,850~26,390</div>
     </div>
 </div>
-<div class="card" data-name="Cashmere Scarf navy 302" data-price="29800" onclick="window.location='product/tw_845830V3VU09903.html'">
+<div class="card" onclick="window.location='product/tw_845830V3VU09903.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/26423e5c-8399-4ffe-aaa6-f2a508a20f2e/Thumbnail/845830V3VU09903_A.jpg" alt="Cashmere Scarf" loading="lazy">
     <div class="info">
         <div class="name">Cashmere Scarf</div>
@@ -165,7 +156,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$14,900~20,860</div>
     </div>
 </div>
-<div class="card" data-name="Key Pouch black" data-price="19600" onclick="window.location='product/tw_690597VCPQ48803.html'">
+<div class="card" onclick="window.location='product/tw_690597VCPQ48803.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/551e10d8edd53ffb/Thumbnail-690597VCPQ48803_A.jpg" alt="Key Pouch" loading="lazy">
     <div class="info">
         <div class="name">Key Pouch</div>
@@ -178,7 +169,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$9,800~13,720</div>
     </div>
 </div>
-<div class="card" data-name="Silk Twill Tie black" data-price="6300" onclick="window.location='product/tw_7213454V0181000.html'">
+<div class="card" onclick="window.location='product/tw_7213454V0181000.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/4b27884af02793af/Thumbnail-7213454V0181000_A.jpg" alt="Silk Twill Tie" loading="lazy">
     <div class="info">
         <div class="name">Silk Twill Tie</div>
@@ -191,7 +182,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$3,150~4,410</div>
     </div>
 </div>
-<div class="card" data-name="Printed Leather Tie white/beige/black/orange" data-price="29900" onclick="window.location='product/tw_812758V1I448933.html'">
+<div class="card" onclick="window.location='product/tw_812758V1I448933.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/5d072a37a702e4bf/Thumbnail-812758V1I448933_A.jpg" alt="Printed Leather Tie" loading="lazy">
     <div class="info">
         <div class="name">Printed Leather Tie</div>
@@ -204,7 +195,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$14,950~20,930</div>
     </div>
 </div>
-<div class="card" data-name="Cat Charm bordeaux" data-price="21600" onclick="window.location='product/tw_835969V64A06337.html'">
+<div class="card" onclick="window.location='product/tw_835969V64A06337.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/d54022d9-495b-4d9c-bf32-8c3fdcee5ee0/Thumbnail/835969V64A06337_A.jpg" alt="Cat Charm" loading="lazy">
     <div class="info">
         <div class="name">Cat Charm</div>
@@ -217,7 +208,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$10,800~15,119</div>
     </div>
 </div>
-<div class="card" data-name="Rabbit Charm white" data-price="22800" onclick="window.location='product/tw_867134V6FJ09000.html'">
+<div class="card" onclick="window.location='product/tw_867134V6FJ09000.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/a3a3d1d1-cb91-4153-a81b-2419833b3029/Thumbnail/867134V6FJ09000_A.jpg" alt="Rabbit Charm" loading="lazy">
     <div class="info">
         <div class="name">Rabbit Charm</div>
@@ -230,7 +221,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$11,400~15,959</div>
     </div>
 </div>
-<div class="card" data-name="Onda Charm deep mahogany" data-price="0" onclick="window.location='product/tw_867410V3D806176.html'">
+<div class="card" onclick="window.location='product/tw_867410V3D806176.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/0c75dad8-2029-499b-ae82-100829f2bd2f/Thumbnail/867410V3D806176_A.jpg" alt="Onda Charm" loading="lazy">
     <div class="info">
         <div class="name">Onda Charm</div>
@@ -243,7 +234,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" data-name="Onda Key Ring deep mahogany" data-price="0" onclick="window.location='product/tw_867867V3D806149.html'">
+<div class="card" onclick="window.location='product/tw_867867V3D806149.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/72dfd019-0906-41f0-a1e7-ce31c8e95d65/Thumbnail/867867V3D806149_A.jpg" alt="Onda Key Ring" loading="lazy">
     <div class="info">
         <div class="name">Onda Key Ring</div>
@@ -256,7 +247,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         
     </div>
 </div>
-<div class="card" data-name="Cat Charm white" data-price="21600" onclick="window.location='product/tw_835969V6FJ09000.html'">
+<div class="card" onclick="window.location='product/tw_835969V6FJ09000.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/120b69fd-9a71-4fc9-9c05-1d31325b2f7f/Thumbnail/835969V6FJ09000_A.jpg" alt="Cat Charm" loading="lazy">
     <div class="info">
         <div class="name">Cat Charm</div>
@@ -269,7 +260,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$10,800~15,119</div>
     </div>
 </div>
-<div class="card" data-name="Tosca Key Holder alabaster" data-price="51800" onclick="window.location='product/tw_873237V2EZ09538.html'">
+<div class="card" onclick="window.location='product/tw_873237V2EZ09538.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/fa46f691-3521-49de-ae36-cd2532de6f96/Thumbnail/873237V2EZ09538_A.jpg" alt="Tosca Key Holder" loading="lazy">
     <div class="info">
         <div class="name">Tosca Key Holder</div>
@@ -282,7 +273,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$25,900~36,260</div>
     </div>
 </div>
-<div class="card" data-name="Intrecciato Belt black" data-price="20800" onclick="window.location='product/tw_855892VCPQ48803.html'">
+<div class="card" onclick="window.location='product/tw_855892VCPQ48803.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/5e1a8342-d282-4907-8efa-4d6ffa4de6c7/Thumbnail/855892VCPQ48803_A.jpg" alt="Intrecciato Belt" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Belt</div>
@@ -295,7 +286,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div style='color:#ff9800;font-size:0.75em;margin-top:3px'>💡 Outlet 預估：NT$10,400~14,559</div>
     </div>
 </div>
-<div class="card" data-name="Intrecciato Piccolo Belt fondant" data-price="23600" onclick="window.location='product/tw_796783V4LQ12145.html'">
+<div class="card" onclick="window.location='product/tw_796783V4LQ12145.html'">
     <img src="https://bottega-veneta.dam.kering.com/m/5bae7395b9700bf3/Thumbnail-796783V4LQ12145_A.jpg" alt="Intrecciato Piccolo Belt" loading="lazy">
     <div class="info">
         <div class="name">Intrecciato Piccolo Belt</div>
@@ -309,32 +300,4 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
     </div>
 </div>
 </div>
-
-<script>
-function applyFilters() {
-    const q = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
-    const priceMin = parseFloat(document.getElementById('priceMin')?.value) || 0;
-    const priceMax = parseFloat(document.getElementById('priceMax')?.value) || Infinity;
-    document.querySelectorAll('.card').forEach(card => {
-        const name = (card.dataset.name || '').toLowerCase();
-        const keywords = q ? q.split(/[ 	]+/) : [];
-        const matchName = keywords.length === 0 || keywords.every(kw => name.includes(kw));
-        const price = parseFloat(card.dataset.price) || 0;
-        const matchPrice = price === 0 || (price >= priceMin && price <= priceMax);
-        card.style.display = (matchName && matchPrice) ? '' : 'none';
-    });
-    document.querySelectorAll('.cat-header').forEach(header => {
-        const grid = header.nextElementSibling;
-        if (grid && grid.classList.contains('grid')) {
-            const visible = grid.querySelectorAll('.card:not([style*="display: none"])').length;
-            header.style.display = visible > 0 ? '' : 'none';
-            grid.style.display = visible > 0 ? '' : 'none';
-        }
-    });
-}
-function clearFilters() {
-    ['searchInput','priceMin','priceMax'].forEach(id => { const el = document.getElementById(id); if(el) el.value=''; });
-    applyFilters();
-}
-</script>
 </body></html>
