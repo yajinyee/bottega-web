@@ -45,7 +45,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 <body>
 <div class="header">
     <h1>Bottega Veneta Catalog</h1>
-    <div class="meta">快照：2026-07-23 | 商品：1460 | 有庫存資料：1411</div>
+    <div class="meta">快照：2026-07-24 | 商品：1459 | 有庫存資料：1459</div>
 </div>
 <div class="nav">
     <a href="index.html" class="active">📦 商品目錄</a>
@@ -57,13 +57,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 <div class="tabs">
     <a class="tab active" href="index_tw.html">台灣 Taiwan</a>
     <a class="tab " href="index_jp.html">日本 Japan</a>
-    <a class="tab " href="index_mo.html">澳門 Macau</a>
     <a class="tab " href="index_es.html">西班牙 Spain</a>
 </div>
 <div class="sub-tabs">
     <a class="sub-tab " href="index_tw.html">全部</a>
     <a class="sub-tab " href="index_tw_new.html">🆕 新品 New Arrivals (108)</a>
-    <a class="sub-tab " href="index_tw_bags.html">👜 包包 Bags (467)</a>
+    <a class="sub-tab " href="index_tw_bags.html">👜 包包 Bags (466)</a>
     <a class="sub-tab " href="index_tw_shoes.html">👠 鞋子 Shoes (231)</a>
     <a class="sub-tab " href="index_tw_rtw.html">👗 服裝 Clothing (19)</a>
     <a class="sub-tab " href="index_tw_slg.html">👛 皮夾 Wallets (235)</a>
@@ -74,17 +73,16 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <a class="sub-tab " href="index_tw_home.html">🏠 家居 Home (62)</a>
 </div>
 <div class="search-bar">
-  <input type="text" id="searchInput" placeholder="🔍 搜尋商品名稱、顏色（例：Madison、black、Jodie）" oninput="searchProducts(this.value)">
+  <input type="text" id="searchInput" placeholder="🔍 搜尋商品名稱、顏色（例：Madison、black、Jodie）" oninput="applyFilters()">
 </div>
 <div class="filters">
-  <label>📏 篩選尺碼：</label>
-  <select onchange="filterSize(this.value)">
-    <option value="">全部尺碼</option>
+  <label>📏 尺碼：</label>
+  <select id="sizeFilter" onchange="applyFilters()">
+    <option value="">全部</option>
     <option value="XS">XS</option>
     <option value="S">S</option>
     <option value="M">M</option>
     <option value="L">L</option>
-    <option value="XL">XL</option>
     <option value="34">34</option>
     <option value="34.5">34.5</option>
     <option value="35">35</option>
@@ -125,30 +123,32 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <option value="115">115</option>
     <option value="120">120</option>
   </select>
+  <label>💰 價格：</label>
+  <input type="number" id="priceMin" placeholder="最低" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
+  <span style="color:#888">—</span>
+  <input type="number" id="priceMax" placeholder="最高" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
+  <button onclick="clearFilters()" style="background:#0f3460;color:#aaa;border:none;padding:5px 12px;border-radius:5px;cursor:pointer;font-size:0.8em;">✕ 清除</button>
 </div>
 
 <script>
-function filterSize(size) {
+function applyFilters() {
+    const q = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
+    const size = document.getElementById('sizeFilter')?.value || '';
+    const priceMin = parseFloat(document.getElementById('priceMin')?.value) || 0;
+    const priceMax = parseFloat(document.getElementById('priceMax')?.value) || Infinity;
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
-        if (!size) { card.style.display = ''; return; }
-        const sizes = card.dataset.sizes || '';
-        card.style.display = sizes.split(',').includes(size) ? '' : 'none';
-    });
-}
-
-function searchProducts(query) {
-    const cards = document.querySelectorAll('.card');
-    const q = query.toLowerCase().trim();
-    let visibleCount = 0;
-    cards.forEach(card => {
-        if (!q) { card.style.display = ''; visibleCount++; return; }
+        // 名稱搜尋
         const name = (card.dataset.name || '').toLowerCase();
-        // 模糊搜尋：每個關鍵字都要匹配
-        const keywords = q.split(/\s+/);
-        const match = keywords.every(kw => name.includes(kw));
-        card.style.display = match ? '' : 'none';
-        if (match) visibleCount++;
+        const keywords = q ? q.split(/\s+/) : [];
+        const matchName = keywords.length === 0 || keywords.every(kw => name.includes(kw));
+        // 尺碼篩選
+        const sizes = card.dataset.sizes || '';
+        const matchSize = !size || sizes.split(',').includes(size);
+        // 價格篩選
+        const price = parseFloat(card.dataset.price) || 0;
+        const matchPrice = price === 0 || (price >= priceMin && price <= priceMax);
+        card.style.display = (matchName && matchSize && matchPrice) ? '' : 'none';
     });
     // 隱藏空的分類標題
     document.querySelectorAll('.cat-header').forEach(header => {
@@ -160,9 +160,25 @@ function searchProducts(query) {
         }
     });
 }
+
+function clearFilters() {
+    const si = document.getElementById('searchInput');
+    const sf = document.getElementById('sizeFilter');
+    const pmin = document.getElementById('priceMin');
+    const pmax = document.getElementById('priceMax');
+    if (si) si.value = '';
+    if (sf) sf.value = '';
+    if (pmin) pmin.value = '';
+    if (pmax) pmax.value = '';
+    applyFilters();
+}
+
+// 相容舊版呼叫
+function filterSize(v) { if(document.getElementById('sizeFilter')) document.getElementById('sizeFilter').value=v; applyFilters(); }
+function searchProducts(q) { if(document.getElementById('searchInput')) document.getElementById('searchInput').value=q; applyFilters(); }
 </script>
 <div class="stats">
-    Generated: 2026-07-24 10:59:07 | DB: 699896 KB
+    Generated: 2026-07-25 00:14:07 | DB: 713992 KB
 </div>
 </body>
 </html>
