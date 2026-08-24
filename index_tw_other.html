@@ -45,7 +45,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 <body>
 <div class="header">
     <h1>Bottega Veneta Catalog</h1>
-    <div class="meta">快照：2026-08-24 | 商品：1513 | 有庫存資料：5</div>
+    <div class="meta">快照：2026-08-24 | 商品：1513 | 有庫存資料：1513</div>
 </div>
 <div class="nav">
     <a href="index.html" class="active">📦 商品目錄</a>
@@ -76,6 +76,58 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
   <input type="text" id="searchInput" placeholder="🔍 搜尋商品名稱、顏色（例：Madison、black、Jodie）" oninput="applyFilters()">
 </div>
 <div class="filters">
+  <label>📏 尺碼：</label>
+  <select id="sizeFilter" onchange="applyFilters()">
+    <option value="">全部</option>
+    <option value="XS">XS</option>
+    <option value="S">S</option>
+    <option value="M">M</option>
+    <option value="L">L</option>
+    <option value="XL">XL</option>
+    <option value="6.5">6.5</option>
+    <option value="7">7</option>
+    <option value="7.5">7.5</option>
+    <option value="8">8</option>
+    <option value="8.5">8.5</option>
+    <option value="34">34</option>
+    <option value="34.5">34.5</option>
+    <option value="35">35</option>
+    <option value="35.5">35.5</option>
+    <option value="36">36</option>
+    <option value="36.5">36.5</option>
+    <option value="37">37</option>
+    <option value="37.5">37.5</option>
+    <option value="38">38</option>
+    <option value="38.5">38.5</option>
+    <option value="39">39</option>
+    <option value="39.5">39.5</option>
+    <option value="40">40</option>
+    <option value="40.5">40.5</option>
+    <option value="41">41</option>
+    <option value="41.5">41.5</option>
+    <option value="42">42</option>
+    <option value="43">43</option>
+    <option value="43.5">43.5</option>
+    <option value="44">44</option>
+    <option value="44.5">44.5</option>
+    <option value="45">45</option>
+    <option value="46">46</option>
+    <option value="47">47</option>
+    <option value="48">48</option>
+    <option value="50">50</option>
+    <option value="52">52</option>
+    <option value="70">70</option>
+    <option value="75">75</option>
+    <option value="80">80</option>
+    <option value="85">85</option>
+    <option value="90">90</option>
+    <option value="95">95</option>
+    <option value="100">100</option>
+    <option value="105">105</option>
+    <option value="110">110</option>
+    <option value="115">115</option>
+    <option value="120">120</option>
+  </select>
   <label>💰 價格：</label>
   <input type="number" id="priceMin" placeholder="最低" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
   <span style="color:#888">—</span>
@@ -131,7 +183,7 @@ function filterSize(v) { if(document.getElementById('sizeFilter')) document.getE
 function searchProducts(q) { if(document.getElementById('searchInput')) document.getElementById('searchInput').value=q; applyFilters(); }
 </script>
 <div class="stats">
-    Generated: 2026-08-24 12:02:13 | DB: 1122764 KB
+    Generated: 2026-08-25 00:10:17 | DB: 1138548 KB
 </div>
 </body>
 </html>
