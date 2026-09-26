@@ -35,7 +35,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
 <body>
 <div class="header">
     <h1>🔖 預購商品 Pre-Order</h1>
-    <div class="meta">共 19 件預購中商品 | 預購品通常 4-8 週到貨</div>
+    <div class="meta">共 20 件預購中商品 | 預購品通常 4-8 週到貨</div>
 </div>
 <div class="nav">
     <a href="index.html">📦 商品目錄</a>
@@ -51,10 +51,12 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
 </div>
 <div class="sub-tabs">
     <a class="sub-tab active" href="preorder_es.html">全部</a>
-    <a class="sub-tab " href="preorder_es_bags.html">👜 包包 Bags (7)</a>
-    <a class="sub-tab " href="preorder_es_shoes.html">👠 鞋子 Shoes (3)</a>
-    <a class="sub-tab " href="preorder_es_rtw.html">👗 服裝 Clothing (5)</a>
+    <a class="sub-tab " href="preorder_es_bags.html">👜 包包 Bags (8)</a>
+    <a class="sub-tab " href="preorder_es_shoes.html">👠 鞋子 Shoes (2)</a>
+    <a class="sub-tab " href="preorder_es_rtw.html">👗 服裝 Clothing (4)</a>
+    <a class="sub-tab " href="preorder_es_slg.html">👛 皮夾 Wallets (1)</a>
     <a class="sub-tab " href="preorder_es_accessories.html">💍 飾品 Accessories (4)</a>
+    <a class="sub-tab " href="preorder_es_other.html">🛍️ 其他 Other (1)</a>
 </div>
 <div class="search-bar" style="padding:10px 20px;background:#16213e;border-bottom:1px solid #0f3460;">
   <input type="text" id="searchInput" placeholder="🔍 搜尋商品名稱、顏色" oninput="applyFilters()" style="width:100%;max-width:500px;padding:10px 15px;border-radius:25px;border:1px solid #333;background:#1a1a2e;color:#eee;font-size:0.9em;outline:none;">
@@ -66,7 +68,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
   <input type="number" id="priceMax" placeholder="最高" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
   <button onclick="clearFilters()" style="background:#1a1a2e;color:#aaa;border:none;padding:5px 12px;border-radius:5px;cursor:pointer;font-size:0.8em;">✕ 清除</button>
 </div>
-<div class="cat-header">👜 包包 Bags — 7 件</div>
+<div class="cat-header">👜 包包 Bags — 8 件</div>
 <div class="grid">
 <div class="card" data-name="Large Campana espresso" data-price="5500" onclick="window.location='product/es_844250V76A12009.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/b18424a4-bfed-4221-9277-87a68b9901b0/Thumbnail/844250V76A12009_A.jpg" alt="Large Campana" loading="lazy">
@@ -75,6 +77,16 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div class="color">espresso</div>
         <div class="price">€5,500</div>
         <div class="date">上架：2026-09-16</div>
+        <span class="preorder-badge">🔖 預購中</span>
+    </div>
+</div>
+<div class="card" data-name="Andiamo Clutch 25 silica gray" data-price="2900" onclick="window.location='product/es_A005POV0HW01876.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/b43f2de8-f42c-44c2-9b6c-d0167e77cd44/Thumbnail/A005POV0HW01876_A.jpg" alt="Andiamo Clutch 25" loading="lazy">
+    <div class="info">
+        <div class="name">Andiamo Clutch 25</div>
+        <div class="color">silica gray</div>
+        <div class="price">€2,900</div>
+        <div class="date">上架：2026-08-27</div>
         <span class="preorder-badge">🔖 預購中</span>
     </div>
 </div>
@@ -139,7 +151,7 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
     </div>
 </div>
 </div>
-<div class="cat-header">👠 鞋子 Shoes — 3 件</div>
+<div class="cat-header">👠 鞋子 Shoes — 2 件</div>
 <div class="grid">
 <div class="card" data-name="Glaston Lace-Up Shoe tobacco" data-price="1500" onclick="window.location='product/es_A007BSV74O08207.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/278ec3f7-da89-411f-a39b-d3b4f92118f6/Thumbnail/A007BSV74O08207_B.jpg" alt="Glaston Lace-Up Shoe" loading="lazy">
@@ -161,18 +173,8 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <span class="preorder-badge">🔖 預購中</span>
     </div>
 </div>
-<div class="card" data-name="Klog Mule black" data-price="1100" onclick="window.location='product/es_876100V2ED01000.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/6f3974c8-f690-449c-93a4-a0e5221afefc/Thumbnail/876100V2ED01000_A.jpg" alt="Klog Mule" loading="lazy">
-    <div class="info">
-        <div class="name">Klog Mule</div>
-        <div class="color">black</div>
-        <div class="price">€1,100</div>
-        <div class="date">上架：2026-07-23</div>
-        <span class="preorder-badge">🔖 預購中</span>
-    </div>
 </div>
-</div>
-<div class="cat-header">👗 服裝 Clothing — 5 件</div>
+<div class="cat-header">👗 服裝 Clothing — 4 件</div>
 <div class="grid">
 <div class="card" data-name="Wool And Mohair Toile Jacket light wenge mel" data-price="2900" onclick="window.location='product/es_A003W8V6YJ02865.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/7a9b7974-30e1-4096-af05-4d95b77553c9/Thumbnail/A003W8V6YJ02865_A.jpg" alt="Wool And Mohair Toile Jacket" loading="lazy">
@@ -204,16 +206,6 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <span class="preorder-badge">🔖 預購中</span>
     </div>
 </div>
-<div class="card" data-name="Wool Twill Dress midnight blue" data-price="2500" onclick="window.location='product/es_A00A08V6Y704071.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/8f91f170-7281-4fae-89ac-79c24e5c220b/Thumbnail/A00A08V6Y704071_A.jpg" alt="Wool Twill Dress" loading="lazy">
-    <div class="info">
-        <div class="name">Wool Twill Dress</div>
-        <div class="color">midnight blue</div>
-        <div class="price">€2,500</div>
-        <div class="date">上架：2026-08-27</div>
-        <span class="preorder-badge">🔖 預購中</span>
-    </div>
-</div>
 <div class="card" data-name="Plissé Satin Dress double black" data-price="2500" onclick="window.location='product/es_A007HOV75N01010.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/db1d3d90-175d-4dd6-b017-b1cc338f15fb/Thumbnail/A007HOV75N01010_A.jpg" alt="Plissé Satin Dress" loading="lazy">
     <div class="info">
@@ -225,8 +217,31 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
     </div>
 </div>
 </div>
+<div class="cat-header">👛 皮夾 Wallets — 1 件</div>
+<div class="grid">
+<div class="card" data-name="Woven Mycelium Bi-Fold Wallet blue royal" data-price="590" onclick="window.location='product/es_876811V6U304296.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/2da6fe92-c1b3-479c-97ed-5d8f55187d4a/Thumbnail/876811V6U304296_A.jpg" alt="Woven Mycelium Bi-Fold Wallet" loading="lazy">
+    <div class="info">
+        <div class="name">Woven Mycelium Bi-Fold Wallet</div>
+        <div class="color">blue royal</div>
+        <div class="price">€590</div>
+        <div class="date">上架：2026-08-27</div>
+        <span class="preorder-badge">🔖 預購中</span>
+    </div>
+</div>
+</div>
 <div class="cat-header">💍 飾品 Accessories — 4 件</div>
 <div class="grid">
+<div class="card" data-name="Woven Mycelium Key Ring blue royal" data-price="320" onclick="window.location='product/es_A003A7V6U304298.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/554dd8a0-33ee-4c3d-b2d2-f1f4335e8758/Thumbnail/A003A7V6U304298_A.jpg" alt="Woven Mycelium Key Ring" loading="lazy">
+    <div class="info">
+        <div class="name">Woven Mycelium Key Ring</div>
+        <div class="color">blue royal</div>
+        <div class="price">€320</div>
+        <div class="date">上架：2026-09-26</div>
+        <span class="preorder-badge">🔖 預購中</span>
+    </div>
+</div>
 <div class="card" data-name="Intrecciato Suede Leather Gloves gray dim/stone brown" data-price="780" onclick="window.location='product/es_A00A1RV6WU11044.html'">
     <img src="https://bottega-veneta.dam.kering.com/asset/162260ee-7d7e-4ecc-90c3-bc471427e02b/Thumbnail/A00A1RV6WU11044_A.jpg" alt="Intrecciato Suede Leather Gloves" loading="lazy">
     <div class="info">
@@ -234,16 +249,6 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div class="color">gray dim/stone brown</div>
         <div class="price">€780</div>
         <div class="date">上架：2026-08-27</div>
-        <span class="preorder-badge">🔖 預購中</span>
-    </div>
-</div>
-<div class="card" data-name="Intrecciato Leather Gloves wine" data-price="750" onclick="window.location='product/es_A00A4MV6WU02203.html'">
-    <img src="https://bottega-veneta.dam.kering.com/asset/07c9df5d-73b0-4d89-9e61-4bacf3347040/Thumbnail/A00A4MV6WU02203_A.jpg" alt="Intrecciato Leather Gloves" loading="lazy">
-    <div class="info">
-        <div class="name">Intrecciato Leather Gloves</div>
-        <div class="color">wine</div>
-        <div class="price">€750</div>
-        <div class="date">上架：2026-08-06</div>
         <span class="preorder-badge">🔖 預購中</span>
     </div>
 </div>
@@ -264,6 +269,19 @@ body { font-family: -apple-system, sans-serif; background: #1a1a2e; color: #eee;
         <div class="color">double black</div>
         <div class="price">€850</div>
         <div class="date">上架：2026-06-03</div>
+        <span class="preorder-badge">🔖 預購中</span>
+    </div>
+</div>
+</div>
+<div class="cat-header">🛍️ 其他 Other — 1 件</div>
+<div class="grid">
+<div class="card" data-name="Key Holder Necklace  bark green" data-price="490" onclick="window.location='product/es_A006LVV6TO03770.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/795e4d8f-f530-4b74-b610-a27b35714d74/Thumbnail/A006LVV6TO03770_A.jpg" alt="Key Holder Necklace " loading="lazy">
+    <div class="info">
+        <div class="name">Key Holder Necklace </div>
+        <div class="color">bark green</div>
+        <div class="price">€490</div>
+        <div class="date">上架：2026-09-26</div>
         <span class="preorder-badge">🔖 預購中</span>
     </div>
 </div>
