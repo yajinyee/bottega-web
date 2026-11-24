@@ -45,7 +45,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 <body>
 <div class="header">
     <h1>Bottega Veneta Catalog</h1>
-    <div class="meta">快照：2026-10-19 | 商品：1599 | 有庫存資料：1517</div>
+    <div class="meta">快照：2026-11-23 | 商品：1195 | 有庫存資料：285</div>
 </div>
 <div class="nav">
     <a href="index.html" class="active">📦 商品目錄</a>
@@ -61,16 +61,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 </div>
 <div class="sub-tabs">
     <a class="sub-tab " href="index_tw.html">全部</a>
-    <a class="sub-tab " href="index_tw_new.html">🆕 新品 New Arrivals (14)</a>
-    <a class="sub-tab " href="index_tw_bags.html">👜 包包 Bags (565)</a>
-    <a class="sub-tab " href="index_tw_shoes.html">👠 鞋子 Shoes (246)</a>
-    <a class="sub-tab " href="index_tw_rtw.html">👗 服裝 Clothing (71)</a>
-    <a class="sub-tab " href="index_tw_slg.html">👛 皮夾 Wallets (220)</a>
-    <a class="sub-tab " href="index_tw_jewellery.html">💎 珠寶 Jewellery (136)</a>
-    <a class="sub-tab " href="index_tw_accessories.html">💍 飾品 Accessories (88)</a>
-    <a class="sub-tab " href="index_tw_eyewear.html">🕶️ 眼鏡 Eyewear (151)</a>
-    <a class="sub-tab " href="index_tw_travel.html">🧳 旅行 Travel (65)</a>
-    <a class="sub-tab " href="index_tw_home.html">🏠 家居 Home (57)</a>
+    <a class="sub-tab " href="index_tw_new.html">🆕 新品 New Arrivals (244)</a>
+    <a class="sub-tab " href="index_tw_bags.html">👜 包包 Bags (431)</a>
+    <a class="sub-tab " href="index_tw_shoes.html">👠 鞋子 Shoes (202)</a>
+    <a class="sub-tab " href="index_tw_rtw.html">👗 服裝 Clothing (45)</a>
+    <a class="sub-tab " href="index_tw_slg.html">👛 皮夾 Wallets (196)</a>
+    <a class="sub-tab " href="index_tw_jewellery.html">💎 珠寶 Jewellery (103)</a>
+    <a class="sub-tab " href="index_tw_accessories.html">💍 飾品 Accessories (39)</a>
+    <a class="sub-tab " href="index_tw_eyewear.html">🕶️ 眼鏡 Eyewear (112)</a>
+    <a class="sub-tab " href="index_tw_travel.html">🧳 旅行 Travel (42)</a>
+    <a class="sub-tab " href="index_tw_home.html">🏠 家居 Home (21)</a>
+    <a class="sub-tab active" href="index_tw_other.html">🛍️ 其他 Other (4)</a>
 </div>
 <div class="search-bar">
   <input type="text" id="searchInput" placeholder="🔍 搜尋商品名稱、顏色（例：Madison、black、Jodie）" oninput="applyFilters()">
@@ -79,45 +80,22 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
   <label>📏 尺碼：</label>
   <select id="sizeFilter" onchange="applyFilters()">
     <option value="">全部</option>
-    <option value="XS">XS</option>
     <option value="S">S</option>
     <option value="M">M</option>
     <option value="L">L</option>
-    <option value="XL">XL</option>
-    <option value="6.5">6.5</option>
-    <option value="7">7</option>
-    <option value="7.5">7.5</option>
-    <option value="8">8</option>
-    <option value="8.5">8.5</option>
-    <option value="9">9</option>
-    <option value="9.5">9.5</option>
     <option value="35">35</option>
-    <option value="35.5">35.5</option>
     <option value="36">36</option>
-    <option value="36.5">36.5</option>
     <option value="37">37</option>
-    <option value="37.5">37.5</option>
     <option value="38">38</option>
-    <option value="38.5">38.5</option>
     <option value="39">39</option>
-    <option value="39.5">39.5</option>
     <option value="40">40</option>
-    <option value="40.5">40.5</option>
     <option value="41">41</option>
-    <option value="41.5">41.5</option>
     <option value="42">42</option>
-    <option value="42.5">42.5</option>
     <option value="43">43</option>
     <option value="44">44</option>
-    <option value="44.5">44.5</option>
     <option value="45">45</option>
-    <option value="45.5">45.5</option>
     <option value="46">46</option>
     <option value="47">47</option>
-    <option value="48">48</option>
-    <option value="49">49</option>
-    <option value="50">50</option>
-    <option value="52">52</option>
     <option value="70">70</option>
     <option value="75">75</option>
     <option value="80">80</option>
@@ -135,6 +113,53 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
   <span style="color:#888">—</span>
   <input type="number" id="priceMax" placeholder="最高" min="0" step="1000" oninput="applyFilters()" style="width:100px;background:#1a1a2e;color:#eee;border:1px solid #333;padding:5px 8px;border-radius:5px;">
   <button onclick="clearFilters()" style="background:#0f3460;color:#aaa;border:none;padding:5px 12px;border-radius:5px;cursor:pointer;font-size:0.8em;">✕ 清除</button>
+</div>
+<div class="cat-header">🛍️ 其他 Other — 4 件</div>
+<div class="grid">
+<div class="card" data-sizes="" data-name="Dustbag fondant" data-price="89000" onclick="window.location='product/tw_796728VCPP02132.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/a6b7717a-8e6f-40e3-a937-4b11c34147a8/Thumbnail/796728VCPP02132_A.jpg" alt="Dustbag" loading="lazy">
+    <div class="info">
+        <div class="name">Dustbag</div>
+        <div class="color">fondant</div>
+        <div class="price">NT$89,000</div>
+        <div class="date">上市：2026-11-24</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Dustbag black" data-price="89000" onclick="window.location='product/tw_796728VCPP08425.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/33c488fa-9fd5-4311-b1e8-9c0ed5d7d68e/Thumbnail/796728VCPP08425_A.jpg" alt="Dustbag" loading="lazy">
+    <div class="info">
+        <div class="name">Dustbag</div>
+        <div class="color">black</div>
+        <div class="price">NT$89,000</div>
+        <div class="date">上市：2026-11-24</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Intrecciato Credit Card Case space" data-price="14500" onclick="window.location='product/tw_796324VCPP34398.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/04fe61aa-1b72-4fd9-aae9-b49d3d2e492d/Thumbnail/796324VCPP34398_A.jpg" alt="Intrecciato Credit Card Case" loading="lazy">
+    <div class="info">
+        <div class="name">Intrecciato Credit Card Case</div>
+        <div class="color">space</div>
+        <div class="price">NT$14,500</div>
+        <div class="date">上市：2026-11-05</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
+<div class="card" data-sizes="" data-name="Mini Cabat black" data-price="200600" onclick="window.location='product/tw_781670V1OW18425.html'">
+    <img src="https://bottega-veneta.dam.kering.com/asset/24ffa52b-b9cc-4566-98f6-56d290d35ceb/Thumbnail/781670V1OW18425_A.jpg" alt="Mini Cabat" loading="lazy">
+    <div class="info">
+        <div class="name">Mini Cabat</div>
+        <div class="color">black</div>
+        <div class="price">NT$200,600</div>
+        <div class="date">上市：2026-11-24</div>
+        <div class="stores"><span class="unavailable">⚠️ 無庫存資料</span></div>
+        
+    </div>
+</div>
 </div>
 
 <script>
@@ -185,7 +210,7 @@ function filterSize(v) { if(document.getElementById('sizeFilter')) document.getE
 function searchProducts(q) { if(document.getElementById('searchInput')) document.getElementById('searchInput').value=q; applyFilters(); }
 </script>
 <div class="stats">
-    Generated: 2026-10-20 10:50:53 | DB: 397004 KB
+    Generated: 2026-11-24 09:44:43 | DB: 331160 KB
 </div>
 </body>
 </html>
